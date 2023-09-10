@@ -1,0 +1,13 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+node_modules
+
+DockerFile
+Dockerrun.aws.json
+package-lock.json
+
+workspace.code-workspace
