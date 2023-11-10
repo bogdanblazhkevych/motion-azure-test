@@ -24,15 +24,17 @@ export default function Home() {
   useEffect(() => {
     const viewportHeight = window.innerHeight;
     const viewportWidth = window.innerWidth;
-    // console.log(scrollY)
-    if (!animateTextDiv.current || !parentref.current || scrollY < viewportHeight/3) {
+
+    if (!animateTextDiv.current || !parentref.current) {
       return
     }
-    const currentPosition = scrollY - viewportHeight
+
     const fullBackgroundHeight = viewportHeight * 3;
-    const h1width = animateTextDiv.current.clientWidth;
-    console.log(scrollY)
-    animateTextDiv.current.style.transform = `translateX(${viewportWidth - (scrollY - viewportHeight/3)}px)`
+    const animateTextDivWidth = animateTextDiv.current.clientWidth;
+
+    // transformX = startX + (endX - startX) * interpFactor
+    // transformX = viewportWidth + ((-animateTextDivWidth / 2) - viewportWidth) * (scrollY / (3 * viewportHeight))
+    animateTextDiv.current.style.transform = `translateX(${viewportWidth + ((-animateTextDivWidth / 1.5) - viewportWidth) * (scrollY / (fullBackgroundHeight))}px)`
   }, [scrollY])
   return (
     <main className={styles.main}>
