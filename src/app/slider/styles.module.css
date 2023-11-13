@@ -1,5 +1,5 @@
 
-.transitionscrollwrapper{
+.scrollwrapper{
     width: 100vw;
     height: 300vh;
     display: flex;
@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.transitionscrolltext{
+.scrolltext{
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -24,7 +24,7 @@
     background-size: 1.1rem 1.1rem;
 }
 
-.transitionh1{
+.animatedheading{
     color: #7F7F7F;
     font-size: 50rem;
     text-align: center;
