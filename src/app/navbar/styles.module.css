@@ -3,6 +3,7 @@
     width: 1280px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 80px;
 }
 
@@ -29,4 +30,46 @@
     font-size: 22px;
     text-align: center;
     cursor: pointer;
+}
+
+.burger{
+    display: none;
+    border: 1px solid blue;
+}
+@media only screen and (max-width: 1280px) {
+    .navbarwrapper{
+        width: 100vw;
+    }
+
+    .navbar ul li a{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .navbar ul li a{
+        font-size: 18px;
+    }
+
+    .navbar ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar{
+        display: none;
+    }
+
+    .burger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        aspect-ratio: 1 / 1;
+        font-size: 24px;
+    }
 }
