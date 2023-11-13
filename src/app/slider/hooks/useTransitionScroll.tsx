@@ -5,6 +5,7 @@ const useTransitionScroll = (
     animatedHeadingRef: RefObject<HTMLDivElement>
 ): void => {
     const [scrollY, setScrollY] = useState<number>(0);
+    
     const handleScroll = () => {
         setScrollY(window.scrollY)
     }
