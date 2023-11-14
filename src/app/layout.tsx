@@ -3,7 +3,7 @@ import { Inter, Open_Sans } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
-const openSans = Open_Sans({weight: ["400", "700"],  subsets: ['latin'], variable: '--opensans'})
+const openSans = Open_Sans({weight: ["400", "500", "700"],  subsets: ['latin'], variable: '--opensans'})
 
 export const metadata: Metadata = {
   title: 'Moiton',
@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        {children}
+      </body>
     </html>
   )
 }
