@@ -1,0 +1,131 @@
+.navbarwrapper{
+    /* border: 1px solid blue; */
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    /* position: relative; */
+}
+
+.companyname{
+    font-weight: 700;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.navcompanyname{
+    display: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navbar ul li a{
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.burger{
+    display: none;
+    /* border: 1px solid blue; */
+}
+
+@media only screen and (max-width: 1280px) {
+    .navbarwrapper{
+        width: 100vw;
+    }
+
+    .navbar ul li a{
+        font-size: 22px;
+    }
+}
+
+/* Laptop L */
+@media only screen and (max-width: 1024px) {
+    .navbarwrapper{
+        padding: 20px 1rem;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    .navbar{
+        position: fixed;
+        transform: translateY(-100vh);
+        transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        /* transition: transform 1s linear; */
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 1rem;
+        justify-content: flex-start;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+
+    .navbar.navactive{
+        transform: translateY(0);
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .navcompanyname a{
+        display: flex;
+        font-weight: 700;
+        font-size: 32px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .navbar .navcompanyname {
+        display: flex;
+        position: relative;
+    }
+
+    .navcompanyname:after{
+        content: "";
+        display: flex;
+        position: absolute;
+        bottom: -1rem;
+        left: -20px;
+        background-color: var(--primary-color);
+        width: 100vw;
+        height: 1px;
+    }
+
+    .burger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        aspect-ratio: 1 / 1;
+        font-size: 32px;
+        z-index: 5;
+        cursor: pointer;
+        /* font-weight: 800; */
+    }
+
+    .burger.burgeractive{
+        color: white;
+        position: static;
+    }
+
+}
