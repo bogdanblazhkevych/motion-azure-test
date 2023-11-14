@@ -12,6 +12,18 @@ const navRef = useRef<HTMLElement>(null)
 
     const [navActive, setNavActive] = useState<boolean>(false);
 
+    const handleClick = () => {
+        setNavActive(!navActive)
+        if (!navActive) {
+            document.body.style.overflow = 'hidden'
+            document.documentElement.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+            document.documentElement.style.overflow = ''
+
+        }
+    }
+
     return (
         <div className={styles.navbarwrapper}>
             <div className={styles.leftwrapper}>
@@ -45,7 +57,7 @@ const navRef = useRef<HTMLElement>(null)
                 </ul>
             </nav>
 
-            <div className={`${styles.burger} ${navActive ? styles.burgeractive : ''}`} onClick={() => setNavActive(!navActive)}>
+            <div className={`${styles.burger} ${navActive ? styles.burgeractive : ''}`} onClick={handleClick}>
                 {/* {navActive ? <AiOutlineClose /> : <AiOutlineMenu /> } */}
                 {navActive ? <AiOutlineClose /> : <HiMenu /> }
             </div>
