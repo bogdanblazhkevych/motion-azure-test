@@ -2,7 +2,10 @@
 
 import styles from './styles.module.css'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { GiHamburgerMenu } from 'react-icons/Gi';
 import { useEffect, useRef, useState } from 'react';
+
+import { HiMenu } from "react-icons/hi";
 
 export default function Navbar(){
 const navRef = useRef<HTMLElement>(null)
@@ -43,7 +46,8 @@ const navRef = useRef<HTMLElement>(null)
             </nav>
 
             <div className={`${styles.burger} ${navActive ? styles.burgeractive : ''}`} onClick={() => setNavActive(!navActive)}>
-                {navActive ? <AiOutlineClose /> : <AiOutlineMenu /> }
+                {/* {navActive ? <AiOutlineClose /> : <AiOutlineMenu /> } */}
+                {navActive ? <AiOutlineClose /> : <HiMenu /> }
             </div>
         </div>
     )
