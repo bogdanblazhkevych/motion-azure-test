@@ -1,5 +1,7 @@
 :root {
-  --default-font: "Open Sans"
+  --default-font: "Open Sans";
+  --primary-color: #FFFFFF;
+  --secondary-color: #232323;
 }
 
 menu, ol, ul {

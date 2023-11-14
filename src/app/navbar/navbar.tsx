@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './styles.module.css'
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Navbar(){
@@ -19,6 +19,11 @@ const navRef = useRef<HTMLElement>(null)
 
             <nav className={`${styles.navbar} ${navActive ? styles.navactive : ''}`} ref={navRef}>
                 <ul>
+                    <li className={styles.navcompanyname}>
+                        <a>
+                            MOTION!
+                        </a>
+                    </li>
                     <li>
                         <a>
                             Become a Partner
@@ -37,8 +42,8 @@ const navRef = useRef<HTMLElement>(null)
                 </ul>
             </nav>
 
-            <div className={styles.burger} onClick={() => setNavActive(!navActive)}>
-                <AiOutlineMenu />
+            <div className={`${styles.burger} ${navActive ? styles.burgeractive : ''}`} onClick={() => setNavActive(!navActive)}>
+                {navActive ? <AiOutlineClose /> : <AiOutlineMenu /> }
             </div>
         </div>
     )
