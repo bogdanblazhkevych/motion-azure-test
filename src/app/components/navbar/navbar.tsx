@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/Gi';
 import { useEffect, useRef, useState } from 'react';
 
 import { HiMenu } from "react-icons/hi";
+import Link from 'next/link';
 
 export default function Navbar(){
 const navRef = useRef<HTMLElement>(null)
@@ -14,7 +15,18 @@ const navRef = useRef<HTMLElement>(null)
 
     const handleClick = () => {
         setNavActive(!navActive)
-        if (!navActive) {
+        // if (!navActive) {
+        //     document.body.style.overflow = 'hidden'
+        //     document.documentElement.style.overflow = 'hidden'
+        // } else {
+        //     document.body.style.overflow = ''
+        //     document.documentElement.style.overflow = ''
+
+        // }
+    }
+
+    useEffect(() => {
+        if (navActive) {
             document.body.style.overflow = 'hidden'
             document.documentElement.style.overflow = 'hidden'
         } else {
@@ -22,37 +34,37 @@ const navRef = useRef<HTMLElement>(null)
             document.documentElement.style.overflow = ''
 
         }
-    }
+    }, [navActive])
 
     return (
         <div className={styles.navbarwrapper}>
             <div className={styles.leftwrapper}>
-                <div className={styles.companyname}>
+                <a className={styles.companyname} href='/'>
                     MOTION!
-                </div>
+                </a>
             </div>
 
             <nav className={`${styles.navbar} ${navActive ? styles.navactive : ''}`} ref={navRef}>
                 <ul>
-                    <li className={styles.navcompanyname}>
-                        <a>
+                    <li className={styles.navcompanyname} onClick={() => setNavActive(false)}>
+                        <Link href='/'>
                             MOTION!
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link href='/partner' onClick={() => setNavActive(false)}>
                             Become a Partner
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link href='/' onClick={() => setNavActive(false)}>
                             Join Waitlist
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link href='/' onClick={() => setNavActive(false)}>
                             Talent
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

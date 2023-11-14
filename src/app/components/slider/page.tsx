@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.css'
-import TestPage from './../testpage/testpage'
+import TestPage from '../../testpage/testpage'
 import useTransitionScroll from './hooks/useTransitionScroll';
 
 export default function Slider() {
