@@ -4,10 +4,17 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
     align-items: center;
     flex-direction: column;
     position: relative;
+}
+
+.textcontainer{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex: 1;
 }
 
 .herotextwrapper{
@@ -47,6 +54,37 @@
     aspect-ratio: 3 / 1;
     background-color: gray;
     /* justify-self: flex-end; */
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+@media only screen and (max-width: 900px) {
+    .herotitle{
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .herotitle{
+        font-size: 2rem;
+    }
+    .heroparagraph{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .herotextwrapper{
+        width: unset;
+        padding: 20px;
+    }
+    .herotitle{
+        /* font-size: 5vmin */
+        width: unset;
+        line-height: 1em;
+        padding-bottom: 1rem;
+    }
+    .heroparagraph{
+        font-size: 16px;
+    }
 }
