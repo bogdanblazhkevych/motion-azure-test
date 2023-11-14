@@ -2,11 +2,12 @@
 
 import styles from './styles.module.css'
 import { AiOutlineMenu } from 'react-icons/ai';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Navbar(){
+const navRef = useRef<HTMLElement>(null)
 
-    const [navActive, setNavActive] = useState<boolean>(false)
+    const [navActive, setNavActive] = useState<boolean>(false);
 
     return (
         <div className={styles.navbarwrapper}>
@@ -16,7 +17,7 @@ export default function Navbar(){
                 </div>
             </div>
 
-            <nav className={styles.navbar}>
+            <nav className={`${styles.navbar} ${navActive ? styles.navactive : ''}`} ref={navRef}>
                 <ul>
                     <li>
                         <a>
