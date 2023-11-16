@@ -12,19 +12,7 @@ export default function Navbar(){
 const navRef = useRef<HTMLElement>(null)
 
     const [navActive, setNavActive] = useState<boolean>(false);
-
-    const handleClick = () => {
-        setNavActive(!navActive)
-        // if (!navActive) {
-        //     document.body.style.overflow = 'hidden'
-        //     document.documentElement.style.overflow = 'hidden'
-        // } else {
-        //     document.body.style.overflow = ''
-        //     document.documentElement.style.overflow = ''
-
-        // }
-    }
-
+    
     useEffect(() => {
         if (navActive) {
             document.body.style.overflow = 'hidden'
@@ -69,7 +57,7 @@ const navRef = useRef<HTMLElement>(null)
                 </ul>
             </nav>
 
-            <div className={`${styles.burger} ${navActive ? styles.burgeractive : ''}`} onClick={handleClick}>
+            <div className={`${styles.burger} ${navActive ? styles.burgeractive : ''}`} onClick={() => setNavActive(!navActive)}>
                 {/* {navActive ? <AiOutlineClose /> : <AiOutlineMenu /> } */}
                 {navActive ? <AiOutlineClose /> : <HiMenu /> }
             </div>

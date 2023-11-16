@@ -1,3 +1,4 @@
+import Logo from '@/app/components/logo/page'
 import styles from './styles.module.css'
 
 export default function FirstPage(){
@@ -16,7 +17,7 @@ export default function FirstPage(){
             </div>
 
             <div className={styles.svgwrapper}>
-                ...placeholder...
+                <Logo />
             </div>
         </div>
     )
