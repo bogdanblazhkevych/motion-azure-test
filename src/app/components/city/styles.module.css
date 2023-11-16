@@ -1,0 +1,18 @@
+.cls1, .cls3 {
+    fill: #fff;
+}
+
+.cls1, .cls2, .cls3, .cls4 {
+    stroke: #000;
+    stroke-width: 3px;
+    fill-rule: evenodd;
+}
+
+.cls2, .cls4 {
+    fill: none;
+}
+
+.cls3, .cls4 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

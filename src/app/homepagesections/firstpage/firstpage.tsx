@@ -1,5 +1,6 @@
 import Logo from '@/app/components/logo/page'
 import styles from './styles.module.css'
+import City from '@/app/components/city/city'
 
 export default function FirstPage(){
     return(
@@ -17,7 +18,8 @@ export default function FirstPage(){
             </div>
 
             <div className={styles.svgwrapper}>
-                <Logo />
+                {/* <Logo /> */}
+                <City />
             </div>
         </div>
     )

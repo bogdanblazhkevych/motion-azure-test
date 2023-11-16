@@ -57,6 +57,10 @@ body {
 
 body {
   color: black;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   /* background: linear-gradient(
       to bottom,
       transparent,

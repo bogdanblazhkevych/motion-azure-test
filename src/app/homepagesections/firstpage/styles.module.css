@@ -1,6 +1,6 @@
 .firstpagewrapper{
     box-sizing: border-box;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,7 +14,10 @@
 .textcontainer{
     /* border: 1px solid green; */
     display: flex;
+    flex-direction: column;
     flex: 1;
+    justify-content: flex-end;
+    /* padding-top: calc(83.5px + 40px); */
 }
 
 .herotextwrapper{
@@ -23,6 +26,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* align-self: flex-end; */
+    /* justify-self: flex-end; */
     /* width: 2.5rem; */
     width: min-content;
     /* width: calc(36rem); */
@@ -51,13 +56,20 @@
 
 .svgwrapper{
     /* border: 1px solid blue; */
-    width: 50vw;
+    width: 80vw;
+    /* height: fit-content; */
     aspect-ratio: 3 / 1;
-    background-color: white;
+    /* background-color: white; */
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    
+    /* position: absolute;
+    bottom: 0; */
+
+    /* align-items: center; */
+
     /* justify-self: flex-end; */
     /* position: absolute;
     bottom: 0; */
