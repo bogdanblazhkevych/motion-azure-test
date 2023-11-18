@@ -7,14 +7,17 @@
     padding: 20px 80px;
     position: absolute;
     z-index: 2;
+    color: var(--secondary-color)
     /* position: relative; */
 }
 
 .companyname{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 30px;
     cursor: pointer;
-    position: relative;
+    /* position: relative; */
+    /* position: absolute; */
+    /* margin-right: 30px; */
 }
 
 .navcompanyname{
@@ -35,7 +38,7 @@
 }
 
 .navbar ul li a{
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     cursor: pointer;
 }

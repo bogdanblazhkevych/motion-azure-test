@@ -1,9 +1,12 @@
 .cls1, .cls3 {
-    fill: #fff;
+    /* fill: #fff; */
+    fill: var(--primary-color);
 }
 
 .cls1, .cls2, .cls3, .cls4 {
-    stroke: #000;
+    /* stroke: #000; */
+    /* stroke: var(--third-color); */
+    stroke: rgb(141, 141, 141);
     stroke-width: 3px;
     fill-rule: evenodd;
 }
@@ -15,4 +18,10 @@
 .cls3, .cls4 {
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+.svgmain{
+    /* position: absolute; */
+    color: #2EB9DF;
+    color: #1f7994;
 }

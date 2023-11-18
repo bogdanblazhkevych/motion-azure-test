@@ -4,7 +4,7 @@ import './globals.css'
 import Navbar from './components/navbar/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
-const openSans = Open_Sans({weight: ["400", "500", "700"],  subsets: ['latin'], variable: '--opensans'})
+const openSans = Open_Sans({weight: ["400", "500", "600", "700"],  subsets: ['latin'], variable: '--opensans'})
 
 export const metadata: Metadata = {
   title: 'Moiton',
