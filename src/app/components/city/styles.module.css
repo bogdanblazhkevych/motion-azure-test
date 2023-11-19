@@ -6,7 +6,7 @@
 .cls1, .cls2, .cls3, .cls4 {
     /* stroke: #000; */
     /* stroke: var(--third-color); */
-    stroke: rgb(141, 141, 141);
+    stroke: rgb(164, 164, 164);
     stroke-width: 3px;
     fill-rule: evenodd;
 }
@@ -21,7 +21,11 @@
 }
 
 .svgmain{
-    /* position: absolute; */
+    transform: scale(1.2);
+
+
+    position: absolute;
+    bottom: -5%;
     color: #2EB9DF;
     color: #1f7994;
 }

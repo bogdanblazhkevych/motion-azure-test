@@ -12,14 +12,17 @@ export default function FirstPage(){
                         Success starts with a great product
                     </h1>
                     <p className={styles.heroparagraph}>
-                        We are building something special shaping the future of automation to unleash the next wave of innovation and productivity. One platform. Any device.
+                        We are building something special shaping the future of automation to unleash the next wave of innovation and productivity.
                     </p>
                 </div>
             </div>
 
             <div className={styles.svgwrapper}>
                 {/* <Logo /> */}
-                <City />
+                <div className={styles.svgcontainer}>
+                    <City />
+
+                </div>
             </div>
         </div>
     )
