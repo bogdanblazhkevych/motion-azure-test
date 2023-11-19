@@ -14,6 +14,15 @@ export default function FirstPage(){
                     <p className={styles.heroparagraph}>
                         We are building something special shaping the future of automation to unleash the next wave of innovation and productivity.
                     </p>
+                    <div className={styles.buttonwrapper}>
+                        <button className={`${styles.button} ${styles.buttonjoin}`}>
+                            Join the Waitlist
+                        </button>
+
+                        <button className={`${styles.button} ${styles.buttonpartner}`}>
+                            Become a partner
+                        </button>
+                    </div>
                 </div>
             </div>
 
