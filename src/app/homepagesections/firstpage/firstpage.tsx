@@ -18,10 +18,8 @@ export default function FirstPage(){
             </div>
 
             <div className={styles.svgwrapper}>
-                {/* <Logo /> */}
                 <div className={styles.svgcontainer}>
                     <City />
-
                 </div>
             </div>
         </div>

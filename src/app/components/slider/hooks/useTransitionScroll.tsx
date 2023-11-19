@@ -16,6 +16,7 @@ const useTransitionScroll = (
     }, []);
 
     useEffect(() => {
+        console.log("here")
         const viewportHeight = window.innerHeight;
         const viewportWidth = window.innerWidth;
 
