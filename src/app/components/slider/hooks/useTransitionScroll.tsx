@@ -8,13 +8,13 @@ const useTransitionScroll = (
     
     const handleScroll = () => {
         console.log("here")
-        setScrollY(document.body.scrollTop)
+        setScrollY(window.scrollY)
     }
 
     useEffect(() => {
         console.log("using effect")
-        document.body.addEventListener('scroll', handleScroll);
-        return () => document.body.removeEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     useEffect(() => {

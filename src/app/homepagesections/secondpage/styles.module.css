@@ -1,9 +1,10 @@
 .pagewrapper {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     scroll-behavior: noscroll;
     /* width: 80vw; */
-    max-width: 1280px;
-    /* height: 100vh; */
+    width: 100vw;
+    /* max-width: 1280px; */
+    /* min-height: 100vh; */
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
@@ -13,6 +14,18 @@
     overflow: hidden;
     /* gap: 1rem; */
     flex-wrap: wrap;
+}
+
+.cardscontainer{
+    border: 1px solid blue;
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    /* gap: 1rem; */
+    /* padding: 0 24px; */
 }
 /* 
 @media only screen and (max-width: 1024px) {
