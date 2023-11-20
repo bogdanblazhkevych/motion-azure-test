@@ -32,7 +32,7 @@ export default function Footer() {
 
                 <div className={styles.socials}>
                     <p>
-                        © MOTION-ISE 2023 ALL RIGHTS RESERVED
+                        {'© MOTION-ISE 2023\nALL RIGHTS RESERVED'}
                     </p>
                     <div className={styles.icons}>
                         <div className={styles.icon}>

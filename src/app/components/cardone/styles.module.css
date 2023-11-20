@@ -78,7 +78,7 @@
 
 @media only screen and (max-width: 640px) {
   .cardwrapper{
-    flex: 0 0 calc(100% - 1rem);
-    /* flex: 0 0 100%; */
+    /* flex: 0 0 calc(100% - 1rem); */
+    flex: 0 0 100%;
   }
 }
