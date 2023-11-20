@@ -114,10 +114,6 @@
     border: 1px solid black;
 }
 
-.buttonpartner{
-    /* border: 1px solid black; */
-}
-
 .buttonjoin{
     background-color: var(--standout-color);
     color: var(--primary-color);
