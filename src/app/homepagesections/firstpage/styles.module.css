@@ -4,7 +4,7 @@
     width: 100svw;
     /* height: 200svh; */
     min-height: 106svh;
-    height: 106svh;
+    /* height: 106svh; */
     display: flex;
     /* justify-content: center; */
     /* justify-content: space-between; */
@@ -81,7 +81,7 @@
     /* border: 1px dotted blue; */
     font-weight: 500;
     line-height: 1.6;
-    color: var(--secondary-color);
+    color: var(--secondary-color-4);
     font-size: clamp(16px, 3vw, 22px);
     /* width: max-content;
     max-width: 100%; */
@@ -111,7 +111,7 @@
     border-radius: 8px;
     cursor: pointer;
     /* box-sizing: border-box; */
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
 }
 
 .buttonjoin{

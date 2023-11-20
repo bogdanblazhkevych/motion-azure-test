@@ -20,7 +20,7 @@ export default function Slider() {
           </h1>
         </div>
       </div>
-      <TestPage />
+      {/* <TestPage /> */}
     </>
   )
 }

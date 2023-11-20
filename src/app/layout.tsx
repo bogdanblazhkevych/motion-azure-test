@@ -12,9 +12,10 @@ export const metadata: Metadata = {
   // themeColor: '#CACACA',
 }
 export const viewport: Viewport = {
-  themeColor: '#d3d3d3',
-  height: "device-height"
-  // themeColor: 'black',
+  themeColor:[
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#d3d3d3" }
+  ]
 }
 {/* <meta name="theme-color" content="rgb(245,245,245)" media="(prefers-color-scheme: light)"> */}
 
