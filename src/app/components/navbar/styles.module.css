@@ -1,17 +1,24 @@
 .navbarwrapper{
     /* border: 1px solid blue; */
     width: 1280px;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
+    position: absolute;
+    z-index: 2;
+    color: var(--secondary-color)
     /* position: relative; */
 }
 
 .companyname{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 30px;
     cursor: pointer;
+    /* position: relative; */
+    /* position: absolute; */
+    /* margin-right: 30px; */
 }
 
 .navcompanyname{
@@ -32,14 +39,19 @@
 }
 
 .navbar ul li a{
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     cursor: pointer;
 }
 
 .burger{
     display: none;
+    /* position: relative; */
     /* border: 1px solid blue; */
+}
+
+.linkdesc{
+    display: none;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -62,7 +74,7 @@
 /* Tablet */
 @media only screen and (max-width: 768px) {
     .navbar{
-        position: fixed;
+        position: absolute;
         transform: translateY(-100vh);
         transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         /* transition: transform 1s linear; */
@@ -74,8 +86,9 @@
         right: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--secondary-color);
+        background-color: var(--third-color);
         color: var(--primary-color);
+        z-index: 2;
     }
 
     .navbar.navactive{
@@ -85,6 +98,7 @@
     .navbar ul {
         flex-direction: column;
         align-items: flex-start;
+        font-size: 18px;
     }
 
     .navbar .navcompanyname a{
@@ -93,6 +107,12 @@
         font-size: 32px;
         cursor: pointer;
         position: relative;
+    }
+
+    .linkdesc{
+        display: flex;
+        font-size: 14px;
+        color: var(--primary-color-2);
     }
 
     .navbar .navcompanyname {

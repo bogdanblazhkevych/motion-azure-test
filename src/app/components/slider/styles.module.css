@@ -25,10 +25,12 @@
 }
 
 .animatedheading{
-    color: #7F7F7F;
+    /* color: #7F7F7F; */
+    color: #FFF;
     font-size: 50rem;
     text-align: center;
     transform: translateX(100vw);
     display: inline;
     width: fit-content;
+    z-index: 0;
 }

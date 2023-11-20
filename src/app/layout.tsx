@@ -1,14 +1,22 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Open_Sans } from 'next/font/google'
 import './globals.css'
+import Navbar from './components/navbar/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
-const openSans = Open_Sans({weight: ["400", "700"],  subsets: ['latin'], variable: '--opensans'})
+const openSans = Open_Sans({weight: ["400", "500", "600", "700"],  subsets: ['latin'], variable: '--opensans'})
 
 export const metadata: Metadata = {
-  title: 'Moiton',
+  title: 'Motion!',
   description: 'Cool Startup',
+  // themeColor: '#CACACA',
 }
+export const viewport: Viewport = {
+  themeColor: '#d3d3d3',
+  height: "device-height"
+  // themeColor: 'black',
+}
+{/* <meta name="theme-color" content="rgb(245,245,245)" media="(prefers-color-scheme: light)"> */}
 
 export default function RootLayout({
   children,
@@ -17,7 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
