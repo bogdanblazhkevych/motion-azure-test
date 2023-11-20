@@ -1,66 +1,82 @@
 .cardwrapper {
-    border: 3px solid var(--primary-color-4);
-    background-color: var(--primary-color-2);
-    width: 680px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px;
-    border-radius: 12px;
-    position: relative;
-    box-sizing: border-box;
+  border: 3px solid var(--primary-color-2);
+  background-color: var(--primary-color);
+  /* width: 33%; */
+  flex: 0 0 32%;
+  /* height: 350px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 12px;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .cardcontent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: radial-gradient(var(--primary-color-4) 1px, transparent 1px);
-    background-position: 50% 50%;
-    background-size: 1.1rem 1.1rem;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: radial-gradient(var(--primary-color-3) 1px, transparent 1px);
+  background-position: 50% 50%;
+  background-size: 1.1rem 1.1rem;
 
-    border-radius: 4rem;
-    padding: 4rem;
-    gap: 1rem;
+  border-radius: 4rem;
+  padding: 16px;
+  gap: 1rem;
 }
 
 .cardcontent h1 {
-    color: var(--secondary-color);
-    font-size: 2.6rem;
+  color: var(--secondary-color);
+  /* font-size: clamp(20px, 2.5vw, 32px); */
+  font-size: 20px
 }
 
 .cardcontent p {
-    color: var(--secondary-color-2);
-    line-height: 1.5rem;
-    font-weight: 400;
+  font-size: 16px;
+  color: var(--secondary-color-4);
+  line-height: 1.5rem;
+  font-weight: 500;
 }
 
-.cardwrapper:after {  
-    content: "";
-    height: 50%;
-    width: 3px;  
-    position: absolute;  
-    left: -3px;
-    top: 65%;
-    transition: top, opacity;
-    transition-duration: 600ms;
-    transition-timing-function: ease;
-    background: linear-gradient(
-      transparent,
+.cardwrapper:after {
+  content: "";
+  height: 50%;
+  width: 3px;
+  position: absolute;
+  left: -3px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent,
       var(--standout-color),
-      transparent
-    );
-    opacity: 0;
+      transparent);
+  opacity: 0;
+}
+
+.cardwrapper:after {
+  top: 65%;
+  opacity: 0;
+}
+
+.cardwrapper:hover:after {
+  top: 25%;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cardwrapper{
+    flex: 0 0 45%;
   }
-  
-  .cardwrapper:after {  
-    top: 65%;
-    opacity: 0;
+}
+
+@media only screen and (max-width: 640px) {
+  .cardwrapper{
+    flex: 0 0 90%;
   }
-  
-  .cardwrapper:hover:after {
-    top: 25%;
-    opacity: 1;
-  }
+}

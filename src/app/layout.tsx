@@ -3,6 +3,7 @@ import { Inter, Open_Sans } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/navbar/navbar'
 
+
 const inter = Inter({ subsets: ['latin'] })
 const openSans = Open_Sans({weight: ["400", "500", "600", "700"],  subsets: ['latin'], variable: '--opensans'})
 
