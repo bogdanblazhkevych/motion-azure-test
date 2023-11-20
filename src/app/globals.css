@@ -3,8 +3,12 @@
   /* --primary-color: #FFFFFF; */
   /* --primary-color: #9a9a9a; */
   --primary-color: #d3d3d3;
-  --primary-color-2: #898989;
-  --secondary-color: rgb(60, 60, 60);
+  --primary-color-2: #cacaca;
+  --primary-color-3: rgb(164, 164, 164);
+  --primary-color-4: #898989;
+
+  --secondary-color: rgb(33, 33, 33);
+  --secondary-color-2: rgb(59, 59, 59);
 
   /* --standout-color: #3387A2; */
   /* --standout-color: #0175A5; */
