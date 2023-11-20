@@ -86,7 +86,7 @@
         right: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--third-color);
+        background-color: var(--secondary-color);
         color: var(--primary-color);
         z-index: 2;
     }
@@ -111,8 +111,8 @@
 
     .linkdesc{
         display: flex;
-        font-size: 14px;
-        color: var(--primary-color-2);
+        font-size: 16px;
+        color: var(--primary-color-4);
     }
 
     .navbar .navcompanyname {
@@ -144,7 +144,7 @@
     }
 
     .burger.burgeractive{
-        color: white;
+        color: var(--primary-color);
         position: static;
     }
 

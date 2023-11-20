@@ -1,59 +1,64 @@
 :root {
   --default-font: "Open Sans";
-  /* --primary-color: #FFFFFF; */
-  /* --primary-color: #9a9a9a; */
-  --primary-color: #d3d3d3;
-  --primary-color-2: #cacaca;
-  --primary-color-3: rgb(164, 164, 164);
+
+  /* --primary-color: #EDEDED;
+  --primary-color-2: #BBBBBB;
+  --primary-color-3: #888888;
   --primary-color-4: #898989;
+  --secondary-color: #000000;
+  --secondary-color-2: #090909; */
 
-  --secondary-color: rgb(33, 33, 33);
-  --secondary-color-2: rgb(59, 59, 59);
+  --primary-color: #E0E0E0;
+  --primary-color-2: #C0C0C0;
+  --primary-color-3: #A0A0A0;
+  --primary-color-4: #808080;
+  --secondary-color: #000000;
+  --secondary-color-2: #202020;
+  --secondary-color-3: #404040;
+  --secondary-color-4: #606060;
 
-  /* --standout-color: #3387A2; */
-  /* --standout-color: #0175A5; */
+  /* --primary-color: #FFFFFF;
+  --primary-color-2: #E0E0E0;
+  --primary-color-3: #C0C0C0;
+  --primary-color-4: #A0A0A0;
+  --secondary-color: #000000;
+  --secondary-color-2: #202020;
+  --secondary-color-3: #404040;
+  --secondary-color-4: #606060; */
+
+
   --standout-color: #1f7994;
 
   --third-color: rgb(38, 38, 38);
   /* --secondary-color: #232323; */
 }
 
-menu, ol, ul {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #000000;
+    --primary-color-2: #404040;
+    --primary-color-3: #606060;
+    --primary-color-4: #808080;
+    --secondary-color: #FFFFFF;
+    --secondary-color-2: #E0E0E0;
+    --secondary-color-3: #C0C0C0;
+    --secondary-color-4: #A0A0A0;
+    /* --primary-color: #000000;
+    --primary-color-2: #090909;
+    --primary-color-3: #1F1F1F;
+    --primary-color-4: #454545;
+    --secondary-color: #EDEDED;
+    --secondary-color-2: #BBBBBB; */
+  }
+
+}
+
+menu,
+ol,
+ul {
   list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
 
 * {
   box-sizing: border-box;
@@ -61,29 +66,19 @@ menu, ol, ul {
   margin: 0;
 }
 
-/* html,
-body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-} */
-
 html,
 body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 100vw;
-    /* min-height: 100vh; */
-    height: 100%;
-    position: relative;
-    /* min-height: 100svh; */
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
-  overflow-y: auto; /* Allow vertical scroll */
+  overflow-y: auto;
   display: flex;
   justify-content: center;
 }

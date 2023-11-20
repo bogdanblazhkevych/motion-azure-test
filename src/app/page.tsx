@@ -7,10 +7,16 @@ import SecondPage from './homepagesections/secondpage/secondpage'
 export default function Home() {
 
   return (
-    <main className={styles.main}>
-      {/* <Navbar /> */}
-      {/* <FirstPage />
-      <Slider /> */}
+    // <main className={styles.main}>
+    //   <FirstPage />
+    //   <Slider />
+    //   <SecondPage />
+    // </main>
+    <main>
+      <FirstPage />
+      {/* <Slider /> */}
+      <SecondPage />
+      <SecondPage />
       <SecondPage />
     </main>
   )

@@ -21,7 +21,7 @@
     background-position: 50% 50%;
     background-size: 1.1rem 1.1rem;
 
-    border-radius: 6px;
+    border-radius: 4rem;
     padding: 4rem;
     gap: 1rem;
 }
@@ -39,7 +39,7 @@
 
 .cardwrapper:after {  
     content: "";
-    height: 70px;
+    height: 50%;
     width: 3px;  
     position: absolute;  
     left: -3px;
