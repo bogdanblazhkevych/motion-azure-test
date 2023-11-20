@@ -8,23 +8,24 @@
   --secondary-color: #000000;
   --secondary-color-2: #090909; */
 
-  --primary-color: #E0E0E0;
+  /* --primary-color: #E0E0E0;
   --primary-color-2: #C0C0C0;
   --primary-color-3: #A0A0A0;
   --primary-color-4: #808080;
   --secondary-color: #000000;
   --secondary-color-2: #202020;
   --secondary-color-3: #404040;
-  --secondary-color-4: #606060;
+  --secondary-color-4: #606060; */
+  
 
-  /* --primary-color: #FFFFFF;
+  --primary-color: #FFFFFF;
   --primary-color-2: #E0E0E0;
   --primary-color-3: #C0C0C0;
   --primary-color-4: #A0A0A0;
   --secondary-color: #000000;
   --secondary-color-2: #202020;
   --secondary-color-3: #404040;
-  --secondary-color-4: #606060; */
+  --secondary-color-4: #606060;
 
 
   --standout-color: #1f7994;
@@ -71,7 +72,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   width: 100vw;
   min-height: 100%;
   position: relative;
@@ -81,8 +82,15 @@ body {
   overflow-y: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -92,4 +100,15 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+footer{
+  /* border: 1px solid red; */
+  width: 100vw;
+  /* min-height: 50vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
 }
