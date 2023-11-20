@@ -50,6 +50,10 @@
     /* border: 1px solid blue; */
 }
 
+.linkdesc{
+    display: none;
+}
+
 @media only screen and (max-width: 1280px) {
     .navbarwrapper{
         width: 100vw;
@@ -82,7 +86,7 @@
         right: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--secondary-color);
+        background-color: var(--third-color);
         color: var(--primary-color);
         z-index: 2;
     }
@@ -94,6 +98,7 @@
     .navbar ul {
         flex-direction: column;
         align-items: flex-start;
+        font-size: 18px;
     }
 
     .navbar .navcompanyname a{
@@ -102,6 +107,12 @@
         font-size: 32px;
         cursor: pointer;
         position: relative;
+    }
+
+    .linkdesc{
+        display: flex;
+        font-size: 14px;
+        color: var(--primary-color-2);
     }
 
     .navbar .navcompanyname {

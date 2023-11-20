@@ -43,16 +43,25 @@ const navRef = useRef<HTMLElement>(null)
                         <Link href='/partner' onClick={() => setNavActive(false)}>
                             Become a Partner
                         </Link>
+                        <div className={styles.linkdesc}>
+                        Access to a global innovation and startup ecosystem
+                        </div>
                     </li>
                     <li>
                         <Link href='/' onClick={() => setNavActive(false)}>
                             Join Waitlist
                         </Link>
+                        <div className={styles.linkdesc}>
+                            Get early access by joining our waiting list
+                        </div>
                     </li>
                     <li>
                         <Link href='/' onClick={() => setNavActive(false)}>
                             Talent
                         </Link>
+                        <div className={styles.linkdesc}>
+                            Join our core team and
+                        </div>
                     </li>
                 </ul>
             </nav>

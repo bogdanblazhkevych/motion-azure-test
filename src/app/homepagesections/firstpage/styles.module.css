@@ -1,9 +1,10 @@
 .firstpagewrapper{
     box-sizing: border-box;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width: 100svw;
     /* height: 200svh; */
-    min-height: 200svh;
+    min-height: 106svh;
+    height: 106svh;
     display: flex;
     /* justify-content: center; */
     /* justify-content: space-between; */
@@ -139,7 +140,12 @@
     justify-content: center;
     align-items: flex-end;
     position: absolute;
-    bottom: 100svh;
+    bottom: 5.5%;
+
+
+    /* bottom: 1000px; */
+
+
     /* bottom: 10rem; */
     /* overflow: visible; */
     

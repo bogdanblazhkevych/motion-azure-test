@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   // themeColor: '#CACACA',
 }
 export const viewport: Viewport = {
-  themeColor: '#CACACA',
+  themeColor: '#d3d3d3',
+  height: "device-height"
   // themeColor: 'black',
 }
 {/* <meta name="theme-color" content="rgb(245,245,245)" media="(prefers-color-scheme: light)"> */}

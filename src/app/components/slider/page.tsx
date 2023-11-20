@@ -11,7 +11,7 @@ export default function Slider() {
   useTransitionScroll(parentref, animateTextDiv)
 
   return (
-    <main className={styles.main}>
+    <>
       <TestPage />
       <div className={styles.scrollwrapper} ref={parentref}>
         <div className={styles.scrolltext}>
@@ -21,6 +21,6 @@ export default function Slider() {
         </div>
       </div>
       <TestPage />
-    </main>
+    </>
   )
 }
