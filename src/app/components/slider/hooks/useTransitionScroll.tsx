@@ -13,8 +13,8 @@ const useTransitionScroll = (
 
     useEffect(() => {
         console.log("using effect")
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        document.body.addEventListener('scroll', handleScroll);
+        return () => document.body.removeEventListener('scroll', handleScroll);
     }, []);
 
     useEffect(() => {

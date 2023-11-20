@@ -12,7 +12,7 @@ export default function Slider() {
 
   return (
     <>
-      <TestPage />
+      {/* <TestPage /> */}
       <div className={styles.scrollwrapper} ref={parentref}>
         <div className={styles.scrolltext}>
           <h1 className={styles.animatedheading} ref={animateTextDiv}>
