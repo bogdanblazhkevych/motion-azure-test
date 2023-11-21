@@ -14,10 +14,10 @@ export default function Home() {
     //   <SecondPage />
     // </main>
     <main>
-      {/* <FirstPage />
+      <FirstPage />
       <Slider />
       <SecondPage />
-      <ThirdPage /> */}
+      <ThirdPage />
       <FourthPage />
       {/* <SecondPage />
       <SecondPage /> */}
