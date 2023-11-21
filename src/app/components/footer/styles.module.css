@@ -74,6 +74,7 @@
     white-space: pre-wrap;
     text-align: right;
     line-height: 30px;
+    /* line-height: 30px; */
 }
 
 @media only screen and (max-width: 768px) {
