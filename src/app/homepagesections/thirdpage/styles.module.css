@@ -1,13 +1,14 @@
 .thirdpagewrapper{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
 }
 
 .thirdpagecontainer{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     max-width: 1280px;
     display: flex;
@@ -18,7 +19,7 @@
 }
 
 .textwrapper{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +45,7 @@
 }
 
 .svgwrapper{
-    border: 1px dotted yellow;
+    /* border: 1px dotted yellow; */
     width: 100%;
     max-width: 1280px;
 }

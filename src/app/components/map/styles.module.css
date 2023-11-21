@@ -15,3 +15,9 @@
     stroke-linecap: round;
     /* fill-rule: evenodd; */
 }
+
+.tesr{
+    fill: none;
+    stroke-width: 200px;
+    stroke-linecap: round;
+}
