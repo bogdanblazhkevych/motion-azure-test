@@ -1,0 +1,23 @@
+.cls1{
+    fill: var(--primary-color-2)
+}
+
+.cls2{
+    fill: none;
+    stroke: red;
+    stroke-width: 5px;
+    fill-rule: evenodd;
+}
+
+.path{
+    fill: none;
+    stroke-width: 20px;
+    stroke-linecap: round;
+    /* fill-rule: evenodd; */
+}
+
+.tesr{
+    fill: none;
+    stroke-width: 200px;
+    stroke-linecap: round;
+}

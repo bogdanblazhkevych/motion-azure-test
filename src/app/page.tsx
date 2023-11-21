@@ -2,6 +2,8 @@ import FirstPage from './homepagesections/firstpage/firstpage'
 import styles from './page.module.css'
 import Slider from './components/slider/page'
 import SecondPage from './homepagesections/secondpage/secondpage'
+import ThirdPage from './homepagesections/thirdpage/thirdpage'
+import FourthPage from './homepagesections/fourthpage/fourthpage'
 
 export default function Home() {
 
@@ -12,9 +14,11 @@ export default function Home() {
     //   <SecondPage />
     // </main>
     <main>
-      <FirstPage />
-      {/* <Slider /> */}
+      {/* <FirstPage />
+      <Slider />
       <SecondPage />
+      <ThirdPage /> */}
+      <FourthPage />
       {/* <SecondPage />
       <SecondPage /> */}
     </main>

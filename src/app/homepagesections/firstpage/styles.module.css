@@ -59,12 +59,13 @@
 
 .herotitle{
     /* border: 1px dotted blue; */
-    color: var(--standout-color);
+    /* color: var(--standout-color); */
+    color: var(--secondary-color);
 
     font-size: clamp(32px, 6vw, 48px);
     width: max-content;
     max-width: 100%;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.15;
     /* color: #016e8c; */
     /* font-size: 3.8rem; */
