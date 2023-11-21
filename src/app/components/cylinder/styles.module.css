@@ -1,11 +1,20 @@
 .bigtop{
-    fill: none;
-    stroke: red;
-    stroke-width: 5px;
+    fill: var(--primary-color-4);
+    stroke: var(--standout-color);
+    stroke-width: 40px;
 }
 
 .smallcircle{
     fill: none;
-    stroke: red;
+    fill: var(--primary-color-2);
     stroke-width: 5px;
+}
+
+.svg * { 
+    transform-box: fill-box;
+}
+
+.svg{
+    transform-origin: center;
+    transform: rotateX(60deg) rotate(180deg);
 }
