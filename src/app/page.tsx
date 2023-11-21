@@ -13,9 +13,9 @@ export default function Home() {
     //   <SecondPage />
     // </main>
     <main>
-      <FirstPage />
+      {/* <FirstPage /> */}
       {/* <Slider /> */}
-      <SecondPage />
+      {/* <SecondPage /> */}
       <ThirdPage />
       {/* <SecondPage />
       <SecondPage /> */}
