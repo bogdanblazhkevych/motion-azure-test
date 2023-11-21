@@ -7,10 +7,10 @@ export default function ThirdPage() {
             <div className={styles.thirdpagecontainer}>
                 <div className={styles.textwrapper}>
                     <h1>
-                        some fucking heading
+                        The Global Innovation Ecosystem Platform
                     </h1>
                     <p>
-                        even more fucnking text yapping baout something 
+                        Motion, the global ecosystem platform, a technology-first approach to unlock the power of ecosystem connectedness for speed on innovation. A catalyst for startup success and high-performance innovation ecosystems.
                     </p>
                 </div>
 
