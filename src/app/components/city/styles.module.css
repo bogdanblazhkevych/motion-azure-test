@@ -29,3 +29,10 @@
     color: #2EB9DF;
     color: #1f7994;
 }
+
+@media (prefers-color-scheme: light) {
+    .cls1, .cls2, .cls3, .cls4 {
+        stroke: var(--primary-color-3);
+    }
+  
+  }

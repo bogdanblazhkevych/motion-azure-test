@@ -12,7 +12,12 @@
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
+  /* transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
+
+/* .cardwrapper:hover{
+  transform: rotateY(10deg);
+} */
 
 .cardcontent {
   /* border: 1px solid blue; */

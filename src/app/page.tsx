@@ -19,6 +19,7 @@ export default function Home() {
       <SecondPage />
       <ThirdPage />
       <FourthPage />
+      <ThirdPage />
       {/* <SecondPage />
       <SecondPage /> */}
     </main>
