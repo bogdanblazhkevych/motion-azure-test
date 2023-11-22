@@ -7,18 +7,22 @@ import CardOne from '@/app/components/cardone/cardone'
 import React from 'react'
 
 export default function FourthPage() {
+    const lineref = useRef<SVGLineElement>(null)
+    const linereftwo = useRef<SVGLineElement>(null)
     const cylinderSVGRef = useRef<SVGSVGElement>(null)
     const cylinderRef = useRef<HTMLDivElement>(null)
     const cylinderWrapperRef = useRef<HTMLDivElement>(null)
     const handleCylinderScroll = () => {
         console.log("scrolling...")
-        console.log("cylinderoffsetTop", cylinderRef.current?.getBoundingClientRect())
+        // console.log("cylinderoffsetTop", cylinderRef.current?.getBoundingClientRect())
         // console.log("cylinderWrapperRefoffsettop ", cylinderWrapperRef.current?.getBoundingClientRect())
-        if (! cylinderWrapperRef.current?.getBoundingClientRect() || !cylinderRef.current?.getBoundingClientRect() || !cylinderSVGRef.current) return
+        if (! cylinderWrapperRef.current?.getBoundingClientRect() || !cylinderRef.current?.getBoundingClientRect() || !cylinderSVGRef.current || !lineref.current || !linereftwo.current) return
         const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderRef.current?.getBoundingClientRect().height)
-        const degree = percentage * 180-90;
+        const degree = percentage * 180 - 90;
 
         cylinderSVGRef.current.style.transform = `rotateX(60deg) rotate(${degree}deg)`
+        lineref.current.style.transform = `rotate(${-degree}deg)`
+        linereftwo.current.style.transform = `rotate(${-degree}deg)`
 
 
         // console.log("degrees: ", `${degree}deg`)
@@ -46,7 +50,7 @@ export default function FourthPage() {
 
                 <div className={styles.cylinderwrapper} ref={cylinderWrapperRef}>
                     <div className={styles.cylindercontainer} ref={cylinderRef}>
-                        <Cylinder cylinderSVGRef={cylinderSVGRef}/>
+                        <Cylinder cylinderSVGRef={cylinderSVGRef} lineref={lineref} linereftwo={linereftwo}/>
                     </div>
                 </div>
             </div>
