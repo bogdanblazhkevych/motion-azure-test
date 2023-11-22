@@ -1,7 +1,7 @@
 .bigtop{
     fill: var(--primary-color-4);
     stroke: var(--standout-color);
-    stroke-width: 40px;
+    stroke-width: 20px;
 }
 
 .smallcircle{
