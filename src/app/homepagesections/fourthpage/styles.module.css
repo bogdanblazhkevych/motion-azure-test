@@ -19,7 +19,7 @@
 }
 
 .cardswrapper{
-    /* border: 1px dashed yellow; */
+    border: 1px dashed yellow;
     width: 50%;
     height: max-content;
     /* height: 100%; */
