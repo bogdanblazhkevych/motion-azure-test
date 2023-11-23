@@ -16,12 +16,20 @@
 
 .svg{
     transform-origin: center;
-    /* transform: rotateX(60deg) rotate(180deg); */
+    transform: rotateX(60deg) rotate(180deg) translateY(100%);
+    /* transform: translateY(100%); */
     border: 1px solid red;
     width: 100%;
     overflow: visible;
     position: absolute;
+    opacity: 0;
+    /* transition: translateY 1s linear; */
 }
+
+
+/* .svgshown{
+    transform: rotateX(60deg) rotate(180deg)
+} */
 
 .linebottom{
     transform-origin: 0% 100%;
@@ -32,3 +40,17 @@
     transform-origin: 100% 110px;
     transform: rotate(0deg) rotateX(0deg);
 }
+
+
+.linetop {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    animation: dash 2s linear;
+    animation-fill-mode: forwards; 
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0; 
+    }
+  }

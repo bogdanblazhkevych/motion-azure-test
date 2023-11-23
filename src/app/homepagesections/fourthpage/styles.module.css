@@ -60,3 +60,10 @@
     /* padding-top: 50px; */
     /* position: -webkit-sticky; */
 }
+
+.svgshown{
+    transition: transform 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 100%;
+    transform: rotateX(60deg) rotate(180deg)
+}

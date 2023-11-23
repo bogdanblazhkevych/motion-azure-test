@@ -8,7 +8,7 @@ import React from 'react'
 
 export default function FourthPage() {
     const cylinderSVGRef = useRef<SVGSVGElement>(null)
-    const cylinderRef = useRef<HTMLDivElement>(null)
+    const cylinderContainerRef = useRef<HTMLDivElement>(null)
     const cylinderWrapperRef = useRef<HTMLDivElement>(null)
     const lineOneBottom = useRef<SVGLineElement>(null)
     const lineOneTop = useRef<SVGLineElement>(null)
@@ -16,20 +16,20 @@ export default function FourthPage() {
     const lineTwoTop = useRef<SVGLineElement>(null)
     const lineThreeBottom = useRef<SVGLineElement>(null)
     const lineThreeTop = useRef<SVGLineElement>(null)
+
     const handleCylinderScroll = () => {
         console.log("scrolling...")
-        // console.log("cylinderoffsetTop", cylinderRef.current?.getBoundingClientRect())
-        // console.log("cylinderWrapperRefoffsettop ", cylinderWrapperRef.current?.getBoundingClientRect())
-        if (! cylinderWrapperRef.current || !cylinderRef.current || !cylinderSVGRef.current || !lineThreeTop.current || !lineThreeBottom.current || !lineOneTop.current || !lineOneBottom.current || !lineTwoTop.current || !lineTwoBottom.current) return
-        const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderRef.current?.getBoundingClientRect().height)
+        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTop.current || !lineThreeBottom.current || !lineOneTop.current || !lineOneBottom.current || !lineTwoTop.current || !lineTwoBottom.current) return
+        const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderContainerRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderContainerRef.current?.getBoundingClientRect().height)
         // const degree = percentage * -180 - 90;
         const degree = 180 - ((1 - percentage) * (180 + 90))
 
         // const progress = 1 - x; 
         // const angle = startAngle - (progress * range);
 
-        console.log("percent: ", percentage)
-        console.log(degree)
+        // console.log("percent: ", percentage)
+        // console.log(degree)
+        if(cylinderContainerRef.current.getBoundingClientRect().top > 0) return
 
         cylinderSVGRef.current.style.transform = `rotateX(60deg) rotate(${degree}deg)`
 
@@ -39,14 +39,31 @@ export default function FourthPage() {
         lineTwoBottom.current.style.transform = `rotate(${-degree}deg)`
         lineThreeTop.current.style.transform = `rotate(${-degree}deg)`
         lineThreeBottom.current.style.transform = `rotate(${-degree}deg)`
-
-
-        // console.log("degrees: ", `${degree}deg`)
-        // console.log((cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderRef.current?.getBoundingClientRect().height)) 
-        // console.log("distance: ", (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderRef.current?.getBoundingClientRect().height))
-        // console.log(cylinderWrapperRef.current?.getBoundingClientRect().y - cylinderRef.current?.getBoundingClientRect().height)
-        // console.log("scrolly: ", window.scrollY)
     }
+
+    useEffect(() => {
+        const cylinderWrapper = cylinderWrapperRef.current;
+        const cylinderSVG = cylinderSVGRef.current
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    cylinderSVG?.classList.add(styles.svgshown)
+                }
+            })
+        }, { threshold: 0.2 })
+    
+        if (cylinderWrapper && cylinderSVG) {
+            observer.observe(cylinderWrapper)
+        }
+
+        return () => {
+          if (cylinderWrapper && cylinderSVG) {
+            observer.unobserve(cylinderWrapperRef.current)
+          }
+        };
+    }, []);
+
     useEffect(() => {
         window.addEventListener('scroll', handleCylinderScroll);
     }, [])
@@ -66,7 +83,7 @@ export default function FourthPage() {
                 </div>
 
                 <div className={styles.cylinderwrapper} ref={cylinderWrapperRef}>
-                    <div className={styles.cylindercontainer} ref={cylinderRef}>
+                    <div className={styles.cylindercontainer} ref={cylinderContainerRef}>
                         <Cylinder cylinderSVGRef={cylinderSVGRef} 
                                   lineThreeBottom={lineThreeBottom} 
                                   lineThreeTop={lineThreeTop}
