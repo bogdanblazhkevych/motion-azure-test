@@ -18,7 +18,14 @@ export default function FourthPage() {
         // console.log("cylinderWrapperRefoffsettop ", cylinderWrapperRef.current?.getBoundingClientRect())
         if (! cylinderWrapperRef.current?.getBoundingClientRect() || !cylinderRef.current?.getBoundingClientRect() || !cylinderSVGRef.current || !lineref.current || !linereftwo.current) return
         const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderRef.current?.getBoundingClientRect().height)
-        const degree = percentage * 180 - 90;
+        // const degree = percentage * -180 - 90;
+        const degree = 180 - ((1 - percentage) * (180 + 90))
+
+        // const progress = 1 - x; 
+        // const angle = startAngle - (progress * range);
+
+        console.log("percent: ", percentage)
+        console.log(degree)
 
         cylinderSVGRef.current.style.transform = `rotateX(60deg) rotate(${degree}deg)`
         lineref.current.style.transform = `rotate(${-degree}deg)`
@@ -39,6 +46,7 @@ export default function FourthPage() {
         <div className={styles.fourthpagewrapper}>
             <div className={styles.fourthpagecontainer}>
                 <div className={styles.cardswrapper}>
+
                 <CardOne heading="A catalyst for startup success"
                                         paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>
                 <CardOne heading="A catalyst for startup success"
