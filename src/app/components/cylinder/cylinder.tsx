@@ -3,16 +3,16 @@ import { RefObject, useRef } from 'react'
 
 type CylinderProps = {
     cylinderSVGRef: React.RefObject<SVGSVGElement>;
-    lineThreeBottom: React.RefObject<SVGLineElement>;
-    lineThreeTop: React.RefObject<SVGLineElement>;
-    lineOneBottom: React.RefObject<SVGLineElement>; 
-    lineOneTop: React.RefObject<SVGLineElement>;
-    lineTwoBottom: React.RefObject<SVGLineElement>;
-    lineTwoTop: React.RefObject<SVGLineElement>;
+    lineThreeBottomRef: React.RefObject<SVGLineElement>;
+    lineThreeTopRef: React.RefObject<SVGLineElement>;
+    lineOneBottomRef: React.RefObject<SVGLineElement>; 
+    lineOneTopRef: React.RefObject<SVGLineElement>;
+    lineTwoBottomRef: React.RefObject<SVGLineElement>;
+    lineTwoTopRef: React.RefObject<SVGLineElement>;
 }
 
 export default function Cylinder(props: CylinderProps) {
-    const {cylinderSVGRef, lineOneBottom, lineOneTop, lineTwoBottom, lineTwoTop, lineThreeBottom, lineThreeTop} = props
+    const {cylinderSVGRef, lineOneBottomRef, lineOneTopRef, lineTwoBottomRef, lineTwoTopRef, lineThreeBottomRef, lineThreeTopRef} = props
     return (
         // <div ref={cylinderSVGRef}>
             <svg ref={cylinderSVGRef} className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
@@ -25,14 +25,14 @@ export default function Cylinder(props: CylinderProps) {
                 <circle id="small3" className={styles.smallcircle} cx="504" cy="162" r="18" />
 
 
-                <line ref={lineOneBottom} className={styles.linebottom} x1="504" y1="845.5" x2="504" y2="733.5" stroke="red" strokeWidth="5px"/>
-                <line ref={lineOneTop} className={styles.linetop} x1="504" y1="733.5" x2="-500" y2="733.5" stroke="red" strokeWidth="5px"/>
+                <line ref={lineOneBottomRef} className={styles.linebottom} x1="504" y1="845.5" x2="504" y2="733.5" stroke="red" strokeWidth="5px"/>
+                <line ref={lineOneTopRef} className={styles.linetop} x1="504" y1="733.5" x2="-500" y2="733.5" stroke="red" strokeWidth="5px"/>
 
-                <line ref={lineTwoBottom} className={styles.linebottom} x1="144.5" y1="500" x2="144.5" y2="388" stroke="red" strokeWidth="5px"/>
-                <line ref={lineTwoTop} className={styles.linetop} x1="144.5" y1="388" x2="-500" y2="388" stroke="red" strokeWidth="5px"/>
+                <line ref={lineTwoBottomRef} className={styles.linebottom} x1="144.5" y1="500" x2="144.5" y2="388" stroke="red" strokeWidth="5px"/>
+                <line ref={lineTwoTopRef} className={styles.linetop} x1="144.5" y1="388" x2="-500" y2="388" stroke="red" strokeWidth="5px"/>
 
-                <line ref={lineThreeBottom} className={styles.linebottom} x1="504" y1="162" x2="504" y2="50" stroke="red" strokeWidth="5px"/>
-                <line ref={lineThreeTop}className={styles.linetop} x1="504" y1="50" x2="-500" y2="50" stroke="red" strokeWidth="5px"/>
+                <line ref={lineThreeBottomRef} className={styles.linebottom} x1="504" y1="162" x2="504" y2="50" stroke="red" strokeWidth="5px"/>
+                <line ref={lineThreeTopRef}className={styles.linetop} x1="504" y1="50" x2="-500" y2="50" stroke="red" strokeWidth="5px"/>
             </svg>
         // </div>
     )

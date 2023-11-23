@@ -45,8 +45,8 @@
 .linetop {
     stroke-dasharray: 1200;
     stroke-dashoffset: 1200;
-    animation: dash 2s linear;
-    animation-fill-mode: forwards; 
+    /* animation: dash 2s linear;
+    animation-fill-mode: forwards;  */
   }
   
   @keyframes dash {
