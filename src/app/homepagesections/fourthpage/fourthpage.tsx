@@ -38,17 +38,43 @@ export default function FourthPage() {
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
 
         if (degree < 117 && degree > 65) {
-            lineOneTopRef.current?.classList.remove(styles.lineanimatedclose)
-            lineOneTopRef.current?.classList.add(styles.lineanimatedopen)
+            lineOneTopRef.current?.classList.remove(styles.linetopanimatedclose)
+            lineOneTopRef.current?.classList.add(styles.linetopanimatedopen)
+
+            lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
+            lineOneBottomRef.current?.classList.add(styles.linebottomanimatedopen)
         } else {
-            lineOneTopRef.current?.classList.remove(styles.lineanimatedopen)
-            lineOneTopRef.current?.classList.add(styles.lineanimatedclose)
+            lineOneTopRef.current?.classList.remove(styles.linetopanimatedopen)
+            lineOneTopRef.current?.classList.add(styles.linetopanimatedclose)
+
+            lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
+            lineOneBottomRef.current?.classList.add(styles.linebottomanimatedclose)
         }
         if (degree < 16 && degree > -37) {
-            lineTwoTopRef.current?.classList.add(styles.lineanimatedopen)
+            lineTwoTopRef.current?.classList.remove(styles.linetopanimatedclose)
+            lineTwoTopRef.current?.classList.add(styles.linetopanimatedopen)
+
+            lineTwoBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
+            lineTwoBottomRef.current?.classList.add(styles.linebottomanimatedopen)
+        } else {
+            lineTwoTopRef.current?.classList.remove(styles.linetopanimatedopen)
+            lineTwoTopRef.current?.classList.add(styles.linetopanimatedclose)
+
+            lineTwoBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
+            lineTwoBottomRef.current?.classList.add(styles.linebottomanimatedclose)
         }
         if (degree < -84) {
-            lineThreeTopRef.current?.classList.add(styles.lineanimatedopen)
+            lineThreeTopRef.current?.classList.remove(styles.linetopanimatedclose)
+            lineThreeTopRef.current?.classList.add(styles.linetopanimatedopen)
+
+            lineThreeBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
+            lineThreeBottomRef.current?.classList.add(styles.linebottomanimatedopen)
+        } else {
+            lineThreeTopRef.current?.classList.remove(styles.linetopanimatedopen)
+            lineThreeTopRef.current?.classList.add(styles.linetopanimatedclose)
+
+            lineThreeBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
+            lineThreeBottomRef.current?.classList.add(styles.linebottomanimatedclose)
         }
 
         cylinderSVGRef.current.style.transform = `rotateX(60deg) rotate(${degree}deg)`
