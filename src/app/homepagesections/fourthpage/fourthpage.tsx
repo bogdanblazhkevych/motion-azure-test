@@ -38,64 +38,28 @@ export default function FourthPage() {
 
         const getDashoffset = (percent: number, dashoffset: number, topUpperBound: number, topLowerBound: number, bottomUpperBound: number, bottomLowerBound: number) => {
             if (percent > topUpperBound) {
-                return 0
+                return dashoffset
             } else if (percent < topUpperBound && percent > topLowerBound) {
-                return ((topUpperBound - percent) / (topUpperBound - topLowerBound)) * dashoffset
+                return (dashoffset - ((topUpperBound - percent) / (topUpperBound - topLowerBound)) * dashoffset)
             } else if (percent < topLowerBound && percent > bottomUpperBound) {
                 return 0
             } else if (percent < bottomUpperBound && percent > bottomLowerBound) {
-                return ((percent - bottomUpperBound) / (bottomUpperBound - bottomLowerBound)) * dashoffset
+                return ((percent - bottomUpperBound) / (bottomUpperBound - bottomLowerBound)) * -dashoffset
             } else if (percent < bottomLowerBound) {
-                return 0
+                return dashoffset
             }
         }
 
-        //call function to get stroke-dashoffset
-        const dashoffset = getDashoffset(percentage, 1200, 0.6, 0.7, 0.2, 0.1);
-        console.log(dashoffset)
-        //apply stroke-dashoffset
+        const lineOneDashoffset = getDashoffset(percentage, 1200, 0.76, 0.66, 0.60, 0.56);
+        lineOneTopRef.current.style.strokeDashoffset = `${lineOneDashoffset}`; 
 
-        // if (degree < 110 && degree > 70) {
-        //     lineOneTopRef.current?.classList.remove(styles.linetopanimatedclose)
-        //     lineOneTopRef.current?.classList.add(styles.linetopanimatedopen)
+        const lineTwoDashoffset = getDashoffset(percentage, 1200, 0.38, 0.35, 0.24, 0.21);
+        lineTwoTopRef.current.style.strokeDashoffset = `${lineTwoDashoffset}`; 
 
-        //     lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
-        //     lineOneBottomRef.current?.classList.add(styles.linebottomanimatedopen)
-        // } else {
-        //     lineOneTopRef.current?.classList.remove(styles.linetopanimatedopen)
-        //     lineOneTopRef.current?.classList.add(styles.linetopanimatedclose)
+        const lineThreeDashoffset = getDashoffset(percentage, 1200, 0.02, 0, 0, 0);
+        lineThreeTopRef.current.style.strokeDashoffset = `${lineThreeDashoffset}`; 
 
-        //     lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
-        //     lineOneBottomRef.current?.classList.add(styles.linebottomanimatedclose)
-        // }
 
-        if (degree < 16 && degree > -37) {
-            lineTwoTopRef.current?.classList.remove(styles.linetopanimatedclose)
-            lineTwoTopRef.current?.classList.add(styles.linetopanimatedopen)
-
-            lineTwoBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
-            lineTwoBottomRef.current?.classList.add(styles.linebottomanimatedopen)
-        } else {
-            lineTwoTopRef.current?.classList.remove(styles.linetopanimatedopen)
-            lineTwoTopRef.current?.classList.add(styles.linetopanimatedclose)
-
-            lineTwoBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
-            lineTwoBottomRef.current?.classList.add(styles.linebottomanimatedclose)
-        }
-
-        if (degree < -84) {
-            lineThreeTopRef.current?.classList.remove(styles.linetopanimatedclose)
-            lineThreeTopRef.current?.classList.add(styles.linetopanimatedopen)
-
-            lineThreeBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
-            lineThreeBottomRef.current?.classList.add(styles.linebottomanimatedopen)
-        } else {
-            lineThreeTopRef.current?.classList.remove(styles.linetopanimatedopen)
-            lineThreeTopRef.current?.classList.add(styles.linetopanimatedclose)
-
-            lineThreeBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
-            lineThreeBottomRef.current?.classList.add(styles.linebottomanimatedclose)
-        }
 
         cylinderSVGRef.current.style.transform = `rotateX(60deg) rotate(${degree}deg)`
 
