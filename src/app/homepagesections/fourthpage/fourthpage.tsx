@@ -32,24 +32,42 @@ export default function FourthPage() {
         // const progress = 1 - x; 
         // const angle = startAngle - (progress * range);
 
-        // console.log("percent: ", percentage)
-        console.log(degree)
+        console.log("percent: ", percentage);
 
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
 
-        if (degree < 110 && degree > 70) {
-            lineOneTopRef.current?.classList.remove(styles.linetopanimatedclose)
-            lineOneTopRef.current?.classList.add(styles.linetopanimatedopen)
-
-            lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
-            lineOneBottomRef.current?.classList.add(styles.linebottomanimatedopen)
-        } else {
-            lineOneTopRef.current?.classList.remove(styles.linetopanimatedopen)
-            lineOneTopRef.current?.classList.add(styles.linetopanimatedclose)
-
-            lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
-            lineOneBottomRef.current?.classList.add(styles.linebottomanimatedclose)
+        const getDashoffset = (percent: number, dashoffset: number, topUpperBound: number, topLowerBound: number, bottomUpperBound: number, bottomLowerBound: number) => {
+            if (percent > topUpperBound) {
+                return 0
+            } else if (percent < topUpperBound && percent > topLowerBound) {
+                return ((topUpperBound - percent) / (topUpperBound - topLowerBound)) * dashoffset
+            } else if (percent < topLowerBound && percent > bottomUpperBound) {
+                return 0
+            } else if (percent < bottomUpperBound && percent > bottomLowerBound) {
+                return ((percent - bottomUpperBound) / (bottomUpperBound - bottomLowerBound)) * dashoffset
+            } else if (percent < bottomLowerBound) {
+                return 0
+            }
         }
+
+        //call function to get stroke-dashoffset
+        const dashoffset = getDashoffset(percentage, 1200, 0.6, 0.7, 0.2, 0.1);
+        console.log(dashoffset)
+        //apply stroke-dashoffset
+
+        // if (degree < 110 && degree > 70) {
+        //     lineOneTopRef.current?.classList.remove(styles.linetopanimatedclose)
+        //     lineOneTopRef.current?.classList.add(styles.linetopanimatedopen)
+
+        //     lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedclose)
+        //     lineOneBottomRef.current?.classList.add(styles.linebottomanimatedopen)
+        // } else {
+        //     lineOneTopRef.current?.classList.remove(styles.linetopanimatedopen)
+        //     lineOneTopRef.current?.classList.add(styles.linetopanimatedclose)
+
+        //     lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
+        //     lineOneBottomRef.current?.classList.add(styles.linebottomanimatedclose)
+        // }
 
         if (degree < 16 && degree > -37) {
             lineTwoTopRef.current?.classList.remove(styles.linetopanimatedclose)
