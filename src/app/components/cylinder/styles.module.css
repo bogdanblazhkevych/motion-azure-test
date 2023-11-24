@@ -39,7 +39,8 @@
 .linetop{
     transform-origin: 100% 110px;
     transform: rotate(0deg) rotateX(0deg);
-    stroke: var(--primary-color-4)
+    stroke: var(--primary-color-4);
+    stroke-width: 15px;
 }
 
 .linetop {
@@ -52,7 +53,8 @@
     stroke-dasharray: 200;
     stroke-dashoffset: 200;
     /* transition: stroke-dashoffset 0.2s linear; */
-    stroke: var(--primary-color-4)
+    stroke: var(--primary-color-4);
+    stroke-width: 10px;
 }
   
 /* @keyframes dash {

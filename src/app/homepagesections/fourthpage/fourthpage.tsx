@@ -37,7 +37,7 @@ export default function FourthPage() {
 
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
 
-        if (degree < 110 && degree > 80) {
+        if (degree < 110 && degree > 70) {
             lineOneTopRef.current?.classList.remove(styles.linetopanimatedclose)
             lineOneTopRef.current?.classList.add(styles.linetopanimatedopen)
 
@@ -50,6 +50,7 @@ export default function FourthPage() {
             lineOneBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
             lineOneBottomRef.current?.classList.add(styles.linebottomanimatedclose)
         }
+
         if (degree < 16 && degree > -37) {
             lineTwoTopRef.current?.classList.remove(styles.linetopanimatedclose)
             lineTwoTopRef.current?.classList.add(styles.linetopanimatedopen)
@@ -63,6 +64,7 @@ export default function FourthPage() {
             lineTwoBottomRef.current?.classList.remove(styles.linebottomanimatedopen)
             lineTwoBottomRef.current?.classList.add(styles.linebottomanimatedclose)
         }
+
         if (degree < -84) {
             lineThreeTopRef.current?.classList.remove(styles.linetopanimatedclose)
             lineThreeTopRef.current?.classList.add(styles.linetopanimatedopen)
