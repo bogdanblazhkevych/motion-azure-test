@@ -37,7 +37,7 @@ export default function FourthPage() {
 
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
 
-        if (degree < 117 && degree > 65) {
+        if (degree < 110 && degree > 80) {
             lineOneTopRef.current?.classList.remove(styles.linetopanimatedclose)
             lineOneTopRef.current?.classList.add(styles.linetopanimatedopen)
 
@@ -91,7 +91,7 @@ export default function FourthPage() {
         const cylinderWrapper = cylinderWrapperRef.current;
         const cylinderSVG = cylinderSVGRef.current
         const cardOne = cardOneRef.current
-        const lineOneTop = lineOneTopRef.current
+        // const lineOneTop = lineOneTopRef.current
 
         const cylinderWrapperObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {

@@ -19,7 +19,7 @@
 }
 
 .cardswrapper{
-    border: 1px dashed yellow;
+    /* border: 1px dashed yellow; */
     width: 50%;
     height: max-content;
     /* height: 100%; */
@@ -28,14 +28,14 @@
     flex-direction: column;
     justify-content: space-evenly;
     gap: 120px;
-    padding: 0px 80px 0px 0px;
+    padding: 00px 0px 0px 0px;
     padding-top: 30%;
     z-index: 20;
     
 }
 
 .cylinderwrapper{
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     width: 50%;
     height: 100%;
     position: relative;
@@ -47,10 +47,11 @@
 }
 
 .cylindercontainer{
-    border: 1px solid violet;
+    /* border: 1px solid violet; */
     /* width: 100%; */
     aspect-ratio: 1 / 1;
     height: 30%;
+    max-width: 35vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +74,7 @@
 }
 
 .linetopanimatedopen{
-    transition: stroke-dashoffset 0.5s linear 0.2s;
+    transition: stroke-dashoffset 0.3s linear 0.1s;
     stroke-dashoffset: 0;
 }
 .linetopanimatedclose{
@@ -83,8 +84,17 @@
 
 .linebottomanimatedopen{
     stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.1s linear;
 }
 .linebottomanimatedclose{
-    transition: stroke-dashoffset 0.5s linear 0.2s;
+    transition: stroke-dashoffset 0.1s linear 0.3s;
     stroke-dashoffset: 200;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .cardswrapper{
+        padding-left: 80px;
+    }
+
 }
