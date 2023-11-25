@@ -1,7 +1,10 @@
+import FirstPage from "../homepagesections/firstpage/firstpage";
+import PartnerLanding from "./partnerlanding/partnerlanding";
+
 export default function Partner() {
     return (
-        <div>
-            oh, hello there 
-        </div>
+        <main>
+            <PartnerLanding />
+        </main>
     )
 }

@@ -1,7 +1,8 @@
 .fourthpagewrapper {
     /* border: 1px solid red; */
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    max-height: 2160px;
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
@@ -23,13 +24,13 @@
     width: 50%;
     height: max-content;
     /* height: 100%; */
-    min-height: 100%;
+    /* min-height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 120px;
     padding: 00px 0px 0px 0px;
-    padding-top: 30%;
+    /* padding-top: 30%; */
     padding-left: 24px;
     z-index: 20;
     
@@ -51,7 +52,9 @@
     /* border: 1px solid violet; */
     /* width: 100%; */
     aspect-ratio: 1 / 1;
+    /* height: min-content; */
     height: 30%;
+    max-height: 400px;
     max-width: 35vw;
     display: flex;
     justify-content: center;
@@ -92,6 +95,17 @@
     stroke-dashoffset: 200;
 }
 
+.invisiblecard{
+    opacity: 0%;
+}
+
+
+/* @media only screen and (min-width: 1280px) {
+    .cardswrapper{
+        padding-top: 220px;
+    }
+
+} */
 
 @media only screen and (max-width: 1280px) {
     .cardswrapper{
