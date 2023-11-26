@@ -60,7 +60,7 @@ export default function FourthPage() {
         lineThreeTopRef.current.style.strokeDashoffset = `${lineThreeDashoffset}`; 
 
 
-
+        // cylinderContainerRef.current.style.transform = `scale(0.5)`
         cylinderSVGRef.current.style.transform = `rotateX(60deg) rotate(${degree}deg)`
 
         lineOneTopRef.current.style.transform = `rotate(${-degree}deg)`
@@ -81,7 +81,7 @@ export default function FourthPage() {
             entries.forEach((entry) => {
                 // console.log(entry)
                 if (entry.isIntersecting) {
-                    cylinderSVG?.classList.add(styles.svgshown)
+                    // cylinderSVG?.classList.add(styles.svgshown)
                 }
             })
         }, { threshold: 0.2 })
@@ -91,7 +91,7 @@ export default function FourthPage() {
                 // console.log(entry)
                 if (entry.isIntersecting) {
                     console.log("added className")
-                    cylinderSVG?.classList.add(styles.svgnotransition)
+                    // cylinderSVG?.classList.add(styles.svgnotransition)
                 }
             })
         }, { threshold: 0.5 })

@@ -1,18 +1,18 @@
 .bigtop{
     fill: var(--secondary-color-2);
     stroke: var(--standout-color);
-    stroke-width: 20px;
-
-    /* fill: white; */
-    /* stroke: black; */
-    /* stroke: white; */
-    /* stroke-width: 1px; */
+    stroke-width: 19px;
 }
 
 .smallcircle{
     fill: none;
     fill: var(--primary-color-2);
     stroke-width: 5px;
+}
+
+.testwrapper{
+    position: relative;
+    /* transform: scale(0.6); */
 }
 
 .svg * { 
@@ -24,62 +24,46 @@
     width: 100%;
     height: 100%;
     transform-origin: center;
-    transform: rotateX(60deg) rotate(180deg) translateY(100%);
-    width: 100%;
+    /* transform: rotateX(60deg) rotate(180deg) translateY(100%); */
+    transform: rotateX(60deg) rotate(180deg);
     overflow: visible;
     position: relative;
     opacity: 100;
 }
 
-.bigbottom{
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform: rotateX(60deg) rotate(180deg) translateY(100%);
-    position: absolute;
-    bottom: -75%;
+.cylinderbottomsvg{
     /* border: 1px solid green; */
+
+    /* width: 100%;
+    height: 100%; */
+    transform-origin: center;
+    /* transform: rotateX(60deg) rotate(180deg) translateY(100%); */
+    transform: rotateX(60deg) rotate(180deg);
+    position: absolute;
+    bottom: -24%;
 }
 
 .cylinderbottom{
-    
+    fill: #006599;
+    stroke: var(--standout-color);
+    stroke-width: 20px;
+}
+
+.cylinderfillsvg{
     position: absolute;
     bottom: -26%;
-    /* border: 1px solid yellow; */
 }   
 
-.bigbottomsvg{
-    /* fill: var(--secondary-color-2); */
+.cylinderfill{
     fill: #006599;
     stroke: var(--standout-color);
     stroke-width: 20px;
-
-    /* stroke: white;
-    stroke-width: 1px; */
-    /* fill: #006599 */
-}
-
-.cylinderbottom{
-
-    /* stroke: white;
-    stroke-width: 10px; */
-}
-
-.cylinderbottomfill{
-    /* fill: var(--secondary-color-2); */
-    fill: #006599;
-    stroke: var(--standout-color);
-    stroke-width: 20px;
-
-    /* stroke: white;
-    stroke-width: 1px; */
-    /* fill: #006599 */
 }
 
 .svg g{
+    border: 1px solid green;
     transform-box: fill-box;
     transform-origin: center;
-    /* border: 1px solid green; */
     position: absolute;
     width: 50px;
     height: 50px;

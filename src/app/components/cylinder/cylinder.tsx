@@ -14,16 +14,17 @@ type CylinderProps = {
 export default function Cylinder(props: CylinderProps) {
     const {cylinderSVGRef, lineOneBottomRef, lineOneTopRef, lineTwoBottomRef, lineTwoTopRef, lineThreeBottomRef, lineThreeTopRef} = props
     return (
-        // <div ref={cylinderSVGRef}>
         <>
-
-            <svg className={styles.bigbottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-                <ellipse className={styles.bigbottomsvg} cx="500" cy="500" rx="404.106" r="400" />
+        {/* <div ref={cylinderSVGRef}> */}
+        <div className={styles.testwrapper}>
+        {/* <div style={{transform: 'scale(0.5'}}> */}
+        
+            <svg className={styles.cylinderbottomsvg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+                <ellipse className={styles.cylinderbottom} cx="500" cy="500" rx="404.106" r="400" />
             </svg>
 
-            <svg className={styles.cylinderbottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-                {/* <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" className={styles.cylinderbottom} d="M505.188,540.487c225.048,0,407.487,90.67,407.487,202.516S730.236,945.519,505.188,945.519,97.7,854.849,97.7,743,280.139,540.487,505.188,540.487Z"/> */}
-                <path className={styles.cylinderbottomfill} d="M 96 490.831 
+            <svg className={styles.cylinderfillsvg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+                <path className={styles.cylinderfill} d="M 96 490.831 
                                                                L 96 242.815 
                                                                L 904 242.815 
                                                                L 904 490.831"/>
@@ -50,6 +51,7 @@ export default function Cylinder(props: CylinderProps) {
                 <line ref={lineThreeTopRef}className={styles.linetop} x1="504" y1="50" x2="-500" y2="50"/>
 
             </svg>
+        </div>
         </>
     )
 }

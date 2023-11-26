@@ -37,19 +37,20 @@
 }
 
 .cylinderwrapper{
-    /* border: 1px dashed green; */
+    border: 1px dashed green;
     width: 50%;
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
+    /* transform: scale(0.5); */
     /* align-items: center; */
     /* display: initial; */
     /* overflow: auto; */
 }
 
 .cylindercontainer{
-    /* border: 1px solid violet; */
+    border: 1px solid violet;
     /* width: 100%; */
     aspect-ratio: 1 / 1;
     /* height: min-content; */
@@ -62,6 +63,9 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    /* transform-origin: center; */
+    /* transform: scale(0.9); */
+    /* transform: translateY(-50%) */
     /* margin-top: 50px; */
     /* padding-top: 50px; */
     /* position: -webkit-sticky; */
