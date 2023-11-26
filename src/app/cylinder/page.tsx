@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import { RefObject, useRef } from 'react'
+// import { RefObject, useRef } from 'react'
 
 type CylinderProps = {
     cylinderSVGRef: React.RefObject<SVGSVGElement>;
@@ -11,25 +11,10 @@ type CylinderProps = {
     lineTwoTopRef: React.RefObject<SVGLineElement>;
 }
 
-export default function Cylinder(props: CylinderProps) {
+export default function Hlinder(props: CylinderProps) {
     const {cylinderSVGRef, lineOneBottomRef, lineOneTopRef, lineTwoBottomRef, lineTwoTopRef, lineThreeBottomRef, lineThreeTopRef} = props
     return (
         // <div ref={cylinderSVGRef}>
-        <>
-
-            <svg className={styles.bigbottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-                <ellipse className={styles.bigbottomsvg} cx="500" cy="500" rx="404.106" r="400" />
-            </svg>
-
-            <svg className={styles.cylinderbottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-                {/* <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" className={styles.cylinderbottom} d="M505.188,540.487c225.048,0,407.487,90.67,407.487,202.516S730.236,945.519,505.188,945.519,97.7,854.849,97.7,743,280.139,540.487,505.188,540.487Z"/> */}
-                <path className={styles.cylinderbottomfill} d="M 96 490.831 
-                                                               L 96 242.815 
-                                                               L 904 242.815 
-                                                               L 904 490.831"/>
-            </svg>
-
-
             <svg ref={cylinderSVGRef} className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
                 <defs>
                 </defs>
@@ -48,8 +33,7 @@ export default function Cylinder(props: CylinderProps) {
 
                 <line ref={lineThreeBottomRef} className={styles.linebottom} x1="504" y1="162" x2="504" y2="50"/>
                 <line ref={lineThreeTopRef}className={styles.linetop} x1="504" y1="50" x2="-500" y2="50"/>
-
             </svg>
-        </>
+        // </div>
     )
 }

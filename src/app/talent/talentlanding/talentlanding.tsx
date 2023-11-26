@@ -13,7 +13,7 @@ export default function TalentLanding() {
                 </h1>
 
                 <p>
-                Join our high performance team of visionary technology experts and industry specialists with passion for innovation.
+                    Join our high performance team of visionary technology experts and industry specialists with passion for innovation.
                 </p>
             </div>
         </div>
