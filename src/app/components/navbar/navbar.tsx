@@ -48,7 +48,7 @@ const navRef = useRef<HTMLElement>(null)
                         </div>
                     </li>
                     <li>
-                        <Link href='/' onClick={() => setNavActive(false)}>
+                        <Link href='/waitlist' onClick={() => setNavActive(false)}>
                             Join Waitlist
                         </Link>
                         <div className={styles.linkdesc}>

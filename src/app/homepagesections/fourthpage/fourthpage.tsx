@@ -79,12 +79,19 @@ export default function FourthPage() {
 
         const lineOneDashoffset = getDashoffset(percentage, 1200, 0.76, 0.66, 0.60, 0.56);
         lineOneTopRef.current.style.strokeDashoffset = `${lineOneDashoffset}`; 
+        // const lineOneBottomDashoffset = getDashoffset(percentage, 200, 0.76, 0.66, 0.60, 0.56);
+        const lineOneBottomDashoffset = getDashoffset(percentage, 200, 0.85, 0.76, 0.56, 0.46);
+        lineOneBottomRef.current.style.strokeDashoffset = `${lineOneBottomDashoffset}`; 
 
         const lineTwoDashoffset = getDashoffset(percentage, 1200, 0.38, 0.35, 0.24, 0.21);
         lineTwoTopRef.current.style.strokeDashoffset = `${lineTwoDashoffset}`; 
+        const lineTwoBottomDashoffset = getDashoffset(percentage, 200, 0.45, 0.38, 0.21, 0.11);
+        lineTwoBottomRef.current.style.strokeDashoffset = `${lineTwoBottomDashoffset}`; 
 
         const lineThreeDashoffset = getDashoffset(percentage, 1200, 0.02, 0, 0, 0);
         lineThreeTopRef.current.style.strokeDashoffset = `${lineThreeDashoffset}`; 
+        const lineThreeBottomDashoffset = getDashoffset(percentage, 200, 0.10, 0.02, 0, 0);
+        lineThreeBottomRef.current.style.strokeDashoffset = `${lineThreeBottomDashoffset}`; 
 
 
         // cylinderContainerRef.current.style.transform = `scale(0.5)`

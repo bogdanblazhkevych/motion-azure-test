@@ -1,9 +1,9 @@
 import styles from './styles.module.css'
 
-export default function Waitlist() {
+export default function WaitlistLanding() {
     return(
-        <div className={styles.talentlandingwrapper}>
-            <div className={styles.talentlandingcontainer}>
+        <div className={styles.waitlistlandingwrapper}>
+            <div className={styles.waitlistlandingcontainer}>
                 <div>
                     logo
                 </div>
