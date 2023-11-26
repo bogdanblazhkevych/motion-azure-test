@@ -11,6 +11,8 @@ export default function FourthPage() {
     const cardTwoRef = useRef<HTMLDivElement>(null)
     const cardThreeRef = useRef<HTMLDivElement>(null)
 
+    const svgDivWrapperRef = useRef<HTMLDivElement>(null);
+
     const cylinderWrapperRef = useRef<HTMLDivElement>(null)
     const cylinderContainerRef = useRef<HTMLDivElement>(null)
     const cylinderSVGRef = useRef<SVGSVGElement>(null)
@@ -24,7 +26,7 @@ export default function FourthPage() {
 
     const handleCylinderScroll = () => {
         console.log("scrolling...")
-        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current) return
+        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current) return
         const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderContainerRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderContainerRef.current?.getBoundingClientRect().height)
         // const degree = percentage * -180 - 90;
         const degree = 180 - ((1 - percentage) * (180 + 90))
@@ -32,7 +34,7 @@ export default function FourthPage() {
         // const progress = 1 - x; 
         // const angle = startAngle - (progress * range);
 
-        console.log("percent: ", percentage);
+        // console.log("percent: ", percentage);
 
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
 
@@ -49,6 +51,31 @@ export default function FourthPage() {
                 return dashoffset
             }
         }
+
+        const getOpacity = (percent: number, startPercent: number, endPercent: number) => {
+            if (percent < startPercent && percent > endPercent) {
+                return ((percent - startPercent) / (startPercent - endPercent)) * -100
+            } else {
+                return 100
+            }
+        }
+
+        const getTranslateY = (percent: number, startPercent: number, endPercent: number) => {
+            if (percent < startPercent && percent > endPercent) {
+                return -50 - (((percent - startPercent) / (startPercent - endPercent)) * 50)
+            } else {
+                return 0
+            }
+        }
+
+        const translateY = getTranslateY(percentage, 1, 0.85);
+        svgDivWrapperRef.current.style.transform = `translateY(${translateY}%)`
+        console.log(`translateY(${translateY})%`)
+        console.log(cylinderContainerRef.current.style.transformStyle)
+
+        const opacity = getOpacity(percentage, 1, 0.85)
+        cylinderContainerRef.current.style.opacity = `${opacity}%`
+        // console.log(opacity);
 
         const lineOneDashoffset = getDashoffset(percentage, 1200, 0.76, 0.66, 0.60, 0.56);
         lineOneTopRef.current.style.strokeDashoffset = `${lineOneDashoffset}`; 
@@ -71,42 +98,42 @@ export default function FourthPage() {
         lineThreeBottomRef.current.style.transform = `rotate(${-degree}deg)`
     }
 
-    useEffect(() => {
-        const cylinderWrapper = cylinderWrapperRef.current;
-        const cylinderSVG = cylinderSVGRef.current
-        const cardOne = cardOneRef.current
-        // const lineOneTop = lineOneTopRef.current
+    // useEffect(() => {
+    //     const cylinderWrapper = cylinderWrapperRef.current;
+    //     const cylinderSVG = cylinderSVGRef.current
+    //     const cardOne = cardOneRef.current
+    //     // const lineOneTop = lineOneTopRef.current
 
-        const cylinderWrapperObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                // console.log(entry)
-                if (entry.isIntersecting) {
-                    // cylinderSVG?.classList.add(styles.svgshown)
-                }
-            })
-        }, { threshold: 0.2 })
+    //     const cylinderWrapperObserver = new IntersectionObserver((entries) => {
+    //         entries.forEach((entry) => {
+    //             // console.log(entry)
+    //             if (entry.isIntersecting) {
+    //                 // cylinderSVG?.classList.add(styles.svgshown)
+    //             }
+    //         })
+    //     }, { threshold: 0.2 })
 
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                // console.log(entry)
-                if (entry.isIntersecting) {
-                    console.log("added className")
-                    // cylinderSVG?.classList.add(styles.svgnotransition)
-                }
-            })
-        }, { threshold: 0.5 })
+    //     const cardObserver = new IntersectionObserver((entries) => {
+    //         entries.forEach((entry) => {
+    //             // console.log(entry)
+    //             if (entry.isIntersecting) {
+    //                 console.log("added className")
+    //                 // cylinderSVG?.classList.add(styles.svgnotransition)
+    //             }
+    //         })
+    //     }, { threshold: 0.5 })
     
-        if (cylinderWrapper && cylinderSVG && cardOne) {
-            cylinderWrapperObserver.observe(cylinderWrapper)
-            cardObserver.observe(cardOne)
-        }
+    //     if (cylinderWrapper && cylinderSVG && cardOne) {
+    //         cylinderWrapperObserver.observe(cylinderWrapper)
+    //         cardObserver.observe(cardOne)
+    //     }
 
-        return () => {
-          if (cylinderWrapper && cylinderSVG && cardOne) {
-              cylinderWrapperObserver.unobserve(cylinderWrapper)
-          }
-        };
-    }, []);
+    //     return () => {
+    //       if (cylinderWrapper && cylinderSVG && cardOne) {
+    //           cylinderWrapperObserver.unobserve(cylinderWrapper)
+    //       }
+    //     };
+    // }, []);
 
     useEffect(() => {
         window.addEventListener('scroll', handleCylinderScroll);
@@ -142,7 +169,8 @@ export default function FourthPage() {
                                   lineOneBottomRef={lineOneBottomRef} 
                                   lineOneTopRef={lineOneTopRef} 
                                   lineTwoBottomRef={lineTwoBottomRef} 
-                                  lineTwoTopRef={lineTwoTopRef}/>
+                                  lineTwoTopRef={lineTwoTopRef}
+                                  svgDivWrapperRef={svgDivWrapperRef}/>
                     </div>
                 </div>
             </div>

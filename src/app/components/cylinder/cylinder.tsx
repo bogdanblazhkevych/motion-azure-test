@@ -9,14 +9,15 @@ type CylinderProps = {
     lineOneTopRef: React.RefObject<SVGLineElement>;
     lineTwoBottomRef: React.RefObject<SVGLineElement>;
     lineTwoTopRef: React.RefObject<SVGLineElement>;
+    svgDivWrapperRef: React.RefObject<HTMLDivElement>;
 }
 
 export default function Cylinder(props: CylinderProps) {
-    const {cylinderSVGRef, lineOneBottomRef, lineOneTopRef, lineTwoBottomRef, lineTwoTopRef, lineThreeBottomRef, lineThreeTopRef} = props
+    const {cylinderSVGRef, lineOneBottomRef, lineOneTopRef, lineTwoBottomRef, lineTwoTopRef, lineThreeBottomRef, lineThreeTopRef, svgDivWrapperRef} = props
     return (
         <>
         {/* <div ref={cylinderSVGRef}> */}
-        <div className={styles.testwrapper}>
+        <div className={styles.testwrapper} ref={svgDivWrapperRef}>
         {/* <div style={{transform: 'scale(0.5'}}> */}
         
             <svg className={styles.cylinderbottomsvg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
