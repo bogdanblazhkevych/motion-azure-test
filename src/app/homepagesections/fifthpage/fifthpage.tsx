@@ -82,17 +82,21 @@ export default function FifthPage() {
     )
 }
 
-function getAnimateTransform(order: number, start: number, fill: number, fillout: number, pause: number, end?: number) {
-    // const _id = `scale-in-${order + 1}`;
+function getAnimateTransform(order: number, start: number, scalein: number, scaleout: number, end: number) {
+    //scalein parameter should be getLinearGradient's fill + fillout value 
     const _start = order * 0.25;
-    const _fill = _start + fill;
-    const _fillout = _fill + fillout;
-    const _pause = _fillout + pause;
+    const _scalein = _start + scalein;
+    const _scaleout = _scalein + scaleout;
+    // const _pause = _fillout + pause;
     const _end = _start + 0.25
 
     return(
-        <animateTransform attributeName="transform" type="scale" values="1;1.15;1;1" dur="10s" keyTimes="0;0.2;0.25;1" repeatCount="indefinite">
-
+        <animateTransform attributeName="transform" 
+                          type="scale" 
+                          values="1;1;1.15;1;1;1" 
+                          dur="10s" 
+                          keyTimes={`0:${_start};${_scalein};${_scaleout};${_end};1`} 
+                          repeatCount="indefinite">
         </animateTransform>      
     )
 }
