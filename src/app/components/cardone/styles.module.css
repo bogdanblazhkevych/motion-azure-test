@@ -5,6 +5,7 @@
   flex: 0 0 calc(32% - 0.3rem);
   /* height: 350px; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 6px;
@@ -24,7 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
   background-image: radial-gradient(var(--primary-color-2) 1px, transparent 1px);
   background-position: 50% 50%;
@@ -35,10 +36,14 @@
   gap: 1rem;
 }
 
+.cardcontent[data-align="left"] * {
+  text-align: left;
+}
+
 .cardcontent h1 {
   color: var(--secondary-color);
   /* font-size: clamp(20px, 2.5vw, 32px); */
-  font-size: 20px
+  font-size: 20px;
 }
 
 .cardcontent p {
@@ -72,6 +77,17 @@
 .cardwrapper:hover:after {
   top: 25%;
   opacity: 1;
+}
+
+.bannerwrapper{
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.bannerwrapper svg path{
+  stroke: white;
+  stroke-width: 3px;
+  fill: none;
 }
 
 @media only screen and (max-width: 1024px) {
