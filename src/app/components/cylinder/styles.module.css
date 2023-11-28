@@ -3,6 +3,10 @@
     /* stroke: var(--standout-color); */
     stroke: #2F528F;
     stroke-width: 19px;
+
+    /* fill: none;
+    stroke: white;
+    stroke-width: 1px; */
 }
 
 .smallcircle{
@@ -41,7 +45,7 @@
     /* transform: rotateX(60deg) rotate(180deg) translateY(100%); */
     transform: rotateX(60deg) rotate(180deg);
     position: absolute;
-    bottom: -24%;
+    bottom: -16%;
 }
 
 .cylinderbottom{
@@ -49,18 +53,30 @@
     /* stroke: var(--standout-color); */
     stroke: #2F528F;
     stroke-width: 20px;
+
+    /* fill: none;
+    stroke: white;
+    stroke-width: 1px; */
+
 }
 
 .cylinderfillsvg{
     position: absolute;
-    bottom: -26%;
+    bottom: -24%;
+    /* border: 1px solid red; */
 }   
 
 .cylinderfill{
     fill: #006599;
     /* stroke: var(--standout-color); */
+
     stroke: #2F528F;
     stroke-width: 20px;
+
+    /* stroke: white;
+    stroke-width: 1px;
+    fill: none; */
+
 }
 
 .svg g{
@@ -89,7 +105,7 @@
     transform: rotate(0deg) rotateX(0deg);
     stroke: var(--primary-color-4);
     stroke-width: 20px;
-    stroke-linecap: round;
+    /* stroke-linecap: round; */
 }
 
 .linetop {
@@ -99,7 +115,7 @@
 }
 
 .linebottom {
-    stroke-linecap: round;
+    /* stroke-linecap: round; */
     stroke-dasharray: 200;
     stroke-dashoffset: 200;
     /* transition: stroke-dashoffset 0.2s linear; */

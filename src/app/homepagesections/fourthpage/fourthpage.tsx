@@ -70,8 +70,8 @@ export default function FourthPage() {
 
         const translateY = getTranslateY(percentage, 1, 0.85);
         svgDivWrapperRef.current.style.transform = `translateY(${translateY}%)`
-        console.log(`translateY(${translateY})%`)
-        console.log(cylinderContainerRef.current.style.transformStyle)
+        // console.log(`translateY(${translateY})%`)
+        // console.log(cylinderContainerRef.current.style.transformStyle)
 
         const opacity = getOpacity(percentage, 1, 0.85)
         cylinderContainerRef.current.style.opacity = `${opacity}%`
@@ -105,42 +105,29 @@ export default function FourthPage() {
         lineThreeBottomRef.current.style.transform = `rotate(${-degree}deg)`
     }
 
-    // useEffect(() => {
-    //     const cylinderWrapper = cylinderWrapperRef.current;
-    //     const cylinderSVG = cylinderSVGRef.current
-    //     const cardOne = cardOneRef.current
-    //     // const lineOneTop = lineOneTopRef.current
+    useEffect(() => {
+        const cylinderWrapper = cylinderWrapperRef.current;
+        const cylindercontainer = cylinderContainerRef.current
 
-    //     const cylinderWrapperObserver = new IntersectionObserver((entries) => {
-    //         entries.forEach((entry) => {
-    //             // console.log(entry)
-    //             if (entry.isIntersecting) {
-    //                 // cylinderSVG?.classList.add(styles.svgshown)
-    //             }
-    //         })
-    //     }, { threshold: 0.2 })
-
-    //     const cardObserver = new IntersectionObserver((entries) => {
-    //         entries.forEach((entry) => {
-    //             // console.log(entry)
-    //             if (entry.isIntersecting) {
-    //                 console.log("added className")
-    //                 // cylinderSVG?.classList.add(styles.svgnotransition)
-    //             }
-    //         })
-    //     }, { threshold: 0.5 })
+        const cylinderWrapperObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry.isIntersecting)
+                if (!entry.isIntersecting && cylindercontainer) {
+                    cylindercontainer.style.opacity = "0%"
+                }
+            })
+        }, { threshold: 0.0 })
     
-    //     if (cylinderWrapper && cylinderSVG && cardOne) {
-    //         cylinderWrapperObserver.observe(cylinderWrapper)
-    //         cardObserver.observe(cardOne)
-    //     }
+        if (cylinderWrapper) {
+            cylinderWrapperObserver.observe(cylinderWrapper)
+        }
 
-    //     return () => {
-    //       if (cylinderWrapper && cylinderSVG && cardOne) {
-    //           cylinderWrapperObserver.unobserve(cylinderWrapper)
-    //       }
-    //     };
-    // }, []);
+        return () => {
+          if (cylinderWrapper) {
+              cylinderWrapperObserver.unobserve(cylinderWrapper)
+          }
+        };
+    }, []);
 
     useEffect(() => {
         window.addEventListener('scroll', handleCylinderScroll);
@@ -159,13 +146,17 @@ export default function FourthPage() {
                                 paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>
                     </div>
                     <div ref={cardTwoRef}>
-                        <CardOne heading="A catalyst for startup success"
-                                paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>
+                        <CardOne heading="Infrastructure for global connectedness"
+                                paragraph="Designed for speed and efficiency, Motion directly connects thousands of companies of all sizes - from start-ups to Fortune 500s, R&D organizations, and government entities - with millions of entrepreneurs, researchers, inventors, and investors around the globe. Offering products and solutions that meet their fast-paced innovation needs."/>
                     </div>
                     <div ref={cardThreeRef}>
-                        <CardOne heading="A catalyst for startup success"
-                                paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>
+                        <CardOne heading="Tools to speed-up innovation"
+                                paragraph="Using the latest technology and tools, intelligently matched data, real-time analytics, and insights capabilities, Motion innovation infrastructure will allow users to collaborate, communicate, and transact anywhere, anytime. All in one easy-to-use platform."/>
                     </div>
+                    {/* <div className={styles.invisiblecard}>
+                        <CardOne heading="A catalyst for startup success"
+                                    paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>                        
+                    </div> */}
                 </div>
 
                 <div className={styles.cylinderwrapper} ref={cylinderWrapperRef}>
