@@ -26,7 +26,7 @@ export default function FourthPage() {
 
     const handleCylinderScroll = () => {
         console.log("scrolling...")
-        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current) return
+        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current || !cardOneRef.current) return
         const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderContainerRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderContainerRef.current?.getBoundingClientRect().height)
         // const degree = percentage * -180 - 90;
         const degree = 180 - ((1 - percentage) * (180 + 90))
@@ -68,18 +68,23 @@ export default function FourthPage() {
             }
         }
 
+        if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.5)){
+            console.log("FIRING")
+        }
+
+        // console.log(cardOneRef.current?.getBoundingClientRect().top)
+
+        //bring cylinder down
         const translateY = getTranslateY(percentage, 1, 0.85);
         svgDivWrapperRef.current.style.transform = `translateY(${translateY}%)`
-        // console.log(`translateY(${translateY})%`)
-        // console.log(cylinderContainerRef.current.style.transformStyle)
 
+        //fade cylinder in
         const opacity = getOpacity(percentage, 1, 0.85)
         cylinderContainerRef.current.style.opacity = `${opacity}%`
-        // console.log(opacity);
 
+        //controlling line behavior
         const lineOneDashoffset = getDashoffset(percentage, 1200, 0.76, 0.66, 0.60, 0.56);
         lineOneTopRef.current.style.strokeDashoffset = `${lineOneDashoffset}`; 
-        // const lineOneBottomDashoffset = getDashoffset(percentage, 200, 0.76, 0.66, 0.60, 0.56);
         const lineOneBottomDashoffset = getDashoffset(percentage, 200, 0.85, 0.76, 0.56, 0.46);
         lineOneBottomRef.current.style.strokeDashoffset = `${lineOneBottomDashoffset}`; 
 
@@ -107,24 +112,40 @@ export default function FourthPage() {
 
     useEffect(() => {
         const cylinderWrapper = cylinderWrapperRef.current;
-        const cylindercontainer = cylinderContainerRef.current
+        const cylindercontainer = cylinderContainerRef.current;
+
+        const cardOne = cardOneRef.current;
 
         const cylinderWrapperObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry.isIntersecting)
+                // console.log(entry.isIntersecting)
                 if (!entry.isIntersecting && cylindercontainer) {
                     cylindercontainer.style.opacity = "0%"
                 }
             })
-        }, { threshold: 0.0 })
+        }, { threshold: 0.0, });
+
+        // const cardOneObserver = new IntersectionObserver((entries) => {
+        //     entries.forEach((entry) => {
+        //         console.log(entry.intersectionRatio)
+        //     })
+        // }, {root: null, 
+        //     rootMargin: '0px',
+        //     threshold: 0.7})
     
         if (cylinderWrapper) {
             cylinderWrapperObserver.observe(cylinderWrapper)
         }
 
+        // if (cardOne) {
+        //     cardOneObserver.observe(cardOne)
+        // }
+
         return () => {
-          if (cylinderWrapper) {
-              cylinderWrapperObserver.unobserve(cylinderWrapper)
+          if (cylinderWrapper && cardOne) {
+              cylinderWrapperObserver.unobserve(cylinderWrapper);
+
+            //   cardOneObserver.unobserve(cardOne)
           }
         };
     }, []);

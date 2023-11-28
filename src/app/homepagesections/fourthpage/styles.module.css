@@ -1,11 +1,12 @@
 .fourthpagewrapper {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 100%;
     /* min-height: 100vh; */
     max-height: 2160px;
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
+    padding-bottom: 120px;
 }
 
 .fourthpagecontainer {
