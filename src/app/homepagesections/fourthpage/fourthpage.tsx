@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import { useEffect, useRef } from 'react'
 import CardOne from '@/app/components/cardone/cardone'
 import React from 'react'
+import { AiFillCodeSandboxSquare } from 'react-icons/ai'
 
 export default function FourthPage() {
     const cardOneRef = useRef<HTMLDivElement>(null)
@@ -37,6 +38,8 @@ export default function FourthPage() {
         // console.log("percent: ", percentage);
 
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
+
+        console.log(percentage)
 
         const getDashoffset = (percent: number, dashoffset: number, topUpperBound: number, topLowerBound: number, bottomUpperBound: number, bottomLowerBound: number) => {
             if (percent > topUpperBound) {
@@ -94,8 +97,37 @@ export default function FourthPage() {
         cylinderContainerRef.current.style.opacity = `${opacity}%`
 
         //controlling line behavior
-        const lineOneDashoffset = getDashoffset(percentage, 1200, 0.76, 0.66, 0.60, 0.56);
-        lineOneTopRef.current.style.strokeDashoffset = `${lineOneDashoffset}`; 
+        
+        //(padding * 100%) / total height
+        const gapPercentage = (120 * 1) / cylinderWrapperRef.current.getBoundingClientRect().height
+
+        //(card height * 100%) / total height
+        const cardPercentage = (cardOneRef.current.getBoundingClientRect().height * 1) / cylinderWrapperRef.current.getBoundingClientRect().height
+        console.log(cardPercentage)
+        const testOffset = (cylinderContainerRef.current.getBoundingClientRect().height * 0.15) / cylinderWrapperRef.current.getBoundingClientRect().height
+
+        console.log("testoffset: ", testOffset)
+
+        const topUpperBound = 1 - cardPercentage - gapPercentage + testOffset
+
+        const topLowerBound = 1 - cardPercentage - gapPercentage - (cardPercentage * 0.2) + testOffset
+
+        const bottomUpperBound = 1 - cardPercentage - gapPercentage - (cardPercentage * 0.8) + testOffset;
+
+        const bottomLowerBound = 1 - cardPercentage - gapPercentage - cardPercentage + testOffset
+
+        console.log("topUpperBound: ", topUpperBound)
+        console.log("topLowerBound: ", topLowerBound)
+        console.log("bottomUpperBound: ", bottomUpperBound)
+        console.log("bottomLowerBound: ", bottomLowerBound)
+
+        const lineOneDashoffsettest = getDashoffset(percentage, 1200, topUpperBound, topLowerBound, bottomUpperBound, bottomLowerBound);
+        lineOneTopRef.current.style.strokeDashoffset = `${lineOneDashoffsettest}`; 
+
+        console.log("yoffsettest: ", lineOneDashoffsettest)
+
+        // const lineOneDashoffset = getDashoffset(percentage, 1200, 0.76, 0.66, 0.60, 0.56);
+        // lineOneTopRef.current.style.strokeDashoffset = `${lineOneDashoffset}`; 
         const lineOneBottomDashoffset = getDashoffset(percentage, 200, 0.85, 0.76, 0.56, 0.46);
         lineOneBottomRef.current.style.strokeDashoffset = `${lineOneBottomDashoffset}`; 
 

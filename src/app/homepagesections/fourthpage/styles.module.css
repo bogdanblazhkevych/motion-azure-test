@@ -30,6 +30,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     gap: 120px;
+    /* gap: 100%; */
     padding: 00px 0px 0px 0px;
     /* padding-top: 30%; */
     padding-left: 24px;
