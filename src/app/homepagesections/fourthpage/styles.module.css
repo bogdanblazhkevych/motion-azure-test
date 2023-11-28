@@ -1,5 +1,5 @@
 .fourthpagewrapper {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     /* min-height: 100vh; */
     max-height: 2160px;
@@ -35,6 +35,17 @@
     padding-left: 24px;
     z-index: 20;
     
+}
+
+.card{
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.cardopen{
+    transform: translateY(0%);
+    opacity: 100%;
+    transition: transform 0.5s linear, opacity 0.5s linear ;
 }
 
 .cylinderwrapper{

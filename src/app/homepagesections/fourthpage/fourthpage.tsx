@@ -26,7 +26,7 @@ export default function FourthPage() {
 
     const handleCylinderScroll = () => {
         console.log("scrolling...")
-        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current || !cardOneRef.current) return
+        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current || !cardOneRef.current || !cardTwoRef.current || !cardThreeRef.current) return
         const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderContainerRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderContainerRef.current?.getBoundingClientRect().height)
         // const degree = percentage * -180 - 90;
         const degree = 180 - ((1 - percentage) * (180 + 90))
@@ -68,8 +68,19 @@ export default function FourthPage() {
             }
         }
 
-        if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.5)){
-            console.log("FIRING")
+        if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.2)){
+            console.log("FIRING");
+            cardOneRef.current.classList.add(`${styles.cardopen}`)
+        }
+
+        if (cardTwoRef.current?.getBoundingClientRect().top < (cardTwoRef.current?.getBoundingClientRect().height * 0.2)){
+            console.log("FIRING");
+            cardTwoRef.current.classList.add(`${styles.cardopen}`)
+        }
+
+        if (cardThreeRef.current?.getBoundingClientRect().top < (cardThreeRef.current?.getBoundingClientRect().height * 0.2)){
+            console.log("FIRING");
+            cardThreeRef.current.classList.add(`${styles.cardopen}`)
         }
 
         // console.log(cardOneRef.current?.getBoundingClientRect().top)
@@ -118,34 +129,19 @@ export default function FourthPage() {
 
         const cylinderWrapperObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                // console.log(entry.isIntersecting)
                 if (!entry.isIntersecting && cylindercontainer) {
                     cylindercontainer.style.opacity = "0%"
                 }
             })
         }, { threshold: 0.0, });
-
-        // const cardOneObserver = new IntersectionObserver((entries) => {
-        //     entries.forEach((entry) => {
-        //         console.log(entry.intersectionRatio)
-        //     })
-        // }, {root: null, 
-        //     rootMargin: '0px',
-        //     threshold: 0.7})
     
         if (cylinderWrapper) {
             cylinderWrapperObserver.observe(cylinderWrapper)
         }
 
-        // if (cardOne) {
-        //     cardOneObserver.observe(cardOne)
-        // }
-
         return () => {
           if (cylinderWrapper && cardOne) {
               cylinderWrapperObserver.unobserve(cylinderWrapper);
-
-            //   cardOneObserver.unobserve(cardOne)
           }
         };
     }, []);
@@ -160,19 +156,19 @@ export default function FourthPage() {
                 <div className={styles.cardswrapper}>
                     <div className={styles.invisiblecard}>
                         <CardOne heading="A catalyst for startup success"
-                                    paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>                        
+                                    paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building a company that will fundamentally change how R&D and Innovation teams work - a product called Motion Platform that will leverage AI-powered data analytics to empower leaders for successful decision-making and execution. It will connect companies of all sizes with innovators around the globe to meet their fast-paced innovation needs."/>                        
                     </div>
-                    <div ref={cardOneRef}>
+                    <div ref={cardOneRef} className={styles.card}>
                         <CardOne heading="A catalyst for startup success"
-                                paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>
+                                paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building a company that will fundamentally change how R&D and Innovation teams work - a product called Motion Platform that will leverage AI-powered data analytics to empower leaders for successful decision-making and execution. It will connect companies of all sizes with innovators around the globe to meet their fast-paced innovation needs."/>
                     </div>
-                    <div ref={cardTwoRef}>
+                    <div ref={cardTwoRef} className={styles.card}>
                         <CardOne heading="Infrastructure for global connectedness"
-                                paragraph="Designed for speed and efficiency, Motion directly connects thousands of companies of all sizes - from start-ups to Fortune 500s, R&D organizations, and government entities - with millions of entrepreneurs, researchers, inventors, and investors around the globe. Offering products and solutions that meet their fast-paced innovation needs."/>
+                                paragraph="Designed for speed and efficiency, Motion directly connects thousands of companies - from startups to Fortune 500s, R&D organizations, government entities - with millions of innovators around the globe, including entrepreneurs, researchers, inventors, and investors. It offers an easy-to-use platform and products that allow users to collaborate, communicate and transact with innovators around the globe to meet their fast-paced innovation needs."/>
                     </div>
-                    <div ref={cardThreeRef}>
+                    <div ref={cardThreeRef} className={styles.card}>
                         <CardOne heading="Tools to speed-up innovation"
-                                paragraph="Using the latest technology and tools, intelligently matched data, real-time analytics, and insights capabilities, Motion innovation infrastructure will allow users to collaborate, communicate, and transact anywhere, anytime. All in one easy-to-use platform."/>
+                                paragraph="Using the latest technology and tools, Motion innovation infrastructure intelligently matches data and provides real-time analytics and insights capabilities. This allows users to collaborate, communicate, and transact anywhere, anytime through an easy-to-use platform. As part of our commitment to continued innovation, we are constantly evaluating opportunities and deliver even more value through emerging technologies such as AI and distributed ledgers."/>
                     </div>
                     {/* <div className={styles.invisiblecard}>
                         <CardOne heading="A catalyst for startup success"
