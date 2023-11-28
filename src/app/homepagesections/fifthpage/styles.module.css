@@ -61,8 +61,6 @@
     justify-content: center;
     align-items: center;
     width: 40%;
-    /* flex: 1; */
-    /* height: max-content; */
     height: 80%;
     max-height: 800px;
     position: relative;
@@ -74,9 +72,37 @@
     /* width: 100%; */
 }
 
+.phonebackground{
+    fill: white;
+}
+
 .phonepath{
     fill: var(--secondary-color);
     /* stroke: aqua; */
+}
+
+.building{
+    fill: none;
+    /* stroke: black; */
+    stroke-width: 3px;
+    transform-origin: center;
+}
+
+.freedomtower{
+}
+
+
+.eiffeltower{
+}
+
+@keyframes stroketest {
+    0% {
+        stroke-dashoffset: 1300;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 .freedomtowersvg{
