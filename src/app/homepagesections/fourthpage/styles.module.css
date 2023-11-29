@@ -118,6 +118,16 @@
     opacity: 0%;
 }
 
+.bluepath{
+    stroke: var(--standout-color) !important;
+    stroke-width: 5px !important;
+    stroke-linecap: round;
+}
+
+.motionpath{
+    stroke-width: 8px !important;
+}
+
 
 /* @media only screen and (min-width: 1280px) {
     .cardswrapper{

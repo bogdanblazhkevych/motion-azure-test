@@ -93,8 +93,8 @@ function getAnimateTransform(order: number, start: number, scalein: number, scal
     return(
         <animateTransform attributeName="transform" 
                           type="scale" 
-                          values="1;1;1.15;1;1;1" 
-                          dur="10s" 
+                          values="1;1;1.1;1;1;1" 
+                          dur="20s" 
                           keyTimes={`0;${_start};${_scalein};${_scaleout};${_end};1`} 
                           repeatCount="indefinite">
         </animateTransform>      
@@ -128,8 +128,8 @@ function getLinearGradient(order: number, start: number, fill: number, fillout: 
             <stop offset="50%" stop-color="white"/>
             <stop offset="100%" stop-color="white"/>
 
-            <animate attributeName="y1" values="100%;100%;-50%;-50%;-100%;-100%;-100%" dur="10s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" />
-            <animate attributeName="y2" values="100%;300%;300%;300%;0%;0%;0%;" dur="10s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="y1" values="100%;100%;-50%;-50%;-100%;-100%;-100%" dur="20s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="y2" values="100%;300%;300%;300%;0%;0%;0%;" dur="20s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" />
         </linearGradient>
     )
 }

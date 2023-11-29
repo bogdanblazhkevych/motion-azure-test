@@ -67,6 +67,20 @@
     padding: 0 24px;
 }
 
+.svgiconcontainer{
+    /* border: 1px dashed blue; */
+    width: 5rem;
+}
+
+.svgiconcontainer svg{
+    width: 100%;
+    height: 100%;
+}
+
+.bluepath{
+    stroke: var(--standout-color) !important
+}
+
 @media only screen and (max-width: 768px) {
     .cardscontainer {
         padding: 0 16px;
