@@ -132,7 +132,7 @@ export default function FormPage() {
                                 </div>
 
                             </div>
-                            
+
                             <div className={styles.longinputcontainer}>
 
                                 <div className={`${styles.singleinputgroup} ${styles.companynameinputgroup}`}>
@@ -231,7 +231,7 @@ export default function FormPage() {
                             </div>
 
 
-                            <button type="submit">Submit</button>
+                            <button type="submit" className={styles.submitbutton}>Submit</button>
                         </form>
 
                     </div>
