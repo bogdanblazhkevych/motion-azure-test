@@ -3,7 +3,16 @@
 import { useState } from 'react';
 import styles from './styles.module.css'
 
+interface FormInputDataInterface {
+    name: string,
+    value: string,
+    onChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void,
+    required: boolean,
+    labelText: string
+}
+
 export default function FormPage() {
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -31,13 +40,92 @@ export default function FormPage() {
         e.preventDefault();
         // submit formData to API 
     }
+
+    const formInputData: FormInputDataInterface[] = [
+        {
+            name: 'firstName',
+            value: formData.firstName,
+            onChange: handleChange,
+            required: true,
+            labelText: "First Name"
+        },
+        {
+            name: 'lastName',
+            value: formData.lastName,
+            onChange: handleChange,
+            required: true,
+            labelText: 'Last Name'
+        },
+        {
+            name: 'companyName',
+            value: formData.companyName,
+            onChange: handleChange,
+            required: true,
+            labelText: 'Company Name'
+        },
+        {
+            name: 'businessEmail',
+            value: formData.email,
+            onChange: handleChange,
+            required: true,
+            labelText: 'Business Email'
+        },
+        {
+            name: 'title',
+            value: formData.title,
+            onChange: handleChange,
+            required: true,
+            labelText: 'Title'
+        },
+        {
+            name: 'phoneNumber',
+            value: formData.phoneNumber,
+            onChange: handleChange,
+            required: true,
+            labelText: 'Phone Number'
+        },
+        {
+            name: 'city',
+            value: formData.city,
+            onChange: handleChange,
+            required: true,
+            labelText: 'City'
+        },
+        {
+            name: 'country',
+            value: formData.country,
+            onChange: handleChange,
+            required: true,
+            labelText: 'Country'
+        },
+    ]
     return (
         <div className={styles.formpagewrapper}>
+
             <div className={styles.formpagecontainer}>
 
                 <div className={styles.formwrapper}>
 
                     <div className={styles.formcontainer}>
+
+                        {/* <form>
+                            {formInputData.map((formInput, index) => {
+                                return (
+                                    <div className={styles.singleinputgroup}>
+
+                                        <input 
+                                            name={formInput.name}
+                                            value={formInput.value}
+                                            onChange={handleChange}
+                                            required={formInput.required}
+                                        />
+
+                                        <label htmlFor={formInput.name}>{formInput.labelText}</label>
+
+                                    </div>
+                                )
+                            })}
+                        </form> */}
 
                         <form className={styles.form} onSubmit={handleSubmit}>
 
@@ -239,26 +327,20 @@ export default function FormPage() {
                 </div>
 
             </div>
+
         </div>
     )
 }
 
-interface FormInputDataInterface {
-    name: string,
-    value: string,
-    onChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void,
-    required: boolean,
-    labelText: string
-}
 
 function FormInput(formInputData: FormInputDataInterface) {
-    return(
+    return (
         <div className={styles.singleinputgroup}>
-            <input 
+            <input
                 name={formInputData.name}
                 value={formInputData.value}
                 onChange={formInputData.onChange}
-                required={formInputData.required}/>
+                required={formInputData.required} />
 
             <label htmlFor={formInputData.name}>{formInputData.labelText}</label>
         </div>
