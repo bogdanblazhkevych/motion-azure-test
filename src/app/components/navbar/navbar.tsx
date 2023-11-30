@@ -44,11 +44,11 @@ const navRef = useRef<HTMLElement>(null)
                             Become a Partner
                         </Link>
                         <div className={styles.linkdesc}>
-                        Access to a global innovation and startup ecosystem
+                            Access to a global innovation and startup ecosystem
                         </div>
                     </li>
                     <li>
-                        <Link href='/' onClick={() => setNavActive(false)}>
+                        <Link href='/waitlist' onClick={() => setNavActive(false)}>
                             Join Waitlist
                         </Link>
                         <div className={styles.linkdesc}>
@@ -56,7 +56,7 @@ const navRef = useRef<HTMLElement>(null)
                         </div>
                     </li>
                     <li>
-                        <Link href='/' onClick={() => setNavActive(false)}>
+                        <Link href='/talent' onClick={() => setNavActive(false)}>
                             Talent
                         </Link>
                         <div className={styles.linkdesc}>

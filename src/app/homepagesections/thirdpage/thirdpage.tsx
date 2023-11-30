@@ -1,5 +1,6 @@
 import Map from '@/app/components/map/map'
 import styles from './styles.module.css'
+import Logo from '@/app/components/logo/page'
 
 export default function ThirdPage() {
     return(
@@ -16,6 +17,7 @@ export default function ThirdPage() {
 
                 <div className={styles.svgwrapper}>
                     <Map />
+                    {/* <Logo /> */}
                 </div>
             </div>
         </div>

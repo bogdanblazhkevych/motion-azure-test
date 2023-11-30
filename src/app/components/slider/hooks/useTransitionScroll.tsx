@@ -7,12 +7,12 @@ const useTransitionScroll = (
     const [scrollY, setScrollY] = useState<number>(0);
     
     const handleScroll = () => {
-        console.log("here")
+        // console.log("here")
         setScrollY(window.scrollY)
     }
 
     useEffect(() => {
-        console.log("using effect")
+        // console.log("using effect")
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);

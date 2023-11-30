@@ -4,6 +4,7 @@ import Slider from './components/slider/page'
 import SecondPage from './homepagesections/secondpage/secondpage'
 import ThirdPage from './homepagesections/thirdpage/thirdpage'
 import FourthPage from './homepagesections/fourthpage/fourthpage'
+import FifthPage from './homepagesections/fifthpage/fifthpage'
 
 export default function Home() {
 
@@ -14,11 +15,12 @@ export default function Home() {
     //   <SecondPage />
     // </main>
     <main>
-      {/* <FirstPage />
+      <FirstPage />
       <Slider />
       <SecondPage />
-      <ThirdPage /> */}
+      <ThirdPage />
       <FourthPage />
+      <FifthPage />
       {/* <SecondPage />
       <SecondPage /> */}
     </main>

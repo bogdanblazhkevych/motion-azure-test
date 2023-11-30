@@ -1,14 +1,16 @@
 .fourthpagewrapper {
-    border: 1px solid red;
-    width: 100vw;
-    min-height: 100vh;
+    /* border: 1px solid red; */
+    width: 100%;
+    /* min-height: 100vh; */
+    max-height: 2160px;
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
+    padding-bottom: 20%;
 }
 
 .fourthpagecontainer {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     max-width: 1280px;
     display: flex;
@@ -19,19 +21,140 @@
 }
 
 .cardswrapper{
-    border: 1px dashed yellow;
+    /* border: 1px dashed yellow; */
     width: 50%;
-    height: 100%;
+    height: max-content;
+    /* height: 100%; */
+    /* min-height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 120px;
+    /* gap: 100%; */
+    padding: 00px 0px 0px 0px;
+    /* padding-top: 30%; */
+    padding-left: 24px;
+    z-index: 20;
+    
+}
+
+.card{
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.cardopen{
+    transform: translateY(0%);
+    opacity: 100%;
+    transition: transform 0.5s linear, opacity 0.5s linear ;
 }
 
 .cylinderwrapper{
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     width: 50%;
     height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* transform: scale(0.5); */
+    /* align-items: center; */
+    /* display: initial; */
+    /* overflow: auto; */
 }
 
 .cylindercontainer{
-    border: 1px solid violet;
-    width: 100%;
+    /* border: 1px solid violet; */
+    /* width: 100%; */
+    aspect-ratio: 1 / 1;
+    /* height: min-content; */
     height: 30%;
+    max-height: 400px;
+    max-width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    opacity: 0;
+    /* transform: translateY(0%) */
+    /* transform-origin: center; */
+    /* transform: scale(0.9); */
+    /* transform: translateY(-50%) */
+    /* margin-top: 50px; */
+    /* padding-top: 50px; */
+    /* position: -webkit-sticky; */
+}
+
+.svgshown{
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 100%;
+    transform: rotateX(60deg) rotate(180deg)
+}
+
+.svgnotransition{
+    transition: none !important 
+}
+
+.linetopanimatedopen{
+    transition: stroke-dashoffset 0.3s linear 0.1s;
+    stroke-dashoffset: 0;
+}
+.linetopanimatedclose{
+    transition: stroke-dashoffset 0.3s linear;
+    stroke-dashoffset: 1200;
+}
+
+.linebottomanimatedopen{
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.1s linear;
+}
+.linebottomanimatedclose{
+    transition: stroke-dashoffset 0.1s linear 0.3s;
+    stroke-dashoffset: 200;
+}
+
+.invisiblecard{
+    opacity: 0%;
+}
+
+.bluepath{
+    stroke: var(--standout-color) !important;
+    stroke-width: 5px !important;
+    stroke-linecap: round;
+}
+
+.motionpath{
+    stroke-width: 8px !important;
+}
+
+
+/* @media only screen and (min-width: 1280px) {
+    .cardswrapper{
+        padding-top: 220px;
+    }
+
+} */
+
+@media only screen and (max-width: 1280px) {
+    .cardswrapper{
+        padding-left: 80px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .cylinderwrapper{
+        display: none;
+    }
+
+    .cardswrapper{
+        width: 100%;
+        padding: 0px;
+        gap: 16px;
+    }
+
+    .fourthpagecontainer{
+        padding: 0px 16px;
+    }
 }
