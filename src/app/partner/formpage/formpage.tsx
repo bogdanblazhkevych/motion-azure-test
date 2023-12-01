@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './styles.module.css'
+import Logo from '@/app/components/logo/page';
 
 export default function FormPage() {
     const [formData, setFormData] = useState({
@@ -35,9 +36,9 @@ export default function FormPage() {
         <div className={styles.formpagewrapper}>
             <div className={styles.formpagecontainer}>
 
-                <div className={styles.formwrapper}>
+                {/* <div className={styles.formwrapper}> */}
 
-                    <div className={styles.formcontainer}>
+                    {/* <div className={styles.formcontainer}> */}
 
                         <form className={styles.form} onSubmit={handleSubmit}>
 
@@ -234,8 +235,24 @@ export default function FormPage() {
                             <button type="submit" className={styles.submitbutton}>Submit</button>
                         </form>
 
-                    </div>
+                    {/* </div> */}
 
+                {/* </div> */}
+
+                <div className={styles.textcontainer}>
+                    <h1>
+                        Thank you for your interest in the Motion Global Partner Program.
+                    </h1>
+
+                    <p>
+                        Fill out the form below to learn more about the Motion Partner Program, a global community focused on customer success and growth. A member of our Partner Program team will contact you directly to verify your information and begin the membership process. 
+                    </p>
+                    
+                    <div className={styles.logowrapper}>
+                        <div className={styles.logocontainer}>
+                            <Logo />
+                        </div>
+                    </div>
                 </div>
 
             </div>
