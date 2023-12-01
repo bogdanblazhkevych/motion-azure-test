@@ -1,9 +1,7 @@
 .cardwrapper {
   border: 3px solid var(--primary-color-2);
   background-color: var(--primary-color);
-  /* flex: 0 0 32%; */
   flex: 0 0 calc(32% - 0.3rem);
-  /* height: 350px; */
   display: flex;
   flex-direction: column;
   justify-content: center;

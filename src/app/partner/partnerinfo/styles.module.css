@@ -1,0 +1,41 @@
+.partnerinfowrapper {
+    border: 1px solid red;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partnerinfocontainer {
+    border: 1px solid blue;
+
+    width: 100%;
+    max-width: 1280px;
+    min-height: 100vh;
+}
+
+.motionlogopath{
+    stroke: none !important;
+    fill: var(--standout-color) !important;
+}
+
+.cardscontainer{
+    /* width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 24px; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 16px;
+    padding: 16px;  
+    /* grid-auto-flow: dense;   */
+    /* align-items: start;  */
+    align-items: flex-end;
+}

@@ -20,6 +20,7 @@
 .formpagecontainer form {
     /* border: 1px solid yellow; */
     width: 50%;
+    /* min-width: 600px; */
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -241,4 +242,15 @@
 	100% {
 		background-position: 0% 100%;
 	}
+}
+
+@media only screen and (max-width: 768px) {
+    .cardscontainer {
+        padding: 0 16px;
+    }
+
+    .formpagecontainer form{
+        width: 100%;
+    }
+
 }
