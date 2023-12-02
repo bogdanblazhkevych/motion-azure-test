@@ -84,16 +84,47 @@
 .building{
     fill: none;
     /* stroke: black; */
+    stroke: #267e99;
+    stroke-width: 3px;
+    transform-origin: center;
+}
+
+.buildingaccents{
+    fill: none;
+    /* stroke: black; */
+    /* stroke: #267e99; */
     stroke-width: 3px;
     transform-origin: center;
 }
 
 .freedomtower{
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
 }
 
+
+.taipei{
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+}
+
+.bigben{
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+}
 
 .eiffeltower{
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
 }
+/* .test{
+    fill: none;
+    stroke: black;
+    stroke-width: 3px;
+    transform-origin: center;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+} */
 
 @keyframes stroketest {
     0% {
