@@ -73,4 +73,11 @@
 
 .selectwrapperlabel{
     position: absolute;
-}   
+}  
+
+@media only screen and (max-width: 768px) {
+    .cardscontainer {
+        padding: 0 16px;
+    }
+
+}

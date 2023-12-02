@@ -7,14 +7,15 @@ interface CardOnePropsInterface {
     icon?: JSX.Element,
     banner?: JSX.Element,
     mobileOnly?: boolean,
-    padding?: boolean
+    padding?: boolean,
+    clickable?: boolean
 }
 
 export default function CardOne(props: CardOnePropsInterface){
-    const { heading, paragraph, textAlign, banner, mobileOnly, icon, padding } = props;
+    const { heading, paragraph, textAlign, banner, mobileOnly, icon, padding, clickable } = props;
 
     return(
-        <div className={styles.cardwrapper}>
+        <div className={styles.cardwrapper} data-clickable={clickable}>
             {banner && 
             <div className={styles.bannerwrapper} data-mobile-only={mobileOnly}>
                 {banner}

@@ -77,6 +77,10 @@
     height: 100%;
 }
 
+.svgiconcontainer svg path{
+    stroke-width: 15px;
+}
+
 .bluepath{
     stroke: var(--standout-color) !important
 }
