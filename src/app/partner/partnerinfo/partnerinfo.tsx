@@ -7,15 +7,21 @@ export default function PartnerInfo() {
 
             <div className={styles.partnerinfocontainer}>
 
+                <div className={styles.textcontainer}>
+                    <h1>
+                        How partners help accelerate businesses at every stage
+                    </h1>
+                </div>
+
                 <div className={styles.cardscontainer}>
 
                     <CardOne heading='Access to Global Resources'
-                        paragraph='Tap into world-class talent on demand with Access to the latest technologies and tools available.'
+                        paragraph='Tap into world-class talent and the latest technologies on-demand with access to tools available globally.'
                         textAlign='left'
                         banner={GlobalResourcesSVG()} />
 
-                    <CardOne heading='Centralized Access for Efficiency'
-                        paragraph="Give easy access to Motionen's entire suite of integrated features designed to work together and expand offerings."
+                    <CardOne heading='Centralized Access'
+                        paragraph="Get easy access to Motion's entire integrated suite of features designed to work together and expand offerings"
                         textAlign='left'
                         banner={CentralizedSVG()} />
 
@@ -51,13 +57,13 @@ function GlobalResourcesSVG() {
         <svg viewBox="0 0 1000 500">
             <defs>
             </defs>
-            <path id="worldoutline_1" data-name="worldoutline 1" d="M504.281,71.986s-180.295,0-180.295,180.3,180.3,180.3,180.3,180.3,180.3,0,180.3-180.3S504.281,71.986,504.281,71.986Z" />
-            <path id="outeroutline_1" data-name="outeroutline 1" d="M504,72S378.328,108.044,378.328,252.218,504,432.437,504,432.437m0.327-359.874S630,108.607,630,252.782,504.327,433,504.327,433" />
-            <path id="inneroutline" d="M503.93,72S450,108.044,450,252.218s53.93,180.219,53.93,180.219m0.14-359.874S558,108.607,558,252.782,504.07,433,504.07,433" />
+            <path id="lineto2" d="M172.812,252.516H324" />
+            <path className={styles.bluestroke} id="worldoutline_1" data-name="worldoutline 1" d="M504.281,71.986s-180.295,0-180.295,180.3,180.3,180.3,180.3,180.3,180.3,0,180.3-180.3S504.281,71.986,504.281,71.986Z" />
+            <path className={styles.bluestroke} id="outeroutline_1" data-name="outeroutline 1" d="M504,72S378.328,108.044,378.328,252.218,504,432.437,504,432.437m0.327-359.874S630,108.607,630,252.782,504.327,433,504.327,433" />
+            <path className={styles.bluestroke} id="inneroutline" d="M503.93,72S450,108.044,450,252.218s53.93,180.219,53.93,180.219m0.14-359.874S558,108.607,558,252.782,504.07,433,504.07,433" />
+            <path className={styles.bluestroke} id="equator" d="M324,252.281H686.392" />
             <path id="smallcircle_1" data-name="smallcircle 1" d="M72,32.349s-28.826,0-28.826,28.826S72,90,72,90s28.826,0,28.826-28.826S72,32.349,72,32.349Z" />
             <path id="lineto1_1" data-name="lineto1 1" d="M72,90v90H336" />
-            <path id="lineto2" d="M172.812,252.516H324" />
-            <path id="equator" d="M324,252.281H686.392" />
             <path id="smallcircle_2" data-name="smallcircle 2" d="M144,223.177s-28.826,0-28.826,28.825S144,280.828,144,280.828s28.826,0,28.826-28.826S144,223.177,144,223.177Z" />
             <path id="liento3_1" data-name="liento3 1" d="M119.813,404.643h168v-65h54" />
             <path id="smallcircle3" d="M90,378.489s-28.826,0-28.826,28.826S90,436.141,90,436.141s28.826,0,28.826-28.826S90,378.489,90,378.489Z" />

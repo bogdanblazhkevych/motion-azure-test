@@ -1,8 +1,8 @@
 .partnerinfowrapper {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
     display: flex;
     justify-content: center;
@@ -10,11 +10,28 @@
 }
 
 .partnerinfocontainer {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 
     width: 100%;
     max-width: 1280px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.textcontainer{
+    /* border: 1px solid red; */
+    padding: 0px 16px;
+}
+
+.textcontainer h1{
+    font-size: clamp(32px, 6vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
 }
 
 .motionlogopath{
@@ -22,20 +39,21 @@
     fill: var(--standout-color) !important;
 }
 
-.cardscontainer{
-    /* width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0 24px; */
+.bluestroke{
+    stroke: var(--standout-color) !important;
+    stroke-width: 9px !important;
+}
 
+.cardscontainer{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 16px;
     padding: 16px;  
-    /* grid-auto-flow: dense;   */
-    /* align-items: start;  */
     align-items: flex-end;
+}
+
+@media only screen and (max-width: 425px) {
+    .cardscontainer{
+        grid-template-columns: 1fr;
+    }
 }
