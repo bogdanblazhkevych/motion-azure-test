@@ -59,9 +59,6 @@ export default function FifthPage() {
 
                         <path className={`${styles.phonebackground}`} d="M20.48,432.71V71.6c0-32.36,22.21-54.91,54.53-54.94q135.81-.15,271.61,0c32.75,0,55.1,22.63,55.1,55.34q0,360.33,0,720.65c0,32.72-22.33,55.3-55.13,55.34Q210.8,848.14,75,848c-32.26,0-54.5-22.64-54.5-55ZM212,57.44v0c12,0,24,.16,36-.06,9.15-.16,14.83-6.07,14.71-14.69-.12-8-6-14-14.59-14.08q-35.25-.24-70.51,0c-9.31.07-15.17,5.9-15.21,14.39s5.91,14.28,15.09,14.42C189,57.57,200.51,57.44,212,57.44Z"/>
 
-
-
-
                         {/* FREEDOM TOWER */}
                         <path className={`${styles.freedomtoweraccents} ${styles.buildingaccents}`} stroke="url(#draw-in-1)" d="M213.46,220.38l-53.83,440.28m52.75-440.01l53.84,440.61m-107.97,59.09h109.66m-91.61-440.01l30.54-15.27m-30.54,31.93l29.15-15.27m-29.15,33.31l26.37-12.49m-26.37,29.15l24.98-11.1m-24.98,30.54l22.21-9.72m-22.21,24.98l19.43-8.33m-19.43,23.6l18.04-8.33m-18.04,24.98l15.27-5.55m-15.27,22.21l13.88-5.55m-13.88,23.6l11.1-4.16m-11.1,22.21l9.72-4.16m-9.72,20.82l6.94-2.78m-6.94,18.04l5.55-1.39m-5.55-216.54l33.31-18.04m39.32,33.12l-30.54-15.27m30.54,31.93l-29.15-15.27m29.15,33.31l-26.37-12.49m26.37,29.15l-24.98-11.1m24.98,30.54l-22.21-9.72m22.21,24.98l-19.43-8.33m19.43,23.6l-18.04-8.33m18.04,24.98l-15.27-5.55m15.27,22.21l-13.88-5.55m13.88,23.6l-11.1-4.16m11.1,22.21l-9.72-4.16m9.72,20.82l-6.94-2.78m6.94,18.04l-5.55-1.39m5.55-216.54l-33.31-18.04m-31-1.2l24.98-5.55m30.54,5.55l-25.22-5.55m-9.48-49.97h13.88m-13.88-34.7h13.88"> 
                             {getAnimateTransform(0, 0, 0.183, 0.033, 0.25)}
@@ -94,7 +91,7 @@ export default function FifthPage() {
                         </path>
 
 
-
+                        {/* EIFFEL TOWER */}
                         <path className={`${styles.eiffeltoweraccents} ${styles.buildingaccents}`} stroke="url(#draw-in-4)" d="M150.01,605.93s11.99-15.67,27.19-49.58m10.33-26.85c5.56-18.23,10.96-39.98,15.49-66.1m4.13-29.95c2.57-19.45,5.05-41.25,6.2-63m69.9,239.62s-10.26-9.96-27.55-53.71m-10.33-25.82c-5.86-18.54-11.57-40.83-16.29-66.76m-3.89-30.34c-4.01-19.17-5.49-39.56-6.67-61.95m-5.16-1.03h5.16m-121.88,265.44h36.15m-15.49-30.99h35.12m-20.66-23.76h33.05m3.1-86.76h28.92m-6.2-84.69h19.62m-15.49-18.59h17.56m-13.43-20.66h33.05m103.29,265.05h-36.15m15.49-30.99h-35.12m20.66-23.76h-33.05m-3.1-86.76h-28.92m6.2-84.69h-19.62m15.49-18.2h-17.56m-75.4,165.26h143.57m-134.27-26.85h123.94m-100.19-66.1h77.46m-69.2-29.95h60.94m-46.48-76.43h30.99m-28.92-15.49h26.85m-13.77-139.44v140.47"> 
                             {getAnimateTransform(3, 0, 0.183, 0.033, 0.25)}
                         </path>
@@ -188,7 +185,7 @@ function getLinearGradient(order: number, start: number, fill: number, fillout: 
                         x1="0%" 
                         y1="100%" 
                         x2="0%" 
-                        y2="200%">
+                        y2="300%">
 
             <stop offset="0%" stop-color="white" stop-opacity="0"/>
             <stop offset="10%" stop-color="white" stop-opacity="0"/>
@@ -196,11 +193,11 @@ function getLinearGradient(order: number, start: number, fill: number, fillout: 
             <stop offset="10%" stop-color="#267e99"/>  
             <stop offset="50%" stop-color="#267e99"/>
 
-            <stop offset="50%" stop-color="white"/>
-            <stop offset="100%" stop-color="white"/>
+            <stop offset="50%" stop-color="white" stop-opacity="0"/>
+            <stop offset="100%" stop-color="white" stop-opacity="0"/>
 
             <animate attributeName="y1" values="100%;100%;-50%;-50%;-100%;-100%;-100%" dur="20s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" />
-            <animate attributeName="y2" values="100%;300%;300%;300%;0%;0%;0%;" dur="20s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="y2" values="300%;300%;300%;300%;0%;0%;0%;" dur="20s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" />
         </linearGradient>
     )
 }
