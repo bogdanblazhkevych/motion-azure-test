@@ -7,6 +7,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, #121212 66%);
+    background: linear-gradient(0deg, #121212 55%, rgba(0,0,0,1) 84%);
 }
 
 .partnerinfocontainer {

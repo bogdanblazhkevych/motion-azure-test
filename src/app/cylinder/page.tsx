@@ -11,7 +11,7 @@ type CylinderProps = {
     lineTwoTopRef: React.RefObject<SVGLineElement>;
 }
 
-export default function Hlinder(props: CylinderProps) {
+export default function Clinder(props: CylinderProps) {
     const {cylinderSVGRef, lineOneBottomRef, lineOneTopRef, lineTwoBottomRef, lineTwoTopRef, lineThreeBottomRef, lineThreeTopRef} = props
     return (
         // <div ref={cylinderSVGRef}>

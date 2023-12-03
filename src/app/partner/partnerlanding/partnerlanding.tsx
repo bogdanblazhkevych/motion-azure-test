@@ -12,7 +12,7 @@ export default function PartnerLanding() {
 
                     </div>
                 </div>
-
+                
                 <h1>
                     Motion global partner program
                 </h1>

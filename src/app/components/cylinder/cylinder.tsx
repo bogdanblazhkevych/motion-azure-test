@@ -26,8 +26,8 @@ export default function Cylinder(props: CylinderProps) {
 
             <svg className={styles.cylinderfillsvg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
                 <path className={styles.cylinderfill} d="M 96 420.831 
-                                                               L 96 242.815 
-                                                               L 904 242.815 
+                                                               L 96 250
+                                                               L 904 250
                                                                L 904 420.831"/>
             </svg>
 
