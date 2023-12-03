@@ -23,27 +23,70 @@ export default function WaitlistInfo() {
     )
 }
 
+const getValueFromScrollPositon = (startHeight: number, endHeight: number, currentHeight: number, startValue: number, endValue: number) => {
+    if (currentHeight < startHeight) {
+        return startValue
+    }
+
+    if (currentHeight > endHeight) {
+        return endValue
+    }
+
+    const ratio = (endValue - startValue) / (endHeight - startHeight);
+
+    const currentValue = startValue - (startHeight - currentHeight) * ratio;
+
+    return currentValue
+}
+
 function waitlistDescription(title: string, paragraphOne: string, paragraphTwo: string, heading: string) {
+    const descriptionRef = useRef<HTMLDivElement>(null);
+    const descriptionContentRef = useRef<HTMLDivElement>(null);
+
+    function handleScroll() {
+        console.log("here")
+        if (!descriptionRef.current || !descriptionContentRef.current) {
+            return
+        }
+
+        const visibleDescriptionHeight = window.innerHeight - descriptionRef.current.getBoundingClientRect().top
+
+        const translateY = getValueFromScrollPositon(0, descriptionRef.current.getBoundingClientRect().height, visibleDescriptionHeight, -150, 0);
+        const opacity = getValueFromScrollPositon(0, descriptionRef.current.getBoundingClientRect().height, visibleDescriptionHeight, 0, 100);
+
+        descriptionContentRef.current.style.transform = `translateY(${translateY}px)`
+        descriptionContentRef.current.style.opacity = `${opacity}%`
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        // return (
+        //     window.removeEventListener('scroll', handleScroll)
+        // )
+    }, [])
+
     return(
-        <div className={styles.description}>
+        <div ref={descriptionRef} className={styles.description}>
+            <div ref={descriptionContentRef} className={styles.descriptionContent}>
+                <h5>
+                    {heading}
+                </h5>
 
-            <h5>
-                {heading}
-            </h5>
-            
-            <h1>
-                {title}
-            </h1>
+                <h1>
+                    {title}
+                </h1>
 
-            <p>
-                {paragraphOne}
-            </p>
+                <p>
+                    {paragraphOne}
+                </p>
 
-            <p>
-                {paragraphTwo}
-            </p>
+                <p>
+                    {paragraphTwo}
+                </p>
 
-            {lineSVG()}
+                {lineSVG()}
+            </div>
         </div>
     )
 }
@@ -53,34 +96,23 @@ function lineSVG() {
     const svgRef = useRef<SVGSVGElement>(null)
     const svgPathRef = useRef<SVGPathElement>(null)
 
-    function handleScroll() {
+    const handleScroll = () => {
         if (!svgRef.current || !svgPathRef.current) {
             return
         }
 
         const visibleSVGHeight = window.innerHeight - svgRef.current.getBoundingClientRect().top;
 
-        const getStrokeOffset = (start: number, svgHeight: number, offset: number, visibleSVGHeight: number) => {
-            if (visibleSVGHeight < start) {
-                return offset
-            }
-
-            if (visibleSVGHeight > svgHeight) {
-                return 0
-            }
-
-            let ratio = (0 - offset) / (svgHeight - start);
-
-            let strokeDashoffset = offset - (start - visibleSVGHeight) * ratio;
-
-            return strokeDashoffset;
-        }
-
-        svgPathRef.current.style.strokeDashoffset = `${getStrokeOffset(0, svgRef.current.getBoundingClientRect().height, 800, visibleSVGHeight)}`
+        const strokeOffset = getValueFromScrollPositon(0, svgRef.current.getBoundingClientRect().height, visibleSVGHeight, 800, 0);
+        svgPathRef.current.style.strokeDashoffset = `${strokeOffset}`
     }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+
+        // return (
+        //     window.removeEventListener('scroll', handleScroll)
+        // )
     }, [])
 
     return (
