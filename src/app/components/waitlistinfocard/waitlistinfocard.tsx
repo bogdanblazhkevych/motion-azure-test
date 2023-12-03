@@ -42,6 +42,7 @@ export default function WaitlistInfoCard(props: WaitlistInfoCardPropsInterface) 
     return (
         <div ref={descriptionRef} className={styles.description}>
             <div ref={descriptionContentRef} className={styles.descriptionContent}>
+                <WaitlistLineSVG />
                 <h5>
                     {heading}
                 </h5>
@@ -58,7 +59,6 @@ export default function WaitlistInfoCard(props: WaitlistInfoCardPropsInterface) 
                     {paragraphTwo}
                 </p>
 
-                <WaitlistLineSVG />
             </div>
         </div>
     )

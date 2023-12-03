@@ -5,6 +5,7 @@
     top: 50%; 
     width: 100%;
     left: 100%;
+    z-index: -10;
 }
 
 .linesvg path{
@@ -17,6 +18,8 @@
     stroke-dashoffset: 800;
 
     transition: all 0.2s ease-out;
+
+    z-index: -10;
 }
 
 @media only screen and (max-width: 768px) {

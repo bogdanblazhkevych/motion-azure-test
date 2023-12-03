@@ -7,11 +7,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background: linear-gradient(0deg, #121212 90%, rgba(0,0,0,1) 100%);
 }
 
 .waitlistinfocontainer {
     /* border: 1px solid red; */
-    gap: 5rem;
+    /* gap: 5rem; */
+
 }
 
 
@@ -20,6 +23,7 @@
     font-weight: 700;
     line-height: 1.15;
     text-align: center;
+    padding: 5rem 0px;
 }
 
 .descriptioncontiner {
