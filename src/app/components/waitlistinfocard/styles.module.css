@@ -8,6 +8,11 @@
     z-index: 20;
 }
 
+.description:first-child{
+    /* background-color: red; */
+    background: linear-gradient(0deg, #121212 50%, rgba(0,0,0,0) 60%);
+}
+
 .descriptionContent {
     transform: translateY(150px);
     opacity: 0;
