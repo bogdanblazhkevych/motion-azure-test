@@ -1,4 +1,4 @@
-.textcontainer{
+.textcontainer {
     /* border: 1px solid blue; */
 
     width: 50%;
@@ -8,7 +8,7 @@
     justify-content: space-between;
 }
 
-.textcontainer h1{
+.textcontainer h1 {
     font-size: clamp(20px, 3vw, 32px);
     font-weight: 700;
     line-height: 1.15;
@@ -16,7 +16,7 @@
     padding-left: 12%;
 }
 
-.textcontainer p{
+.textcontainer p {
     font-size: clamp(18px, 2vw, 24px);
     font-weight: 500;
     line-height: 1.6;
@@ -25,7 +25,7 @@
     padding-left: 12%;
 }
 
-.logowrapper{
+.logowrapper {
     /* border: 1px solid yellow; */
 
     height: 150px;
@@ -36,17 +36,23 @@
     align-items: center;
 }
 
-.logocontainer{
+.logocontainer {
     /* border: 1px solid blue; */
-    
+
     position: absolute;
     width: 100%;
     aspect-ratio: 1 / 1;
 }
 
 @media only screen and (max-width: 768px) {
-    .textcontainer{
+    .textcontainer {
         width: 100%;
         padding-bottom: 0px;
+    }
+
+    .textcontainer>h1,
+    .textcontainer>p {
+        padding-left: 0px;
+        text-align: center;
     }
 }
