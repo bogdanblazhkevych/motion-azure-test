@@ -1,6 +1,18 @@
+'use client'
+
+import { useEffect } from 'react';
 import styles from './styles.module.css'
 
 export default function WaitlistInfo() {
+
+    function handleScroll() {
+        
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    }, [])
+    
     return (
         <div className={styles.waitlistinfowrapper}>
             <div className={styles.waitlistinfocontainer}>
