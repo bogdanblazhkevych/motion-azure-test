@@ -1,0 +1,76 @@
+.waitlistinfowrapper {
+    border: 1px solid red;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.waitlistinfocontainer {
+    border: 1px solid blue;
+
+    width: 100%;
+    max-width: 1280px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.textcontainer {
+    /* border: 1px solid red; */
+    padding: 0px 16px;
+}
+
+.descriptioncontiner {
+    border: 1px solid purple;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptioncontiner .description {
+    /* border: 1px solid white; */
+    width: 40%;
+    padding-bottom: 300px;
+    position: relative;
+    background-color: black;
+}
+
+.description:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.description:nth-child(even) {
+    align-self: flex-end;
+}
+
+.description:nth-child(even) .lineleftrightsvg{
+    /* border: 1px dotted blue; */
+    left: unset;
+    right: 100%;
+    transform: scaleX(-1);
+}
+
+.lineleftrightsvg{
+    /* border: 1px dotted white; */
+
+    position: absolute;
+    top: 50%; 
+    width: 100%;
+    left: 100%;
+    /* height: 100%; */
+    /* transform: translateY(50%); */
+    /* width: 50%; */
+}
+
+.lineleftrightsvg path{
+    fill: none;
+    stroke: white;
+    stroke-width: 3px;
+}

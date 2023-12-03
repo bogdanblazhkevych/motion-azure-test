@@ -1,4 +1,5 @@
 import FormPage from "./../partner/formpage/formpage";
+import WaitlistInfo from "./waitlistinfo/waitlistinfo";
 import WaitlistLanding from "./waitlistlanding/waitlistlanding";
 
 export default function Waitlist() {
@@ -6,6 +7,7 @@ export default function Waitlist() {
         <main>
             <WaitlistLanding />
             {/* <FormPage /> */}
+            <WaitlistInfo />
             <FormPage />
         </main>
     )
