@@ -1,20 +1,16 @@
 .fifthpagewrapper{
     /* border: 1px solid red; */
+
     width: 100%;
-    /* height: fit-content; */
-    /* height: fit-content; */
-    /* height: 100vh; */
-    /* max-height: 2000px; */
     display: flex;
     justify-content: center;
-    /* background-color: var(--primary-color); */
-    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(29,29,29,1) 66%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, #121212 66%);
 }
 
 .fifthpagecontainer{
     /* border: 1px dashed aqua; */
+
     width: 100%;
-    /* height: 100%; */
     max-width: 1280px;
     padding: 0 24px;
     display: flex;
@@ -24,12 +20,11 @@
 
 .textwrapper{
     /* border: 1px solid green; */
+
     width: 70%;
-    /* height: auto; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* justify-content: space-between; */
 }
 
 .textwrapper h1{
@@ -50,6 +45,7 @@
 
 .listcontainer{
     /* border: 1px solid purple; */
+
     font-size: clamp(16px, 3vw, 22px);
     display: flex;
     flex-direction: column;
@@ -58,6 +54,7 @@
 
 .artwrapper{
     /* border: 1px dotted yellow; */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,9 +65,7 @@
 }
 
 .phonesvg{
-    /* height: auto; */
     height: 100%;
-    /* width: 100%; */
 }
 
 .phonebackground{
@@ -79,22 +74,19 @@
 
 .phonepath{
     fill: var(--secondary-color);
-    /* stroke: aqua; */
 }
 
 .building{
     fill: none;
-    /* stroke: black; */
     stroke: #267e99;
-    stroke-width: 3px;
+    stroke-width: 6px;
     transform-origin: center;
+    stroke-linecap: round;
+    
 }
-
 .buildingaccents{
     fill: none;
-    /* stroke: black; */
-    /* stroke: #267e99; */
-    stroke-width: 3px;
+    stroke-width: 4px;
     transform-origin: center;
 }
 
@@ -118,6 +110,7 @@
     stroke-dasharray: 800;
     stroke-dashoffset: 800;
 }
+
 /* .test{
     fill: none;
     stroke: black;
