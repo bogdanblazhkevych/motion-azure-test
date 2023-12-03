@@ -44,14 +44,13 @@ function waitlistDescription(title: string, paragraphOne: string, paragraphTwo: 
     const descriptionContentRef = useRef<HTMLDivElement>(null);
 
     function handleScroll() {
-        console.log("here")
         if (!descriptionRef.current || !descriptionContentRef.current) {
             return
         }
 
         const visibleDescriptionHeight = window.innerHeight - descriptionRef.current.getBoundingClientRect().top
 
-        const translateY = getValueFromScrollPositon(0, descriptionRef.current.getBoundingClientRect().height, visibleDescriptionHeight, -150, 0);
+        const translateY = getValueFromScrollPositon(0, (descriptionRef.current.getBoundingClientRect().height / 2), visibleDescriptionHeight, 150, 0);
         const opacity = getValueFromScrollPositon(0, descriptionRef.current.getBoundingClientRect().height, visibleDescriptionHeight, 0, 100);
 
         descriptionContentRef.current.style.transform = `translateY(${translateY}px)`
@@ -61,9 +60,9 @@ function waitlistDescription(title: string, paragraphOne: string, paragraphTwo: 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
-        // return (
-        //     window.removeEventListener('scroll', handleScroll)
-        // )
+        return () => {
+            window.removeEventListener('scroll', handleScroll)   
+        }
     }, [])
 
     return(
@@ -110,13 +109,13 @@ function lineSVG() {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
-        // return (
-        //     window.removeEventListener('scroll', handleScroll)
-        // )
+        return () => {
+            window.removeEventListener('scroll', handleScroll)   
+        }
     }, [])
 
     return (
-        <svg ref={svgRef} className={styles.lineleftrightsvg} viewBox="0 0 500 500" preserveAspectRatio="none">
+        <svg ref={svgRef} className={styles.linesvg} viewBox="0 0 500 500" preserveAspectRatio="none">
             <path ref={svgPathRef} fill-rule="evenodd" stroke-width="3.79px" stroke-linecap="round" stroke-linejoin="miter" d="M4.395,3.895 L247.395,3.895 C247.395,3.895 490.395,3.895 490.395,244.895 C490.395,485.895 490.395,485.895 490.395,485.895 " />
         </svg>
     )
