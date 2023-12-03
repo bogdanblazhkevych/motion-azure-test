@@ -1,0 +1,52 @@
+.textcontainer{
+    /* border: 1px solid blue; */
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.textcontainer h1{
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.15;
+
+    padding-left: 12%;
+}
+
+.textcontainer p{
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--secondary-color-4);
+
+    padding-left: 12%;
+}
+
+.logowrapper{
+    /* border: 1px solid yellow; */
+
+    height: 150px;
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logocontainer{
+    /* border: 1px solid blue; */
+    
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .textcontainer{
+        width: 100%;
+        padding-bottom: 0px;
+    }
+}
