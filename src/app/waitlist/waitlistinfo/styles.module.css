@@ -1,5 +1,5 @@
 .waitlistinfowrapper {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     width: 100%;
     min-height: 100vh;
@@ -10,11 +10,13 @@
 }
 
 .waitlistinfocontainer {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 
     width: 100%;
     max-width: 1280px;
     min-height: 100vh;
+
+    padding: 0px 16px;
 
     display: flex;
     flex-direction: column;
@@ -27,19 +29,50 @@
 }
 
 .descriptioncontiner {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    gap: 5rem;
+    
 }
 
-.descriptioncontiner .description {
-    /* border: 1px solid white; */
+
+.description{
     width: 40%;
-    padding-bottom: 300px;
     position: relative;
-    background-color: black;
+    /* background-color: black; */
+    background-color: #121212;
+
+    border-radius: 10px;
+    /* border: 2px solid var(--standout-color); */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 16px;
+
+}
+
+.description h1{
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.description p{
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--secondary-color-4);
+}
+
+.description h5{
+    color: var(--standout-color);
+    text-transform: uppercase;
 }
 
 .description:nth-child(odd) {
@@ -48,6 +81,10 @@
 
 .description:nth-child(even) {
     align-self: flex-end;
+}
+
+.description:last-child svg{
+    display: none;
 }
 
 .description:nth-child(even) .lineleftrightsvg{
@@ -64,14 +101,16 @@
     top: 50%; 
     width: 100%;
     left: 100%;
-    
 }
 
 .lineleftrightsvg path{
     fill: none;
-    stroke: white;
+    stroke: var(--primary-color-2);
+    /* stroke: var(--standout-color); */
     stroke-width: 3px;
 
     stroke-dasharray: 800;
     stroke-dashoffset: 800;
+
+    transition: all 0.2s ease-out;
 }

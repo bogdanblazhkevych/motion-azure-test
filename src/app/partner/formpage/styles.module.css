@@ -41,8 +41,8 @@
     font-weight: 700;
     line-height: 1.15;
 
-    /* padding-left: 12%; */
-    padding: 0px 12%;
+    padding-left: 12%;
+    /* padding: 0px 12%; */
 }
 
 .textcontainer p{
@@ -51,8 +51,8 @@
     line-height: 1.6;
     color: var(--secondary-color-4);
 
-    /* padding-left: 12%; */
-    padding: 0px 12%;
+    padding-left: 12%;
+    /* padding: 0px 12%; */
 }
 
 .logowrapper{
