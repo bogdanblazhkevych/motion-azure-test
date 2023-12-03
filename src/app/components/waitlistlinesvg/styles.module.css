@@ -1,0 +1,26 @@
+.linesvg{
+    /* border: 1px dotted white; */
+
+    position: absolute;
+    top: 50%; 
+    width: 100%;
+    left: 100%;
+}
+
+.linesvg path{
+    fill: none;
+    stroke: var(--primary-color-2);
+    /* stroke: var(--standout-color); */
+    stroke-width: 3px;
+
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+
+    transition: all 0.2s ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .linesvg{
+        display: none;
+    }
+}
