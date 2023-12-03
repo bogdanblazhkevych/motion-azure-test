@@ -9,6 +9,19 @@
     align-items: center;
 }
 
+.waitlistinfocontainer {
+    /* border: 1px solid red; */
+    gap: 5rem;
+}
+
+
+.waitlistinfotitle{
+    font-size: clamp(32px, 6vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+}
+
 .descriptioncontiner {
     /* border: 1px solid purple; */
 
