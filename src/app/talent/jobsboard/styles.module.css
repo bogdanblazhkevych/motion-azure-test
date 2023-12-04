@@ -1,6 +1,6 @@
 .jobsboardwrapper {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,10 +8,10 @@
 
 
 .jobsboardcontainer {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     max-width: 1280px;
-    padding: 0px 80px;
+    padding: 5rem 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,26 +33,74 @@
 }
 
 .jobsboardcontainer table {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     table-layout: fixed;
     width: 100%;
     text-align: left;
+    border-collapse: collapse;
+}
+
+.thead{
+    border-bottom: 3px solid var(--primary-color-2);
+}
+
+.trhead th{
+    padding-bottom: 2rem;
+}
+
+.tbody{
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 .trhead th{
     font-weight: 400;
-}
-
-.trbody td{
-    font-weight: 600;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.15;
 }
 
 .trhead th:nth-child(1){
-    width: 80%;
+    width: 70%;
 }
 .trhead th:nth-child(2){
     width: 10%;
 }
 .trhead th:nth-child(3){
-    width: 10%;
+    width: 20%;
+    text-align: right;
+}
+
+.trbody td:last-child{
+    text-align: right;
+}
+
+.trbody td{
+    padding-top: 1rem
+}
+
+@media only screen and (max-width: 1280px) {
+    .jobsboardcontainer{
+        padding: 5rem 16px;
+    }
+
+    .trhead th:nth-child(2){
+        display: none;
+    }
+
+    .trbody td:nth-child(2){
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .tbody{
+        font-size: clamp(16px, 2vw, 24px);
+        font-weight: 600;
+        line-height: 1.6;
+    }
+    .trbody td:nth-child(3){
+        font-size: clamp(14px, 2vw, 24px);
+        font-weight: 500;
+    }
+    
 }

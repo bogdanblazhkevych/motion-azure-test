@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './styles.module.css'
 
 export default function JobsBoard() {
@@ -5,7 +6,7 @@ export default function JobsBoard() {
         <div className={styles.jobsboardwrapper}>
             <div className={styles.jobsboardcontainer}>
                 <table>
-                    <thead>
+                    <thead className={styles.thead}>
                         <tr className={styles.trhead}>
                             <th>Job Role</th>
                             <th>Code</th>
@@ -13,28 +14,40 @@ export default function JobsBoard() {
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody className={styles.tbody}>
                         <tr className={styles.trbody}>
-                            <td>Business Development & Strategic Partnerships Manager</td>
-                            <td>BDUS</td>
-                            <td>New York, NY</td>
+                                <td>
+                                    <Link href='/bdus'>
+                                        Business Development & Strategic Partnerships Manager
+                                    </Link>
+                                </td>
+                                <td>
+                                    <Link href='/bdus'>
+                                        BDUS
+                                    </Link>
+                                </td>
+                                <td>
+                                    <Link href='/bdus'>
+                                        New York, NY
+                                    </Link>
+                                </td>
                         </tr>
-                        <tr>
-                            <td>Specialist, Business Project Manager - </td>
+                        <tr className={styles.trbody}>
+                            <td>Specialist, Business Project Manager</td>
                             <td>SBPM</td>
                             <td>Remote</td>
                         </tr>
-                        <tr>
+                        <tr className={styles.trbody}>
                             <td>Business Development & Strategic Partnerships Manager</td>
                             <td>BDFR</td>
                             <td>France</td>
-                        </tr>
-                        <tr>
+                        </tr >
+                        <tr className={styles.trbody}>
                             <td>AI - Machine Learning Platform Engineer</td>
                             <td>AIMLPE</td>
                             <td>France</td>
                         </tr>
-                        <tr>
+                        <tr className={styles.trbody}>
                             <td>Machine Learning Engineer(s)- Intelligent Algorithms Experts</td>
                             <td>MLEIA</td>
                             <td>France</td>
