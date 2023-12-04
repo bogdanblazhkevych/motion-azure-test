@@ -157,4 +157,13 @@
     .fourthpagecontainer{
         padding: 0px 16px;
     }
+
+    .invisiblecard{
+        display: none
+    }
+
+    .card{
+        transform: none;
+        opacity: 100;
+    }
 }

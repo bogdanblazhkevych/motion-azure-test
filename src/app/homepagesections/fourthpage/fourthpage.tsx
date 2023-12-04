@@ -27,20 +27,11 @@ export default function FourthPage() {
     const lineThreeTopRef = useRef<SVGLineElement>(null)
 
     const handleCylinderScroll = () => {
-        console.log("scrolling...")
-        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current || !cardOneRef.current || !cardTwoRef.current || !cardThreeRef.current) return
+        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current || !cardOneRef.current || !cardTwoRef.current || !cardThreeRef.current || window.innerWidth < 768) return
         const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderContainerRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderContainerRef.current?.getBoundingClientRect().height)
-        // const degree = percentage * -180 - 90;
         const degree = 180 - ((1 - percentage) * (180 + 90))
 
-        // const progress = 1 - x; 
-        // const angle = startAngle - (progress * range);
-
-        // console.log("percent: ", percentage);
-
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
-
-        // console.log(percentage)
 
         const getDashoffset = (percent: number, dashoffset: number, topUpperBound: number, topLowerBound: number, bottomUpperBound: number, bottomLowerBound: number) => {
             if (percent > topUpperBound) {
@@ -87,20 +78,6 @@ export default function FourthPage() {
         const cardThreeOpacity = getValueFromScrollPositonDecreasing(200, (0), (cardThreeRef.current.getBoundingClientRect().top - 150), 0, 100)
         cardThreeRef.current.style.transform = `translateY(${cardThreeTranslateY}px)`
         cardThreeRef.current.style.opacity = `${cardThreeOpacity}%`
-
-        // if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.2)){
-        //     cardOneRef.current.classList.add(`${styles.cardopen}`)
-        // }
-
-        // if (cardTwoRef.current?.getBoundingClientRect().top < (cardTwoRef.current?.getBoundingClientRect().height * 0.2)){
-        //     cardTwoRef.current.classList.add(`${styles.cardopen}`)
-        // }
-
-        // if (cardThreeRef.current?.getBoundingClientRect().top < (cardThreeRef.current?.getBoundingClientRect().height * 0.2)){
-        //     cardThreeRef.current.classList.add(`${styles.cardopen}`)
-        // }
-
-        // console.log(cardOneRef.current?.getBoundingClientRect().top)
 
         //bring cylinder down
         const translateY = getTranslateY(percentage, 1, 0.85);
