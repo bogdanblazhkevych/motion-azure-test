@@ -1,8 +1,7 @@
 'use client'
 
 import styles from './styles.module.css'
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { GiHamburgerMenu } from 'react-icons/Gi';
+import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 
 import { HiMenu } from "react-icons/hi";

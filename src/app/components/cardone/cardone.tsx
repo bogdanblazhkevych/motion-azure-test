@@ -1,4 +1,5 @@
 import styles from './styles.module.css'
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface CardOnePropsInterface {
     heading: string,
@@ -16,6 +17,11 @@ export default function CardOne(props: CardOnePropsInterface){
 
     return(
         <div className={styles.cardwrapper} data-clickable={clickable}>
+            {clickable &&
+            <div className={styles.linkicon}>
+                <FaExternalLinkAlt />
+            </div>
+            }
             {banner && 
             <div className={styles.bannerwrapper} data-mobile-only={mobileOnly}>
                 {banner}
