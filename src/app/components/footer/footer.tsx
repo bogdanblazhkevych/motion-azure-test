@@ -16,13 +16,13 @@ export default function Footer() {
                     <Link href='/'>
                         About
                     </Link>
-                    <Link href='/'>
+                    <Link href='/partner'>
                         Global Partner Program
                     </Link>
-                    <Link href='/'>
+                    <Link href='/talent'>
                         Talent
                     </Link>
-                    <Link href='/'>
+                    <Link href='/waitlist'>
                         Join Waitlist 
                     </Link>
                     <Link href='/'>
@@ -35,15 +35,21 @@ export default function Footer() {
                         {'© MOTION-ISE 2023\nALL RIGHTS RESERVED'}
                     </p>
                     <div className={styles.icons}>
-                        <div className={styles.icon}>
-                            <FaFacebookF />
-                        </div>
-                        <div className={styles.icon}>
-                            <FaXTwitter />
-                        </div>
-                        <div className={styles.icon}>
-                            <FaLinkedinIn />
-                        </div>
+                        <Link href="https://www.facebook.com/motion.ise.platform" target="_blank">
+                            <div className={styles.icon}>
+                                <FaFacebookF />
+                            </div>
+                        </Link>
+                        <Link href="https://twitter.com/motion_platform" target="_blank">            
+                            <div className={styles.icon}>
+                                <FaXTwitter />
+                            </div>
+                        </Link>
+                        <Link href="https://www.linkedin.com/company/motionplatform/" target="_blank">
+                            <div className={styles.icon}>
+                                <FaLinkedinIn />
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

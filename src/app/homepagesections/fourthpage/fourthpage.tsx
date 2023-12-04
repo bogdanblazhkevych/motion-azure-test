@@ -227,12 +227,12 @@ function graphSVG() {
     return(
 
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1000 500">
-        <defs>
-        </defs>
-        <path id="graph_1" data-name="graph 1" d="M923.441,426.983s-23.072,0-23.072,23.067,23.072,23.067,23.072,23.067,23.072,0,23.072-23.067S923.441,426.983,923.441,426.983ZM72.559,44.123s-23.072,0-23.072,23.067S72.559,90.256,72.559,90.256s23.072,0,23.072-23.067S72.559,44.123,72.559,44.123Zm0,46.134V450.125H900.444"/>
-        <path id="path1_1" data-name="path1 1" d="M72,348l216,84,126-79,162,67.625L720,342l144,96.625"/>
-        <path className={`${styles.bluepath} ${styles.motionpath}`} id="paththreeeee_1" data-name="paththreeeee 1" d="M72,390l72-138,216,36L504,162l198,54L864,108"/>
-        <path id="linetwo_1" data-name="linetwo 1" d="M72,414l144-72,288,90,72-108L702,432l162-54"/>
+            <defs>
+            </defs>
+            <path id="graph_1" data-name="graph 1" d="M923.441,426.983s-23.072,0-23.072,23.067,23.072,23.067,23.072,23.067,23.072,0,23.072-23.067S923.441,426.983,923.441,426.983ZM72.559,44.123s-23.072,0-23.072,23.067S72.559,90.256,72.559,90.256s23.072,0,23.072-23.067S72.559,44.123,72.559,44.123Zm0,46.134V450.125H900.444"/>
+            <path id="path1_1" data-name="path1 1" d="M72,348l216,84,126-79,162,67.625L720,342l144,96.625"/>
+            <path className={`${styles.bluepath} ${styles.motionpath}`} id="paththreeeee_1" data-name="paththreeeee 1" d="M72,390l72-138,216,36L504,162l198,54L864,108"/>
+            <path id="linetwo_1" data-name="linetwo 1" d="M72,414l144-72,288,90,72-108L702,432l162-54"/>
         </svg>
     )
 }
