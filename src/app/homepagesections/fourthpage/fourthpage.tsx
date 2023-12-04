@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react'
 import CardOne from '@/app/components/cardone/cardone'
 import React from 'react'
 import { AiFillCodeSandboxSquare } from 'react-icons/ai'
+import getValueFromScrollPositon, { getValueFromScrollPositonDecreasing } from '@/app/components/utils'
 
 export default function FourthPage() {
     const cardOneRef = useRef<HTMLDivElement>(null)
@@ -39,7 +40,7 @@ export default function FourthPage() {
 
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
 
-        console.log(percentage)
+        // console.log(percentage)
 
         const getDashoffset = (percent: number, dashoffset: number, topUpperBound: number, topLowerBound: number, bottomUpperBound: number, bottomLowerBound: number) => {
             if (percent > topUpperBound) {
@@ -71,17 +72,21 @@ export default function FourthPage() {
             }
         }
 
-        if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.2)){
-            cardOneRef.current.classList.add(`${styles.cardopen}`)
-        }
+        const testTranslateY = getValueFromScrollPositonDecreasing(150, (100 - 150), (cardOneRef.current.getBoundingClientRect().top - 150), 150, 0)
+        cardOneRef.current.style.transform = `translateY(${testTranslateY}px)`
+        console.log(testTranslateY)
 
-        if (cardTwoRef.current?.getBoundingClientRect().top < (cardTwoRef.current?.getBoundingClientRect().height * 0.2)){
-            cardTwoRef.current.classList.add(`${styles.cardopen}`)
-        }
+        // if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.2)){
+        //     cardOneRef.current.classList.add(`${styles.cardopen}`)
+        // }
 
-        if (cardThreeRef.current?.getBoundingClientRect().top < (cardThreeRef.current?.getBoundingClientRect().height * 0.2)){
-            cardThreeRef.current.classList.add(`${styles.cardopen}`)
-        }
+        // if (cardTwoRef.current?.getBoundingClientRect().top < (cardTwoRef.current?.getBoundingClientRect().height * 0.2)){
+        //     cardTwoRef.current.classList.add(`${styles.cardopen}`)
+        // }
+
+        // if (cardThreeRef.current?.getBoundingClientRect().top < (cardThreeRef.current?.getBoundingClientRect().height * 0.2)){
+        //     cardThreeRef.current.classList.add(`${styles.cardopen}`)
+        // }
 
         // console.log(cardOneRef.current?.getBoundingClientRect().top)
 
@@ -176,10 +181,6 @@ export default function FourthPage() {
                                 banner={graphSVG()}
                                 mobileOnly={true}/>
                     </div>
-                    {/* <div className={styles.invisiblecard}>
-                        <CardOne heading="A catalyst for startup success"
-                                    paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>                        
-                    </div> */}
                 </div>
 
                 <div className={styles.cylinderwrapper} ref={cylinderWrapperRef}>
