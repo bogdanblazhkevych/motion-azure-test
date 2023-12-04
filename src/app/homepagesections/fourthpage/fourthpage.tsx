@@ -5,8 +5,7 @@ import styles from './styles.module.css'
 import { useEffect, useRef } from 'react'
 import CardOne from '@/app/components/cardone/cardone'
 import React from 'react'
-import { AiFillCodeSandboxSquare } from 'react-icons/ai'
-import getValueFromScrollPositon, { getValueFromScrollPositonDecreasing } from '@/app/components/utils'
+import { getValueFromScrollPositonDecreasing } from '@/app/components/utils'
 
 export default function FourthPage() {
     const cardOneRef = useRef<HTMLDivElement>(null)
@@ -63,14 +62,14 @@ export default function FourthPage() {
             }
         }
 
-        const cardOneTranslateY = getValueFromScrollPositonDecreasing(150, (100 - 150), (cardOneRef.current.getBoundingClientRect().top - 150), 150, 0)
-        const cardOneOpacity = getValueFromScrollPositonDecreasing(150, (100 - 150), (cardOneRef.current.getBoundingClientRect().top - 150), 0, 100)
+        const cardOneTranslateY = getValueFromScrollPositonDecreasing(150, (-50), (cardOneRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardOneOpacity = getValueFromScrollPositonDecreasing(150, (-50), (cardOneRef.current.getBoundingClientRect().top - 150), 0, 100)
         cardOneRef.current.style.transform = `translateY(${cardOneTranslateY}px)`
         cardOneRef.current.style.opacity = `${cardOneOpacity}%`
 
 
-        const cardTwoTranslateY = getValueFromScrollPositonDecreasing(300, (-50), (cardTwoRef.current.getBoundingClientRect().top - 150), 150, 0)
-        const cardTwoOpacity = getValueFromScrollPositonDecreasing(300, (-50), (cardTwoRef.current.getBoundingClientRect().top - 150), 0, 100)
+        const cardTwoTranslateY = getValueFromScrollPositonDecreasing(175, (-25), (cardTwoRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardTwoOpacity = getValueFromScrollPositonDecreasing(175, (-25), (cardTwoRef.current.getBoundingClientRect().top - 150), 0, 100)
         cardTwoRef.current.style.transform = `translateY(${cardTwoTranslateY}px)`
         cardTwoRef.current.style.opacity = `${cardTwoOpacity}%`
 
@@ -148,7 +147,7 @@ export default function FourthPage() {
         <div className={styles.fourthpagewrapper}>
             <div className={styles.fourthpagecontainer}>
                 <div className={styles.cardswrapper}>
-                    <div className={styles.invisiblecard}>
+                    <div className={`${styles.invisiblecard} ${styles.card}`}>
                         <CardOne heading="A catalyst for startup success"
                                     paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building a company that will fundamentally change how R&D and Innovation teams work - a product called Motion Platform that will leverage AI-powered data analytics to empower leaders for successful decision-making and execution. It will connect companies of all sizes with innovators around the globe to meet their fast-paced innovation needs."/>                        
                     </div>

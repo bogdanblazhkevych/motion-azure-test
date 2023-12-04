@@ -35,7 +35,7 @@
     height: auto;
 }
 
-.textwrapper p{
+.textwrapper h1~p{
     font-weight: 500;
     line-height: 1.6;
     color: var(--secondary-color-4);
