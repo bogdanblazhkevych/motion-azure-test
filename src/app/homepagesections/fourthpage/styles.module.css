@@ -40,7 +40,7 @@
 
 .card{
     transform: translateY(150px);
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .cardopen{

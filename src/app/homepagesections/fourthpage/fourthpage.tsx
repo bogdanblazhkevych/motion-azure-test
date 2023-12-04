@@ -72,9 +72,21 @@ export default function FourthPage() {
             }
         }
 
-        const testTranslateY = getValueFromScrollPositonDecreasing(150, (100 - 150), (cardOneRef.current.getBoundingClientRect().top - 150), 150, 0)
-        cardOneRef.current.style.transform = `translateY(${testTranslateY}px)`
-        console.log(testTranslateY)
+        const cardOneTranslateY = getValueFromScrollPositonDecreasing(150, (100 - 150), (cardOneRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardOneOpacity = getValueFromScrollPositonDecreasing(150, (100 - 150), (cardOneRef.current.getBoundingClientRect().top - 150), 0, 100)
+        cardOneRef.current.style.transform = `translateY(${cardOneTranslateY}px)`
+        cardOneRef.current.style.opacity = `${cardOneOpacity}%`
+
+
+        const cardTwoTranslateY = getValueFromScrollPositonDecreasing(300, (-50), (cardTwoRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardTwoOpacity = getValueFromScrollPositonDecreasing(300, (-50), (cardTwoRef.current.getBoundingClientRect().top - 150), 0, 100)
+        cardTwoRef.current.style.transform = `translateY(${cardTwoTranslateY}px)`
+        cardTwoRef.current.style.opacity = `${cardTwoOpacity}%`
+
+        const cardThreeTranslateY = getValueFromScrollPositonDecreasing(200, (0), (cardThreeRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardThreeOpacity = getValueFromScrollPositonDecreasing(200, (0), (cardThreeRef.current.getBoundingClientRect().top - 150), 0, 100)
+        cardThreeRef.current.style.transform = `translateY(${cardThreeTranslateY}px)`
+        cardThreeRef.current.style.opacity = `${cardThreeOpacity}%`
 
         // if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.2)){
         //     cardOneRef.current.classList.add(`${styles.cardopen}`)
