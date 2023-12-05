@@ -25,7 +25,7 @@ export default function WaitlistInfo() {
                     <WaitlistInfoCard title='Test out new features'
                                       paragraphOne="Experience and experiment with the latest features Motion is developing. See what future functionality is on the roadmap."
                                       paragraphTwo="Test cutting-edge capabilities early and validate functionality before public launch."
-                                      heading="Preview"/>
+                                      heading="EXPERIMENT"/>
 
                     <WaitlistInfoCard title='Join our private community of innovators'
                                       paragraphOne="Connect with and learn from other cutting-edge companies that are pushing the boundaries in cloud-AI automation."

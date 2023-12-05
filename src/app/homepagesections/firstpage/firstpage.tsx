@@ -1,6 +1,7 @@
 import Logo from '@/app/components/logo/page'
 import styles from './styles.module.css'
 import City from '@/app/components/city/city'
+import Link from 'next/link'
 
 export default function FirstPage(){
     return(
@@ -15,13 +16,16 @@ export default function FirstPage(){
                         We are building something special shaping the future of automation to unleash the next wave of innovation and productivity.
                     </p>
                     <div className={styles.buttonwrapper}>
-                        <button className={`${styles.button} ${styles.buttonjoin}`}>
-                            Join the Waitlist
-                        </button>
-
-                        <button className={`${styles.button} ${styles.buttonpartner}`}>
-                            Become a partner
-                        </button>
+                        <Link href="/waitlist">    
+                            <button className={`${styles.button} ${styles.buttonjoin}`}>
+                                Join the Waitlist
+                            </button>
+                        </Link>
+                        <Link href="/partner">
+                            <button className={`${styles.button} ${styles.buttonpartner}`}>
+                                Become a partner
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

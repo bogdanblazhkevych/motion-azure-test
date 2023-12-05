@@ -1,10 +1,12 @@
 .thirdpagewrapper{
     /* border: 1px solid red; */
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
+    /* padding-top: 5rem; */
+    padding: 5rem 0;
 }
 
 .thirdpagecontainer{
@@ -28,6 +30,7 @@
     width: min-content;
     max-width: 100%;
     gap: 1rem;
+    padding: 0 16px;
 }
 
 .textwrapper h1{
@@ -48,4 +51,10 @@
     /* border: 1px dotted yellow; */
     width: 100%;
     max-width: 1280px;
+}
+
+@media only screen and (max-width: 768px) {
+    .thirdpagewrapper{
+        padding: 5rem 0;
+    }
 }

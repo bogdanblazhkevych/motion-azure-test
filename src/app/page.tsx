@@ -9,20 +9,13 @@ import FifthPage from './homepagesections/fifthpage/fifthpage'
 export default function Home() {
 
   return (
-    // <main className={styles.main}>
-    //   <FirstPage />
-    //   <Slider />
-    //   <SecondPage />
-    // </main>
     <main>
       <FirstPage />
-      <Slider />
-      <SecondPage />
-      <ThirdPage />
       <FourthPage />
       <FifthPage />
-      {/* <SecondPage />
-      <SecondPage /> */}
+      <ThirdPage />
+      <Slider />
+      <SecondPage />
     </main>
   )
 }

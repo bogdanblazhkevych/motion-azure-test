@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import { useEffect, useRef } from 'react'
 import CardOne from '@/app/components/cardone/cardone'
 import React from 'react'
-import { AiFillCodeSandboxSquare } from 'react-icons/ai'
+import { getValueFromScrollPositonDecreasing } from '@/app/components/utils'
 
 export default function FourthPage() {
     const cardOneRef = useRef<HTMLDivElement>(null)
@@ -26,20 +26,11 @@ export default function FourthPage() {
     const lineThreeTopRef = useRef<SVGLineElement>(null)
 
     const handleCylinderScroll = () => {
-        console.log("scrolling...")
-        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current || !cardOneRef.current || !cardTwoRef.current || !cardThreeRef.current) return
+        if (! cylinderWrapperRef.current || !cylinderContainerRef.current || !cylinderSVGRef.current || !lineThreeTopRef.current || !lineThreeBottomRef.current || !lineOneTopRef.current || !lineOneBottomRef.current || !lineTwoTopRef.current || !lineTwoBottomRef.current || !svgDivWrapperRef.current || !cardOneRef.current || !cardTwoRef.current || !cardThreeRef.current || window.innerWidth < 768) return
         const percentage = (cylinderWrapperRef.current?.getBoundingClientRect().bottom - cylinderContainerRef.current?.getBoundingClientRect().bottom) / (cylinderWrapperRef.current?.getBoundingClientRect().height - cylinderContainerRef.current?.getBoundingClientRect().height)
-        // const degree = percentage * -180 - 90;
         const degree = 180 - ((1 - percentage) * (180 + 90))
 
-        // const progress = 1 - x; 
-        // const angle = startAngle - (progress * range);
-
-        // console.log("percent: ", percentage);
-
         if (cylinderContainerRef.current.getBoundingClientRect().top > 0) return
-
-        console.log(percentage)
 
         const getDashoffset = (percent: number, dashoffset: number, topUpperBound: number, topLowerBound: number, bottomUpperBound: number, bottomLowerBound: number) => {
             if (percent > topUpperBound) {
@@ -71,19 +62,21 @@ export default function FourthPage() {
             }
         }
 
-        if (cardOneRef.current?.getBoundingClientRect().top < (cardOneRef.current?.getBoundingClientRect().height * 0.2)){
-            cardOneRef.current.classList.add(`${styles.cardopen}`)
-        }
+        const cardOneTranslateY = getValueFromScrollPositonDecreasing(150, (-50), (cardOneRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardOneOpacity = getValueFromScrollPositonDecreasing(150, (-50), (cardOneRef.current.getBoundingClientRect().top - 150), 0, 100)
+        cardOneRef.current.style.transform = `translateY(${cardOneTranslateY}px)`
+        cardOneRef.current.style.opacity = `${cardOneOpacity}%`
 
-        if (cardTwoRef.current?.getBoundingClientRect().top < (cardTwoRef.current?.getBoundingClientRect().height * 0.2)){
-            cardTwoRef.current.classList.add(`${styles.cardopen}`)
-        }
 
-        if (cardThreeRef.current?.getBoundingClientRect().top < (cardThreeRef.current?.getBoundingClientRect().height * 0.2)){
-            cardThreeRef.current.classList.add(`${styles.cardopen}`)
-        }
+        const cardTwoTranslateY = getValueFromScrollPositonDecreasing(175, (-25), (cardTwoRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardTwoOpacity = getValueFromScrollPositonDecreasing(175, (-25), (cardTwoRef.current.getBoundingClientRect().top - 150), 0, 100)
+        cardTwoRef.current.style.transform = `translateY(${cardTwoTranslateY}px)`
+        cardTwoRef.current.style.opacity = `${cardTwoOpacity}%`
 
-        // console.log(cardOneRef.current?.getBoundingClientRect().top)
+        const cardThreeTranslateY = getValueFromScrollPositonDecreasing(200, (0), (cardThreeRef.current.getBoundingClientRect().top - 150), 150, 0)
+        const cardThreeOpacity = getValueFromScrollPositonDecreasing(200, (0), (cardThreeRef.current.getBoundingClientRect().top - 150), 0, 100)
+        cardThreeRef.current.style.transform = `translateY(${cardThreeTranslateY}px)`
+        cardThreeRef.current.style.opacity = `${cardThreeOpacity}%`
 
         //bring cylinder down
         const translateY = getTranslateY(percentage, 1, 0.85);
@@ -154,7 +147,7 @@ export default function FourthPage() {
         <div className={styles.fourthpagewrapper}>
             <div className={styles.fourthpagecontainer}>
                 <div className={styles.cardswrapper}>
-                    <div className={styles.invisiblecard}>
+                    <div className={`${styles.invisiblecard} ${styles.card}`}>
                         <CardOne heading="A catalyst for startup success"
                                     paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building a company that will fundamentally change how R&D and Innovation teams work - a product called Motion Platform that will leverage AI-powered data analytics to empower leaders for successful decision-making and execution. It will connect companies of all sizes with innovators around the globe to meet their fast-paced innovation needs."/>                        
                     </div>
@@ -176,10 +169,6 @@ export default function FourthPage() {
                                 banner={graphSVG()}
                                 mobileOnly={true}/>
                     </div>
-                    {/* <div className={styles.invisiblecard}>
-                        <CardOne heading="A catalyst for startup success"
-                                    paragraph="We believe in leveling the playing field and empowering people to use technology for value. That's why we're building something special. A company that will be different from anything else on the market. Motion Platform, a product that will fundamentally change how R&D and Innovation teams work and empower leaders to leverage AI-powered data analytics for successful decision-making and execution."/>                        
-                    </div> */}
                 </div>
 
                 <div className={styles.cylinderwrapper} ref={cylinderWrapperRef}>
@@ -238,12 +227,12 @@ function graphSVG() {
     return(
 
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1000 500">
-        <defs>
-        </defs>
-        <path id="graph_1" data-name="graph 1" d="M923.441,426.983s-23.072,0-23.072,23.067,23.072,23.067,23.072,23.067,23.072,0,23.072-23.067S923.441,426.983,923.441,426.983ZM72.559,44.123s-23.072,0-23.072,23.067S72.559,90.256,72.559,90.256s23.072,0,23.072-23.067S72.559,44.123,72.559,44.123Zm0,46.134V450.125H900.444"/>
-        <path id="path1_1" data-name="path1 1" d="M72,348l216,84,126-79,162,67.625L720,342l144,96.625"/>
-        <path className={`${styles.bluepath} ${styles.motionpath}`} id="paththreeeee_1" data-name="paththreeeee 1" d="M72,390l72-138,216,36L504,162l198,54L864,108"/>
-        <path id="linetwo_1" data-name="linetwo 1" d="M72,414l144-72,288,90,72-108L702,432l162-54"/>
+            <defs>
+            </defs>
+            <path id="graph_1" data-name="graph 1" d="M923.441,426.983s-23.072,0-23.072,23.067,23.072,23.067,23.072,23.067,23.072,0,23.072-23.067S923.441,426.983,923.441,426.983ZM72.559,44.123s-23.072,0-23.072,23.067S72.559,90.256,72.559,90.256s23.072,0,23.072-23.067S72.559,44.123,72.559,44.123Zm0,46.134V450.125H900.444"/>
+            <path id="path1_1" data-name="path1 1" d="M72,348l216,84,126-79,162,67.625L720,342l144,96.625"/>
+            <path className={`${styles.bluepath} ${styles.motionpath}`} id="paththreeeee_1" data-name="paththreeeee 1" d="M72,390l72-138,216,36L504,162l198,54L864,108"/>
+            <path id="linetwo_1" data-name="linetwo 1" d="M72,414l144-72,288,90,72-108L702,432l162-54"/>
         </svg>
     )
 }

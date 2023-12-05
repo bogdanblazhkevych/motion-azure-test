@@ -43,13 +43,13 @@ export default function Cylinder(props: CylinderProps) {
 
 
                 <line ref={lineOneBottomRef} className={styles.linebottom} x1="504" y1="845.5" x2="504" y2="726"/>
-                <line ref={lineOneTopRef} className={styles.linetop} x1="504" y1="733.5" x2="-500" y2="733.5"/>
+                <line ref={lineOneTopRef} className={styles.linetop} x1="504" y1="733.5" x2="-300" y2="733.5"/>
 
                 <line ref={lineTwoBottomRef} className={styles.linebottom} x1="144.5" y1="500" x2="144.5" y2="380"/>
-                <line ref={lineTwoTopRef} className={styles.linetop} x1="140" y1="388" x2="-900" y2="388"/>
+                <line ref={lineTwoTopRef} className={styles.linetop} x1="140" y1="388" x2="-664" y2="388"/>
 
                 <line ref={lineThreeBottomRef} className={styles.linebottom} x1="504" y1="162" x2="504" y2="42"/>
-                <line ref={lineThreeTopRef}className={styles.linetop} x1="504" y1="50" x2="-500" y2="50"/>
+                <line ref={lineThreeTopRef}className={styles.linetop} x1="504" y1="50" x2="-300" y2="50"/>
 
             </svg>
         </div>
