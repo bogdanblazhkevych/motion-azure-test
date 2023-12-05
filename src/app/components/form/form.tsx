@@ -18,6 +18,8 @@ export interface FormDataInterface {
     consent: boolean
 }
 
+export type FormFieldsInterface = 'firstName' | 'lastName' | 'companyName' | 'title' | 'role' | 'email' | 'phoneNumber' | 'industry' | 'website' | 'city' | 'country' | 'companyType' | 'consent'
+
 export default function Form() {
     const [formData, setFormData] = useState<FormDataInterface>({
         firstName: '',
