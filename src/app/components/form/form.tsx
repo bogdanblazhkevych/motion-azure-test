@@ -2,8 +2,24 @@
 import styles from './styles.module.css'
 import { useState } from 'react';
 
+export interface FormDataInterface {
+    firstName: string,
+    lastName: string,
+    companyName: string,
+    title: string,
+    role: string,
+    email: string,
+    phoneNumber: string,
+    industry: string,
+    website: string,
+    city: string,
+    country: string,
+    companyType: 'Partner developing software solutions' | 'Partner providing services',
+    consent: boolean
+}
+
 export default function Form() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormDataInterface>({
         firstName: '',
         lastName: '',
         companyName: '',
@@ -15,7 +31,7 @@ export default function Form() {
         website: '',
         city: '',
         country: '',
-        companyType: '',
+        companyType: 'Partner developing software solutions' || 'Partner providing services',
         consent: false
     });
 
@@ -26,9 +42,19 @@ export default function Form() {
         });
     }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // submit formData to API 
+
+        const response = await fetch('/api/submitform', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        console.log(response)
     }
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
