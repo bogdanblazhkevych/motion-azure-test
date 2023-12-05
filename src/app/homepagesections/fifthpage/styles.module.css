@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(90deg, rgba(0,0,0,1) 40%, #121212 66%);
+    border-top: 1px solid var(--primary-color-3);
+    border-bottom: 1px solid var(--primary-color-3);
+    /* padding-bottom: 5rem; */
+    padding: 5rem 0;
 }
 
 .fifthpagecontainer{
@@ -29,7 +33,7 @@
 
 .textwrapper h1{
     color: var(--secondary-color);
-    font-size: clamp(32px, 6vw, 48px);
+    font-size: clamp(24px, 5vw, 36px);
     font-weight: 700;
     line-height: 1.15;
     height: auto;
@@ -39,14 +43,14 @@
     font-weight: 500;
     line-height: 1.6;
     color: var(--secondary-color-4);
-    font-size: clamp(16px, 3vw, 22px);
+    font-size: clamp(16px, 2vw, 20px);
     height: auto;
 }
 
 .listcontainer{
     /* border: 1px solid purple; */
 
-    font-size: clamp(16px, 3vw, 22px);
+    font-size: clamp(16px, 2vw, 20px);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -79,7 +83,7 @@
 .building{
     fill: none;
     stroke: #267e99;
-    stroke-width: 6px;
+    stroke-width: 4px;
     transform-origin: center;
     stroke-linecap: round;
     
@@ -111,15 +115,6 @@
     stroke-dashoffset: 800;
 }
 
-/* .test{
-    fill: none;
-    stroke: black;
-    stroke-width: 3px;
-    transform-origin: center;
-    stroke-dasharray: 800;
-    stroke-dashoffset: 800;
-} */
-
 @keyframes stroketest {
     0% {
         stroke-dashoffset: 1300;
@@ -149,6 +144,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .fifthpagewrapper{
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, #121212 60%);
+    }
     .fifthpagecontainer{
         flex-direction: column;
         gap: 1rem;

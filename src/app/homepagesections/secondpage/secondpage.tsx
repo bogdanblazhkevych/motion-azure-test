@@ -1,5 +1,6 @@
 import CardOne from '@/app/components/cardone/cardone'
 import styles from './styles.module.css'
+import Link from 'next/link'
 
 export default function SecondPage() {
         return (
@@ -15,22 +16,28 @@ export default function SecondPage() {
                                 </div>
 
                                 <div className={styles.cardscontainer}>
-                                        <CardOne heading="Global Partner"
-                                                paragraph="We at Motion are building a global platform to enable collaboration, accelerate innovation communities, and democratize access to business-building tools. Our goal is making scaling a business more equitable by allowing more people to leverage resources previously reserved for large corporations alone."
-                                                textAlign='left'
-                                                icon={globalSVG()}
-                                                padding={true} 
-                                                clickable={true}/>
-                                        <CardOne heading="Early Access"
-                                                paragraph="We invite product builders and developers worldwide to join our platform's growing community and get early access to tools that ease growth. Connect with potential partners, customers and investors globally to advance your business or product. Leverage our community's collective knowledge to achieve your ambitions."
-                                                textAlign='left'
-                                                icon={lockSVG()}
-                                                clickable={true}/>
-                                        <CardOne heading="Talent Acquisition"
-                                                paragraph="We seek talented, entrepreneurial team members passionate about using technology to transform business building and scaling, making it more accessible. Join us in our ambitious mission to drive innovation democratization globally through collaboration and creativity. Together we can revolutionize and accelerate innovation."
-                                                textAlign='left'
-                                                icon={mindSVG()}
-                                                clickable={true}/>
+                                        <Link href="/partner">
+                                                <CardOne heading="Global Partner"
+                                                        paragraph="We at Motion are building a global platform to enable collaboration, accelerate innovation communities, and democratize access to business-building tools. Our goal is making scaling a business more equitable by allowing more people to leverage resources previously reserved for large corporations alone."
+                                                        textAlign='left'
+                                                        icon={globalSVG()}
+                                                        padding={true} 
+                                                        clickable={true}/>
+                                        </Link>
+                                        <Link href="/waitlist">
+                                                <CardOne heading="Early Access"
+                                                        paragraph="We invite product builders and developers worldwide to join our platform's growing community and get early access to tools that ease growth. Connect with potential partners, customers and investors globally to advance your business or product. Leverage our knowledge to achieve your ambitions."
+                                                        textAlign='left'
+                                                        icon={lockSVG()}
+                                                        clickable={true}/>
+                                        </Link>
+                                        <Link href="/talent">
+                                                <CardOne heading="Talent Acquisition"
+                                                        paragraph="We seek talented, entrepreneurial team members passionate about using technology to transform business building and scaling, making it more accessible. Join us in our ambitious mission to drive innovation democratization globally through collaboration and creativity."
+                                                        textAlign='left'
+                                                        icon={mindSVG()}
+                                                        clickable={true}/>
+                                        </Link>
                                 </div>
                         </div>
                 </div>
