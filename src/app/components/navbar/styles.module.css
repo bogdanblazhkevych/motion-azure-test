@@ -76,7 +76,7 @@
 @media only screen and (max-width: 768px) {
     .navbar{
         position: absolute;
-        transform: translateY(-100vh);
+        transform: translateY(-200vh);
         /* transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
         transition: transform 0.5s linear;
         /* transition: transform 1s linear; */
