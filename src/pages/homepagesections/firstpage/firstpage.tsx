@@ -1,6 +1,6 @@
-import Logo from '@/app/components/logo/page'
+import Logo from '@/pages/components/logo/page'
 import styles from './styles.module.css'
-import City from '@/app/components/city/city'
+import City from '@/pages/components/city/city'
 import Link from 'next/link'
 
 export default function FirstPage(){

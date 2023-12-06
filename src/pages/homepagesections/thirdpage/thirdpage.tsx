@@ -1,6 +1,6 @@
-import Map from '@/app/components/map/map'
+import Map from '@/pages/components/map/map'
 import styles from './styles.module.css'
-import Logo from '@/app/components/logo/page'
+import Logo from '@/pages/components/logo/page'
 
 export default function ThirdPage() {
     return(

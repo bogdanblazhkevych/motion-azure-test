@@ -1,6 +1,6 @@
 import styles from './styles.module.css'
-import Form from '@/app/components/form/form';
-import FormCard from '@/app/components/formcard/formcard';
+import Form from '@/pages/components/form/form';
+import FormCard from '@/pages/components/formcard/formcard';
 
 interface FormPagePropsInterface {
     title: string,
@@ -13,8 +13,8 @@ export default function FormPage(props: FormPagePropsInterface) {
     return (
         <div className={styles.formpagewrapper}>
             <div className={styles.formpagecontainer}>
-                <Form />
-                <FormCard title={title} paragraph={paragraph}/>
+                <Form/>
+                {/* <FormCard title={title} paragraph={paragraph}/> */}
             </div>
         </div>
     )

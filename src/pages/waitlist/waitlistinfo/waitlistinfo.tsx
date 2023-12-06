@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import WaitlistInfoCard from '@/app/components/waitlistinfocard/waitlistinfocard';
+import WaitlistInfoCard from '@/pages/components/waitlistinfocard/waitlistinfocard';
 
 export default function WaitlistInfo() {
     return (

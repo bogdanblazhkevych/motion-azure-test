@@ -1,4 +1,4 @@
-import CardOne from '@/app/components/cardone/cardone'
+import CardOne from '@/pages/components/cardone/cardone'
 import styles from './styles.module.css'
 
 export default function PartnerInfo() {

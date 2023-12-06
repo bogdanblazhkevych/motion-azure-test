@@ -1,11 +1,11 @@
 'use client'
 
-import Cylinder from '@/app/components/cylinder/cylinder'
+import Cylinder from '@/pages/components/cylinder/cylinder'
 import styles from './styles.module.css'
 import { useEffect, useRef } from 'react'
-import CardOne from '@/app/components/cardone/cardone'
+import CardOne from '@/pages/components/cardone/cardone'
 import React from 'react'
-import { getValueFromScrollPositonDecreasing } from '@/app/components/utils'
+import { getValueFromScrollPositonDecreasing } from '@/pages/components/utils'
 
 export default function FourthPage() {
     const cardOneRef = useRef<HTMLDivElement>(null)

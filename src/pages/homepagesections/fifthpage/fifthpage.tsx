@@ -1,7 +1,7 @@
 import { text } from 'stream/consumers';
 import styles from './styles.module.css'
 import { IoCheckbox } from "react-icons/io5";
-import ListItem from '@/app/components/listitem/listitem';
+import ListItem from '@/pages/components/listitem/listitem';
 
 export default function FifthPage() {
     return (

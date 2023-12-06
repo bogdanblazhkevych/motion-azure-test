@@ -48,7 +48,7 @@ export default function Form() {
         e.preventDefault();
         // submit formData to API 
 
-        const response = await fetch('/api/submitform', {
+        const response = await fetch('/api/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
