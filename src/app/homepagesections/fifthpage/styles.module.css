@@ -72,13 +72,22 @@
     height: 100%;
 }
 
-.phonebackground{
-    fill: var(--primary-color-2)
+.phoneborder{
+    fill: var(--primary-color-2);
+    stroke: var(--primary-color);
+    stroke-width: 15px;
+    stroke-linecap: butt; 
+    stroke-linejoin: miter; 
+    fill: fill; 
 }
 
-.phonepath{
-    fill: var(--secondary-color);
+.phonebackground{
+    /* fill: var(--primary-color-2) */
 }
+
+/* .phonepath{
+    fill: var(--secondary-color);
+} */
 
 .building{
     fill: none;
