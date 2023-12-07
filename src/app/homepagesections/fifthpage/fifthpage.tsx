@@ -1,8 +1,6 @@
 'use client'
 
-import { text } from 'stream/consumers';
 import styles from './styles.module.css'
-import { IoCheckbox } from "react-icons/io5";
 import ListItem from '@/app/components/listitem/listitem';
 import { useEffect, useRef, useState } from 'react';
 import { delay } from '@/app/components/utils';
@@ -109,10 +107,10 @@ export default function FifthPage() {
 
                         {toggleTowers && 
                         <defs>
-                                {getLinearGradient(0, 0, 0.033, 0.15, 0.033, 0.25)}
-                                {getLinearGradient(1, 0, 0.033, 0.15, 0.033, 0.5)}
-                                {getLinearGradient(2, 0, 0.033, 0.15, 0.033, 0.5)}
-                                {getLinearGradient(3, 0, 0.033, 0.15, 0.033, 0.5)}                    
+                                {getLinearGradient(toggleTowers, 0, 0, 0.033, 0.15, 0.033, 0.25)}
+                                {getLinearGradient(toggleTowers, 1, 0, 0.033, 0.15, 0.033, 0.5)}
+                                {getLinearGradient(toggleTowers, 2, 0, 0.033, 0.15, 0.033, 0.5)}
+                                {getLinearGradient(toggleTowers, 3, 0, 0.033, 0.15, 0.033, 0.5)}                    
                         </defs>
                         }
                     
@@ -210,13 +208,18 @@ function getAnimateTransform(order: number, start: number, scalein: number, scal
 }
 
 
-function getLinearGradient(order: number, start: number, fill: number, fillout: number, pause: number, end?: number) {
+function getLinearGradient(toggleTowers:boolean, order: number, start: number, fill: number, fillout: number, pause: number, end?: number) {
     const _id = `draw-in-${order + 1}`;
     const _start = order * 0.25;
     const _fill = _start + fill;
     const _fillout = _fill + fillout;
     const _pause = _fillout + pause;
     const _end = _start + 0.25
+
+    if (!toggleTowers) {
+        return <>
+        </>
+    }
 
     return (
         <linearGradient gradientUnits="objectBoundingBox"

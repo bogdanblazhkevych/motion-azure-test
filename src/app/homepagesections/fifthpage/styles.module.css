@@ -153,13 +153,6 @@
     display: none;
 }
 
-.phonebackground{
-    /* fill: var(--primary-color-2) */
-}
-
-/* .phonepath{
-    fill: var(--secondary-color);
-} */
 .buildingsgroup{
     transform-origin: 50% 0%; 
     opacity: 0;
