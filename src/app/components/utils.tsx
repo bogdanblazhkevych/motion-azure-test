@@ -28,3 +28,9 @@ export function getValueFromScrollPositonDecreasing(startHeight: number, endHeig
 
     return currentValue
 }
+
+export async function delay(duration: number) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, duration);
+    });
+}

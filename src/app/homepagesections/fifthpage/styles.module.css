@@ -73,12 +73,33 @@
 }
 
 .phoneborder{
-    fill: var(--primary-color-2);
+    fill: transparent;
     stroke: var(--primary-color);
-    stroke-width: 15px;
+    stroke-width: 3px;
     stroke-linecap: butt; 
     stroke-linejoin: miter; 
-    fill: fill; 
+    stroke-dasharray: 2400;
+    stroke-dashoffset: 2400;
+    transform-origin: center;
+    transform: scale(0.95);
+}
+
+.phonedraw{
+    stroke: var(--standout-color);
+    transition: stroke-dashoffset 3s ease;
+    stroke-dashoffset: 0;
+}
+
+.phoneopen{
+    stroke: var(--primary-color);
+    fill: var(--primary-color-2);
+    stroke-width: 15px;
+    transform: scale(1);
+    transition: stroke 1s ease, stroke-width 1s ease, fill 1s ease, transform 1s ease;
+}
+
+.phonepart{
+    display: none;
 }
 
 .phonebackground{
