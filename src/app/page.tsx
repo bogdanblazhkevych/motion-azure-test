@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <main>
       <FirstPage />
+      <Slider />
       <FourthPage />
       <FifthPage />
       <ThirdPage />
-      <Slider />
       <SecondPage />
     </main>
   )
