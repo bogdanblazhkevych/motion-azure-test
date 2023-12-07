@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, #121212 66%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, #181818 66%);
     border-top: 1px solid var(--primary-color-3);
     border-bottom: 1px solid var(--primary-color-3);
     /* padding-bottom: 5rem; */
@@ -68,6 +68,53 @@
     position: relative;
 }
 
+.phonetextwrapper{
+    /* border: 1px solid red; */
+    bottom: 50px;
+    position: absolute;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.phonetextitem{
+    /* border: 1px solid green; */
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0%;
+}
+
+.phonetextshow{
+    transition: opacity 1s ease;
+    opacity: 100%;
+}
+
+.phonetextshow:nth-child(1) {
+    transition-delay: 200ms;
+}
+.phonetextshow:nth-child(2) {
+    transition-delay: 300ms;
+}
+.phonetextshow:nth-child(3) {
+    transition-delay: 400ms;
+} 
+.phonetextshow:nth-child(4) {
+    transition-delay: 500ms;
+}
+.phonetextshow:nth-child(5) {
+    transition-delay: 600ms;
+}
+
+.phonetextcircle{
+    /* border: 1px solid white; */
+    aspect-ratio: 1 / 1;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .phonesvg{
     height: 100%;
 }
@@ -98,6 +145,10 @@
     transition: stroke 1s ease, stroke-width 1s ease, fill 1s ease, transform 1s ease;
 }
 
+.phonenotch{
+    transform: translateY(10px)
+}
+
 .phonepart{
     display: none;
 }
@@ -109,6 +160,17 @@
 /* .phonepath{
     fill: var(--secondary-color);
 } */
+.buildingsgroup{
+    transform-origin: 50% 0%; 
+    opacity: 0;
+    /* transform: scale(0.5); */
+    transform: scale(0.55);
+}
+
+.showtower{
+    transition: opacity 300ms ease;
+    opacity: 100%;
+}
 
 .building{
     fill: none;
@@ -116,7 +178,6 @@
     stroke-width: 4px;
     transform-origin: center;
     stroke-linecap: round;
-    
 }
 .buildingaccents{
     fill: none;
