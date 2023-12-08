@@ -1,0 +1,18 @@
+.buildingaccents{
+    fill: none;
+    stroke-width: 4px;
+    transform-origin: center;
+}
+
+.freedomtower{
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+}
+
+.building{
+    fill: none;
+    stroke: #267e99;
+    stroke-width: 4px;
+    transform-origin: center;
+    stroke-linecap: round;
+}
