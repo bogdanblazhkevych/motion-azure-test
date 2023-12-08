@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { delay } from '@/app/components/utils';
 import { FaRegCircle } from "react-icons/fa";
 import Building from '@/app/components/building/building';
+import AnimateHeading from '@/app/components/animateheading/animateheading';
 
 export default function FifthPage() {
     const phonePathRef = useRef<SVGPathElement>(null)
@@ -49,13 +50,15 @@ export default function FifthPage() {
         <div className={styles.fifthpagewrapper}>
             <div className={styles.fifthpagecontainer}>
                 <div className={styles.textwrapper}>
-                    <h1>
+                    {/* <h1>
                         One platform to govern and manage it all
                     </h1>
 
                     <p>
                         Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.
-                    </p>
+                    </p> */}
+                    <AnimateHeading heading='One platform to govern and manage it all'
+                                    subheading='Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.' />
 
                     <ul className={styles.listcontainer}>
                         <ListItem text="Real-time analytics & insights" />

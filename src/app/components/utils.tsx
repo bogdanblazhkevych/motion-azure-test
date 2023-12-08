@@ -89,7 +89,6 @@ export function getLinearGradient(ref:React.RefObject<SVGAnimateElement>, second
     const _fillout = _fill + fillout;
     const _pause = _fillout + pause;
     const _end = _start + 0.25
-    console.log("HERE GRADIENTR ", ref.current)
     ref.current?.beginElement();
     secondRef.current?.beginElement();
 
