@@ -2,13 +2,13 @@
 
 import { useRef } from 'react';
 import styles from './styles.module.css'
-import { getAnimateStroke, getAnimateTransform, getLinearGradient } from '@/app/homepagesections/fifthpage/fifthpage';
+import { getLinearGradient, getAnimateTransform, getAnimateStroke } from '../utils';
 
 interface FreedomTowerPropsInterface {
     buildingIndex: number
 }
 
-export default function FreedomTower(props: FreedomTowerPropsInterface) {
+export default function Building(props: FreedomTowerPropsInterface) {
     const { buildingIndex } = props;
 
     const strokeRef = useRef<SVGAnimateElement>(null)
@@ -16,7 +16,6 @@ export default function FreedomTower(props: FreedomTowerPropsInterface) {
     const gradientRef = useRef<SVGAnimateElement>(null)
     const secondGradientRef = useRef<SVGAnimateElement>(null)
     const accentsTransformRef = useRef<SVGAnimateTransformElement>(null)
-    // console.log("RENDERED HEEEERE")
 
     const accents = ["M213.46,220.38l-53.83,440.28m52.75-440.01l53.84,440.61m-107.97,59.09h109.66m-91.61-440.01l30.54-15.27m-30.54,31.93l29.15-15.27m-29.15,33.31l26.37-12.49m-26.37,29.15l24.98-11.1m-24.98,30.54l22.21-9.72m-22.21,24.98l19.43-8.33m-19.43,23.6l18.04-8.33m-18.04,24.98l15.27-5.55m-15.27,22.21l13.88-5.55m-13.88,23.6l11.1-4.16m-11.1,22.21l9.72-4.16m-9.72,20.82l6.94-2.78m-6.94,18.04l5.55-1.39m-5.55-216.54l33.31-18.04m39.32,33.12l-30.54-15.27m30.54,31.93l-29.15-15.27m29.15,33.31l-26.37-12.49m26.37,29.15l-24.98-11.1m24.98,30.54l-22.21-9.72m22.21,24.98l-19.43-8.33m19.43,23.6l-18.04-8.33m18.04,24.98l-15.27-5.55m15.27,22.21l-13.88-5.55m13.88,23.6l-11.1-4.16m11.1,22.21l-9.72-4.16m9.72,20.82l-6.94-2.78m6.94,18.04l-5.55-1.39m5.55-216.54l-33.31-18.04m-31-1.2l24.98-5.55m30.54,5.55l-25.22-5.55m-9.48-49.97h13.88m-13.88-34.7h13.88",
                     "M188.99,291.79h48.48m-48.48-19.1h49.95m-42.6-17.63h35.26m-26.44-35.26h17.63m-45.54,380.47h23.5m-29.38-32.32h27.91m-14.69-127.8h24.97m-32.32-24.97h26.44m-22.03-47.01h26.44m-33.79-22.03h23.5m58.76,254.14h-23.5m29.38-32.32h-27.91m14.69-127.8h-24.97m32.32-24.97h-26.44m22.03-47.01h-26.44m33.79-22.03h-23.5m-60.23,163.06h26.44m-35.26-24.97l36.72,.73m54.35,24.24h-26.44m35.26-24.97h-35.26m-17.63,134.41s17.47-2.94,17.47,19.15m0,0c0,22.09-20.57,22.44-20.57,22.44m0,0s-18.34,.34-18.7-20.57m0,0c-.38-22.58,21.8-21.02,21.8-21.02m-52.88-.73s7.59,6.38,33.79,8.81m-36.72,14.69s11.12,9.47,36.72,8.81m33.79-23.5s22.14,1.47,38.19-7.34m-39.66,32.32s24.93,4.32,42.6-10.28m-113.11,127.8h52.88m-48.48-26.44h42.6m-36.72-26.44h29.38m-23.5-26.44h19.1m85.2,79.33h-52.88m48.48-26.44h-42.6m36.72-26.44h-29.38m23.5-26.44h-19.1",
