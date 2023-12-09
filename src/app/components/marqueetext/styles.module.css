@@ -1,0 +1,24 @@
+.marqueewrapper{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.marqueewrapper span{
+    position: absolute;
+    transition: all 600ms ease;
+}
+
+.textin{
+    transform: translateY(0) !important;
+    opacity: 100% !important;
+}
+
+.textout{
+    transform: translateY(20px);
+    opacity: 0%;
+}

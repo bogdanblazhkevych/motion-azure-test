@@ -7,6 +7,7 @@ import { delay } from '@/app/components/utils';
 import { FaRegCircle } from "react-icons/fa";
 import Building from '@/app/components/building/building';
 import AnimateChildren from '@/app/components/animatechildren/animatechildren';
+import MarqueeText from '@/app/components/marqueetext/marqueetext';
 
 export default function FifthPage() {
     const phonePathRef = useRef<SVGPathElement>(null)
@@ -74,6 +75,21 @@ export default function FifthPage() {
                 </div>
 
                 <div className={styles.artwrapper}>
+                    <div className={styles.phoneheadingwrapper}>
+                        <div className={styles.phoneheadingtext}>
+                            WELCOME TO
+                        </div>
+                        <div className={styles.phoneheadingtext}>
+                            <MarqueeText />
+                        </div>
+        
+                        {/* <div className={styles.phoneheadingtext}>
+                            STARTUP ECOSYSTEM
+                        </div> */}
+                        {/* <div className={styles.phoneheadingtext}>
+                            ECOSYSTEM
+                        </div> */}
+                    </div>
                     <div className={styles.phonetextwrapper}>
                         <div ref={phoneTextRefOne} className={styles.phonetextitem}>
                             <div className={styles.phonetextcircle}>

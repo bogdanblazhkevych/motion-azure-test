@@ -75,6 +75,23 @@
     position: relative;
 }
 
+.phoneheadingwrapper{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 25px;
+    /* gap: 1rem; */
+    color: var(--secondary-color);
+}
+
+.phoneheadingtext{
+    width: 100%;
+}
+
 .phonetextwrapper{
     /* border: 1px solid red; */
     bottom: 50px;
@@ -154,10 +171,11 @@
 }
 
 .buildingsgroup{
+    border: 1px solid red;
     transform-origin: 50% 0%; 
     opacity: 0;
     /* transform: scale(0.5); */
-    transform: scale(0.55);
+    transform: translateY(100px) scale(0.55);
 }
 
 .showtower{
