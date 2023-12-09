@@ -15,7 +15,7 @@ export default function AnimateChildren({children}: AnimateChildrenPropsInterfac
         const wrapperObserver = new IntersectionObserver((entries) => {
             entries.forEach(async (entry) => {
                 if (entry.isIntersecting) {
-                    wrapper?.classList.add(`${styles.wrapperOpen}`)
+                    wrapper?.classList.add(`${styles.animatewrapperOpen}`)
                 }
             })
         }, { threshold: 0.1 });

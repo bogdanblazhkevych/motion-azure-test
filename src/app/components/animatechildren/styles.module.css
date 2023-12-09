@@ -1,0 +1,10 @@
+.animatewrapper{
+    opacity: 0%;
+    transform: translateY(150px);
+    transition: all 600ms ease;
+}
+
+.animatewrapperOpen{
+    opacity: 100%;
+    transform: translateY(0px);
+}
