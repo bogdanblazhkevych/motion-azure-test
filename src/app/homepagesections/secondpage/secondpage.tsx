@@ -1,18 +1,23 @@
 import CardOne from '@/app/components/cardone/cardone'
 import styles from './styles.module.css'
 import Link from 'next/link'
+import AnimateChildren from '@/app/components/animatechildren/animatechildren'
 
 export default function SecondPage() {
         return (
                 <div className={styles.pagewrapper}>
                         <div className={styles.pagecontainer}>
                                 <div className={styles.textcontentwrapper}>
-                                        <h1>
-                                                Unlock Opportunities with Motion!
-                                        </h1>
-                                        <p>
-                                                Embark on a journey of innovation and collaboration with Motion. Whether you're interested in global partnerships, eager for early access to groundbreaking solutions, or exploring exciting career opportunities, our doors are open. Choose your path below and be a part of something extraordinary.
-                                        </p>
+                                        <AnimateChildren>
+
+                                                <h1>
+                                                        Unlock Opportunities with Motion!
+                                                </h1>
+                                                <p>
+                                                        Embark on a journey of innovation and collaboration with Motion. Whether you're interested in global partnerships, eager for early access to groundbreaking solutions, or exploring exciting career opportunities, our doors are open. Choose your path below and be a part of something extraordinary.
+                                                </p>
+
+                                        </AnimateChildren>
                                 </div>
 
                                 <div className={styles.cardscontainer}>
