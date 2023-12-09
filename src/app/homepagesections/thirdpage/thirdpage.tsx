@@ -1,7 +1,6 @@
 import Map from '@/app/components/map/map'
 import styles from './styles.module.css'
 import Logo from '@/app/components/logo/page'
-import AnimateHeading from '@/app/components/animateheading/animateheading'
 import AnimateChildren from '@/app/components/animatechildren/animatechildren'
 
 export default function ThirdPage() {
