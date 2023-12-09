@@ -38,6 +38,7 @@
 }
 
 .textcontentwrapper h1{
+    color: var(--secondary-color);
     width: max-content;
     max-width: 100%;
     font-size: clamp(32px, 6vw, 48px);

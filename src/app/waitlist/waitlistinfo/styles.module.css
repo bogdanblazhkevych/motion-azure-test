@@ -12,6 +12,7 @@
 }
 
 .waitlistinfotitle{
+    color: var(--secondary-color);
     font-size: clamp(32px, 6vw, 46px);
     font-weight: 700;
     line-height: 1.15;

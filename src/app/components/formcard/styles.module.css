@@ -9,6 +9,7 @@
 }
 
 .textcontainer h1 {
+    color: var(--secondary-color);
     font-size: clamp(20px, 3vw, 32px);
     font-weight: 700;
     line-height: 1.15;

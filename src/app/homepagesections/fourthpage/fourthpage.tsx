@@ -99,6 +99,9 @@ export default function FourthPage() {
 
         const lineThreeDashoffset = getDashoffset(percentage, 1200, 0.02, 0, 0, 0);
         lineThreeTopRef.current.style.strokeDashoffset = `${lineThreeDashoffset}`; 
+        if (percentage === 0) {
+            lineThreeTopRef.current.style.strokeDashoffset = '0'; 
+        }
         const lineThreeBottomDashoffset = getDashoffset(percentage, 200, 0.10, 0.02, 0, 0);
         lineThreeBottomRef.current.style.strokeDashoffset = `${lineThreeBottomDashoffset}`; 
 
