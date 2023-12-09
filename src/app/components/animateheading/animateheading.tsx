@@ -5,11 +5,12 @@ import styles from './styles.module.css'
 
 interface AnmiateHeadingPropsInterface {
     heading: string,
-    subheading: string
+    subheading: string,
+    align?: "center" | "left"
 }
 
 export default function AnimateHeading(props: AnmiateHeadingPropsInterface) {
-    const { heading, subheading } = props;
+    const { heading, subheading, align } = props;
     const headingRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -17,7 +18,6 @@ export default function AnimateHeading(props: AnmiateHeadingPropsInterface) {
 
         const headingObserver = new IntersectionObserver((entries) => {
             entries.forEach(async (entry) => {
-                console.log(entry)
                 if (entry.isIntersecting) {
                     heading?.classList.add(`${styles.headingOpen}`)
                 }
@@ -31,7 +31,7 @@ export default function AnimateHeading(props: AnmiateHeadingPropsInterface) {
 
 
     return(
-        <div ref={headingRef} className={styles.headingwrapper}>
+        <div ref={headingRef} className={styles.headingwrapper} data-align={align}>
             <h1>
                 {heading}
             </h1>

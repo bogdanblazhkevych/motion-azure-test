@@ -11,6 +11,10 @@
     transition: all 600ms ease;
 }
 
+.headingwrapper[data-align="center"]{
+    text-align: center;
+}
+
 .headingwrapper *{
     width: 100%;
 }

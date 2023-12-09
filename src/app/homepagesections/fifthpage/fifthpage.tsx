@@ -58,7 +58,8 @@ export default function FifthPage() {
                         Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.
                     </p> */}
                     <AnimateHeading heading='One platform to govern and manage it all'
-                                    subheading='Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.' />
+                                    subheading='Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.'
+                                    align="left" />
 
                     <ul className={styles.listcontainer}>
                         <ListItem text="Real-time analytics & insights" />
