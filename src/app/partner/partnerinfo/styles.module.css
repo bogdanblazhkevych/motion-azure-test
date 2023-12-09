@@ -21,6 +21,7 @@
 
 .textcontainer{
     /* border: 1px solid red; */
+    color: var(--secondary-color);
     padding: 0px 16px;
 }
 
