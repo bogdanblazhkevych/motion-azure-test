@@ -17,7 +17,6 @@ export default function MarqueeText() {
     const refList = [newyorkRef, londonRef, taipeiRef, parisRef]
 
     const changeText = async () => {
-        await delay(4000)
         const currentIndex = count % refList.length;
         console.log("current index:", currentIndex)
         const prevIndex = (count - 1) % refList.length;
@@ -33,8 +32,7 @@ export default function MarqueeText() {
         textOut.classList.remove(`${styles.textin}`)
         await delay(600)
         textIn.classList.add(`${styles.textin}`)
-        // textIn.classList.remove(`${styles.textout}`)
-        // textOut.classList.add(`${styles.textout}`)
+        await delay(4400)
         setCount((prevCount) => prevCount + 1);
     }
 
@@ -44,10 +42,10 @@ export default function MarqueeText() {
 
     return(
         <div className={styles.marqueewrapper}>
-            <span ref={newyorkRef} className={styles.textout}>New York</span>
-            <span ref={londonRef} className={styles.textout}>London</span>
-            <span ref={taipeiRef} className={styles.textout}>Tai Pei</span>
-            <span ref={parisRef} className={styles.textout}>Paris</span>
+            <span ref={newyorkRef} className={styles.textout}>Paris</span>
+            <span ref={londonRef} className={styles.textout}>New York</span>
+            <span ref={taipeiRef} className={styles.textout}>London</span>
+            <span ref={parisRef} className={styles.textout}>Tai Pei</span>
         </div>
     )
 }

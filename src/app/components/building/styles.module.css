@@ -4,9 +4,6 @@
     /* transform-origin: 50% 0%; */
     transform-origin: center;
 }
-/* 
-.freedomtower{
-} */
 
 .building{
     fill: none;
@@ -14,7 +11,7 @@
     stroke-width: 4px;
     transform-origin: center;
     stroke-linecap: round;
-    /* transform-origin: 50% 0%; */
+    
 
     stroke-dasharray: 1600;
     stroke-dashoffset: 1600;
