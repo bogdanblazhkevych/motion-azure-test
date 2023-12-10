@@ -10,7 +10,14 @@ const openSans = Open_Sans({weight: ["400", "500", "600", "700"],  subsets: ['la
 
 export const metadata: Metadata = {
   title: 'Motion!',
-  description: 'Cool Startup',
+  description: 'building something special shaping the future of automation to unleash the next wave of innovation and productivity.',
+  openGraph: {
+    type: "website",
+    url: "https://thankful-mud-0c7d5e210.4.azurestaticapps.net/",
+    title: "MOTION!",
+    description: "building something special shaping the future of automation to unleash the next wave of innovation and productivity.",
+    siteName: "Motion"
+  }
   // themeColor: '#CACACA',
 }
 export const viewport: Viewport = {
