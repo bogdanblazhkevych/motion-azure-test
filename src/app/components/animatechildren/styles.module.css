@@ -2,6 +2,7 @@
     opacity: 0%;
     transform: translateY(150px);
     transition: all 600ms ease;
+    width: 100%;
 }
 
 .animatewrapperOpen{

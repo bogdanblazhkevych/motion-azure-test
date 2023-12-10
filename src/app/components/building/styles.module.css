@@ -1,12 +1,8 @@
 .buildingaccents{
     fill: none;
     stroke-width: 4px;
+    /* transform-origin: 50% 0%; */
     transform-origin: center;
-}
-
-.freedomtower{
-    stroke-dasharray: 900;
-    stroke-dashoffset: 900;
 }
 
 .building{
@@ -15,4 +11,8 @@
     stroke-width: 4px;
     transform-origin: center;
     stroke-linecap: round;
+    
+
+    stroke-dasharray: 1600;
+    stroke-dashoffset: 1600;
 }
