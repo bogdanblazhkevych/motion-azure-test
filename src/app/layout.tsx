@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 const openSans = Open_Sans({weight: ["400", "500", "600", "700"],  subsets: ['latin'], variable: '--opensans'})
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://thankful-mud-0c7d5e210.4.azurestaticapps.net'),
   title: 'Motion!',
   description: 'building something special shaping the future of automation to unleash the next wave of innovation and productivity.',
   openGraph: {
