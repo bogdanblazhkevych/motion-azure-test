@@ -1,4 +1,4 @@
-import LandingTemplate from "../components/landingtemplate/landingtemplate/landingtemplate/landingtemplate";
+import LandingTemplate from "../components/landingtemplate/landingtemplate";
 import FormPage from "../components/formpage/formpage";
 import PartnerInfo from "./partnerinfo/partnerinfo";
 
