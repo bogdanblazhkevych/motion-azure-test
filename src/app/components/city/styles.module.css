@@ -45,9 +45,11 @@
 
 .test path{
     stroke: var(--primary-color-2);
+    fill: none;
 }
 
 .teststroke path{
+    fill: none;
     transform-origin: 50% 100%;
     transform: scale(1.2) translateY(15px);
     stroke-width: 4px;

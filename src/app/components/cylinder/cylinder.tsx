@@ -40,7 +40,7 @@ export default function Cylinder(props: CylinderProps) {
                 <ellipse className={styles.bigtop} cx="500" cy="500" rx="404.106" r="400" />
                     
                 <circle id="small1" className={styles.smallcircle} cx="504" cy="845.5" r="18" />
-                <circle id="smallglow1" fill="url(#blue-glow)" className={styles.smallcircleglow} cx="504" cy="845.5" r="18" />
+                {/* <circle id="smallglow1" fill="url(#blue-glow)" className={styles.smallcircleglow} cx="504" cy="845.5" r="18" /> */}
 
                 <circle id="small2" className={styles.smallcircle} cx="144.5" cy="500" r="18" />
                 <circle id="small3" className={styles.smallcircle} cx="504" cy="162" r="18" />
