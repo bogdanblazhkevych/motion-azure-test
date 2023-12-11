@@ -17,7 +17,9 @@
 
   --third-color: rgb(38, 38, 38);
 
-  --light-1: rgb(171, 171, 171);
+  --light-1: rgb(255, 255, 255);
+
+  --light-5: rgb(154, 154, 154);
 }
 
 menu,
