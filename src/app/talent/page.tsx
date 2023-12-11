@@ -1,4 +1,5 @@
-import LandingTemplate from "../components/landingtemplate/landingtemplate/landingtemplate/landingtemplate";
+
+import LandingTemplate from "../components/landingtemplate/landingtemplate";
 import JobsBoard from "./jobsboard/jobsboard";
 
 export default function Partner() {

@@ -10,6 +10,31 @@
     stroke-width: 1px; */
 }
 
+.logosvg{
+    /* border: 1px solid red; */
+
+    /* width: 100%;
+    height: 100%; */
+    position: absolute;
+    z-index: 1;
+    top: 68px;
+    transform-origin: center;
+    transform: scale(0.7);
+}
+
+.test{
+    stroke: 5px solid red;
+}
+
+.logo{
+    fill: var(--standout-color);
+}
+
+.logotext{
+    fill: var(--primary-color-2);
+    /* filter: drop-shadow(6px 2px 6px #000000); */
+}
+
 
 .smallcircle{
     fill: none;
@@ -38,21 +63,6 @@
     filter: blur(5px);
     will-change: filter;
 }
-
-
-/* .gradient{
-
-    position: absolute;
-    width: 300%;
-    max-width: 98vw;
-    aspect-ratio:  1 / 1;
-    background: conic-gradient(from 180deg at 50% 50%,var(--standout-color) 0deg,var(--standout-color-3) 180deg,var(--standout-color-dark) 1turn);
-    opacity: 0.25;
-
-    mix-blend-mode: normal;
-    filter: blur(100px);
-    will-change: filter;
-} */
 
 .svg{
     /* border: 1px solid red; */
