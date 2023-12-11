@@ -115,3 +115,63 @@ export function getLinearGradient(ref:React.RefObject<SVGAnimateElement>, second
         </linearGradient>
     )
 }
+
+export const createStrokeGradient = (order: number, length: number, delay: number, delayPosition: "start" | "end", direction: "up" | "down" | "left" | "right") => {
+    const totalDuration = length + delay;
+    const start = delay / totalDuration;
+    const gradientKeyTimes = `0;${delayPosition === "start" ? start : 0};${delayPosition === "start" ? 1 : (1 - start)};1`
+
+    let gradientValuesY1;
+    let gradientValuesY2;
+    let gradientValuesX1;
+    let gradientValuesX2;
+
+    switch (direction) {
+        case 'up':
+            gradientValuesY1 = "100%;100%;-40%;-40%;";
+            gradientValuesY2 = "140%;140%;0%;0%;";
+            gradientValuesX1 = "0%;0%;0%;0%;";
+            gradientValuesX2 = "0%;0%;0%;0%;";
+            break;
+            case 'down':
+            gradientValuesY1 = "-40%;-40%;100%;100%;";
+            gradientValuesY2 = "0%;0%;140%;140%;";
+            gradientValuesX1 = "0%;0%;0%;0%;";
+            gradientValuesX2 = "0%;0%;0%;0%;";
+            break;
+        case 'left':
+            gradientValuesY1 = "0%;0%;0%;0%;";
+            gradientValuesY2 = "0%;0%;0%;0%;";
+            gradientValuesX1 = "100%;100%;-40%;-40%;";
+            gradientValuesX2 = "140%;140%;0%;0%;";
+            break;
+        case 'right':
+            gradientValuesY1 = "0%;0%;0%;0%;";
+            gradientValuesY2 = "0%;0%;0%;0%;";
+            gradientValuesX1 = "0%;0%;140%;140%;";
+            gradientValuesX2 = "-40%;-40%;100%;100%;";
+            break;
+        default:
+            gradientValuesY1 = "100%;100%;-40%;-40%;";
+            gradientValuesY2 = "140%;140%;0%;0%;";
+            gradientValuesX1 = "0%;0%;0%;0%;";
+            gradientValuesX2 = "0%;0%;0%;0%;";
+    }
+
+    return (
+        <linearGradient gradientUnits="objectBoundingBox"
+            id={`new-blue-pulse-${order}`}
+            x1="0%"
+            y1={direction === "up" ? "100%" : "-40%"}
+            x2="0%"
+            y2={direction === "up" ? "140%" : "0%"} >
+            <stop stop-color="#267e99" stop-opacity="0"></stop>
+            <stop offset="0.05" stop-color="#267e99"></stop>
+            <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+            <animate attributeName="y1" values={gradientValuesY1} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="y2" values={gradientValuesY2} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="x1" values={gradientValuesX1} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="x2" values={gradientValuesX2} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
+        </linearGradient>
+    )
+}
