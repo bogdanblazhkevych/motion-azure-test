@@ -12,6 +12,41 @@
     background-color: var(--primary-color);
 }
 
+.submitbutton {
+    all: unset;
+    width: 100%;
+    color: var(--secondary-color);
+    font-size: clamp(16px, 3vw, 22px);
+    padding: 0.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid var(--standout-color);
+    text-align: center;
+    position: relative;
+    box-sizing: content-box;
+    overflow: hidden;
+
+    background: linear-gradient(to right, var(--standout-color), var(--standout-color) 50%, var(--primary-color) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+    transition: background-position 0.3s ease-out, color 0.3s ease-in-out;
+}
+
+.submitbutton:hover {
+    background-position: 0% 100%;
+    color: var(--primary-color)
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
 .textcontainer{
     /* border: 1px solid green; */
     opacity: 0%;
@@ -19,13 +54,33 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    /* justify-content: center; */
     align-items: center;
     margin-top: 80px;
     width: 80vw;
     max-width: 1280px;
 }
 
+.logowrapper {
+    /* border: 1px solid yellow; */
 
+    /* height: 150px; */
+    width: 80%;
+    aspect-ratio: 2 / 0.5;
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logocontainer {
+    /* border: 1px solid blue; */
+
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
 
 .herotextwrapper{
     /* border: 1px solid red; */
@@ -35,9 +90,14 @@
     align-items: center;
     flex-direction: column;
     width: min-content;
+    /* width: 60%; */
     max-width: 100%;
     min-width: 300px;
-    gap: 2rem;
+    /* gap: 2rem; */
+}
+
+.herotextwrapper > :not(:first-child){
+    padding-bottom: 2.5rem;
 }
 
 .herotitle{
@@ -69,8 +129,13 @@
 
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    padding: 0px !important;
+}
+
+.buttonwrapper a{
+    width: 100%;
 }
 
 .button{

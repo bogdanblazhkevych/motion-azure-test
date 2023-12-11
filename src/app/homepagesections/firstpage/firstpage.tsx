@@ -33,14 +33,20 @@ export default function FirstPage(){
             
             <div ref={textcontainerRef} className={styles.textcontainer}>
                 <div className={styles.herotextwrapper}>
+                    <div className={styles.logowrapper}>
+                        <div className={styles.logocontainer}>
+                            <Logo />
+                        </div>
+                    </div>
                     <h1 className={styles.herotitle}>
-                        Success starts with a great product
+                        Technology For The Next<br></br>Frontier of Innovation
+                        {/* Success starts with a great product */}
                     </h1>
-                    <p className={styles.heroparagraph}>
+                    {/* <p className={styles.heroparagraph}>
                         We are building something special shaping the future of automation to unleash the next wave of innovation and productivity.
-                    </p>
+                    </p> */}
                     <div className={styles.buttonwrapper}>
-                        <Link href="/waitlist">    
+                        {/* <Link href="/waitlist">    
                             <button className={`${styles.button} ${styles.buttonjoin}`}>
                                 Join the Waitlist
                             </button>
@@ -49,6 +55,9 @@ export default function FirstPage(){
                             <button className={`${styles.button} ${styles.buttonpartner}`}>
                                 Become a partner
                             </button>
+                        </Link> */}
+                        <Link href={"#calltoaction"}>
+                            <button type="submit" className={styles.submitbutton}>Build the future with Motion!</button>
                         </Link>
                     </div>
                 </div>

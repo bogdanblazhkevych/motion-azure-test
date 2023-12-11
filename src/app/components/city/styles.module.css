@@ -14,6 +14,12 @@
 }
 
 .citygroup path{
+    stroke: rgb(58, 58, 58) !important;
+    stroke-width: 3px !important;
+    fill: none !important;
+}
+
+.citygroup path{
     stroke: var(--primary-color-2);
     fill: none;
 }
