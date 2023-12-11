@@ -6,11 +6,12 @@
     bottom: -5.5%;
     color: #2EB9DF;
     color: #1f7994;
+    /* border: 1px solid red; */
 }
 
 .citygroup{
     transform-origin: 50% 100%;
-    transform: scale(1.2) translateY(15px);
+    transform: scale(1.2) translateY(17px);
 }
 
 .citygroup path{
