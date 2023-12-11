@@ -1,5 +1,6 @@
 .bigtop{
-    fill: var(--secondary-color-2);
+    /* fill: var(--secondary-color-2); */
+    fill: rgb(189, 189, 189);
     /* stroke: var(--standout-color); */
     stroke: #2F528F;
     stroke-width: 19px;
@@ -9,11 +10,14 @@
     stroke-width: 1px; */
 }
 
+
 .smallcircle{
     fill: none;
     fill: var(--primary-color-2);
     stroke-width: 5px;
+    position: relative;
 }
+
 
 .testwrapper{
     position: relative;
@@ -23,6 +27,32 @@
 .svg * { 
     transform-box: fill-box;
 }
+
+.smallcircleglow{
+    /* fill: red; */
+    transform-origin: center;
+    transform: scale(1.5);
+    opacity: 1;
+
+    mix-blend-mode: normal;
+    filter: blur(5px);
+    will-change: filter;
+}
+
+
+/* .gradient{
+
+    position: absolute;
+    width: 300%;
+    max-width: 98vw;
+    aspect-ratio:  1 / 1;
+    background: conic-gradient(from 180deg at 50% 50%,var(--standout-color) 0deg,var(--standout-color-3) 180deg,var(--standout-color-dark) 1turn);
+    opacity: 0.25;
+
+    mix-blend-mode: normal;
+    filter: blur(100px);
+    will-change: filter;
+} */
 
 .svg{
     /* border: 1px solid red; */
