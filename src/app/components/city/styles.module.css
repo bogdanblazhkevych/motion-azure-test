@@ -11,23 +11,41 @@
 
 .citygroup{
     transform-origin: 50% 100%;
-    transform: scale(1.2) translateY(17px);
+    transform: scale(1.2) translateY(20px);
+}
+
+.cityfill{
+    transform-origin: 50% 100%;
+    transform: scale(1.2) translateY(20px);
+    
+    stroke: none;
+    fill: black;
 }
 
 .citygroup path{
-    stroke: rgb(58, 58, 58) !important;
-    stroke-width: 3px !important;
-    fill: none !important;
+    /* stroke: rgb(58, 58, 58) !important; */
+    /* stroke: var(--primary-color-2) !important; */
+    stroke: rgb(59, 59, 59) !important;
+    /* fill: black !important; */
+
+
+    /* stroke-width: 3px !important; */
+    /* fill: none !important; */
 }
 
 .citygroup path{
     stroke: var(--primary-color-2);
-    fill: none;
+    /* fill: none; */
 }
 
 .strokegroup path{
-    fill: none;
+    /* fill: none; */
     transform-origin: 50% 100%;
-    transform: scale(1.2) translateY(15px);
-    stroke-width: 4px;
+    transform: scale(1.2) translateY(20px);
+    /* stroke-width: 4px; */
+}
+
+.citygroup path,.strokegroup path{
+    fill: none !important;
+    stroke-width: 3px !important
 }
