@@ -1,18 +1,8 @@
-.line{
+.waitlistsvg path{
     stroke: var(--secondary-color-4);
-    stroke-width: 4px;
-}
-
-.chip{
-    stroke: var(--secondary-color-4);
-    /* fill: var(--primary-color); */
-    fill: var(--primary-color);
     stroke-width: 6px;
-    stroke-linecap: round;
-    border-radius: 10px;
 }
 
-.motionicon{
-    stroke: none;
-    fill: var(--standout-color)
+.personicon path{
+    fill: var(--primary-color) !important;
 }
