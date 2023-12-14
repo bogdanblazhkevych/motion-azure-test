@@ -1,8 +1,10 @@
 .waitlistsvg path{
     stroke: var(--secondary-color-4);
-    stroke-width: 6px;
+    stroke-width: 4px;
+    transform: translateY(-5px);
 }
 
 .personicon path{
+    stroke-width: 6px;
     fill: var(--primary-color) !important;
 }
