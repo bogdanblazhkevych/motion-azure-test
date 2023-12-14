@@ -6,27 +6,40 @@
     bottom: -5.5%;
     color: #2EB9DF;
     color: #1f7994;
+    /* border: 1px solid red; */
 }
 
 .citygroup{
     transform-origin: 50% 100%;
-    transform: scale(1.2) translateY(15px);
+    transform: scale(1.2) translateY(20px);
+}
+
+.cityfill{
+    transform-origin: 50% 100%;
+    transform: scale(1.2) translateY(20px);
+    
+    stroke: none;
+    fill: black;
 }
 
 .citygroup path{
-    stroke: rgb(58, 58, 58) !important;
-    stroke-width: 3px !important;
-    fill: none !important;
+    /* stroke: rgb(59, 59, 59) !important; */
+    stroke: rgb(69, 69, 69) !important;
 }
 
 .citygroup path{
     stroke: var(--primary-color-2);
-    fill: none;
+    /* fill: none; */
 }
 
 .strokegroup path{
-    fill: none;
+    /* fill: none; */
     transform-origin: 50% 100%;
-    transform: scale(1.2) translateY(15px);
-    stroke-width: 4px;
+    transform: scale(1.2) translateY(20px);
+    stroke-width: 4px !important;
+}
+
+.citygroup path,.strokegroup path{
+    fill: none !important;
+    stroke-width: 2px;
 }

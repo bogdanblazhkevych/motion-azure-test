@@ -134,8 +134,8 @@ export const createStrokeGradient = (order: number, length: number, delay: numbe
             gradientValuesX2 = "0%;0%;0%;0%;";
             break;
             case 'down':
-            gradientValuesY1 = "-40%;-40%;100%;100%;";
-            gradientValuesY2 = "0%;0%;140%;140%;";
+            gradientValuesY2 = "-40%;-40%;100%;100%;";
+            gradientValuesY1 = "0%;0%;140%;140%;";
             gradientValuesX1 = "0%;0%;0%;0%;";
             gradientValuesX2 = "0%;0%;0%;0%;";
             break;
@@ -165,9 +165,9 @@ export const createStrokeGradient = (order: number, length: number, delay: numbe
             y1={direction === "up" ? "100%" : "-40%"}
             x2="0%"
             y2={direction === "up" ? "140%" : "0%"} >
-            <stop stop-color="#267e99" stop-opacity="0"></stop>
-            <stop offset="0.05" stop-color="#267e99"></stop>
-            <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+            <stop stop-color="#1F7994" stop-opacity="0"></stop>
+            <stop offset="0.05" stop-color="#1F7994"></stop>
+            <stop offset="1" stop-color="#1F7994" stop-opacity="0"></stop>
             <animate attributeName="y1" values={gradientValuesY1} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
             <animate attributeName="y2" values={gradientValuesY2} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
             <animate attributeName="x1" values={gradientValuesX1} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />

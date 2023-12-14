@@ -1,5 +1,6 @@
 import CardOne from '@/app/components/cardone/cardone'
 import styles from './styles.module.css'
+import AnimateChildren from '@/app/components/animatechildren/animatechildren'
 
 export default function PartnerInfo() {
     return (
@@ -7,44 +8,47 @@ export default function PartnerInfo() {
 
             <div className={styles.partnerinfocontainer}>
 
-                <div className={styles.textcontainer}>
-                    <h1>
-                        How partners help accelerate businesses at every stage
-                    </h1>
-                </div>
+                <AnimateChildren>
+                    <div className={styles.textcontainer}>
+                        <h1>
+                            How partners help accelerate businesses at every stage
+                        </h1>
+                    </div>
+                </AnimateChildren>
 
-                <div className={styles.cardscontainer}>
+                <AnimateChildren>
+                    <div className={styles.cardscontainer}>
 
-                    <CardOne heading='Access to Global Resources'
-                        paragraph='Tap into world-class talent and the latest technologies on-demand with access to tools available globally.'
-                        textAlign='left'
-                        banner={GlobalResourcesSVG()} />
+                        <CardOne heading='Access to Global Resources'
+                            paragraph='Tap into world-class talent and the latest technologies on-demand with access to tools available globally.'
+                            textAlign='left'
+                            banner={GlobalResourcesSVG()} />
 
-                    <CardOne heading='Centralized Access'
-                        paragraph="Get easy access to Motion's entire integrated suite of features designed to work together and expand offerings"
-                        textAlign='left'
-                        banner={CentralizedSVG()} />
+                        <CardOne heading='Centralized Access'
+                            paragraph="Get easy access to Motion's entire integrated suite of features designed to work together and expand offerings"
+                            textAlign='left'
+                            banner={CentralizedSVG()} />
 
-                    <CardOne heading='Streamline Operations'
-                        paragraph='Use our unified platform to integrate Motion into innovation processes and strategy with SaaS and Marketplace.'
-                        textAlign='left' 
-                        banner={InnovationSVG()}/>
+                        <CardOne heading='Streamline Operations'
+                            paragraph='Use our unified platform to integrate Motion into innovation processes and strategy with SaaS and Marketplace.'
+                            textAlign='left' 
+                            banner={InnovationSVG()}/>
 
-                    <CardOne heading='Accelerate Innovation'
-                        paragraph='Co-create and collaborate to optimize R&D projects, de-risk innovation, and accelerate your overall business model.'
-                        textAlign='left' />
+                        <CardOne heading='Accelerate Innovation'
+                            paragraph='Co-create and collaborate to optimize R&D projects, de-risk innovation, and accelerate your overall business model.'
+                            textAlign='left' />
 
-                    <CardOne heading='Expand Globally'
-                        paragraph='Accelerate international expansion and enter new global markets with regional experts to find new sales channels.'
-                        textAlign='left' />
+                        <CardOne heading='Expand Globally'
+                            paragraph='Accelerate international expansion and enter new global markets with regional experts to find new sales channels.'
+                            textAlign='left' />
 
-                    <CardOne heading='Launch Quickly'
-                        paragraph="Validate assumptions quickly, reduce time to market, and bring product to deployment faster."
-                        textAlign='left' />
+                        <CardOne heading='Launch Quickly'
+                            paragraph="Validate assumptions quickly, reduce time to market, and bring product to deployment faster."
+                            textAlign='left' />
 
+                    </div>
+                </AnimateChildren>
 
-
-                </div>
 
             </div>
 

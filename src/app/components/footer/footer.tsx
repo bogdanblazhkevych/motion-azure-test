@@ -25,7 +25,7 @@ export default function Footer() {
                     <Link href='/waitlist'>
                         Join Waitlist 
                     </Link>
-                    <Link href='/'>
+                    <Link href='/policy'>
                         Terms of Use
                     </Link>
                 </div>

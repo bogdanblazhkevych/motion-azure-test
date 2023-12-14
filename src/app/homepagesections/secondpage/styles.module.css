@@ -52,6 +52,13 @@
     color: var(--secondary-color-4);
 }
 
+.headingwrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+
+}
+
 .cardscontainer{
     /* border: 1px solid blue; */
 

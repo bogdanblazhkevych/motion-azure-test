@@ -1,0 +1,39 @@
+.waitlistsvg path{
+    transform: translateY(5px);
+    fill: none;
+    /* stroke: var(--secondary-color-4); */
+}
+
+/* .waitlistsvg{
+    border: 1px solid red;
+} */
+
+.globelinesgroup path{
+    /* stroke: var(--secondary-color-4); */
+    stroke: rgb(50, 50, 50);
+    stroke-width: 2px;
+}
+
+.personicon *{
+    /* stroke: var(--secondary-color-4); */
+    /* stroke: rgb(146, 146, 146); */
+    stroke: rgb(50, 50, 50);
+    stroke-width: 2px;
+    fill: var(--primary-color) !important;
+}
+
+.personicon path{
+    transform: translateY(-0.3%);
+    stroke: rgb(146, 146, 146);
+    stroke-width: 4px;
+}
+
+.bluelinesgroup path{
+    stroke-width: 6px;
+}
+
+.smallcircle{
+    stroke: var(--standout-color);
+    stroke-width: 8px;
+    fill: none;
+}
