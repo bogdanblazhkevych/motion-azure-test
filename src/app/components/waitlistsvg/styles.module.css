@@ -55,3 +55,22 @@
     0% {transform: scale(5)}
     100% {transform: scale(1);}
 } 
+
+@media only screen and (max-width: 1024px) {
+    .waitlistsvg{
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 762px) {
+    .waitlistsvg{
+        transform: scaleX(-1);
+    }
+
+    .motionicon{
+        stroke: none;
+        /* transform-origin: center; */
+        transform-origin: 56% 40%;
+        transform: scaleX(-1)
+    }
+}
