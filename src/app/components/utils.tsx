@@ -134,8 +134,8 @@ export const createStrokeGradient = (order: number, length: number, delay: numbe
             gradientValuesX2 = "0%;0%;0%;0%;";
             break;
             case 'down':
-            gradientValuesY1 = "-40%;-40%;100%;100%;";
-            gradientValuesY2 = "0%;0%;140%;140%;";
+            gradientValuesY2 = "-40%;-40%;100%;100%;";
+            gradientValuesY1 = "0%;0%;140%;140%;";
             gradientValuesX1 = "0%;0%;0%;0%;";
             gradientValuesX2 = "0%;0%;0%;0%;";
             break;
