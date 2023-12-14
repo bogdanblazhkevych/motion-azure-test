@@ -28,7 +28,7 @@ export default function LandingTemplateTwo(props: LandingTemplatePropsInterface)
                 </div>
 
                 <div className={styles.iconwrapper}>
-                    {icon === "partner" ? PartnerSVG() : WaitlistSVG()}
+                    {icon === "partner" ? <PartnerSVG /> : <WaitlistSVG />}
                 </div>
             </div>
 
