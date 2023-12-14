@@ -1,3 +1,4 @@
+import AnimateChildren from '@/app/components/animatechildren/animatechildren';
 import styles from './styles.module.css'
 import WaitlistInfoCard from '@/app/components/waitlistinfocard/waitlistinfocard';
 
@@ -6,9 +7,11 @@ export default function WaitlistInfo() {
         <div className={styles.waitlistinfowrapper}>
             <div className={styles.waitlistinfocontainer}>
 
-                <h1 className={styles.waitlistinfotitle}>
-                    Exclusive Access, Influence, and Innovation
-                </h1>
+                <AnimateChildren>
+                    <h1 className={styles.waitlistinfotitle}>
+                        Exclusive Access, Influence, and Innovation
+                    </h1>
+                </AnimateChildren>
 
                 <div className={styles.descriptioncontiner}>
 

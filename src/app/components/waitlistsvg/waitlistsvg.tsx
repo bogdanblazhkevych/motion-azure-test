@@ -102,12 +102,14 @@ const getGradient = (order: number) => {
                 fr="0%"
                 r="0%"
                 gradientUnits="userSpaceOnUse">
-                <stop offset="0.3" stop-color="#A0A0A0" />
+                <stop offset="0.3" stop-color="#323232" />
                 <stop offset="0.5"stop-color="#1F7994" />
                 <stop offset="0.8"stop-color="#1F7994" />
                 <stop stop-color="black" />
-                {/* <stop stop-color="#1F7994"></stop>
-                <stop offset="0.06" stop-color="#1F7994" stopOpacity={0}></stop> */}
+                {/* <stop offset="0.3" stop-color="#A0A0A0" />
+                <stop offset="0.5"stop-color="#1F7994" />
+                <stop offset="0.8"stop-color="#1F7994" />
+                <stop stop-color="black" /> */}
                 <animate attributeName="r" values="0%;200%" begin={`${1.5 + order * 0.0185}s`} dur="2s" repeatCount="1" fill="freeze" />
             </radialGradient>
     )

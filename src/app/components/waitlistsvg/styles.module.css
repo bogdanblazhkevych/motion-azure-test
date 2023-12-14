@@ -4,7 +4,7 @@
 }
 
 .line{
-    stroke-width: 4px;
+    stroke-width: 2px;
     fill: none
 }
 
@@ -14,10 +14,13 @@
 }
 
 .chip{
-    stroke: var(--secondary-color-4);
+    /* stroke: var(--secondary-color-4); */
+    stroke: #323232;
+    
     fill: var(--primary-color);
+    /* fill: #323232; */
 
-    stroke-width: 6px;
+    stroke-width: 2px;
     stroke-linecap: round;
     border-radius: 10px;
 

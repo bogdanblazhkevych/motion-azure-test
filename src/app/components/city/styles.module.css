@@ -36,10 +36,10 @@
     /* fill: none; */
     transform-origin: 50% 100%;
     transform: scale(1.2) translateY(20px);
-    /* stroke-width: 4px; */
+    stroke-width: 4px !important;
 }
 
 .citygroup path,.strokegroup path{
     fill: none !important;
-    stroke-width: 4px !important
+    stroke-width: 2px;
 }

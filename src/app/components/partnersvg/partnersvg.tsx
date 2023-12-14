@@ -2,10 +2,7 @@ import { createStrokeGradient } from '../utils'
 import styles from './styles.module.css'
 
 export default function PartnerSVG() {
-
-
     return (
-
         <svg className={styles.waitlistsvg} viewBox='0 0 1000 500'>
             <defs>
                 {createStrokeGradient(1, 2, 5, "end", "down")}

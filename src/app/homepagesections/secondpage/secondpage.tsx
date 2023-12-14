@@ -5,7 +5,7 @@ import AnimateChildren from '@/app/components/animatechildren/animatechildren'
 
 export default function SecondPage() {
         return (
-                <div className={styles.pagewrapper} id="calltoaction">
+                <div className={styles.pagewrapper} id="opportunities">
                         <div className={styles.pagecontainer}>
                                 <div className={styles.textcontentwrapper}>
                                         <AnimateChildren>
