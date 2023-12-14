@@ -54,6 +54,12 @@
     max-width: 1280px;
 }
 
+.headingwrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
     .thirdpagewrapper{
         padding: 5rem 0;

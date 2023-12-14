@@ -9,14 +9,14 @@ export default function SecondPage() {
                         <div className={styles.pagecontainer}>
                                 <div className={styles.textcontentwrapper}>
                                         <AnimateChildren>
-
-                                                <h1>
-                                                        Unlock Opportunities with Motion!
-                                                </h1>
-                                                <p>
-                                                        Embark on a journey of innovation and collaboration with Motion. Whether you're interested in global partnerships, eager for early access to groundbreaking solutions, or exploring exciting career opportunities, our doors are open. Choose your path below and be a part of something extraordinary.
-                                                </p>
-
+                                                <div className={styles.headingwrapper}>
+                                                        <h1>
+                                                                Unlock Opportunities with Motion!
+                                                        </h1>
+                                                        <p>
+                                                                Embark on a journey of innovation and collaboration with Motion. Whether you're interested in global partnerships, eager for early access to groundbreaking solutions, or exploring exciting career opportunities, our doors are open. Choose your path below and be a part of something extraordinary.
+                                                        </p>
+                                                </div>
                                         </AnimateChildren>
                                 </div>
                                 <AnimateChildren>
