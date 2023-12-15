@@ -1,46 +1,32 @@
-.laptopbackground{
-    fill: white;
-    fill: var(--primary-color)
+.svgmain *{
+    stroke-width: 5px;
+    stroke: #323232;
 }
 
 .laptopborder{
-    /* fill: red */
-    fill: #323232;
+    fill: var(--primary-color)
 }
 
-.bottombar{
-    stroke: red;
-    stroke: #323232;
-    stroke-width: 17px;
-}
+/* .bottombar{
+
+} */
 
 .linechart{
-    stroke: red;
-    stroke: #323232;
     stroke: var(--standout-color);
-    stroke-width: 17px;
 }
 
-.piechartlarge{
-    stroke: red;
-    stroke: #323232;
-    /* stroke: var(--standout-color); */
-    stroke-width: 17px;
-}
+/* .piechartlarge{
+
+} */
 
 .piechartsmall{
-    stroke: red;
-    stroke: #323232;
     stroke: var(--standout-color);
-    stroke-width: 17px;
 }
 
-.topbar{
-    fill: red;
-    fill: #323232;
-}
+/* .topbar{
 
-.topdot{
-    fill: red;
-    fill: #323232;
-}
+} */
+
+/* .topdot{
+
+} */

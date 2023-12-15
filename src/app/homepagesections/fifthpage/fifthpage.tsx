@@ -9,6 +9,7 @@ import Building from '@/app/components/building/building';
 import AnimateChildren from '@/app/components/animatechildren/animatechildren';
 import MarqueeText from '@/app/components/marqueetext/marqueetext';
 import AnalyticsSVG from '@/app/components/analyticssvg/analyticssvg';
+import InovationSVG from '@/app/components/inovationsvg/inovationsvg';
 
 export default function FifthPage() {
     const phonePathRef = useRef<SVGPathElement>(null)
@@ -97,7 +98,8 @@ export default function FifthPage() {
                         From ideation to prototyping
                     </p>
                     <div className={styles.iconsvgwrapper}>
-                        <AnalyticsSVG />
+                        {/* <AnalyticsSVG /> */}
+                        <InovationSVG />
                     </div>
                 </div>
                 <div className={styles.iconwrapper}>

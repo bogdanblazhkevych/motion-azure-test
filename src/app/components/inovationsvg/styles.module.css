@@ -1,0 +1,17 @@
+.svgmain path{
+    stroke-width: 5px;
+    stroke: #323232;    
+    fill: none;
+}
+
+.gearsmall{
+    stroke: var(--standout-color) !important;
+}
+
+.gearlarge{
+    stroke: var(--standout-color) !important;
+}
+
+.lightpath{
+    stroke: var(--standout-color) !important;
+}
