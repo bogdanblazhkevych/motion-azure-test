@@ -1,0 +1,46 @@
+.laptopbackground{
+    fill: white;
+    fill: var(--primary-color)
+}
+
+.laptopborder{
+    /* fill: red */
+    fill: #323232;
+}
+
+.bottombar{
+    stroke: red;
+    stroke: #323232;
+    stroke-width: 17px;
+}
+
+.linechart{
+    stroke: red;
+    stroke: #323232;
+    stroke: var(--standout-color);
+    stroke-width: 17px;
+}
+
+.piechartlarge{
+    stroke: red;
+    stroke: #323232;
+    /* stroke: var(--standout-color); */
+    stroke-width: 17px;
+}
+
+.piechartsmall{
+    stroke: red;
+    stroke: #323232;
+    stroke: var(--standout-color);
+    stroke-width: 17px;
+}
+
+.topbar{
+    fill: red;
+    fill: #323232;
+}
+
+.topdot{
+    fill: red;
+    fill: #323232;
+}
