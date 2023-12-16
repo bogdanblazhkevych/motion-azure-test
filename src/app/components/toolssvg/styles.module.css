@@ -1,0 +1,13 @@
+.svgmain *{
+    stroke-width: 5px;
+    stroke: #323232;    
+    fill: none;
+}
+
+.window{
+    fill: var(--primary-color)
+}
+
+.range{
+    stroke: var(--standout-color)
+}

@@ -10,6 +10,7 @@ import AnimateChildren from '@/app/components/animatechildren/animatechildren';
 import MarqueeText from '@/app/components/marqueetext/marqueetext';
 import AnalyticsSVG from '@/app/components/analyticssvg/analyticssvg';
 import InovationSVG from '@/app/components/inovationsvg/inovationsvg';
+import ToolsSVG from '@/app/components/toolssvg/toolssvg';
 
 export default function FifthPage() {
     const phonePathRef = useRef<SVGPathElement>(null)
@@ -110,7 +111,7 @@ export default function FifthPage() {
                         Leverage technology & talent
                     </p>
                     <div className={styles.iconsvgwrapper}>
-                        <AnalyticsSVG />
+                        <ToolsSVG />
                     </div>
 
                 </div>

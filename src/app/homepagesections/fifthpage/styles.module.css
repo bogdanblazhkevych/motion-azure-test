@@ -1,5 +1,5 @@
 .fifthpagewrapper{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     width: 100%;
     display: flex;
@@ -12,7 +12,7 @@
 }
 
 .fifthpagecontainer{
-    border: 1px dashed aqua;
+    /* border: 1px dashed aqua; */
 
     width: 100%;
     max-width: 1280px;
@@ -52,11 +52,11 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .iconwrapper{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 100%;
     height: 100%;
     display: flex; 
@@ -102,7 +102,7 @@
 }
 
 .artwrapper{
-    border: 1px dotted yellow;
+    /* border: 1px dotted yellow; */
 
     display: flex;
     justify-content: center;
