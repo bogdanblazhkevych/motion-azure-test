@@ -5,13 +5,15 @@ import SecondPage from './homepagesections/secondpage/secondpage'
 import ThirdPage from './homepagesections/thirdpage/thirdpage'
 import FourthPage from './homepagesections/fourthpage/fourthpage'
 import FifthPage from './homepagesections/fifthpage/fifthpage'
+import SixthPage from './homepagesections/sixthpage/sixthpage'
 
 export default function Home() {
 
   return (
     <main>
       <FirstPage />
-      <FourthPage />
+      <SixthPage />
+      {/* <FourthPage /> */}
       <FifthPage />
       <Slider />
       <ThirdPage />

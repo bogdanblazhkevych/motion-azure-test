@@ -1,0 +1,84 @@
+.sixthpagewrapper{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.sixthpagecontainer{
+    /* border: 1px dotted green; */
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 24px;
+}
+
+.maincontentcontainer{
+    /* border: 1px solid white; */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    align-items: center;
+    /* aspect-ratio: 2 / 1; */
+}
+
+.maincontentcontainer div{
+    height: 100%;
+}
+
+.gridcard{
+    /* border: 1px solid red; */
+    /* height: 100%; */
+}
+
+
+.gridsvg{
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    /* margin: 100px; */
+}
+
+
+/* \/\/\/ card styles \/\/\/ */
+.cardwrapper{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /* aspect-ratio: 1 / 1; */
+    position: relative;
+}
+
+.cardcontainer{
+    /* border: 1px solid blue; */
+    /* height: 100%; */
+    height: fit-content !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cardcontainer h1{
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--secondary-color);
+}
+
+.cardcontainer p{
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--secondary-color-4);
+}
+
+.cardcontainer h5{
+    color: var(--standout-color);
+    text-transform: uppercase;
+}
+/* /\/\/\ card styles /\/\/\ */

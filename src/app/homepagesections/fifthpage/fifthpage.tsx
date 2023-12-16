@@ -79,54 +79,70 @@ export default function FifthPage() {
                         <ListItem text="Validate and bring products to market quickly" />
                     </ul> */}
                 </div>
+                {/* <div>
+                    <div className={styles.iconwrapper}>
+                        <h3>
+                            Real-Time Analytics
+                        </h3>
+                        <p>
+                            Gain insights & optimize performance
+                        </p>
+                        <div className={styles.iconsvgwrapper}>
+                            <AnalyticsSVG />
+                        </div>
 
-                <div className={styles.iconwrapper}>
-                    <h3>
-                        Real-Time Analytics
-                    </h3>
-                    <p>
-                        Gain insights & optimize performance
-                    </p>
-                    <div className={styles.iconsvgwrapper}>
-                        <AnalyticsSVG />
                     </div>
+                    <div className={styles.iconwrapper}>
+                        <h3>
+                            Innovation & Development
+                        </h3>
+                        <p>
+                            From ideation to prototyping
+                        </p>
+                        <div className={styles.iconsvgwrapper}>
+                            <InovationSVG />
+                        </div>
+                    </div>
+                    <div className={styles.iconwrapper}>
+                        <h3>
+                            Access Cutting-Edge Tools
+                        </h3>
+                        <p>
+                            Leverage technology & talent
+                        </p>
+                        <div className={styles.iconsvgwrapper}>
+                            <ToolsSVG />
+                        </div>
 
-                </div>
-                <div className={styles.iconwrapper}>
-                    <h3>
-                        Innovation & Development
-                    </h3>
-                    <p>
-                        From ideation to prototyping
-                    </p>
-                    <div className={styles.iconsvgwrapper}>
-                        {/* <AnalyticsSVG /> */}
-                        <InovationSVG />
                     </div>
-                </div>
-                <div className={styles.iconwrapper}>
-                    <h3>
-                        Access Cutting-Edge Tools
-                    </h3>
-                    <p>
-                        Leverage technology & talent
-                    </p>
-                    <div className={styles.iconsvgwrapper}>
-                        <ToolsSVG />
-                    </div>
+                    <div className={styles.iconwrapper}>
+                        <h3>
+                            Accelerate Market Entry
+                        </h3>
+                        <p>
+                            Accelerate Market Entry
+                        </p>
+                        <div className={styles.iconsvgwrapper}>
+                            <MarketSVG />
+                        </div>
 
-                </div>
-                <div className={styles.iconwrapper}>
-                    <h3>
-                        Accelerate Market Entry
-                    </h3>
-                    <p>
-                        Accelerate Market Entry
-                    </p>
-                    <div className={styles.iconsvgwrapper}>
-                        <MarketSVG />
                     </div>
+                </div> */}
 
+                <div className={styles.textcontent}>
+                    <h3>
+                        PLATFORM
+                    </h3>
+
+                    <h1>
+                        One platform to govern and manage it all
+                    </h1>
+
+                    <p>
+                        Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.
+                    </p>
+
+                    <button type="submit" className={styles.submitbutton}>Request Early Access</button>
                 </div>
 
                 <div className={styles.artwrapper}>
