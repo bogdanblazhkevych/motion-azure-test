@@ -11,6 +11,7 @@ import MarqueeText from '@/app/components/marqueetext/marqueetext';
 import AnalyticsSVG from '@/app/components/analyticssvg/analyticssvg';
 import InovationSVG from '@/app/components/inovationsvg/inovationsvg';
 import ToolsSVG from '@/app/components/toolssvg/toolssvg';
+import MarketSVG from '@/app/components/marketsvg/marketsvg';
 
 export default function FifthPage() {
     const phonePathRef = useRef<SVGPathElement>(null)
@@ -123,7 +124,7 @@ export default function FifthPage() {
                         Accelerate Market Entry
                     </p>
                     <div className={styles.iconsvgwrapper}>
-                            <AnalyticsSVG />
+                        <MarketSVG />
                     </div>
 
                 </div>

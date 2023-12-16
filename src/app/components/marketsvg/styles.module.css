@@ -1,0 +1,14 @@
+.svgmain *{
+    stroke-width: 5px;
+    stroke: #323232;    
+    fill: none;
+}
+
+.svgmain circle{
+    fill: var(--primary-color);
+    stroke: var(--standout-color)
+}
+
+.dollarsign{
+    stroke: var(--standout-color) !important;
+}
