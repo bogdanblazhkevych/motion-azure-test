@@ -9,9 +9,18 @@
 
 .sixthpagecontainer{
     /* border: 1px dotted green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 1280px;
     padding: 0 24px;
+}
+
+.pagetitle{
+    font-size: clamp(24px, 4vw, 46px);
+    font-weight: 700;
+    text-align: center;
 }
 
 .maincontentcontainer{
@@ -30,17 +39,17 @@
     height: 100%;
 }
 
-.gridcard{
-    /* border: 1px solid red; */
-    /* height: 100%; */
-}
-
+/* .maincontentcontainer div:nth-child(even){
+    text-align: right;
+} */
 
 .gridsvg{
     display: flex;
-    align-items: center;
-    padding: 100px;
-    /* margin: 100px; */
+    padding: 150px;
+}
+
+.gridsvg svg{
+    /* width: 60%; */
 }
 
 
@@ -82,3 +91,30 @@
     text-transform: uppercase;
 }
 /* /\/\/\ card styles /\/\/\ */
+
+
+@media only screen and (max-width: 1280px) {
+    .gridsvg{
+        padding: 100px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .gridsvg{
+        padding: 50px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .sixthpagecontainer{
+        gap: 16px;
+    }
+    .maincontentcontainer{
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat(8, 1fr); */
+        grid-template-rows: repeat(8, auto);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .gridsvg{
+        padding: 20px;
+    }
+}
