@@ -1,0 +1,14 @@
+.gradienttestwrapper{
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    /* display: flex; */
+    justify-content: center;
+}
+
+.gradienttestwrapper canvas{
+    border: 1px solid #0000ff;
+    transform-origin: 0% 0%;
+    transform: scale(3, 3)
+}
