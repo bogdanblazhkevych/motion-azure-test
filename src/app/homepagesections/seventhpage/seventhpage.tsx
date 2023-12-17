@@ -123,13 +123,11 @@ export default function SeventhPage() {
             context.stroke();
 
             circles.forEach((item, index) => {
+                let circle = d3.geoCircle().center(item.center).radius(item.radius)
                 let opacity = 1;
                 if (item.radius > (item.maxRadius / 2)) {
                     opacity = 1 + ((item.radius - (item.maxRadius / 2)) * (-1 / (item.maxRadius / 2)))
                 }
-                console.log(opacity)
-
-                let circle = d3.geoCircle().center(item.center).radius(item.radius)
                 // context.fillStyle = `rgba(31,121,148, ${opacity})`;
                 context.fillStyle = `rgba(0,0,0,0)`;
                 context.beginPath();
@@ -173,7 +171,9 @@ export default function SeventhPage() {
 
                     <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
                 </div>
-                <canvas id="content" width={800} height={800} />
+                <div className={styles.canvascontainer}>
+                    <canvas id="content" width={800} height={800} />
+                </div>
             </div>
         </div>
     );

@@ -45,11 +45,13 @@
 
 .gridsvg{
     display: flex;
-    padding: 150px;
+    justify-content: center;
+    align-items: center;
+    /* padding: 150px; */
 }
 
 .gridsvg svg{
-    /* width: 60%; */
+    width: 60%;
 }
 
 
@@ -95,17 +97,20 @@
 
 @media only screen and (max-width: 1280px) {
     .gridsvg{
-        padding: 100px;
+        /* padding: 100px; */
     }
 }
 @media only screen and (max-width: 1000px) {
     .gridsvg{
-        padding: 50px;
+        /* padding: 50px; */
     }
 }
 @media only screen and (max-width: 768px) {
     .sixthpagecontainer{
         gap: 16px;
+    }
+    .gridsvg svg{
+        width: 90%;
     }
     .maincontentcontainer{
         grid-template-columns: 1fr;
@@ -115,6 +120,6 @@
 }
 @media only screen and (max-width: 500px) {
     .gridsvg{
-        padding: 20px;
+        /* padding: 20px; */
     }
 }
