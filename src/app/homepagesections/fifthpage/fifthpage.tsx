@@ -68,67 +68,7 @@ export default function FifthPage() {
                             </p>
                         </div>
                     </AnimateChildren>
-                    {/* <ul className={styles.listcontainer}>
-                        <ListItem text="Real-time analytics & insights" />
-                        <ListItem text="Manage and optimize the innovation portfolio" />
-                        <ListItem text="Access to the latest technologies and tools" />
-                        <ListItem text="Tap into world-class talent on demand" />
-                        <ListItem text="Co-creation and collaboration rooms to optimize R&D projects" />
-                        <ListItem text="New product development, rapid product prototyping and validation" />
-                        <ListItem text="Effective technology transfer and commercialization of innovation" />
-                        <ListItem text="Validate and bring products to market quickly" />
-                    </ul> */}
                 </div>
-                {/* <div>
-                    <div className={styles.iconwrapper}>
-                        <h3>
-                            Real-Time Analytics
-                        </h3>
-                        <p>
-                            Gain insights & optimize performance
-                        </p>
-                        <div className={styles.iconsvgwrapper}>
-                            <AnalyticsSVG />
-                        </div>
-
-                    </div>
-                    <div className={styles.iconwrapper}>
-                        <h3>
-                            Innovation & Development
-                        </h3>
-                        <p>
-                            From ideation to prototyping
-                        </p>
-                        <div className={styles.iconsvgwrapper}>
-                            <InovationSVG />
-                        </div>
-                    </div>
-                    <div className={styles.iconwrapper}>
-                        <h3>
-                            Access Cutting-Edge Tools
-                        </h3>
-                        <p>
-                            Leverage technology & talent
-                        </p>
-                        <div className={styles.iconsvgwrapper}>
-                            <ToolsSVG />
-                        </div>
-
-                    </div>
-                    <div className={styles.iconwrapper}>
-                        <h3>
-                            Accelerate Market Entry
-                        </h3>
-                        <p>
-                            Accelerate Market Entry
-                        </p>
-                        <div className={styles.iconsvgwrapper}>
-                            <MarketSVG />
-                        </div>
-
-                    </div>
-                </div> */}
-
                 <div className={styles.textcontent}>
                     <h3>
                         PLATFORM
@@ -146,51 +86,47 @@ export default function FifthPage() {
                 </div>
 
                 <div className={styles.artwrapper}>
-                    <div className={styles.phoneheadingwrapper}>
-                        <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefOne}>
-                            WELCOME TO
-                        </div>
-                        <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefTwo}>
-                            {toggleTowers && <MarqueeText />}
-                        </div>
-        
-                        {/* <div className={styles.phoneheadingtext}>
-                            STARTUP ECOSYSTEM
-                        </div> */}
-                        {/* <div className={styles.phoneheadingtext}>
-                            ECOSYSTEM
-                        </div> */}
-                    </div>
-                    <div className={styles.phonetextwrapper}>
-                        <div ref={phoneTextRefOne} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                    <div className={styles.phonetextcontentwrapper}>
+                        <div className={styles.phoneheadingwrapper}>
+                            <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefOne}>
+                                WELCOME TO
                             </div>
-                            ECOSYSTEMS
-                        </div>
-                        <div ref={phoneTextRefTwo} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                            <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefTwo}>
+                                {toggleTowers && <MarqueeText />}
                             </div>
-                            COMMUNITIES
                         </div>
-                        <div ref={phoneTextRefThree} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                        <div className={styles.phonetextwrapper}>
+                            <div ref={phoneTextRefOne} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                ECOSYSTEMS
                             </div>
-                            TEAMS ROOMS
-                        </div>
-                        <div ref={phoneTextRefFour} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                            <div ref={phoneTextRefTwo} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                COMMUNITIES
                             </div>
-                            AI ANALYTICS
-                        </div>
-                        <div ref={phoneTextRefFive} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                            <div ref={phoneTextRefThree} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                TEAMS ROOMS
                             </div>
-                            MARKETPLACE
+                            <div ref={phoneTextRefFour} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                AI ANALYTICS
+                            </div>
+                            <div ref={phoneTextRefFive} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                MARKETPLACE
+                            </div>
+
                         </div>
 
                     </div>
