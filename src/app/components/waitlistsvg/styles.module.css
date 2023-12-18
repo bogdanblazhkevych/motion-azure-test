@@ -51,8 +51,12 @@
 
 
 .motionicon{
-    stroke: none;
+    /* stroke: none;
+    stroke: #323232; */
 }
+/* .motionchipgroupanimation .motionicon{
+    stroke-dashoffset: 0;
+} */
 
 @keyframes scaleicon {
     0% {transform: scale(5)}

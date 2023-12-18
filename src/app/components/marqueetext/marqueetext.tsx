@@ -45,7 +45,7 @@ export default function MarqueeText() {
             <span ref={newyorkRef} className={styles.textout}>Paris</span>
             <span ref={londonRef} className={styles.textout}>New York</span>
             <span ref={taipeiRef} className={styles.textout}>London</span>
-            <span ref={parisRef} className={styles.textout}>Tai Pei</span>
+            <span ref={parisRef} className={styles.textout}>TaiPei</span>
         </div>
     )
 }
