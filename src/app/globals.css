@@ -33,6 +33,7 @@ ul {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* overflow-x: hidden; */
   /* border: 1px solid red */
 }
 
@@ -62,6 +63,9 @@ main{
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* position: relative; */
+  /* overflow-x: hidden;
+  overflow-y: visible; */
 }
 a {
   color: inherit;

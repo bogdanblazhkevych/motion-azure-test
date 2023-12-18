@@ -9,6 +9,11 @@
   font-family: var(--font-mono);
 }
 
+/* main{
+  position: relative;
+  overflow-x: hidden;
+} */
+
 .description a {
   display: flex;
   justify-content: center;
