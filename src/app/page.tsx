@@ -8,6 +8,7 @@ import FifthPage from './homepagesections/fifthpage/fifthpage'
 import SixthPage from './homepagesections/sixthpage/sixthpage'
 import SeventhPage from './homepagesections/seventhpage/seventhpage'
 import GradientTest from './homepagesections/gradienttest/gradienttest'
+import NinthPage from './homepagesections/ninthpage/ninthpage'
 
 export default function Home() {
 
@@ -15,7 +16,8 @@ export default function Home() {
     <main>
       <GradientTest />
       <FirstPage />
-      <SixthPage />
+      <NinthPage />
+      {/* <SixthPage /> */}
       {/* <FourthPage /> */}
       <FifthPage />
       <Slider />
