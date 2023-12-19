@@ -12,6 +12,7 @@ import AnalyticsSVG from '@/app/components/analyticssvg/analyticssvg';
 import InovationSVG from '@/app/components/inovationsvg/inovationsvg';
 import ToolsSVG from '@/app/components/toolssvg/toolssvg';
 import MarketSVG from '@/app/components/marketsvg/marketsvg';
+import Link from 'next/link';
 
 export default function FifthPage() {
     const phonePathRef = useRef<SVGPathElement>(null)
@@ -81,8 +82,9 @@ export default function FifthPage() {
                     <p>
                         Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.
                     </p>
-
-                    <button type="submit" className={styles.submitbutton}>Request Early Access</button>
+                    <Link href="/waitlist">
+                        <button type="submit" className={styles.submitbutton}>Request Early Access</button>
+                    </Link>
                 </div>
 
                 <div className={styles.artwrapper}>

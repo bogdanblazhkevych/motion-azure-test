@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import * as d3 from 'd3';
 
 import { ExtendedFeatureCollection, ExtendedFeature } from 'd3-geo';
+import Link from 'next/link';
 
 interface GeoFeature extends ExtendedFeature {
     properties: {
@@ -147,8 +148,9 @@ export default function SeventhPage() {
                     <p>
                         Motion, the global ecosystem platform, a technology-first approach to unlock the power of ecosystem connectedness for speed on innovation. A catalyst for startup success and high-performance innovation ecosystems.
                     </p>
-
-                    <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
+                    <Link href="/partner">
+                        <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
+                    </Link>
                 </div>
                 <div className={styles.canvascontainer}>
                     <canvas id="content" width={800} height={800} />
