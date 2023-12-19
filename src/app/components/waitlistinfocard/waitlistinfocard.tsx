@@ -58,7 +58,6 @@ export default function WaitlistInfoCard(props: WaitlistInfoCardPropsInterface) 
                 <p>
                     {paragraphTwo}
                 </p>
-
             </div>
         </div>
     )

@@ -8,6 +8,11 @@ import { FaRegCircle } from "react-icons/fa";
 import Building from '@/app/components/building/building';
 import AnimateChildren from '@/app/components/animatechildren/animatechildren';
 import MarqueeText from '@/app/components/marqueetext/marqueetext';
+import AnalyticsSVG from '@/app/components/analyticssvg/analyticssvg';
+import InovationSVG from '@/app/components/inovationsvg/inovationsvg';
+import ToolsSVG from '@/app/components/toolssvg/toolssvg';
+import MarketSVG from '@/app/components/marketsvg/marketsvg';
+import Link from 'next/link';
 
 export default function FifthPage() {
     const phonePathRef = useRef<SVGPathElement>(null)
@@ -64,64 +69,66 @@ export default function FifthPage() {
                             </p>
                         </div>
                     </AnimateChildren>
-                    <ul className={styles.listcontainer}>
-                        <ListItem text="Real-time analytics & insights" />
-                        <ListItem text="Manage and optimize the innovation portfolio" />
-                        <ListItem text="Access to the latest technologies and tools" />
-                        <ListItem text="Tap into world-class talent on demand" />
-                        <ListItem text="Co-creation and collaboration rooms to optimize R&D projects" />
-                        <ListItem text="New product development, rapid product prototyping and validation" />
-                        <ListItem text="Effective technology transfer and commercialization of innovation" />
-                        <ListItem text="Validate and bring products to market quickly" />
-                    </ul>
+                </div>
+                <div className={styles.textcontent}>
+                    <h3>
+                        PLATFORM
+                    </h3>
+
+                    <h1>
+                        One platform to govern and manage it all
+                    </h1>
+
+                    <p>
+                        Innovation and product development are complex, costly, risky, and ever-evolving. To help you compete and succeed, we are building technology infrastructure, networks, and solutions to de-risk and fast-track innovation.
+                    </p>
+                    <Link href="/waitlist">
+                        <button type="submit" className={styles.submitbutton}>Request Early Access</button>
+                    </Link>
                 </div>
 
                 <div className={styles.artwrapper}>
-                    <div className={styles.phoneheadingwrapper}>
-                        <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefOne}>
-                            WELCOME TO
-                        </div>
-                        <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefTwo}>
-                            {toggleTowers && <MarqueeText />}
-                        </div>
-        
-                        {/* <div className={styles.phoneheadingtext}>
-                            STARTUP ECOSYSTEM
-                        </div> */}
-                        {/* <div className={styles.phoneheadingtext}>
-                            ECOSYSTEM
-                        </div> */}
-                    </div>
-                    <div className={styles.phonetextwrapper}>
-                        <div ref={phoneTextRefOne} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                    <div className={styles.phonetextcontentwrapper}>
+                        <div className={styles.phoneheadingwrapper}>
+                            <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefOne}>
+                                WELCOME TO
                             </div>
-                            ECOSYSTEMS
-                        </div>
-                        <div ref={phoneTextRefTwo} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                            <div className={styles.phoneheadingtext} ref={phoneTextHeadingRefTwo}>
+                                {toggleTowers && <MarqueeText />}
                             </div>
-                            COMMUNITIES
                         </div>
-                        <div ref={phoneTextRefThree} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                        <div className={styles.phonetextwrapper}>
+                            <div ref={phoneTextRefOne} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                ECOSYSTEMS
                             </div>
-                            TEAMS ROOMS
-                        </div>
-                        <div ref={phoneTextRefFour} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                            <div ref={phoneTextRefTwo} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                COMMUNITIES
                             </div>
-                            AI ANALYTICS
-                        </div>
-                        <div ref={phoneTextRefFive} className={styles.phonetextitem}>
-                            <div className={styles.phonetextcircle}>
-                                <FaRegCircle /> 
+                            <div ref={phoneTextRefThree} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                TEAMS ROOMS
                             </div>
-                            MARKETPLACE
+                            <div ref={phoneTextRefFour} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                AI ANALYTICS
+                            </div>
+                            <div ref={phoneTextRefFive} className={styles.phonetextitem}>
+                                <div className={styles.phonetextcircle}>
+                                    <FaRegCircle /> 
+                                </div>
+                                MARKETPLACE
+                            </div>
+
                         </div>
 
                     </div>
@@ -140,3 +147,4 @@ export default function FifthPage() {
         </div>
     )
 }
+

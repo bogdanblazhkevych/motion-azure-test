@@ -1,0 +1,43 @@
+.svgmain *{
+    stroke-width: 5px;
+    stroke: #323232;
+
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: draw 3s forwards;
+}
+
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.laptopborder{
+    fill: var(--primary-color)
+}
+
+/* .bottombar{
+
+} */
+
+.linechart{
+    stroke: var(--standout-color);
+}
+
+/* .piechartlarge{
+
+} */
+
+.piechartsmall{
+    stroke: var(--standout-color);
+}
+
+/* .topbar{
+
+} */
+
+/* .topdot{
+
+} */

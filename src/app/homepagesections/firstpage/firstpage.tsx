@@ -4,6 +4,7 @@ import styles from './styles.module.css'
 import City from '@/app/components/city/city'
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
+import GradientTest from '../gradienttest/gradienttest'
 
 export default function FirstPage(){
     const cityWrapperRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ export default function FirstPage(){
 
     return(
         <div ref={firstPageWrapperRef} className={styles.firstpagewrapper}>
-            
+            {/* <GradientTest /> */}
             <div ref={textcontainerRef} className={styles.textcontainer}>
                 <div ref={textWrapperRef} className={styles.herotextwrapper}>
                     <div className={styles.logocontainer}>

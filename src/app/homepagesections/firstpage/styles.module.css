@@ -12,6 +12,8 @@
     background-color: var(--primary-color);
 }
 
+/* firstpagewrapper */
+
 .firstpagewrapper::after{
     content: "";
     position: absolute;
@@ -51,10 +53,7 @@
 
 .submitbutton {
     all: unset;
-    /* color: var(--secondary-color); */
-    /* color: var(--light-1); */
     color: var(--light-5);
-    /* font-size: clamp(20px, 2vw, 30px); */
     font-size: clamp(16px, 3vw, 22px);
     padding: 0.5em;
     border-radius: 10px;
