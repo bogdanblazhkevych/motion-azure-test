@@ -33,7 +33,6 @@
 .textcontent{
     /* border: 1px solid green; */
     width: 50%;
-    /* grid-area: 1 / 1 / 3 / 2;  */
     display: flex;
     flex-direction: column;
     justify-content: center;

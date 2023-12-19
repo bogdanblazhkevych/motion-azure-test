@@ -7,44 +7,81 @@ export default function SecondPage() {
         return (
                 <div className={styles.pagewrapper} id="opportunities">
                         <div className={styles.pagecontainer}>
-                                <div className={styles.textcontentwrapper}>
-                                        <AnimateChildren>
-                                                <div className={styles.headingwrapper}>
-                                                        <h1>
-                                                                Unlock Opportunities with Motion!
-                                                        </h1>
-                                                        <p>
-                                                                Embark on a journey of innovation and collaboration with Motion. Whether you're interested in global partnerships, eager for early access to groundbreaking solutions, or exploring exciting career opportunities, our doors are open. Choose your path below and be a part of something extraordinary.
-                                                        </p>
-                                                </div>
-                                        </AnimateChildren>
+                                <div className={styles.textcontent}>
+                                        <h3>
+                                                Opportunities
+                                        </h3>
+
+                                        <h1>
+                                                {/* Unlock Opportunities with Motion! */}
+                                                Get Started With Motion
+                                        </h1>
+
+                                        <p>
+                                                Embark on a journey of innovation by choosing a path below and be a part of something extraordinary.
+                                        </p>
+
+                                        {/* <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button> */}
                                 </div>
-                                <AnimateChildren>
+
+                                <div className={styles.cardcontainer}>
+                                        {/* <div className={styles.svgiconcontainer}> */}
+                                        {/* </div> */}
+                                        <div className={styles.cardwrapper}>
+                                                {globalSVG()}
+                                                <h1> Global Partner </h1>
+                                                <p>Become a Global Partner at Motion to build a global platform, accelerate innovation, and democratize business tools, making scaling equitable for all.</p>
+                                                <Link href="/partner">
+                                                        <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
+                                                </Link>
+                                        </div>
+
+                                        <div className={styles.cardwrapper}>
+                                                {lockSVG()}
+                                                <h1> Developer Early Access </h1>
+                                                <p>Calling product builders and developers worldwide! Join our community for early access to growth tools, connect globally, and achieve your ambitions.</p>
+                                                <Link href="/waitlist">
+                                                        <button type="submit" className={styles.submitbutton}>Request Developer Early Access</button>
+                                                </Link>
+                                        </div>
+
+                                        <div className={styles.cardwrapper}>
+                                                {mindSVG()}
+                                                <h1> Talent Acquisition </h1>
+                                                <p>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
+                                                <Link href="/talent">
+                                                        <button type="submit" className={styles.submitbutton}>View Open Positions</button>
+                                                </Link>
+                                        </div>
+
+                                </div>
+
+                                {/* <AnimateChildren>
                                         <div className={styles.cardscontainer}>
                                                 <Link href="/partner">
                                                         <CardOne heading="Global Partner"
                                                                 paragraph="We at Motion are building a global platform to enable collaboration, accelerate innovation communities, and democratize access to business-building tools. Our goal is making scaling a business more equitable by allowing more people to leverage resources previously reserved for large corporations alone."
                                                                 textAlign='left'
                                                                 icon={globalSVG()}
-                                                                padding={true} 
-                                                                clickable={true}/>
+                                                                padding={true}
+                                                                clickable={true} />
                                                 </Link>
                                                 <Link href="/waitlist">
                                                         <CardOne heading="Early Access"
                                                                 paragraph="We invite product builders and developers worldwide to join our platform's growing community and get early access to tools that ease growth. Connect with potential partners, customers and investors globally to advance your business or product. Leverage our knowledge to achieve your ambitions."
                                                                 textAlign='left'
                                                                 icon={lockSVG()}
-                                                                clickable={true}/>
+                                                                clickable={true} />
                                                 </Link>
                                                 <Link href="/talent">
                                                         <CardOne heading="Talent Acquisition"
                                                                 paragraph="We seek talented, entrepreneurial team members passionate about using technology to transform business building and scaling, making it more accessible. Join us in our ambitious mission to drive innovation democratization globally through collaboration and creativity."
                                                                 textAlign='left'
                                                                 icon={mindSVG()}
-                                                                clickable={true}/>
+                                                                clickable={true} />
                                                 </Link>
                                         </div>
-                                </AnimateChildren>
+                                </AnimateChildren> */}
                         </div>
                 </div>
         )
@@ -69,10 +106,10 @@ function globalSVG() {
                         <svg height="100%" width="100%" viewBox="0 0 500 500">
                                 <defs>
                                 </defs>
-                                
-                                <path d="M249.1000,16.648 C249.1000,16.648 16.945,16.648 16.945,249.704 C16.945,482.759 249.1000,482.759 249.1000,482.759 C249.1000,482.759 483.055,482.759 483.055,249.704 C483.055,16.648 249.1000,16.648 249.1000,16.648 Z"/>
-                                <path d="M16.247,249.709 L483.753,249.709 M117.251,249.709 C117.251,249.709 117.251,379.571 247.114,483.462 M374.091,249.709 C374.091,249.709 376.977,379.571 247.114,483.462 M247.114,249.709 L247.114,483.462 "/>
-                                <path className={styles.bluepath} d="M248.1000,47.916 C248.1000,47.916 202.848,47.916 202.848,94.165 C202.848,140.414 248.1000,140.414 248.1000,140.414 C248.1000,140.414 295.152,140.414 295.152,94.165 C295.152,47.916 248.1000,47.916 248.1000,47.916 ZM158.997,223.925 C158.997,223.925 248.1000,79.406 339.003,223.925 "/>
+
+                                <path d="M249.1000,16.648 C249.1000,16.648 16.945,16.648 16.945,249.704 C16.945,482.759 249.1000,482.759 249.1000,482.759 C249.1000,482.759 483.055,482.759 483.055,249.704 C483.055,16.648 249.1000,16.648 249.1000,16.648 Z" />
+                                <path d="M16.247,249.709 L483.753,249.709 M117.251,249.709 C117.251,249.709 117.251,379.571 247.114,483.462 M374.091,249.709 C374.091,249.709 376.977,379.571 247.114,483.462 M247.114,249.709 L247.114,483.462 " />
+                                <path className={styles.bluepath} d="M248.1000,47.916 C248.1000,47.916 202.848,47.916 202.848,94.165 C202.848,140.414 248.1000,140.414 248.1000,140.414 C248.1000,140.414 295.152,140.414 295.152,94.165 C295.152,47.916 248.1000,47.916 248.1000,47.916 ZM158.997,223.925 C158.997,223.925 248.1000,79.406 339.003,223.925 " />
 
 
                         </svg>
@@ -83,7 +120,7 @@ function globalSVG() {
 function lockSVG() {
         return (
                 <div className={styles.svgiconcontainer}>
-                        <svg height="100%" viewBox="0 0 500 500">
+                        <svg height="100%" viewBox="0 0 650 500">
                                 <defs>
                                 </defs>
                                 <path id="lockcircle_1" data-name="lockcircle 1" d="M250,166.089s-155.36,0-155.36,155.36S250,476.809,250,476.809s155.36,0,155.36-155.36S250,166.089,250,166.089Z" />
@@ -93,4 +130,4 @@ function lockSVG() {
                         </svg>
                 </div>
         )
-}
+}       
