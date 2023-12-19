@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <main>
-      <GradientTest />
+      {/* <GradientTest /> */}
       <FirstPage />
       <NinthPage />
       {/* <SixthPage /> */}

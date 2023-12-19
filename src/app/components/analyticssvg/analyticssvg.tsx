@@ -11,11 +11,6 @@ export default function AnalyticsSVG() {
             />
 
             <path  
-                className={`${styles.bottombar} ${styles.strokepath}`} 
-                d="m170.58,308.89v-15.27h95.04v15.27h-95.04Z" 
-            />
-
-            <path  
                 className={`${styles.bottombar} ${styles.strokepath}`}
                 d="m170.58,269.59h-94.87"
             />

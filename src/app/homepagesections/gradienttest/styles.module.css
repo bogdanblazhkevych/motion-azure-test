@@ -31,10 +31,9 @@
     position: absolute;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    /* transform-origin: center; */
-    /* filter: blur(10vw); */
-    filter: blur(150px);
-    /* opacity: 0.9 */
+    /* transform: translate3d(0, 0, 0); */
+    opacity: 0.2;
+    filter: blur(20px);
 }
 
 .orbone {
@@ -184,6 +183,7 @@
 
 @media only screen and (max-width: 500px) {
     .orb {
-        filter: blur(220px);
+        /* filter: blur(220px); */
+        transform: translate3d(0, 0, 0);
     }
 }
