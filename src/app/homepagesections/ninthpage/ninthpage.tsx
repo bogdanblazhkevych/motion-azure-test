@@ -5,15 +5,27 @@ import styles from './styles.module.css'
 import InovationSVG from '@/app/components/inovationsvg/inovationsvg'
 import MarketSVG from '@/app/components/marketsvg/marketsvg'
 import ToolsSVG from '@/app/components/toolssvg/toolssvg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function NinthPage() {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const [intervalId, setIntervalId] = useState<NodeJS.Timeout>()
 
     const handleClick = (index: number): undefined => {
+        clearInterval(intervalId)
         setCurrentIndex(index)
         return
     }
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+            setCurrentIndex((currentIndex) => currentIndex === 3 ? 0 : currentIndex + 1)
+        }, 10000)
+
+        setIntervalId(interval)
+
+    }, [])
 
     const tempArr = [0, 1, 2, 3]
     const svgArr = [<AnalyticsSVG />, <InovationSVG />, <MarketSVG />, <ToolsSVG />]
@@ -26,7 +38,7 @@ export default function NinthPage() {
                         <div className={styles.marqueecontent} style={{ transform: `translate(-${currentIndex * 25}%)` }}>
                             <div className={styles.textcontent}>
                                 <h3>
-                                    Real-Time Analytics
+                                    Analytics
                                 </h3>
 
                                 <h1>
@@ -39,7 +51,7 @@ export default function NinthPage() {
                             </div>
                             <div className={styles.textcontent}>
                                 <h3>
-                                    Innovation & Development
+                                    Innovation
                                 </h3>
 
                                 <h1>

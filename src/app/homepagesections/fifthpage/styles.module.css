@@ -7,7 +7,6 @@
     background: linear-gradient(90deg, rgba(0,0,0,1) 40%, #181818 66%);
     border-top: 1px solid var(--primary-color-3);
     border-bottom: 1px solid var(--primary-color-3);
-    /* padding-bottom: 5rem; */
     padding: 5rem 0;
 }
 

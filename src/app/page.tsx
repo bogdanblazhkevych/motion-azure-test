@@ -17,12 +17,9 @@ export default function Home() {
       {/* <GradientTest /> */}
       <FirstPage />
       <NinthPage />
-      {/* <SixthPage /> */}
-      {/* <FourthPage /> */}
       <FifthPage />
-      <Slider />
-      {/* <ThirdPage /> */}
       <SeventhPage />
+      <Slider />
       <SecondPage />
     </main>
   )

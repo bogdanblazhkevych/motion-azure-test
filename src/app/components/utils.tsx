@@ -134,8 +134,8 @@ export const createStrokeGradient = (order: number, length: number, delay: numbe
             gradientValuesX2 = "0%;0%;0%;0%;";
             break;
             case 'down':
+            gradientValuesY1 = "-10%;-10%;140%;140%;";
             gradientValuesY2 = "-40%;-40%;100%;100%;";
-            gradientValuesY1 = "0%;0%;140%;140%;";
             gradientValuesX1 = "0%;0%;0%;0%;";
             gradientValuesX2 = "0%;0%;0%;0%;";
             break;
@@ -162,9 +162,9 @@ export const createStrokeGradient = (order: number, length: number, delay: numbe
         <linearGradient gradientUnits="objectBoundingBox"
             id={`new-blue-pulse-${order}`}
             x1="0%"
-            y1={direction === "up" ? "100%" : "-40%"}
+            y1={direction === "up" ? "100%" : "-20%"}
             x2="0%"
-            y2={direction === "up" ? "140%" : "0%"} >
+            y2={direction === "up" ? "140%" : "-40%"} >
             <stop stop-color="#1F7994" stop-opacity="0"></stop>
             <stop offset="0.05" stop-color="#1F7994"></stop>
             <stop offset="1" stop-color="#1F7994" stop-opacity="0"></stop>
