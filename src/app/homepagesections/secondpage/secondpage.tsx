@@ -50,7 +50,7 @@ export default function SecondPage() {
                                                 <h1> Talent Acquisition </h1>
                                                 <p>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
                                                 <Link href="/talent">
-                                                        <button type="submit" className={styles.submitbutton}>View Open Positions</button>
+                                                        <button type="submit" className={styles.submitbutton}>Explore Open Positions</button>
                                                 </Link>
                                         </div>
 

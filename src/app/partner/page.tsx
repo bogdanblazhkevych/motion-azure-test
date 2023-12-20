@@ -8,7 +8,7 @@ export default function Partner() {
         <main>
             {/* <LandingTemplate title="Motion global partner program"
                              paragraph="We are designing a partner program to help entrepreneurs and stakeholders connect and collaborate to build new products fast and efficiently, and successfully grow new companies."/> */}
-            <LandingTemplateTwo title="Motion global partner program"
+            <LandingTemplateTwo title="Motion Global Partner Program"
                                 paragraph="Join a Thriving Tech Community to Enhance Your Brand and Accelerate Innovation Globally"
                                 icon="partner"/>
             <PartnerInfo />

@@ -11,7 +11,7 @@ export default function FormPage(props: FormPagePropsInterface) {
     const { title, paragraph } = props;
 
     return (
-        <div className={styles.formpagewrapper}>
+        <div id="form" className={styles.formpagewrapper}>
             <div className={styles.formpagecontainer}>
                 <Form />
                 <FormCard title={title} paragraph={paragraph}/>
