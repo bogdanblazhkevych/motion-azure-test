@@ -63,6 +63,8 @@
 
 .singlebuttongroup label{
     padding-left: 0.8em;
+    cursor: pointer;
+    width: max-content;
 }
 
 .singlebuttongroup input {

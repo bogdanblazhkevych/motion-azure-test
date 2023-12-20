@@ -231,6 +231,7 @@ export default function Form() {
                     <input
                         name="consent"
                         type="checkbox"
+                        id="consent"
                         checked={formData.consent}
                         onChange={() => setFormData({ ...formData, consent: !formData.consent })}
                         required
