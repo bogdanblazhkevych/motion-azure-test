@@ -199,6 +199,16 @@ export default function Form() {
 
             <div className={styles.formbuttons}>
 
+                <div className={styles.buttonlabeltopwrapper}>
+                    <div className={styles.buttonlabeltopleftbar}>
+                    </div>
+                    <div className={styles.buttonlabeltoptext}>
+                        I am a
+                    </div>
+                    <div className={styles.buttonlabeltoprightbar}>
+                    </div>
+                </div>
+
                 <div className={styles.singlebuttongroup}>
 
                     <input type="radio" id="ctype1" name="companyType" value="Partner providing services" onChange={handleChange} required />
@@ -213,6 +223,10 @@ export default function Form() {
 
                 </div>
 
+                <div className={styles.buttonlabelbottomwrapper}>
+                    <div className={styles.buttonlabelbottombar}></div>
+                </div>
+
                 <div className={styles.singlebuttongroup}>
                     <input
                         name="consent"
@@ -223,7 +237,7 @@ export default function Form() {
                     />
 
                     <label htmlFor='consent'>
-                        I consent to receive future messages from Motion regarding Motion Platform.
+                        I consent to receive future messages regarding Motion Platform.
                     </label>
 
                 </div>

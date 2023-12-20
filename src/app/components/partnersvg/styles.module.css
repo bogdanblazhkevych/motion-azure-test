@@ -6,7 +6,7 @@
 
 .globelinesgroup{
     stroke-dashoffset: 1500;
-    animation: draw 7s forwards;
+    animation: draw 4s forwards;
     stroke-dasharray: 1500;
 }
 
@@ -18,7 +18,7 @@
 
 .bluelinesgroup{
     opacity: 0;
-    animation: bluelinefade 7s forwards;
+    animation: bluelinefade 4s forwards;
 }
 
 @keyframes bluelinefade {
@@ -35,7 +35,7 @@
 
 .personicon{
     opacity: 0;
-    animation: bluelinefade 7s forwards;
+    animation: bluelinefade 5s forwards;
 }
 
 /* .waitlistsvg{

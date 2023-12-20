@@ -30,32 +30,32 @@ export default function PartnerSVG() {
             
             <g className={styles.personicon}>
                     <circle className={styles.smallcircle} cx="323.42" cy="368.51" r="16">
-                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="30;30;65;30"></animate>
-                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="1;1;0;0"></animate>
+                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="30;30;65;30"></animate>
+                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="1;1;0;0"></animate>
                     </circle>
                     <circle cx="323.42" cy="368.51" r="36.83" fill="#fff" stroke="#000" />
                     <path d="m323.31,351.44s-8.87,0-8.87,8.91,8.87,8.91,8.87,8.91c0,0,8.87,0,8.87-8.91s-8.87-8.91-8.87-8.91Zm-17.3,33.92s17.3-27.85,34.61,0" fill="#fff" fill-rule="evenodd" stroke="#000" />
                 </g>
                 <g className={styles.personicon}>
                     <circle className={styles.smallcircle} cx="245.11" cy="177.5" r="16.67">
-                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="30;30;65;30"></animate>
-                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="1;1;0;0"></animate>
+                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="30;30;65;30"></animate>
+                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="1;1;0;0"></animate>
                     </circle>
                     <circle cx="245.11" cy="177.5" r="36.83" fill="#fff" stroke="#000" />
                     <path d="m245,160.44s-8.87,0-8.87,8.91,8.87,8.91,8.87,8.91c0,0,8.87,0,8.87-8.91s-8.87-8.91-8.87-8.91Zm-17.3,33.92s17.3-27.85,34.61,0" fill="#fff" fill-rule="evenodd" stroke="#000" />
                 </g>
                 <g className={styles.personicon}>
                     <circle className={styles.smallcircle} cx="551.15" cy="82.16" r="16.67">
-                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="30;30;65;30"></animate>
-                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="1;1;0;0"></animate>
+                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="30;30;65;30"></animate>
+                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="1;1;0;0"></animate>
                     </circle>
                     <circle cx="551.15" cy="82.16" r="36.83" fill="#fff" stroke="#000" />
                     <path d="m551.04,65.1s-8.87,0-8.87,8.91,8.87,8.91,8.87,8.91c0,0,8.87,0,8.87-8.91s-8.87-8.91-8.87-8.91Zm-17.3,33.92s17.3-27.85,34.61,0" fill="#fff" fill-rule="evenodd" stroke="#000" />
                 </g>
                 <g className={styles.personicon}>
                     <circle className={styles.smallcircle} cx="810.96" cy="272.5" r="16.67">
-                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="30;30;65;30"></animate>
-                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.857;1" repeatCount="indefinite" values="1;1;0;0"></animate>
+                        <animate attributeName="r" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="30;30;65;30"></animate>
+                        <animate attributeName="opacity" dur="7s" keyTimes="0;0.285;0.5714;1" repeatCount="indefinite" values="1;1;0;0"></animate>
                     </circle>
                     <circle cx="810.96" cy="272.5" r="36.83" fill="#fff" stroke="#000" />
                     <path d="m810.85,255.44s-8.87,0-8.87,8.91,8.87,8.91,8.87,8.91c0,0,8.87,0,8.87-8.91s-8.87-8.91-8.87-8.91Zm-17.3,33.92s17.3-27.85,34.61,0" fill="#fff" fill-rule="evenodd" stroke="#000" />

@@ -46,7 +46,8 @@
 
 .singleinputgroup :is(input:focus, input:valid)~label {
     transform-origin: 0.5rem 0.875rem;
-    transform: translateY(-0.65rem) scale(0.8);
+    transform: translateY(-0.65rem);
+    font-size: 0.8em;
 }
 
 .singleinputgroup input:valid {
@@ -120,6 +121,43 @@
     border-radius: 50%;
 }
 
+.buttonlabeltopwrapper{
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.buttonlabeltoptext{
+    /* border: 1px solid green; */
+    width: fit-content;
+}
+
+.buttonlabeltopleftbar{
+    height: 2px;
+    flex: 1;
+    background: linear-gradient(90deg, var(--primary-color-4) 83%, rgba(0,0,0,0) 100%);
+}
+
+.buttonlabeltoprightbar{
+    height: 2px;
+    flex: 1;
+    background: linear-gradient(-90deg, var(--primary-color-4) 83%, rgba(0,0,0,0) 100%);
+}
+
+.buttonlabelbottomwrapper{
+    /* border: 1px solid red; */
+    padding: 0.8rem 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.buttonlabelbottombar{
+    height: 2px;
+    flex: 1;
+    background-color: var(--primary-color-4);
+}
+
 .submitbutton {
     all: unset;
     color: var(--secondary-color);
@@ -133,7 +171,7 @@
     box-sizing: content-box;
     overflow: hidden;
 
-    background: linear-gradient(to right, var(--standout-color), var(--standout-color) 50%, var(--primary-color-2) 50%);
+    background: linear-gradient(to right, var(--standout-color), var(--standout-color) 50%, var(--primary-color) 50%);
     background-size: 200% 100%;
     background-position: 100% 100%;
     transition: background-position 0.3s ease-out, color 0.3s ease-in-out;
