@@ -66,6 +66,12 @@ const navRef = useRef<HTMLElement>(null)
                             Join our core team and
                         </div>
                     </li>
+                    <div className={styles.mobileborderdiv}></div>
+                    <li className={styles.tosli}>
+                        <Link href='/policy' onClick={() => setNavActive(false)}>
+                            Terms Of Use
+                        </Link>
+                    </li>
                 </ul>
             </nav>
 
