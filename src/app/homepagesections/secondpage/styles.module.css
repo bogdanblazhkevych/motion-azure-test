@@ -53,7 +53,7 @@
     /* justify-content: space-evenly; */
     /* align-items: center; */
     gap: 5rem;
-    padding: 0px 16px;
+    padding: 0px 24px;
 }
 
 .cardcontainer{
@@ -174,6 +174,10 @@
     .pagewrapper {
         padding: 0px;
         padding-top: 16px;
+    }
+
+    .pagecontainer{
+        padding: 0px 16px;
     }
 }
 

@@ -42,16 +42,6 @@
     width: 100%;
     max-width: 1280px;
     padding: 0 24px;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    aspect-ratio:  2 / 1; */
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -308,6 +298,11 @@
 
     .phonetextwrapper{
         font-size: clamp(10px, 1.8vw, 25px);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .fifthpagecontainer{
+        padding: 0px 16px;
     }
 }
 @media only screen and (max-width: 760px) {
