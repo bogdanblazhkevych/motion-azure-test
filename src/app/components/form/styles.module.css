@@ -23,7 +23,8 @@
     font-size: 100%;
     padding: 1.25rem 0.5rem 0.5rem 0.5rem;
     outline: none;
-    border: 2px solid var(--primary-color-4);
+    /* border: 2px solid var(--primary-color-4); */
+    border: 2px solid var(--primary-color-2);
     background-color: transparent;
     border-radius: 10px;
     transition: border-color 0.3s ease-in-out;
@@ -137,13 +138,13 @@
 .buttonlabeltopleftbar{
     height: 2px;
     flex: 1;
-    background: linear-gradient(90deg, var(--primary-color-4) 83%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(90deg, var(--primary-color-2) 83%, rgba(0,0,0,0) 100%);
 }
 
 .buttonlabeltoprightbar{
     height: 2px;
     flex: 1;
-    background: linear-gradient(-90deg, var(--primary-color-4) 83%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(-90deg, var(--primary-color-2) 83%, rgba(0,0,0,0) 100%);
 }
 
 .buttonlabelbottomwrapper{
@@ -157,7 +158,7 @@
 .buttonlabelbottombar{
     height: 2px;
     flex: 1;
-    background-color: var(--primary-color-4);
+    background-color: var(--primary-color-2);
 }
 
 .submitbutton {

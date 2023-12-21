@@ -6,6 +6,7 @@ import InovationSVG from '@/app/components/inovationsvg/inovationsvg'
 import MarketSVG from '@/app/components/marketsvg/marketsvg'
 import ToolsSVG from '@/app/components/toolssvg/toolssvg'
 import { useEffect, useState } from 'react'
+import CardOne from '@/app/components/cardone/cardone'
 
 export default function NinthPage() {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -111,20 +112,20 @@ export default function NinthPage() {
             </div>
 
             <div className={styles.ninthpagemobile}>
-                <h1>
+                {/* <h1>
                     Innovation is hard, but it does not have to be.
-                </h1>
+                </h1> */}
                 <div className={styles.textcontent}>
                     <h3>
                         Real-Time Analytics
                     </h3>
 
                     <h1>
-                        Gain insights & optimize performance
+                        Real-Time Analytics
                     </h1>
 
                     <p>
-                        Harness the power of real-time analytics for swift, data-driven decisions. Monitor and optimize key metrics instantly, staying ahead in a rapidly evolving digital world.
+                        Harness the power of real-time analytics for swift, data-driven decisions. Monitor key metrics instantly.
                     </p>
 
                     <AnalyticsSVG />
@@ -139,7 +140,7 @@ export default function NinthPage() {
                     </h1>
 
                     <p>
-                        Traverse from innovative ideas to tangible prototypes. Merge creativity with practical development, leading to groundbreaking products and market-ready solutions.
+                        Traverse from innovative ideas to tangible prototypes. Merge creativity with practical development.
                     </p>
 
                     <InovationSVG />
@@ -154,7 +155,7 @@ export default function NinthPage() {
                     </h1>
 
                     <p>
-                        Speed your product from concept to market. Streamline the path from validation to commercialization, ensuring rapid, impactful market entry. Embrace the pace for a standout launch.
+                        Speed your product from concept to market. Streamline the path from validation to commercialization.
                     </p>
 
                     <MarketSVG />
@@ -165,11 +166,11 @@ export default function NinthPage() {
                     </h3>
 
                     <h1>
-                        Access to Cutting Edge Tech Tools
+                        Cutting Edge Tech Tools
                     </h1>
 
                     <p>
-                        Access the latest technologies and elite talent. Equip yourself with a comprehensive toolbox for success in today's competitive environment, blending tech with expertise.
+                        Access the latest technologies and elite talent. Equip yourself with a comprehensive toolbox for success.
                     </p>
 
                     <ToolsSVG />
