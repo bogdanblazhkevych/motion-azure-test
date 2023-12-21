@@ -13,6 +13,10 @@
   }
 }
 
+.topdot{
+  stroke: #323232 !important;    
+}
+
 .svgmain circle{
     fill: var(--primary-color);
     stroke: var(--standout-color)

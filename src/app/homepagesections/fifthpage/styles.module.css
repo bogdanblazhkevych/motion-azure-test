@@ -283,7 +283,7 @@
     transform-origin: 50% 0%; 
     opacity: 0;
     /* transform: scale(0.5); */
-    transform: translateY(7%) scale(0.60) translateX(20px);
+    transform: translateY(5vw) scale(0.60) translateX(20px);
 }
 
 .showtower{
@@ -324,24 +324,21 @@
     }
     .phonetextcontentwrapper{
         width: 100%;
-        padding: 10% 0px;
+        padding: 7% 0px;
     }
     .phonesvg{
-        width: 90%;
+        width: 50%;
     }
     .phoneheadingwrapper{
-        font-size: clamp(14px, 6vw, 58px);
+        font-size: clamp(14px, 3.5vw, 32px);
     }
     
     .phonetextwrapper{
-        font-size: clamp(14px, 6vw, 58px);
+        font-size: clamp(14px, 3.5vw, 32px);
     }
     .buildingsgroup{
-        transform: translateY(-2%) scale(0.80) translateX(20px);
+        transform: translateY(4vw) scale(0.67) translateX(20px);
     }
-
-
-
 
     .textwrapper{
         width: 100%;
@@ -351,6 +348,22 @@
 
 @media only screen and (max-width: 500px) {
     .buildingsgroup{
-        transform: translateY(5%) scale(0.60) translateX(20px);
+        transform: translateY(5%) scale(0.66) translateX(20px);
+        /* transform-origin: 50% 100%; */
+    }
+    .phonesvg{
+        width: 90%;
+    }
+
+    .phoneheadingwrapper{
+        font-size: clamp(14px,6vw,58px);
+    }
+
+    .phonetextwrapper{
+        font-size: clamp(14px,6vw,58px);
+    }
+
+    .phonetextcontentwrapper{
+        padding: 15% 0px;
     }
 }
