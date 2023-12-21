@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link';
 import PartnerSVG from '../partnersvg/partnersvg';
 import TalentSVG from '../talentsvg/talentsvg';
@@ -15,7 +17,7 @@ export default function LandingTemplateTwo(props: LandingTemplatePropsInterface)
 
 
     return (
-        <div className={styles.landingwrapper}>
+        <div className={styles.landingwrapper} style={{height: `${window ? `${window.innerHeight}px` : "100vh"}`}}>
 
             <div className={styles.landingcontainer}>
 

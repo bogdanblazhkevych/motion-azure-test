@@ -5,9 +5,9 @@
 }
 
 .globelinesgroup{
-    stroke-dashoffset: 1500;
+    stroke-dashoffset: 1540;
     animation: draw 4s forwards;
-    stroke-dasharray: 1500;
+    stroke-dasharray: 1540;
 }
 
 @keyframes draw {

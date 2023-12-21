@@ -40,7 +40,7 @@
     max-width: 1280px;
     min-height: 100vh;
 
-    padding: 0px 16px;
+    padding: 0px 24px;
 
     display: flex;
     flex-direction: column;
@@ -64,6 +64,10 @@
 
     .descriptioncontiner{
         padding-bottom: 5rem;
+    }
+
+    .waitlistinfocontainer {
+        padding: 0px 16px
     }
 
 }

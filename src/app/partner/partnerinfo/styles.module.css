@@ -48,12 +48,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 16px;
-    padding: 16px;  
+    padding: 24px;  
     align-items: flex-end;
 }
 
 @media only screen and (max-width: 425px) {
     .cardscontainer{
         grid-template-columns: 1fr;
+        padding: 16px;
     }
 }

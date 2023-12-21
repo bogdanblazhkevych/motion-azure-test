@@ -3,17 +3,13 @@
 import styles from './styles.module.css'
 import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
-
-// import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
-
 import { HiMenu } from "react-icons/hi";
 import Link from 'next/link';
 
 export default function Navbar(){
 const navRef = useRef<HTMLElement>(null)
     const pathname = usePathname();
-    console.log(pathname)
     const [navActive, setNavActive] = useState<boolean>(false);
     
     useEffect(() => {
