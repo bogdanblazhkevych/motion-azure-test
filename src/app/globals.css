@@ -1,7 +1,8 @@
 :root {
   --default-font: "Open Sans";
 
-  --primary-color: #000000;
+  /* --primary-color: #000000; */
+  --primary-color: #0a0b0b;
   --primary-color-2: #404040;
   --primary-color-3: #606060;
   --primary-color-4: #808080;

@@ -90,17 +90,17 @@ export default function NinthPage() {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div className={styles.controls}>
-                        <div className={styles.controlscontainer}>
-                            <div className={styles.blueindicator} style={{ transform: `translate(${currentIndex * 100}%)` }}></div>
-                            {tempArr.map((element, index) => {
-                                return (
+                        <div className={styles.controls}>
+                            <div className={styles.controlscontainer}>
+                                <div className={styles.blueindicator} style={{ transform: `translate(${currentIndex * 100}%)` }}></div>
+                                {tempArr.map((element, index) => {
+                                    return (
 
-                                    <div className={`${styles.indicator} ${currentIndex === index ? styles.activeindicator : null}`} onClick={() => handleClick(index)}></div>
+                                        <div className={`${styles.indicator} ${currentIndex === index ? styles.activeindicator : null}`} onClick={() => handleClick(index)}></div>
 
-                                )
-                            })}
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>

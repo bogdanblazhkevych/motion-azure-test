@@ -1,5 +1,5 @@
 .seventhpagewrapper{
-    background-color: black;
+    background-color: var(--primary-color);
     width: 100%;
     display: flex;
     justify-content: center;
