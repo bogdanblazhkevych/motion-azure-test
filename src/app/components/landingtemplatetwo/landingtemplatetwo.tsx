@@ -5,6 +5,7 @@ import PartnerSVG from '../partnersvg/partnersvg';
 import TalentSVG from '../talentsvg/talentsvg';
 import WaitlistSVG from '../waitlistsvg/waitlistsvg';
 import styles from './styles.module.css'
+import { useEffect, useRef } from 'react';
 
 interface LandingTemplatePropsInterface {
     title: string,
@@ -14,10 +15,17 @@ interface LandingTemplatePropsInterface {
 
 export default function LandingTemplateTwo(props: LandingTemplatePropsInterface) {
     const { title, paragraph, icon } = props;
+    const landingwrapperref = useRef<HTMLDivElement>(null)
 
+    useEffect(() => {
+        if (landingwrapperref.current) {
+            landingwrapperref.current.style.height = `${window.innerHeight}px`
+            landingwrapperref.current.style.opacity = '100%'
+        }
 
+    }, [])
     return (
-        <div className={styles.landingwrapper} style={{height: `${window as any ? `${window.innerHeight}px` : "100vh"}`}}>
+        <div ref={landingwrapperref} className={styles.landingwrapper}>
 
             <div className={styles.landingcontainer}>
 
