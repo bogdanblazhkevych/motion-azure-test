@@ -5,7 +5,7 @@ export default function AnalyticsSVG() {
 
         <svg className={styles.svgmain} viewBox="0 0 470.66 429.96">
 
-            <path d="m147.31,299.41H42.71" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="17" />
+            <path d="m147.31,299.41H42.71" fill="none" stroke="#000" strokeMiterlimit="10" strokeWidth="17" />
             <path
                 className={`${styles.laptopborder} ${styles.strokepath}`}
                 d="m8.39,77.4h453.23m-.25,291.43c0,7.14.01,14.04,0,20.94-.03,17.81-9.36,27.33-27.06,27.33-132.95.03-265.9.03-398.84,0-17.73,0-26.99-9.46-26.99-27.34,0-116.17.15-232.35-.17-348.52-.05-16.61,9.67-29.47,28.19-28.23,1.22.08,2.46-.09,4.35-.18l16.15.2h6.46c122.55,0,245.1,0,367.65,0,1.9,0,3.79,0,5.69.02,0,0,24.84,1.5,24.84,32.58v306.28l-.25,16.91Z"

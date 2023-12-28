@@ -11,9 +11,9 @@ export default function Map() {
                             y1="100%" 
                             x2="0%" 
                             y2="100%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="y1" values="100%;0%;0%" dur="4s" keyTimes="0;0.2;1" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="x1" values="0%;140%;140%" dur="4s" keyTimes="0;0.2;1" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="y2" values="140%;0%;0%" dur="4" keyTimes="0;0.2;1" repeatCount="indefinite" calcMode="linear" />
@@ -27,9 +27,9 @@ export default function Map() {
                             y1="100%" 
                             x2="0%" 
                             y2="100%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="y1" values="110%;110%;0%;0%" dur="4s" keyTimes="0;0.2;0.6;1" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="x1" values="0%;0%;140%;140%" dur="4s" keyTimes="0;0.2;0.6;1" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="y2" values="140%;140%;0%;0%" dur="4" keyTimes="0;0.2;0.6;1" repeatCount="indefinite" calcMode="linear" />
@@ -43,9 +43,9 @@ export default function Map() {
                             y1="0%" 
                             x2="140%" 
                             y2="0%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="110%;100%;-40%;" dur="2s" keyTimes="0;0.5;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="y1" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="x2" values="140%;140%;0%;" dur="2s" keyTimes="0;0.5;1" repeatCount="indefinite" calcMode="linear" />
@@ -59,9 +59,9 @@ export default function Map() {
                             y1="0%" 
                             x2="140%" 
                             y2="0%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="100%;-40%;-40%" dur="2s" keyTimes="0;0.5;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="y1" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="x2" values="140%;0%;0%" dur="2s" keyTimes="0;0.5;1" repeatCount="indefinite" calcMode="linear" />
@@ -75,9 +75,9 @@ export default function Map() {
                             y1="0%" 
                             x2="140%" 
                             y2="0%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="100%;-40%;-40%" dur="3s" keyTimes="0;0.7;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="y1" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="x2" values="140%;0%;0%" dur="3s" keyTimes="0;0.7;1" repeatCount="indefinite" calcMode="linear" />
@@ -91,9 +91,9 @@ export default function Map() {
                             y1="0%" 
                             x2="140%" 
                             y2="0%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="110%;110%;-40%;-40%" dur="3s" keyTimes="0;0.2;0.5;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="y1" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="x2" values="140%;140%;0%;0%" dur="3s" keyTimes="0;0.2;0.5;1" repeatCount="indefinite" calcMode="linear" />
@@ -107,9 +107,9 @@ export default function Map() {
                             y1="0%" 
                             x2="-40%" 
                             y2="0%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="0%;140%;140%" dur="4s" keyTimes="0;0.5;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="y1" values="0%;0%;0%" dur="4s" keyTimes="0;0.5;1" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="x2" values="-40%;100%;100%;" dur="4s" keyTimes="0;0.5;1" repeatCount="indefinite" calcMode="linear" />
@@ -123,9 +123,9 @@ export default function Map() {
                             y1="-10%" 
                             x2="0%" 
                             y2="5%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="100%;-40%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="y1" values="0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="x2" values="140%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
@@ -139,9 +139,9 @@ export default function Map() {
                             y1="-10%" 
                             x2="0%" 
                             y2="5%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="0%;140%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="y1" values="0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="x2" values="-40%;100%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
@@ -155,9 +155,9 @@ export default function Map() {
                             y1="-10%" 
                             x2="0%" 
                             y2="-40%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 {/* <animate attributeName="x1" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="y1" values="-10%;-10%;0%;140%;140%;" dur="6s" keyTimes="0;0.4;0.5;0.7;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="x2" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
@@ -171,9 +171,9 @@ export default function Map() {
                             y1="-10%" 
                             x2="0%" 
                             y2="-40%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 {/* <animate attributeName="x1" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="y1" values="-10%;0%;140%;" dur="3s" keyTimes="0;0.8;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="x2" values="0%;0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" /> */}
@@ -187,9 +187,9 @@ export default function Map() {
                             y1="-10%" 
                             x2="0%" 
                             y2="5%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="y1" values="0%;140%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="x2" values="0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
@@ -203,9 +203,9 @@ export default function Map() {
                             y1="110%" 
                             x2="0%" 
                             y2="140%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 {/* <animate attributeName="x1" values="0%;0%;" dur="4s" repeatCount="indefinite" calcMode="linear" /> */}
                 <animate attributeName="y1" values="110%;110%;-40%;-40%" dur="4s" keyTimes="0;0.4;0.6;1" repeatCount="indefinite" calcMode="linear" />
                 {/* <animate attributeName="x2" values="0%;0%;" dur="4s" repeatCount="indefinite" calcMode="linear" /> */}
@@ -219,9 +219,9 @@ export default function Map() {
                             y1="-10%" 
                             x2="0%" 
                             y2="5%">
-                <stop stop-color="#267e99" stop-opacity="0"></stop>
-                <stop offset="0.05" stop-color="#267e99"></stop>
-                <stop offset="1" stop-color="#267e99" stop-opacity="0"></stop>
+                <stop stopColor="#267e99" stopOpacity="0"></stop>
+                <stop offset="0.05" stopColor="#267e99"></stop>
+                <stop offset="1" stopColor="#267e99" stopOpacity="0"></stop>
                 <animate attributeName="x1" values="0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="y1" values="100%;-40%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />
                 <animate attributeName="x2" values="0%;0%;" dur="1.3s" repeatCount="indefinite" calcMode="linear" />

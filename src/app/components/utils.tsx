@@ -101,14 +101,14 @@ export function getLinearGradient(ref:React.RefObject<SVGAnimateElement>, second
             x2="0%"
             y2="300%">
 
-            <stop offset="0%" stop-color="white" stop-opacity="0" />
-            <stop offset="10%" stop-color="white" stop-opacity="0" />
+            <stop offset="0%" stopColor="white" stopOpacity="0" />
+            <stop offset="10%" stopColor="white" stopOpacity="0" />
 
-            <stop offset="10%" stop-color="#267e99" />
-            <stop offset="50%" stop-color="#267e99" />
+            <stop offset="10%" stopColor="#267e99" />
+            <stop offset="50%" stopColor="#267e99" />
 
-            <stop offset="50%" stop-color="white" stop-opacity="0" />
-            <stop offset="100%" stop-color="white" stop-opacity="0" />
+            <stop offset="50%" stopColor="white" stopOpacity="0" />
+            <stop offset="100%" stopColor="white" stopOpacity="0" />
 
             <animate attributeName="y1" values="100%;100%;-50%;-50%;-100%;-100%;-100%" dur="20s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" ref={ref}/>
             <animate attributeName="y2" values="300%;300%;300%;300%;0%;0%;0%;" dur="20s" keyTimes={`0;${_start};${_fill};${_fillout};${_pause};${_end};1`} repeatCount="indefinite" calcMode="linear" ref={secondRef}/>
@@ -165,9 +165,9 @@ export const createStrokeGradient = (order: number, length: number, delay: numbe
             y1={direction === "up" ? "100%" : "-20%"}
             x2="0%"
             y2={direction === "up" ? "140%" : "-40%"} >
-            <stop stop-color="#1F7994" stop-opacity="0"></stop>
-            <stop offset="0.05" stop-color="#1F7994"></stop>
-            <stop offset="1" stop-color="#1F7994" stop-opacity="0"></stop>
+            <stop stopColor="#1F7994" stopOpacity="0"></stop>
+            <stop offset="0.05" stopColor="#1F7994"></stop>
+            <stop offset="1" stopColor="#1F7994" stopOpacity="0"></stop>
             <animate attributeName="y1" values={gradientValuesY1} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
             <animate attributeName="y2" values={gradientValuesY2} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />
             <animate attributeName="x1" values={gradientValuesX1} dur={`${totalDuration}s`} keyTimes={gradientKeyTimes} repeatCount="indefinite" calcMode="linear" />

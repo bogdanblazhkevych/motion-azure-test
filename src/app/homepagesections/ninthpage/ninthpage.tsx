@@ -96,7 +96,7 @@ export default function NinthPage() {
                                 {tempArr.map((element, index) => {
                                     return (
 
-                                        <div className={`${styles.indicator} ${currentIndex === index ? styles.activeindicator : null}`} onClick={() => handleClick(index)}></div>
+                                        <div key={index} className={`${styles.indicator} ${currentIndex === index ? styles.activeindicator : null}`} onClick={() => handleClick(index)}></div>
 
                                     )
                                 })}
@@ -130,6 +130,10 @@ export default function NinthPage() {
                     </p>
 
                 </div>
+                {/* <CardOne heading='Real-Time Analytics'
+                    paragraph='Harness the power of real-time analytics for swift, data-driven decisions. Monitor key metrics instantly.'
+                    textAlign='left'
+                    banner={<AnalyticsSVG />} /> */}
                 <div className={styles.textcontent}>
                     <h3>
                         Innovation & Development
@@ -138,7 +142,8 @@ export default function NinthPage() {
                     <InovationSVG />
 
                     <h1>
-                        From ideation to prototyping
+                        {/* From ideation to prototyping */}
+                        Ideation to Prototyping
                     </h1>
 
                     <p>
@@ -160,7 +165,6 @@ export default function NinthPage() {
                     <p>
                         Speed your product from concept to market. Streamline the path to commercialization.
                     </p>
-
                 </div>
                 <div className={styles.textcontent}>
                     <h3>
@@ -168,7 +172,7 @@ export default function NinthPage() {
                     </h3>
 
                     <ToolsSVG />
-                    
+
                     <h1>
                         Cutting Edge Tech Tools
                     </h1>
