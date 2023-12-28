@@ -1,0 +1,38 @@
+.talentsvg *{
+    fill: none;
+    /* stroke: red; */
+    /* stroke-width: 5px; */
+    /* stroke: var(--standout-color); */
+    /* animation: test 3s forwards;
+    animation-delay: 3s; */
+}
+
+.hand{
+    stroke-width: 5px;
+    stroke: var(--standout-color);
+    stroke-dasharray: 2800;
+    stroke-dashoffset: 2800;
+    animation: draw 2.5s forwards, strokefade 1s forwards 2.5s;
+}
+
+/* .handone{
+}
+
+.handtwo{
+    stroke-dasharray: 2800;
+    stroke-dashoffset: 2800;
+    animation: draw 3s forwards;
+} */
+
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes strokefade {
+    100% {
+        stroke: rgb(50, 50, 50);
+    }
+}

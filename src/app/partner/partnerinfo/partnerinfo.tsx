@@ -4,14 +4,14 @@ import AnimateChildren from '@/app/components/animatechildren/animatechildren'
 
 export default function PartnerInfo() {
     return (
-        <div className={styles.partnerinfowrapper}>
+        <div id="partnerinfo" className={styles.partnerinfowrapper}>
 
             <div className={styles.partnerinfocontainer}>
 
                 <AnimateChildren>
                     <div className={styles.textcontainer}>
                         <h1>
-                            How partners help accelerate businesses at every stage
+                            World-Class Capabilities At Your Fingertips
                         </h1>
                     </div>
                 </AnimateChildren>

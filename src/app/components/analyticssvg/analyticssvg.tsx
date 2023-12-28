@@ -1,89 +1,82 @@
 import styles from './styles.module.css'
 
 export default function AnalyticsSVG() {
-    return(
+    return (
 
-        <svg className={styles.svgmain} viewBox="0 0 500 389.52">
+        <svg className={styles.svgmain} viewBox="0 0 470.66 429.96">
 
+            <path d="m147.31,299.41H42.71" fill="none" stroke="#000" strokeMiterlimit="10" strokeWidth="17" />
             <path
-                className={`${styles.laptopborder} ${styles.strokepath}`}  
-                d="m457.09,324.96h32.18c-.51,10.53-.13,20.8-1.73,30.75-1.54,9.55-10.48,15.97-20.43,16.85-2,.18-4.03.15-6.05.15-140.46,0-280.92,0-421.39,0-18.73,0-27.72-8.95-27.72-27.6,0-6.48,0-12.97,0-19.84h31.73v-6.16c0-92.16-.06-184.32.16-276.49.01-5.51,1.38-11.5,3.82-16.42,3.42-6.92,10.18-10.15,17.9-10.88,2-.19,4.03-.14,6.05-.14,119.2,0,238.4,0,357.6,0,18.94,0,27.89,8.97,27.89,27.95,0,91.85,0,183.7,0,275.55v6.29Zm-413.42.3c127.12,0,286.31-.3,413.42-.3M43.67,236.32h206.33m0,0h207.09M43.75,83.95h413.34"
-            />
-
-            <path  
-                className={`${styles.bottombar} ${styles.strokepath}`}
-                d="m170.58,269.59h-94.87"
-            />
-
-            <path
-                className={`${styles.bottombar} ${styles.strokepath}`} 
-                d="m170.58,301.25h-94.87"
+                className={`${styles.laptopborder} ${styles.strokepath}`}
+                d="m8.39,77.4h453.23m-.25,291.43c0,7.14.01,14.04,0,20.94-.03,17.81-9.36,27.33-27.06,27.33-132.95.03-265.9.03-398.84,0-17.73,0-26.99-9.46-26.99-27.34,0-116.17.15-232.35-.17-348.52-.05-16.61,9.67-29.47,28.19-28.23,1.22.08,2.46-.09,4.35-.18l16.15.2h6.46c122.55,0,245.1,0,367.65,0,1.9,0,3.79,0,5.69.02,0,0,24.84,1.5,24.84,32.58v306.28l-.25,16.91Z"
             />
 
             <path
                 className={`${styles.bottombar} ${styles.strokepath}`}
-                d="m361.64,269.49h-94.87" 
-            />
-
-            <path
-                className={`${styles.bottombar} ${styles.strokepath}`} 
-                d="m361.64,301.2h-94.87"
+                d="m147.31,334.32H42.71"
             />
 
             <path
                 className={`${styles.bottombar} ${styles.strokepath}`}
-                d="m234.13,269.49h-31.72"
+                d="m357.99,299.3h-104.6"
             />
 
             <path
                 className={`${styles.bottombar} ${styles.strokepath}`}
-                d="m234.13,301.2h-31.72" 
+                d="m357.99,334.26h-104.6"
             />
 
             <path
                 className={`${styles.bottombar} ${styles.strokepath}`}
-                d="m425.1,301.25h-31.72"
-            />
-
-            <path  
-                className={`${styles.bottombar} ${styles.strokepath}`}
-                d="m425.1,269.49h-31.72"
+                d="m147.31,299.41H42.71"
             />
 
             <path
-                className={`${styles.linechart} ${styles.strokepath}`} 
-                d="m76.36,193.93c11.86-11.9,24.09-24.16,36.21-36.32,7.27,7.3,14.99,15.05,22.72,22.82,13.69-13.78,26.75-26.94,39.94-40.22,8.48,8.58,16.21,16.38,24,24.26,9.07-9.12,17.65-17.75,26.41-26.57" 
+                className={`${styles.bottombar} ${styles.strokepath}`}
+                d="m217.39,299.3h-34.98"
+            />
+
+            <path
+                className={`${styles.bottombar} ${styles.strokepath}`}
+                d="m217.39,334.26h-34.98"
+            />
+
+            <path
+                className={`${styles.bottombar} ${styles.strokepath}`}
+                d="m427.96,334.32h-34.98"
+            />
+
+            <path
+                className={`${styles.bottombar} ${styles.strokepath}`}
+                d="m427.96,299.3h-34.98"
+            />
+
+            <path
+                className={`${styles.linechart} ${styles.strokepath}`}
+                d="m43.42,215.99c13.08-13.12,26.56-26.64,39.93-40.05,8.01,8.05,16.53,16.6,25.06,25.16,15.09-15.2,29.5-29.7,44.04-44.34,9.36,9.46,17.87,18.06,26.46,26.75,10-10.06,19.46-19.58,29.13-29.3"
             />
 
             <path
                 className={`${styles.piechartlarge} ${styles.strokepath}`}
-                d="m361.94,134.93c17.37-1.5,37.68,13.19,39.26,36.39,1.57,22.9-15.86,41.89-39,42.34-22.09.43-40.64-17.65-39.87-39.34" 
+                d="m358.31,150.93c19.15-1.65,41.54,14.55,43.29,40.13,1.73,25.25-17.48,46.19-43.01,46.69-24.36.47-44.82-19.46-43.97-43.38"
             />
 
             <path
-                className={`${styles.piechartsmall} ${styles.strokepath}`} 
-                d="m345.31,157.94h-46.87c-4.12-28.36,18.06-50.68,46.87-47.07v47.07Z"
+                className={`${styles.piechartsmall} ${styles.strokepath}`}
+                d="m339.98,176.3h-51.68c-4.54-31.27,19.91-55.88,51.68-51.9v51.9Z"
             />
 
             <path
                 className={`${styles.topbar} ${styles.strokepath}`}
-                d="m173.86,51.36h253.8" 
+                d="m149.99,45.54h270.24"
             />
-
-            <circle 
-                className={`${styles.topdot} ${styles.strokepath}`}
-                cx="78.71" cy="51.36" r="7.32" 
-            />
-
-            <circle
-                className={`${styles.topdot} ${styles.strokepath}`} 
-                cx="143.69" cy="51.36" r="7.32"
-            />
-
             <circle
                 className={`${styles.topdot} ${styles.strokepath}`}
-                cx="111.36" cy="51.36" r="7.32" 
-            />
+                cx="48.68" cy="45.54" r="7.79" />
+            <circle className={`${styles.topdot} ${styles.strokepath}`}
+                cx="117.86" cy="45.54" r="7.79" />
+            <circle className={`${styles.topdot} ${styles.strokepath}`}
+                cx="83.44" cy="45.54" r="7.79" />
 
         </svg>
     )

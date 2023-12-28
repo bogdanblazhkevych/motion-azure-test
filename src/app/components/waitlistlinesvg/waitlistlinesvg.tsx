@@ -28,7 +28,7 @@ export default function WaitlistLineSVG() {
 
     return (
         <svg ref={svgRef} className={styles.linesvg} viewBox="0 0 500 500" preserveAspectRatio="none">
-            <path ref={svgPathRef} fill-rule="evenodd" stroke-width="3.79px" stroke-linecap="round" stroke-linejoin="miter" d="M4.395,3.895 L247.395,3.895 C247.395,3.895 490.395,3.895 490.395,244.895 C490.395,485.895 490.395,485.895 490.395,485.895 " />
+            <path ref={svgPathRef} fill-rule="evenodd" strokeWidth="3.79px" strokeLinecap="round" strokeLinejoin="miter" d="M4.395,3.895 L247.395,3.895 C247.395,3.895 490.395,3.895 490.395,244.895 C490.395,485.895 490.395,485.895 490.395,485.895 " />
         </svg>
     )
 }

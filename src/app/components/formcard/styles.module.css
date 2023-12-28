@@ -56,4 +56,13 @@
         padding-left: 0px;
         text-align: center;
     }
+
+    .textcontainer p {
+        display: none;
+    }
+
+    .textcontainer{
+        flex-direction: column-reverse;
+        gap: unset;
+    }
 }

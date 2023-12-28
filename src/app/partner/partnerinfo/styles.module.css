@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, #121212 55%, rgba(0,0,0,1) 84%);
+    /* background: linear-gradient(0deg, #121212 35%, rgba(0,0,0,1) 55%); */
+    background-color: var(--primary-color);
 }
 
 .partnerinfocontainer {
@@ -17,6 +18,7 @@
     flex-direction: column;
     justify-content: space-around;
     gap: 2rem;
+    padding-top: 2rem;
 }
 
 .textcontainer{
@@ -46,12 +48,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 16px;
-    padding: 16px;  
+    padding: 24px;  
     align-items: flex-end;
 }
 
 @media only screen and (max-width: 425px) {
     .cardscontainer{
         grid-template-columns: 1fr;
+        padding: 16px;
     }
 }

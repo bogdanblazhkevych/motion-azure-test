@@ -3,13 +3,13 @@
 import styles from './styles.module.css'
 import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
-
+import { usePathname } from 'next/navigation'
 import { HiMenu } from "react-icons/hi";
 import Link from 'next/link';
 
 export default function Navbar(){
 const navRef = useRef<HTMLElement>(null)
-
+    const pathname = usePathname();
     const [navActive, setNavActive] = useState<boolean>(false);
     
     useEffect(() => {
@@ -38,7 +38,7 @@ const navRef = useRef<HTMLElement>(null)
                             MOTION!
                         </Link>
                     </li>
-                    <li>
+                    <li className={pathname === '/partner/' ? styles.navlinkon : undefined }>
                         <Link href='/partner' onClick={() => setNavActive(false)}>
                             Become a Partner
                         </Link>
@@ -46,7 +46,7 @@ const navRef = useRef<HTMLElement>(null)
                             Access to a global innovation and startup ecosystem
                         </div>
                     </li>
-                    <li>
+                    <li className={pathname === '/waitlist/' ? styles.navlinkon : undefined }>
                         <Link href='/waitlist' onClick={() => setNavActive(false)}>
                             Join Waitlist
                         </Link>
@@ -54,13 +54,19 @@ const navRef = useRef<HTMLElement>(null)
                             Get early access by joining our waiting list
                         </div>
                     </li>
-                    <li>
+                    <li className={pathname === '/talent/' ? styles.navlinkon : undefined }>
                         <Link href='/talent' onClick={() => setNavActive(false)}>
                             Talent
                         </Link>
                         <div className={styles.linkdesc}>
                             Join our core team and
                         </div>
+                    </li>
+                    <div className={styles.mobileborderdiv}></div>
+                    <li className={styles.tosli}>
+                        <Link href='/policy' onClick={() => setNavActive(false)}>
+                            Terms Of Use
+                        </Link>
                     </li>
                 </ul>
             </nav>

@@ -4,9 +4,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, #181818 66%);
-    border-top: 1px solid var(--primary-color-3);
-    border-bottom: 1px solid var(--primary-color-3);
+    /* background: linear-gradient(90deg, var(--primary-color) 40%, #181818 66%); */
+    background: var(--primary-color);
+    /* border-top: 1px solid var(--primary-color-3); */
+    /* border-bottom: 1px solid var(--primary-color-3); */
     padding: 5rem 0;
 }
 
@@ -42,16 +43,6 @@
     width: 100%;
     max-width: 1280px;
     padding: 0 24px;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    aspect-ratio:  2 / 1; */
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -263,7 +254,8 @@
 
 .phoneborder{
     fill: transparent;
-    stroke: var(--primary-color);
+    /* stroke: var(--primary-color); */
+    stroke: #000000;
     stroke-width: 3px;
     stroke-linecap: butt; 
     stroke-linejoin: miter; 
@@ -280,10 +272,11 @@
 }
 
 .phoneopen{
-    stroke: var(--primary-color);
+    /* stroke: var(--primary-color); */
+    stroke: #323232;
     /* fill: var(--primary-color-2); */
-    fill: rgb(34, 34, 34);
-    stroke-width: 15px;
+    fill: var(--primary-color);
+    stroke-width: 10px;
     transform: scale(1);
     transition: stroke 1s ease, stroke-width 1s ease, fill 1s ease, transform 1s ease;
 }
@@ -293,7 +286,7 @@
     transform-origin: 50% 0%; 
     opacity: 0;
     /* transform: scale(0.5); */
-    transform: translateY(7%) scale(0.60) translateX(20px);
+    transform: translateY(5vw) scale(0.60) translateX(20px);
 }
 
 .showtower{
@@ -308,6 +301,11 @@
 
     .phonetextwrapper{
         font-size: clamp(10px, 1.8vw, 25px);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .fifthpagecontainer{
+        padding: 0px 16px;
     }
 }
 @media only screen and (max-width: 760px) {
@@ -329,24 +327,21 @@
     }
     .phonetextcontentwrapper{
         width: 100%;
-        padding: 10% 0px;
+        padding: 7% 0px;
     }
     .phonesvg{
-        width: 90%;
+        width: 50%;
     }
     .phoneheadingwrapper{
-        font-size: clamp(14px, 6vw, 58px);
+        font-size: clamp(14px, 3.5vw, 32px);
     }
     
     .phonetextwrapper{
-        font-size: clamp(14px, 6vw, 58px);
+        font-size: clamp(14px, 3.5vw, 32px);
     }
     .buildingsgroup{
-        transform: translateY(-2%) scale(0.80) translateX(20px);
+        transform: translateY(4vw) scale(0.67) translateX(20px);
     }
-
-
-
 
     .textwrapper{
         width: 100%;
@@ -356,6 +351,22 @@
 
 @media only screen and (max-width: 500px) {
     .buildingsgroup{
-        transform: translateY(5%) scale(0.60) translateX(20px);
+        transform: translateY(5%) scale(0.66) translateX(20px);
+        /* transform-origin: 50% 100%; */
+    }
+    .phonesvg{
+        width: 90%;
+    }
+
+    .phoneheadingwrapper{
+        font-size: clamp(14px,6vw,58px);
+    }
+
+    .phonetextwrapper{
+        font-size: clamp(14px,6vw,58px);
+    }
+
+    .phonetextcontentwrapper{
+        padding: 15% 0px;
     }
 }

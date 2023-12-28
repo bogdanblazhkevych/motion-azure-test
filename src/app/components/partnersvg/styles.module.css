@@ -1,20 +1,54 @@
-.waitlistsvg path{
+.waitlistsvg path {
     transform: translateY(5px);
     fill: none;
     /* stroke: var(--secondary-color-4); */
+}
+
+.globelinesgroup{
+    stroke-dashoffset: 1540;
+    animation: draw 4s forwards;
+    stroke-dasharray: 1540;
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.bluelinesgroup{
+    opacity: 0;
+    animation: bluelinefade 4s forwards;
+}
+
+@keyframes bluelinefade {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.personicon{
+    opacity: 0;
+    animation: bluelinefade 5s forwards;
 }
 
 /* .waitlistsvg{
     border: 1px solid red;
 } */
 
-.globelinesgroup path{
+.globelinesgroup path {
     /* stroke: var(--secondary-color-4); */
     stroke: rgb(50, 50, 50);
     stroke-width: 2px;
 }
 
-.personicon *{
+.personicon * {
     /* stroke: var(--secondary-color-4); */
     /* stroke: rgb(146, 146, 146); */
     stroke: rgb(50, 50, 50);
@@ -22,17 +56,17 @@
     fill: var(--primary-color) !important;
 }
 
-.personicon path{
+.personicon path {
     transform: translateY(-0.3%);
     stroke: rgb(146, 146, 146);
     stroke-width: 4px;
 }
 
-.bluelinesgroup path{
+.bluelinesgroup path {
     stroke-width: 6px;
 }
 
-.smallcircle{
+.smallcircle {
     stroke: var(--standout-color);
     stroke-width: 8px;
     fill: none;

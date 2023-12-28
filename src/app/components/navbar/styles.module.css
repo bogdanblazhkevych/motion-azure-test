@@ -1,4 +1,4 @@
-.navbarwrapper{
+.navbarwrapper {
     /* border: 1px solid blue; */
     width: 100%;
     max-width: 1280px;
@@ -9,11 +9,11 @@
     position: absolute;
     z-index: 200;
     color: var(--secondary-color);
-    top:0;
+    top: 0;
     /* position: relative; */
 }
 
-.companyname{
+.companyname {
     font-weight: 700;
     font-size: 30px;
     cursor: pointer;
@@ -22,37 +22,66 @@
     /* margin-right: 30px; */
 }
 
-.navcompanyname{
+.navcompanyname {
     display: none;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
 }
 
-.navbar ul li a{
+.navbar ul li a {
     font-size: 18px;
     text-align: center;
     cursor: pointer;
 }
 
-.burger{
+.burger {
     display: none;
     /* position: relative; */
     /* border: 1px solid blue; */
 }
 
-.linkdesc{
+.linkdesc {
     display: none;
+}
+
+.mobileborderdiv{
+    display: none;
+}
+
+.tosli{
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar ul li:not(:first-child) {
+        /* color: #333; */
+        /* border: 1px solid red; */
+        padding: 10px 0px;
+        background: linear-gradient(0deg, rgba(60,149,189,1) 49%, rgba(0,0,0,0) 50%);
+        background-size: 200% 200%;
+        background-position: 0% 0px;
+        transition: background-position 0.3s ease-out, color 0.3s ease-in-out;
+        border-radius: 5px;
+    }
+    
+    .navbar ul li:not(:first-child):hover {
+        background-position: 0% -4px;
+    }
+    
+    .navlinkon{
+        background-position: 0% -4px !important;
+    }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -60,21 +89,22 @@
         width: 100vw;
     } */
 
-    .navbar ul li a{
+    .navbar ul li a {
         font-size: 22px;
     }
 }
 
 /* Laptop L */
 @media only screen and (max-width: 1024px) {
-    .navbarwrapper{
+    .navbarwrapper {
         padding: 20px 1rem;
     }
 }
 
 /* Tablet */
 @media only screen and (max-width: 768px) {
-    .navbar{
+    .navbar {
+        /* border: 1px solid red; */
         position: absolute;
         transform: translateY(-200vh);
         /* transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
@@ -93,17 +123,23 @@
         z-index: 2;
     }
 
-    .navbar.navactive{
+    .navbar.navactive {
         transform: translateY(0);
     }
 
     .navbar ul {
+        /* border: 1px solid blue; */
+        height: 100%;
+        gap: unset;
+        justify-content: flex-start;
+        gap: 3rem;
         flex-direction: column;
         align-items: flex-start;
         font-size: 18px;
+        width: 100%;
     }
 
-    .navbar .navcompanyname a{
+    .navbar .navcompanyname a {
         display: flex;
         font-weight: 700;
         font-size: 32px;
@@ -111,7 +147,7 @@
         position: relative;
     }
 
-    .linkdesc{
+    .linkdesc {
         display: flex;
         font-size: 16px;
         color: var(--primary-color-4);
@@ -122,7 +158,7 @@
         position: relative;
     }
 
-    .navcompanyname:after{
+    .navcompanyname:after {
         content: "";
         display: flex;
         position: absolute;
@@ -133,7 +169,7 @@
         height: 1px;
     }
 
-    .burger{
+    .burger {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -145,9 +181,21 @@
         /* font-weight: 800; */
     }
 
-    .burger.burgeractive{
+    .burger.burgeractive {
         color: var(--primary-color);
         position: static;
+    }
+
+    .mobileborderdiv{
+        display: unset;
+        height: 3px;
+        /* border: 1px solid red; */
+        width: 100%;
+        background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    .tosli{
+        display: unset;
     }
 
 }

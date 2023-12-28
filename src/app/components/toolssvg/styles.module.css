@@ -21,3 +21,12 @@
 .range{
     stroke: var(--standout-color)
 }
+
+.topdot{
+  stroke: #323232 !important;    
+}
+
+.window, .topdot, .topbar{
+  animation: none;
+  stroke-dashoffset: 0;
+}

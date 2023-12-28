@@ -45,9 +45,9 @@ export default function Cylinder(props: CylinderProps) {
             <svg ref={cylinderSVGRef} className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
             <defs>
                 <radialGradient id="blue-glow" gradientTransform="translate(-0.5 -0.5) scale(2, 2)">
-                <stop offset="15%" stop-color="#1f7994"/>
-                <stop offset="64%" stop-color="rgba(255, 255, 255, 0)"/>
-                <stop offset="100%" stop-color="rgba(31, 121, 148, 0)"/>
+                <stop offset="15%" stopColor="#1f7994"/>
+                <stop offset="64%" stopColor="rgba(255, 255, 255, 0)"/>
+                <stop offset="100%" stopColor="rgba(31, 121, 148, 0)"/>
                 </radialGradient>
             </defs>
                 <ellipse className={styles.bigtop} cx="500" cy="500" rx="404.106" r="400" />

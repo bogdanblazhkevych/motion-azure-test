@@ -50,8 +50,8 @@ export default function WaitlistSVG() {
                     y1="0%"
                     x2="-100%"
                     y2="-10%">
-                    <stop stop-color="#323232" stop-opacity="0"></stop>
-                    <stop stop-color="#323232"></stop>
+                    <stop stopColor="#323232" stopOpacity="0"></stop>
+                    <stop stopColor="#323232"></stop>
                     <animate attributeName="y2" values="0%;100%;" dur={`0.6s`} begin="0s" repeatCount="1" fill="freeze" />
                     <animate attributeName="x2" values="-100%;0%" dur={`0.6s`} begin="0s" repeatCount="1" fill="freeze" />
                 </linearGradient>
@@ -103,14 +103,14 @@ const getGradient = (order: number) => {
                 fr="0%"
                 r="0%"
                 gradientUnits="userSpaceOnUse">
-                <stop offset="0.3" stop-color="#323232" />
-                <stop offset="0.5"stop-color="#1F7994" />
-                <stop offset="0.8"stop-color="#1F7994" />
-                <stop stop-color="black" />
-                {/* <stop offset="0.3" stop-color="#A0A0A0" />
-                <stop offset="0.5"stop-color="#1F7994" />
-                <stop offset="0.8"stop-color="#1F7994" />
-                <stop stop-color="black" /> */}
+                <stop offset="0.3" stopColor="#323232" />
+                <stop offset="0.5"stopColor="#1F7994" />
+                <stop offset="0.8"stopColor="#1F7994" />
+                <stop stopColor="black" />
+                {/* <stop offset="0.3" stopColor="#A0A0A0" />
+                <stop offset="0.5"stopColor="#1F7994" />
+                <stop offset="0.8"stopColor="#1F7994" />
+                <stop stopColor="black" /> */}
                 <animate attributeName="r" values="0%;200%" begin={`${1.5 + order * 0.0185}s`} dur="2s" repeatCount="1" fill="freeze" />
             </radialGradient>
     )

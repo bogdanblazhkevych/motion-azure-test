@@ -4,7 +4,7 @@ import WaitlistInfoCard from '@/app/components/waitlistinfocard/waitlistinfocard
 
 export default function WaitlistInfo() {
     return (
-        <div className={styles.waitlistinfowrapper}>
+        <div id="waitlistinfo" className={styles.waitlistinfowrapper}>
             <div className={styles.waitlistinfocontainer}>
 
                 <AnimateChildren>

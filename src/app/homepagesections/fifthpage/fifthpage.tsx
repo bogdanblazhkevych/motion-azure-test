@@ -35,6 +35,7 @@ export default function FifthPage() {
         const svgObserver = new IntersectionObserver((entries) => {
             entries.forEach(async (entry) => {
                 if (entry.isIntersecting) {
+                    console.log(entry)
                     phonePathRef.current?.classList.add(`${styles.phonedraw}`)
                     await delay(3000)
                     phonePathRef.current?.classList.add(`${styles.phoneopen}`)
@@ -47,7 +48,6 @@ export default function FifthPage() {
                 }
             })
         }, { threshold: 0.9 });
-    
         if (svg) {
             svgObserver.observe(svg);
         }
