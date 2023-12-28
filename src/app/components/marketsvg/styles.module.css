@@ -17,6 +17,11 @@
   stroke: #323232 !important;    
 }
 
+.windowborder, .topdot, .topbar{
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
 .svgmain circle{
     fill: var(--primary-color);
     stroke: var(--standout-color)

@@ -99,7 +99,7 @@
 
 .singlebuttongroup:hover input:not(:checked)::before {
     transform: scale(1);
-    background-color: var(--primary-color-4);
+    background-color: var(--primary-color-2);
 }
 
 .singlebuttongroup input:checked::before {

@@ -13,6 +13,11 @@
   }
 }
 
+.windowborder, .topdot, .topbar{
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
 .gearsmall{
     stroke: var(--standout-color) !important;
 }

@@ -155,7 +155,7 @@ export default function NinthPage() {
                     </h1>
 
                     <p>
-                        Speed your product from concept to market. Streamline the path from validation to commercialization.
+                        Speed your product from concept to market. Streamline the path to commercialization.
                     </p>
 
                     <MarketSVG />
