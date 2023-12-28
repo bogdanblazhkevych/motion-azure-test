@@ -13,6 +13,10 @@
   }
 }
 
+.windowborder{
+  fill: var(--primary-color)
+}
+
 .topdot{
   stroke: #323232 !important;    
 }

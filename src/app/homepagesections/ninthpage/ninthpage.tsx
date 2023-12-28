@@ -120,6 +120,7 @@ export default function NinthPage() {
                         Real-Time Analytics
                     </h3>
 
+                    <AnalyticsSVG />
                     <h1>
                         Real-Time Analytics
                     </h1>
@@ -128,12 +129,13 @@ export default function NinthPage() {
                         Harness the power of real-time analytics for swift, data-driven decisions. Monitor key metrics instantly.
                     </p>
 
-                    <AnalyticsSVG />
                 </div>
                 <div className={styles.textcontent}>
                     <h3>
                         Innovation & Development
                     </h3>
+
+                    <InovationSVG />
 
                     <h1>
                         From ideation to prototyping
@@ -143,12 +145,13 @@ export default function NinthPage() {
                         Traverse from innovative ideas to tangible prototypes. Merge creativity with practical development.
                     </p>
 
-                    <InovationSVG />
                 </div>
                 <div className={styles.textcontent}>
                     <h3>
                         Market
                     </h3>
+
+                    <MarketSVG />
 
                     <h1>
                         Accelerate Product Launch
@@ -158,13 +161,14 @@ export default function NinthPage() {
                         Speed your product from concept to market. Streamline the path to commercialization.
                     </p>
 
-                    <MarketSVG />
                 </div>
                 <div className={styles.textcontent}>
                     <h3>
                         Resources
                     </h3>
 
+                    <ToolsSVG />
+                    
                     <h1>
                         Cutting Edge Tech Tools
                     </h1>
@@ -173,7 +177,6 @@ export default function NinthPage() {
                         Access the latest technologies and elite talent. Equip yourself with a comprehensive toolbox for success.
                     </p>
 
-                    <ToolsSVG />
                 </div>
             </div>
         </div>

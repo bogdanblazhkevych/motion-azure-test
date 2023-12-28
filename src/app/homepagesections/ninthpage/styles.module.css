@@ -207,6 +207,7 @@
         grid-column-gap: 16px;
         grid-row-gap: 16px;
         padding: 0px 16px;
+        /* gap: unset */
     }
 
     .ninthpagemobile {
@@ -214,12 +215,19 @@
     }
 
     .textcontent {
-        border: 1px solid var(--primary-color-2)
+        /* border: 2px solid var(--primary-color-2); */
+        border: 2px solid #323232;
+        padding: 16px;
+        border-radius: 15px;
+        gap: 1rem;
+        /* background: #121212; */
+        background: var(--primary-color);
+        
     }
 
     .textcontent svg{
-        width: 80%;
-        aspect-ratio: 1 / 1;
+        width: 100%;
+        /* aspect-ratio: 1 / 1; */
         align-self: center;
     }
 

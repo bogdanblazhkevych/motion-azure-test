@@ -273,10 +273,10 @@
 
 .phoneopen{
     /* stroke: var(--primary-color); */
-    stroke: #000000;
+    stroke: #323232;
     /* fill: var(--primary-color-2); */
-    fill: rgb(34, 34, 34);
-    stroke-width: 15px;
+    fill: var(--primary-color);
+    stroke-width: 10px;
     transform: scale(1);
     transition: stroke 1s ease, stroke-width 1s ease, fill 1s ease, transform 1s ease;
 }
