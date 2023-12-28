@@ -17,7 +17,7 @@ export default function LandingTemplateTwo(props: LandingTemplatePropsInterface)
 
 
     return (
-        <div className={styles.landingwrapper} style={{height: `${window ? `${window.innerHeight}px` : "100vh"}`}}>
+        <div className={styles.landingwrapper} style={{height: `${window as any ? `${window.innerHeight}px` : "100vh"}`}}>
 
             <div className={styles.landingcontainer}>
 
