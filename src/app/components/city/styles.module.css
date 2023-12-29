@@ -14,7 +14,7 @@
     transform: scale(1.2) translateY(20px);
 }
 
-.cityfill{
+.cityfill path{
     transform-origin: 50% 100%;
     transform: scale(1.2) translateY(20px);
     

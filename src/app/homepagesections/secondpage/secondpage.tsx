@@ -2,6 +2,7 @@ import CardOne from '@/app/components/cardone/cardone'
 import styles from './styles.module.css'
 import Link from 'next/link'
 import AnimateChildren from '@/app/components/animatechildren/animatechildren'
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 export default function SecondPage() {
         return (
@@ -54,6 +55,9 @@ export default function SecondPage() {
                                                 {globalSVG()}
                                                 <h1 className={styles.cardh1}> Global Partner </h1>
                                                 <p className={styles.cardp}>Become a Global Partner at Motion to build a global platform, accelerate innovation, and democratize business tools, making scaling equitable for all.</p>
+                                                <div className={styles.cardarrow}>
+                                                        <MdOutlineArrowOutward />
+                                                </div>
                                                 {/* <Link href="/partner">
                                                         <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
                                                 </Link> */}
@@ -62,6 +66,9 @@ export default function SecondPage() {
                                                 {lockSVG()}
                                                 <h1 className={styles.cardh1}> Developer Early Access </h1>
                                                 <p className={styles.cardp}>Calling product builders and developers worldwide! Join our community for early access to growth tools, connect globally, and achieve your ambitions.</p>
+                                                <div className={styles.cardarrow}>
+                                                        <MdOutlineArrowOutward />
+                                                </div>
                                                 {/* <Link href="/partner">
                                                         <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
                                                 </Link> */}
@@ -70,6 +77,9 @@ export default function SecondPage() {
                                         {mindSVG()}
                                                 <h1 className={styles.cardh1}> Talent Acquisition </h1>
                                                 <p className={styles.cardp}>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
+                                                <div className={styles.cardarrow}>
+                                                        <MdOutlineArrowOutward />
+                                                </div>
                                         </div>
 
 
