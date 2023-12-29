@@ -25,34 +25,53 @@ export default function SecondPage() {
                                 </div>
 
                                 <div className={styles.cardcontainer}>
-                                        {/* <div className={styles.svgiconcontainer}> */}
-                                        {/* </div> */}
-                                        <div className={styles.cardwrapper}>
+                                        {/* <div className={styles.cardwrapper}>
                                                 {globalSVG()}
                                                 <h1> Global Partner </h1>
                                                 <p>Become a Global Partner at Motion to build a global platform, accelerate innovation, and democratize business tools, making scaling equitable for all.</p>
                                                 <Link href="/partner">
                                                         <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
                                                 </Link>
-                                        </div>
-
-                                        <div className={styles.cardwrapper}>
+                                        </div> */}
+                                        {/* <div className={styles.cardwrapper}>
                                                 {lockSVG()}
-                                                <h1> Developer Early Access </h1>
-                                                <p>Calling product builders and developers worldwide! Join our community for early access to growth tools, connect globally, and achieve your ambitions.</p>
+                                                <h1 className={styles.cardh1}> Developer Early Access </h1>
+                                                <p className={styles.cardp}>Calling product builders and developers worldwide! Join our community for early access to growth tools, connect globally, and achieve your ambitions.</p>
                                                 <Link href="/waitlist">
                                                         <button type="submit" className={styles.submitbutton}>Request Developer Early Access</button>
                                                 </Link>
-                                        </div>
+                                        </div> */}
 
-                                        <div className={styles.cardwrapper}>
+                                        {/* <div className={styles.cardwrapper}>
                                                 {mindSVG()}
-                                                <h1> Talent Acquisition </h1>
-                                                <p>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
+                                                <h1 className={styles.cardh1}> Talent Acquisition </h1>
+                                                <p className={styles.cardp}>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
                                                 <Link href="/talent">
                                                         <button type="submit" className={styles.submitbutton}>Explore Open Positions</button>
                                                 </Link>
+                                        </div> */}
+                                        <div className={styles.newcardwrapper}>
+                                                {globalSVG()}
+                                                <h1 className={styles.cardh1}> Global Partner </h1>
+                                                <p className={styles.cardp}>Become a Global Partner at Motion to build a global platform, accelerate innovation, and democratize business tools, making scaling equitable for all.</p>
+                                                {/* <Link href="/partner">
+                                                        <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
+                                                </Link> */}
                                         </div>
+                                        <div className={styles.newcardwrapper}>
+                                                {lockSVG()}
+                                                <h1 className={styles.cardh1}> Developer Early Access </h1>
+                                                <p className={styles.cardp}>Calling product builders and developers worldwide! Join our community for early access to growth tools, connect globally, and achieve your ambitions.</p>
+                                                {/* <Link href="/partner">
+                                                        <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
+                                                </Link> */}
+                                        </div>
+                                        <div className={styles.newcardwrapper}>
+                                        {mindSVG()}
+                                                <h1 className={styles.cardh1}> Talent Acquisition </h1>
+                                                <p className={styles.cardp}>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
+                                        </div>
+
 
                                 </div>
 
@@ -120,7 +139,7 @@ function globalSVG() {
 function lockSVG() {
         return (
                 <div className={styles.svgiconcontainer}>
-                        <svg height="100%" viewBox="0 0 650 500">
+                        <svg height="100%" viewBox="0 0 500 500">
                                 <defs>
                                 </defs>
                                 <path id="lockcircle_1" data-name="lockcircle 1" d="M250,166.089s-155.36,0-155.36,155.36S250,476.809,250,476.809s155.36,0,155.36-155.36S250,166.089,250,166.089Z" />
