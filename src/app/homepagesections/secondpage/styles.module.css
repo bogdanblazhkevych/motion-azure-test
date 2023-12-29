@@ -117,8 +117,8 @@
     width: 30%;
     display: grid;
     place-items: center;
-    padding: 16px;
-    border: 3px solid #323232;
+    padding: 6px;
+    border: 2px solid #323232;
     border-radius: 22px;
     /* align-self: center; */
     /* aspect-ratio: 1 / 1; */
@@ -141,13 +141,21 @@
 
 .svgiconcontainer path{
     stroke: #323232;
-    stroke-width: 20px;
+    stroke-width: 15px;
     fill: none
 }
 
+.newcardwrapper:hover .bluepath{
+    stroke-dashoffset: 0 !important;
+}
+
+
 .bluepath{
     stroke: var(--standout-color) !important;
-    stroke-width: 20px !important;
+    /* stroke-width: 20px !important; */
+    /* stroke-dasharray: initial;
+    stroke-dashoffset: 100%; */
+    transition: stroke-dashoffset 0.5s ease-in-out;
 }
 
 .submitbutton {
@@ -184,11 +192,16 @@
     justify-content: space-between;
     padding: 16px;
     gap: 16px;
-    border: 3px solid #323232;
+    border: 2px solid #323232;
     background-color: #0e0e0e;
     border-radius: 22px;
     position: relative;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.newcardwrapper:hover{
+    background-color: hsl(0 0% 7% / 1);
 }
 
 .cardarrow{
@@ -209,6 +222,7 @@
 .newcardwrapper:hover .cardarrow{
     opacity: 100%;
     transform: scale(1);
+    color: var(--standout-color)
 }
 
 
