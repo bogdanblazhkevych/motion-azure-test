@@ -240,7 +240,8 @@
         /* background: #121212; */
         background: var(--primary-color);
         position: relative;
-        background: linear-gradient(0deg, hsl(194, 45%, 8%) 0%, rgba(0, 0, 0, 1) 100%);
+        /* background: linear-gradient(180deg, hsla(196, 46%, 8%, 0.51) 65%, rgba(0, 0, 0, 1) 100%); */
+        background-color: #151515;
     }
 
     /* .textcontent:after {
