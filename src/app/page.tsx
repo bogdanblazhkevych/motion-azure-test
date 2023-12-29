@@ -14,7 +14,9 @@ export default function Home() {
 
   return (
     <main>
-      {/* <GradientTest /> */}
+      <GradientTest />
+
+      {/* <div className={styles.testing}></div> */}
       <FirstPage />
       <NinthPage />
       <FifthPage />

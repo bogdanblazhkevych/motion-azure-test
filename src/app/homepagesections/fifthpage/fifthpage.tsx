@@ -1,17 +1,12 @@
 'use client'
 
 import styles from './styles.module.css'
-import ListItem from '@/app/components/listitem/listitem';
 import { useEffect, useRef, useState } from 'react';
 import { delay } from '@/app/components/utils';
 import { FaRegCircle } from "react-icons/fa";
 import Building from '@/app/components/building/building';
 import AnimateChildren from '@/app/components/animatechildren/animatechildren';
 import MarqueeText from '@/app/components/marqueetext/marqueetext';
-import AnalyticsSVG from '@/app/components/analyticssvg/analyticssvg';
-import InovationSVG from '@/app/components/inovationsvg/inovationsvg';
-import ToolsSVG from '@/app/components/toolssvg/toolssvg';
-import MarketSVG from '@/app/components/marketsvg/marketsvg';
 import Link from 'next/link';
 
 export default function FifthPage() {
@@ -37,7 +32,7 @@ export default function FifthPage() {
                 if (entry.isIntersecting) {
                     console.log(entry)
                     phonePathRef.current?.classList.add(`${styles.phonedraw}`)
-                    await delay(3000)
+                    await delay(2000)
                     phonePathRef.current?.classList.add(`${styles.phoneopen}`)
                     await delay(1000)
                     setToggleTowers(true);

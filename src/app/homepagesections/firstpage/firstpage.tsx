@@ -21,7 +21,10 @@ export default function FirstPage(){
 
         if (!textcontainerRef.current || !cityWrapperRef.current || !textParagraphRef.current || !textTitleRef.current || !textWrapperRef.current || !firstPageWrapperRef.current) return
         // set height of text container
-        if (calculatedTextWrapperHeight > (windowHeight / 2)) {
+        if (window.innerWidth < 450) {
+            textcontainerRef.current.style.height = `${windowHeight}px`
+            console.log("here")
+        } else if (calculatedTextWrapperHeight > (windowHeight / 2)) {
             textcontainerRef.current.style.height = `${windowHeight / 2}px`    
         } else {
             textcontainerRef.current.style.height = `${calculatedTextWrapperHeight}px`
@@ -62,6 +65,7 @@ export default function FirstPage(){
                     <City />
                 </div>
             </div>
+            {/* <div className={styles.testing}></div> */}
         </div>
     )
 }

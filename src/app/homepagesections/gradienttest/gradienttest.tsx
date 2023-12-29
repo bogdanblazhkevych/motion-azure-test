@@ -5,12 +5,13 @@ import styles from './styles.module.css'
 export default function GradientTest() {
     return(
         <div className={styles.wrapper}>
-            <div className={styles.container}>
+            {/* <div className={styles.container}>
                 <div className={`${styles.orb} ${styles.orbone}`}></div>
                 <div className={`${styles.orb} ${styles.orbtwo}`}></div>
                 <div className={`${styles.orb} ${styles.orbthree}`}></div>
                 <div className={`${styles.orb} ${styles.orbfour}`}></div>
-            </div>
+            </div> */}
+            <div className={styles.testing}></div>
         </div>
     )
 }

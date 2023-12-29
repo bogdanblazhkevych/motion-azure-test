@@ -24,7 +24,8 @@
 
 .citygroup path{
     /* stroke: rgb(59, 59, 59) !important; */
-    stroke: rgb(69, 69, 69) !important;
+    /* stroke: rgb(69, 69, 69) !important; */
+    stroke: #323232 !important;
 }
 
 .citygroup path{
@@ -41,5 +42,5 @@
 
 .citygroup path,.strokegroup path{
     fill: none !important;
-    stroke-width: 2px;
+    stroke-width: 4px;
 }

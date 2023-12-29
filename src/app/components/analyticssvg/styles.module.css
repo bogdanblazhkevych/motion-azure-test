@@ -1,11 +1,6 @@
 .svgmain *{
     stroke-width: 5px;
-    /* stroke: #323232; */
-    /* stroke: var(--secondary-color); */
-    /* stroke: var(--secondary-color-4); */
     stroke: #323232;
-    /* stroke: #323232; */
-
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
     animation: draw 3s forwards;
@@ -19,11 +14,14 @@
   }
 }
 
+
+
 .laptopborder{
-    fill: var(--primary-color)
-    /* fill: #1A1A1A; */
-    /* fill: var(--primary-color) */
-    /* fill: #141414 */
+    fill: var(--primary-color);
+    /* fill: rgba(255,255,255,0.05) */
+    /* fill: rgba(0, 0, 0, 0.257); */
+    /* stroke: none */
+    /* stroke-width: 2px; */
 }
 
 /* .bottombar{

@@ -25,8 +25,8 @@
 }
 
 .animatedheading{
-    /* color: #7F7F7F; */
     color: var(--secondary-color);
+    /* color: var(--secondary-color-4); */
     font-size: 50rem;
     text-align: center;
     transform: translateX(100vw);
@@ -36,7 +36,7 @@
 }
 
 
-@media only screen and (max-width: 7680px) {
+@media only screen and (max-width: 768px) {
     .scrollwrapper{
         display: none;
     }
