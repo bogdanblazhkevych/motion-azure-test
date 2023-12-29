@@ -267,7 +267,7 @@
 
 .phonedraw{
     stroke: var(--standout-color);
-    transition: stroke-dashoffset 3s ease;
+    transition: stroke-dashoffset 2s ease;
     stroke-dashoffset: 0;
 }
 
@@ -352,7 +352,7 @@
 @media only screen and (max-width: 500px) {
     .buildingsgroup{
         transform: translateY(5%) scale(0.66) translateX(20px);
-        /* transform-origin: 50% 100%; */
+        
     }
     .phonesvg{
         width: 90%;
