@@ -18,40 +18,64 @@ export default function PartnerInfo() {
 
                 <AnimateChildren>
                     <div className={styles.cardscontainer}>
-
-                        <CardOne heading='Access to Global Resources'
+                        {/* <CardOne heading='Access to Global Resources'
                             paragraph='Tap into world-class talent and the latest technologies on-demand with access to tools available globally.'
                             textAlign='left'
-                            banner={GlobalResourcesSVG()} />
-
-                        <CardOne heading='Centralized Access'
+                            banner={GlobalResourcesSVG()} /> */}
+                        {/* <CardOne heading='Centralized Access'
                             paragraph="Get easy access to Motion's entire integrated suite of features designed to work together and expand offerings"
                             textAlign='left'
-                            banner={CentralizedSVG()} />
-
-                        <CardOne heading='Streamline Operations'
+                            banner={CentralizedSVG()} /> */}
+                        {/* <CardOne heading='Streamline Operations'
                             paragraph='Use our unified platform to integrate Motion into innovation processes and strategy with SaaS and Marketplace.'
-                            textAlign='left' 
-                            banner={InnovationSVG()}/>
-
-                        <CardOne heading='Accelerate Innovation'
+                            textAlign='left'
+                        banner={InnovationSVG()} /> */}
+                        {/* <CardOne heading='Accelerate Innovation'
                             paragraph='Co-create and collaborate to optimize R&D projects, de-risk innovation, and accelerate your overall business model.'
-                            textAlign='left' />
-
-                        <CardOne heading='Expand Globally'
+                            textAlign='left' /> */}
+                        {/* <CardOne heading='Expand Globally'
                             paragraph='Accelerate international expansion and enter new global markets with regional experts to find new sales channels.'
-                            textAlign='left' />
-
-                        <CardOne heading='Launch Quickly'
+                            textAlign='left' /> */}
+                        {/* <CardOne heading='Launch Quickly'
                             paragraph="Validate assumptions quickly, reduce time to market, and bring product to deployment faster."
-                            textAlign='left' />
+                            textAlign='left' /> */}
 
+                        <div className={styles.newcardwrapper}>
+                            <div className={styles.svgbannercontainer}>
+                                {GlobalResourcesSVG()}
+                            </div>
+                            <h1 className={styles.cardh1}> Global Partner </h1>
+                            <p className={styles.cardp}>Become a Global Partner at Motion to build a global platform, accelerate innovation, and democratize business tools, making scaling equitable for all.</p>
+                        </div>
+                        <div className={styles.newcardwrapper}>
+                            <div className={styles.svgbannercontainer}>
+                                {CentralizedSVG()}
+                            </div>
+                            <h1 className={styles.cardh1}> Centralized Access </h1>
+                            <p className={styles.cardp}>Get easy access to Motion's entire integrated suite of features designed to work together and expand offerings.</p>
+                        </div>
+                        <div className={styles.newcardwrapper}>
+                            <div className={styles.svgbannercontainer}>
+                                {InnovationSVG()}
+                            </div>
+                            <h1 className={styles.cardh1}> Streamline Operations </h1>
+                            <p className={styles.cardp}>Use our unified platform to integrate Motion into innovation processes and strategy with SaaS and Marketplace.</p>
+                        </div>
+                        <div className={styles.newcardwrapper}>
+                            <h1 className={styles.cardh1}> Accelerate Innovation </h1>
+                            <p className={styles.cardp}>Co-create and collaborate to optimize R&D projects, de-risk innovation, and accelerate your overall business model.</p>
+                        </div>
+                        <div className={styles.newcardwrapper}>
+                            <h1 className={styles.cardh1}> Expand Globally </h1>
+                            <p className={styles.cardp}> Accelerate international expansion and enter new global markets with regional experts to find new sales channels. </p>
+                        </div>
+                        <div className={styles.newcardwrapper}>
+                            <h1 className={styles.cardh1}> Launch Quickly </h1>
+                            <p className={styles.cardp}> Validate assumptions quickly, reduce time to market, and bring product to deployment faster. </p>
+                        </div>
                     </div>
                 </AnimateChildren>
-
-
             </div>
-
         </div>
     )
 }
@@ -61,11 +85,6 @@ function GlobalResourcesSVG() {
         <svg viewBox="0 0 1000 500">
             <defs>
             </defs>
-            <path id="lineto2" d="M172.812,252.516H324" />
-            <path className={styles.bluestroke} id="worldoutline_1" data-name="worldoutline 1" d="M504.281,71.986s-180.295,0-180.295,180.3,180.3,180.3,180.3,180.3,180.3,0,180.3-180.3S504.281,71.986,504.281,71.986Z" />
-            <path className={styles.bluestroke} id="outeroutline_1" data-name="outeroutline 1" d="M504,72S378.328,108.044,378.328,252.218,504,432.437,504,432.437m0.327-359.874S630,108.607,630,252.782,504.327,433,504.327,433" />
-            <path className={styles.bluestroke} id="inneroutline" d="M503.93,72S450,108.044,450,252.218s53.93,180.219,53.93,180.219m0.14-359.874S558,108.607,558,252.782,504.07,433,504.07,433" />
-            <path className={styles.bluestroke} id="equator" d="M324,252.281H686.392" />
             <path id="smallcircle_1" data-name="smallcircle 1" d="M72,32.349s-28.826,0-28.826,28.826S72,90,72,90s28.826,0,28.826-28.826S72,32.349,72,32.349Z" />
             <path id="lineto1_1" data-name="lineto1 1" d="M72,90v90H336" />
             <path id="smallcircle_2" data-name="smallcircle 2" d="M144,223.177s-28.826,0-28.826,28.825S144,280.828,144,280.828s28.826,0,28.826-28.826S144,223.177,144,223.177Z" />
@@ -77,6 +96,11 @@ function GlobalResourcesSVG() {
             <path id="smallcircle6" d="M918,378.989s28.826,0,28.826,28.826S918,436.641,918,436.641s-28.826,0-28.826-28.826S918,378.989,918,378.989Z" />
             <path id="smallcircle4" d="M929.312,25.177s28.826,0,28.826,28.826-28.826,28.826-28.826,28.826-28.825,0-28.825-28.826S929.312,25.177,929.312,25.177Z" />
             <path id="lineto4_1" data-name="lineto4 1" d="M504,72V54H900" />
+            <path id="lineto2" d="M172.812,252.516H324" />
+            <path className={styles.bluestroke} id="worldoutline_1" data-name="worldoutline 1" d="M504.281,71.986s-180.295,0-180.295,180.3,180.3,180.3,180.3,180.3,180.3,0,180.3-180.3S504.281,71.986,504.281,71.986Z" />
+            <path className={styles.bluestroke} id="outeroutline_1" data-name="outeroutline 1" d="M504,72S378.328,108.044,378.328,252.218,504,432.437,504,432.437m0.327-359.874S630,108.607,630,252.782,504.327,433,504.327,433" />
+            <path className={styles.bluestroke} id="inneroutline" d="M503.93,72S450,108.044,450,252.218s53.93,180.219,53.93,180.219m0.14-359.874S558,108.607,558,252.782,504.07,433,504.07,433" />
+            <path className={styles.bluestroke} id="equator" d="M324,252.281H686.392" />
         </svg>
     )
 }
