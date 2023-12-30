@@ -34,3 +34,9 @@
 .dollarsign{
     stroke: var(--standout-color) !important;
 }
+
+@media only screen and (max-width: 768px) {
+  .windowborder{
+    display: none;
+  }
+}

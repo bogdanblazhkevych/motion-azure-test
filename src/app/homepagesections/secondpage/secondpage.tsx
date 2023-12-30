@@ -3,54 +3,36 @@ import styles from './styles.module.css'
 import Link from 'next/link'
 import AnimateChildren from '@/app/components/animatechildren/animatechildren'
 import { MdOutlineArrowOutward } from "react-icons/md";
+import Logo from '@/app/components/logo/page';
 
 export default function SecondPage() {
         return (
                 <div className={styles.pagewrapper} id="opportunities">
                         <div className={styles.pagecontainer}>
-                                <div className={styles.textcontent}>
-                                        <h3>
-                                                Opportunities
-                                        </h3>
+                                <div className={styles.headingcontainer}>
+                                        <div className={styles.textcontent}>
+                                                <h3>
+                                                        Opportunities
+                                                </h3>
 
-                                        <h1>
-                                                {/* Unlock Opportunities with Motion! */}
-                                                Get Started With Motion
-                                        </h1>
+                                                <h1>
+                                                        {/* Unlock Opportunities with Motion! */}
+                                                        Get Started With Motion
+                                                </h1>
 
-                                        <p>
-                                                Embark on a journey of innovation by choosing a path below and be a part of something extraordinary.
-                                        </p>
+                                                <p>
+                                                        Embark on a journey of innovation by choosing a path below and be a part of something extraordinary.
+                                                </p>
 
-                                        {/* <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button> */}
+                                                {/* <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button> */}
+                                        </div>
+                                        <div className={styles.spinlogo}>
+                                                <Logo />
+                                        </div>
+
                                 </div>
 
                                 <div className={styles.cardcontainer}>
-                                        {/* <div className={styles.cardwrapper}>
-                                                {globalSVG()}
-                                                <h1> Global Partner </h1>
-                                                <p>Become a Global Partner at Motion to build a global platform, accelerate innovation, and democratize business tools, making scaling equitable for all.</p>
-                                                <Link href="/partner">
-                                                        <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
-                                                </Link>
-                                        </div> */}
-                                        {/* <div className={styles.cardwrapper}>
-                                                {lockSVG()}
-                                                <h1 className={styles.cardh1}> Developer Early Access </h1>
-                                                <p className={styles.cardp}>Calling product builders and developers worldwide! Join our community for early access to growth tools, connect globally, and achieve your ambitions.</p>
-                                                <Link href="/waitlist">
-                                                        <button type="submit" className={styles.submitbutton}>Request Developer Early Access</button>
-                                                </Link>
-                                        </div> */}
-
-                                        {/* <div className={styles.cardwrapper}>
-                                                {mindSVG()}
-                                                <h1 className={styles.cardh1}> Talent Acquisition </h1>
-                                                <p className={styles.cardp}>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
-                                                <Link href="/talent">
-                                                        <button type="submit" className={styles.submitbutton}>Explore Open Positions</button>
-                                                </Link>
-                                        </div> */}
                                         <div className={styles.newcardwrapper}>
                                                 {globalSVG()}
                                                 <h1 className={styles.cardh1}> Global Partner </h1>
@@ -58,9 +40,6 @@ export default function SecondPage() {
                                                 <div className={styles.cardarrow}>
                                                         <MdOutlineArrowOutward />
                                                 </div>
-                                                {/* <Link href="/partner">
-                                                        <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
-                                                </Link> */}
                                         </div>
                                         <div className={styles.newcardwrapper}>
                                                 {lockSVG()}
@@ -69,9 +48,6 @@ export default function SecondPage() {
                                                 <div className={styles.cardarrow}>
                                                         <MdOutlineArrowOutward />
                                                 </div>
-                                                {/* <Link href="/partner">
-                                                        <button type="submit" className={styles.submitbutton}>Explore Global Partner Program</button>
-                                                </Link> */}
                                         </div>
                                         <div className={styles.newcardwrapper}>
                                         {mindSVG()}
@@ -84,33 +60,6 @@ export default function SecondPage() {
 
 
                                 </div>
-
-                                {/* <AnimateChildren>
-                                        <div className={styles.cardscontainer}>
-                                                <Link href="/partner">
-                                                        <CardOne heading="Global Partner"
-                                                                paragraph="We at Motion are building a global platform to enable collaboration, accelerate innovation communities, and democratize access to business-building tools. Our goal is making scaling a business more equitable by allowing more people to leverage resources previously reserved for large corporations alone."
-                                                                textAlign='left'
-                                                                icon={globalSVG()}
-                                                                padding={true}
-                                                                clickable={true} />
-                                                </Link>
-                                                <Link href="/waitlist">
-                                                        <CardOne heading="Early Access"
-                                                                paragraph="We invite product builders and developers worldwide to join our platform's growing community and get early access to tools that ease growth. Connect with potential partners, customers and investors globally to advance your business or product. Leverage our knowledge to achieve your ambitions."
-                                                                textAlign='left'
-                                                                icon={lockSVG()}
-                                                                clickable={true} />
-                                                </Link>
-                                                <Link href="/talent">
-                                                        <CardOne heading="Talent Acquisition"
-                                                                paragraph="We seek talented, entrepreneurial team members passionate about using technology to transform business building and scaling, making it more accessible. Join us in our ambitious mission to drive innovation democratization globally through collaboration and creativity."
-                                                                textAlign='left'
-                                                                icon={mindSVG()}
-                                                                clickable={true} />
-                                                </Link>
-                                        </div>
-                                </AnimateChildren> */}
                         </div>
                 </div>
         )
