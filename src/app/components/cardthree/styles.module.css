@@ -1,0 +1,31 @@
+.newcardwrapper {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 16px;
+    border: 2px solid #323232;
+    background-color: #0e0e0e;
+    border-radius: 22px;
+    position: relative;
+    /* cursor: pointer; */
+    transition: all 0.2s ease-in-out;
+}
+
+.cardh1 {
+    color: var(--secondary-color);
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 700;
+    line-height: 1.15;
+    height: auto;
+    width: fit-content;
+}
+
+.cardp {
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--secondary-color-4);
+    font-size: clamp(16px, 1vw, 18px);
+    height: auto;
+}

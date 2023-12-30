@@ -50,7 +50,7 @@ export default function SecondPage() {
                                                 </div>
                                         </div>
                                         <div className={styles.newcardwrapper}>
-                                        {mindSVG()}
+                                                {mindSVG()}
                                                 <h1 className={styles.cardh1}> Talent Acquisition </h1>
                                                 <p className={styles.cardp}>Join Motion's mission! We're seeking talented, entrepreneurial team members passionate about using technology to transform business building.</p>
                                                 <div className={styles.cardarrow}>
