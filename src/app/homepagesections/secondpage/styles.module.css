@@ -152,9 +152,6 @@
 
 .bluepath{
     stroke: var(--standout-color) !important;
-    /* stroke-width: 20px !important; */
-    /* stroke-dasharray: initial;
-    stroke-dashoffset: 100%; */
     transition: stroke-dashoffset 0.5s ease-in-out;
 }
 

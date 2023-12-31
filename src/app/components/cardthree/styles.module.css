@@ -1,4 +1,4 @@
-.newcardwrapper {
+.cardwrapper {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -28,4 +28,34 @@
     color: var(--secondary-color-4);
     font-size: clamp(16px, 1vw, 18px);
     height: auto;
+}
+
+.cardwrapper[data-clickable="true"]:hover{
+    background-color: hsl(0 0% 7% / 1);
+    cursor: pointer;
+}
+
+.cardarrow{
+    /* border: 1px solid red; */
+    width: fit-content;
+    position: absolute;
+    right: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    color: #323232;
+    opacity: 0%;
+    transform-origin: 0% 100%;
+    transform: scale(0.8);
+    transition: all 0.15s ease-in-out;
+}
+
+.cardwrapper[data-clickable="true"]:hover .cardarrow{
+    opacity: 100%;
+    transform: scale(1);
+    color: var(--standout-color)
+}
+
+.cardwrapper[data-clickable="true"]:hover g path{
+    stroke-dashoffset: 0 !important;
 }
