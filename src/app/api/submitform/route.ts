@@ -1,9 +1,15 @@
-import { NextRequest } from "next/server";
+'use server'
+import { NextRequest, NextResponse } from "next/server";
 import { FormFieldsInterface, FormDataInterface } from "@/app/components/form/form";
 import { IoBodyOutline } from "react-icons/io5";
 import { validateHeaderName } from "http";
+import { CosmosClient } from "@azure/cosmos";
+
+const key = process.env.COSMOS_KEY;
+const endpoint = process.env.COSMOS_ENDPOINT;
 
 export const POST = async (req: NextRequest) => {
+    // console.log(key)
     const body = await req.json()
 
     function assertInputFields<field extends string>(fields: readonly field[], input: unknown): asserts input is Record<field, unknown> {
@@ -44,13 +50,12 @@ export const POST = async (req: NextRequest) => {
     }
 
     function assertInput(input: unknown): asserts input is FormDataInterface {
-        const fields = ['firstName', 'lastName', 'companyName', 'title', 'role', 'email', 'phoneNumber', 'industry', 'website', 'city', 'country', 'companyType', 'consent'] as const;
+        const fields = ['firstName', 'lastName', 'companyName', 'role', 'email', 'phoneNumber', 'industry', 'website', 'city', 'country', 'companyType', 'consent'] as const;
 
         assertInputFields(fields, input);
         assertString(input.firstName, 'firstName');
         assertString(input.lastName, 'lastName');
         assertString(input.companyName, 'companyName');
-        assertString(input.title, 'title');
         assertString(input.role, 'role');
         assertEmail(input.email);
         assertPhoneNumber(input.phoneNumber);
@@ -60,22 +65,47 @@ export const POST = async (req: NextRequest) => {
         assertString(input.country, 'country');
     }
 
+    if (!key || !endpoint) {
+        throw new Error("key and endpoint not provided")
+    }
+    
+    const cosmosClient = new CosmosClient({ endpoint, key });
+
+    const { database } = await cosmosClient.databases.createIfNotExists({ id: "motion-db-test"});
+    console.log(`${database.id} database ready`);
+    const { container } = await database.containers.createIfNotExists({
+        id: "motion-db-container",
+        partitionKey: {
+            paths: ["/id"]
+        }
+    });
+    console.log(`${container.id} container ready`);
+
     assertInput(body);
+
+    const { resource } = await container.items.create(body);
+    // resource.
+    console.log(`'${resource?.id}' inserted`);
+
     
     // input is validated, send to the server 
-
-
-
     try {
-        return Response.json({
-            status: 200,
-            contexts: "somethig"
+        assertInput(body);
+        return NextResponse.json({
+            submitted: "true",
+            error: null
         })
     } catch (error) {
-        console.log("failed to get chat history", error)
-        return Response.json({
-            status: 400,
-            contexts: {}
-        })
+        if (typeof error === "string") {
+            return NextResponse.json({
+                submitted: "false",
+                error: error
+            })
+        } else {
+            return NextResponse.json({
+                submitted: "false",
+                error: "something unexpected has occured"
+            })
+        }
     }
 }

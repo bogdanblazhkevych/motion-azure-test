@@ -6,7 +6,7 @@ export interface FormDataInterface {
     firstName: string,
     lastName: string,
     companyName: string,
-    title: string,
+    // title: string,
     role: string,
     email: string,
     phoneNumber: string,
@@ -18,14 +18,14 @@ export interface FormDataInterface {
     consent: boolean
 }
 
-export type FormFieldsInterface = 'firstName' | 'lastName' | 'companyName' | 'title' | 'role' | 'email' | 'phoneNumber' | 'industry' | 'website' | 'city' | 'country' | 'companyType' | 'consent'
+export type FormFieldsInterface = 'firstName' | 'lastName' | 'companyName' | 'role' | 'email' | 'phoneNumber' | 'industry' | 'website' | 'city' | 'country' | 'companyType' | 'consent'
 
 export default function Form() {
     const [formData, setFormData] = useState<FormDataInterface>({
         firstName: '',
         lastName: '',
         companyName: '',
-        title: '',
+        // title: '',
         role: '',
         email: '',
         phoneNumber: '',
@@ -47,6 +47,7 @@ export default function Form() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // submit formData to API 
+        console.log(formData)
 
         const response = await fetch('/api/submitform', {
             method: 'POST',

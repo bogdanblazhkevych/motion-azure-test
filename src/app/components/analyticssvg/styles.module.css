@@ -49,3 +49,9 @@
 /* .topdot{
 
 } */
+
+@media only screen and (max-width: 768px) {
+  .laptopborder{
+    display: none;
+  }
+}
