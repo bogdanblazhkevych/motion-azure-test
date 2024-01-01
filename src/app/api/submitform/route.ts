@@ -8,12 +8,6 @@ import { CosmosClient } from "@azure/cosmos";
 const key = process.env.COSMOS_KEY;
 const endpoint = process.env.COSMOS_ENDPOINT;
 
-if (!key || !endpoint) {
-    throw new Error("key and endpoint not provided")
-}
-
-const cosmosClient = new CosmosClient({ endpoint, key });
-
 export const POST = async (req: NextRequest) => {
     // console.log(key)
     const body = await req.json()
@@ -70,6 +64,12 @@ export const POST = async (req: NextRequest) => {
         assertString(input.city, 'city');
         assertString(input.country, 'country');
     }
+
+    if (!key || !endpoint) {
+        throw new Error("key and endpoint not provided")
+    }
+    
+    const cosmosClient = new CosmosClient({ endpoint, key });
 
     const { database } = await cosmosClient.databases.createIfNotExists({ id: "motion-db-test"});
     console.log(`${database.id} database ready`);
