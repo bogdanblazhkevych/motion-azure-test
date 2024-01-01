@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@azure/cosmos": "^4.0.0",
+    "@azure/identity": "^4.0.0",
     "d3": "^7.8.5",
     "next": "14.0.1",
     "react": "^18",
