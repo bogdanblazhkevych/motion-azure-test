@@ -6,7 +6,6 @@ export interface FormDataInterface {
     firstName: string,
     lastName: string,
     companyName: string,
-    // title: string,
     role: string,
     email: string,
     phoneNumber: string,
@@ -25,7 +24,6 @@ export default function Form() {
         firstName: '',
         lastName: '',
         companyName: '',
-        // title: '',
         role: '',
         email: '',
         phoneNumber: '',
@@ -46,10 +44,9 @@ export default function Form() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // submit formData to API 
         console.log(formData)
 
-        const response = await fetch('/api/submitform', {
+        const response = await fetch('https://motion-form-function.azurewebsites.net/api/httptrigger1', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
