@@ -44,8 +44,6 @@ export default function Form() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(formData)
-
         const response = await fetch('https://motion-form-function.azurewebsites.net/api/httptrigger1', {
             method: 'POST',
             headers: {
@@ -54,7 +52,9 @@ export default function Form() {
             body: JSON.stringify(formData),
         });
 
-        console.log(response)
+        let parsedResponse = await response.json()
+
+        console.log(parsedResponse)
     }
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
