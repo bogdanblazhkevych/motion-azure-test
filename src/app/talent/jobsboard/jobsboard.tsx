@@ -32,25 +32,78 @@ export default function JobsBoard() {
                                     </Link>
                                 </td>
                         </tr>
-                        <tr className={styles.trbody}>
-                            <td>Specialist, Business Project Manager</td>
-                            <td>SBPM</td>
-                            <td>Remote</td>
+                        <tr className={styles.trbody}>                   
+
+                            <td>
+                                <Link href="/sbpm">
+                                    Specialist, Business Project Manager
+                                </Link>
+                            </td>
+
+                            <td>
+                                <Link href="/sbpm">
+                                    SBPM
+                                </Link>
+                            </td>
+
+                            <td>
+                                <Link href="/sbpm">
+                                    Remote
+                                </Link>
+                            </td>
                         </tr>
-                        <tr className={styles.trbody}>
-                            <td>Business Development & Strategic Partnerships Manager</td>
-                            <td>BDFR</td>
-                            <td>France</td>
+                        <tr className={styles.trbody}>                
+                            <td>
+                                <Link href='/bdfr'>
+                                    Business Development & Strategic Partnerships Manager
+                                </Link>
+                            </td>
+
+                            <td>
+                                <Link href='/bdfr'>
+                                    BDFR
+                                </Link>
+                            </td>
+                            <td>
+                                <Link href='/bdfr'>
+                                    France
+                                </Link>
+                            </td>
                         </tr >
                         <tr className={styles.trbody}>
-                            <td>AI - Machine Learning Platform Engineer</td>
-                            <td>AIMLPE</td>
-                            <td>France</td>
+                            <td>
+                                <Link href='/mlpe'>
+                                    AI - Machine Learning Platform Engineer 
+                                </Link>
+                            </td>
+                            <td>
+                                <Link href='/mlpe'>
+                                    AIMLPE
+                                </Link>
+                            </td>
+                            <td>
+                                <Link href='/mlpe'>
+
+                                    France
+                                </Link>
+                            </td>
                         </tr>
                         <tr className={styles.trbody}>
-                            <td>Machine Learning Engineer(s)- Intelligent Algorithms Experts</td>
-                            <td>MLEIA</td>
-                            <td>France</td>
+                            <td>
+                                <Link href="/mleia">
+                                    Machine Learning Engineer(s)- Intelligent Algorithms Experts
+                                </Link>
+                            </td>
+                            <td>
+                                <Link href="/mleia">
+                                    MLEIA
+                                </Link>
+                            </td>
+                            <td>
+                                <Link href="mleia">
+                                    France
+                                </Link>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
