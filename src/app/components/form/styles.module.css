@@ -5,6 +5,49 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    position: relative;
+}
+
+.errormessage{
+    position: absolute;
+    /* top: 0; */
+    transform: translateY(-2rem);
+    opacity: 0%;
+    color: rgb(255, 61, 61);
+    /* animation: errorShake 0.2s ease; */
+}
+
+.showerrormessage{
+    opacity: 100%;
+}
+
+
+@keyframes errorShake {
+    0% {
+        transform: translateX(5px);
+    }
+    20% {
+        transform: translateX(-5px);
+    }
+    40% {
+        transform: translateX(5px);
+    }
+    60% {
+        transform: translateX(-5px);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+.inputerror input{
+    border: 2px solid red !important;
+    animation: errorShake 0.2s ease;
+    transition: none !important;
 }
 
 .formbuttons {
@@ -30,6 +73,7 @@
     transition: border-color 0.3s ease-in-out;
     width: 100%;
     color: var(--secondary-color);
+    /* color: red; */
 }
 
 .singleinputgroup label {
@@ -40,6 +84,7 @@
     padding-left: 0.5rem;
     padding-top: 0.875rem;
     color: var(--primary-color-4);
+    /* color: red; */
     pointer-events: none;
     transition: all 0.3s ease;
 
@@ -49,6 +94,41 @@
     transform-origin: 0.5rem 0.875rem;
     transform: translateY(-0.65rem);
     font-size: 0.8em;
+}
+/* .singleinputgroup input:-internal-autofill-selected {
+    background-color: aqua !important;
+    background: red !important;
+    appearance: none
+} */
+
+.singleinputgroup input:-webkit-autofill,
+.singleinputgroup input:-webkit-autofill:hover, 
+.singleinputgroup input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 40rem var(--primary-color) inset;
+  /* -webkit-text-fill-color: red !important; */
+}
+.singleinputgroup input:disabled,
+.singleinputgroup input:disabled:hover, 
+.singleinputgroup input:disabled:focus {
+  /* -webkit-box-shadow: 0 0 0px 40rem var(--primary-color) inset; */
+  -webkit-text-fill-color: var(--primary-color-4) !important;
+}
+
+.singleinputgroup :is(:disabled)~label{
+    transform-origin: 0.5rem 0.875rem;
+    transform: translateY(-0.65rem);
+    font-size: 0.8em;
+}
+/* .singleinputgroup input:{
+    color: red
+} */
+.singleinputgroup input[data-cunt="smelly"]{
+    color: red !important;
+}
+
+.singleinputgroup input:disabled{
+    border: 2px solid var(--primary-color-2);
+    /* color: red !important; */
 }
 
 .singleinputgroup input:valid {
