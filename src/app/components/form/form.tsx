@@ -1,6 +1,6 @@
 'use client'
 import styles from './styles.module.css'
-import { useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useRef, useState } from 'react';
 
 export interface FormDataInterface {
     firstName: string,
@@ -19,7 +19,13 @@ export interface FormDataInterface {
 
 export type FormFieldsInterface = 'firstName' | 'lastName' | 'companyName' | 'role' | 'email' | 'phoneNumber' | 'industry' | 'website' | 'city' | 'country' | 'companyType' | 'consent'
 
-export default function Form() {
+interface FormPropsInterface {
+    isSubmitted: boolean;
+    setIsSubmitted: Dispatch<SetStateAction<boolean>>
+}
+
+export default function Form(props: FormPropsInterface) {
+    const { isSubmitted, setIsSubmitted } = props
     const [formData, setFormData] = useState<FormDataInterface>({
         firstName: '',
         lastName: '',
@@ -35,9 +41,9 @@ export default function Form() {
         consent: false
     });
 
-    const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+    // const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
     const [errormessage, setErrorMessage] = useState<string | null>(null)
-    const errorMessageRef = useRef<HTMLDivElement>(null);
+    // const errorMessageRef = useRef<HTMLDivElement>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         e.target.parentElement?.classList.remove(`${styles.inputerror}`)
