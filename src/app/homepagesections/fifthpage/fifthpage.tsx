@@ -91,6 +91,14 @@ export default function FifthPage() {
                                 {toggleTowers && <MarqueeText />}
                             </div>
                         </div>
+                        <svg className={styles.buildingsvg} viewBox='0 0 500 500'>
+                            <g ref={towerRef} className={styles.buildingsgroup}>
+                                <Building buildingIndex={0}/>
+                                <Building buildingIndex={1}/>
+                                <Building buildingIndex={2}/>
+                                <Building buildingIndex={3}/>
+                            </g>
+                        </svg>
                         <div className={styles.phonetextwrapper}>
                             <div ref={phoneTextRefOne} className={styles.phonetextitem}>
                                 <div className={styles.phonetextcircle}>
@@ -129,12 +137,12 @@ export default function FifthPage() {
                     <svg className={styles.phonesvg} ref={svgRef} id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 422 864.59">
                         <path ref={phonePathRef} className={styles.phoneborder} d="M18.517,434.370 C18.517,554.552 18.515,674.734 18.519,794.916 C18.520,827.260 40.744,849.876 72.975,849.909 C163.449,850.001 253.923,850.007 344.397,849.906 C377.167,849.870 399.482,827.277 399.483,794.535 C399.491,554.171 399.489,313.807 399.480,73.443 C399.479,40.710 377.145,18.096 344.426,18.063 C253.953,17.972 163.478,17.967 73.005,18.061 C40.709,18.094 18.519,40.662 18.518,73.039 C18.515,193.482 18.517,313.926 18.517,434.370 Z"/>
 
-                        <g ref={towerRef} className={styles.buildingsgroup}>
+                        {/* <g ref={towerRef} className={styles.buildingsgroup}>
                             <Building buildingIndex={0}/>
                             <Building buildingIndex={1}/>
                             <Building buildingIndex={2}/>
                             <Building buildingIndex={3}/>
-                        </g>
+                        </g> */}
                     </svg>
                 </div>
             </div>
