@@ -22,7 +22,7 @@ export default function NinthPage() {
 
         const interval = setInterval(() => {
             setCurrentIndex((currentIndex) => currentIndex === 3 ? 0 : currentIndex + 1)
-        }, 10000)
+        }, 6500)
 
         setIntervalId(interval)
 
