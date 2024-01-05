@@ -37,15 +37,11 @@ export async function delay(duration: number) {
 
 
 export function getAnimateStroke(ref:React.RefObject<SVGAnimateElement>, order: number, offset: number, start: number, strokein: number, strokeout: number, end: number) {
-    //strokein should be before gradient fillin
-    //strokeout should at gradien pause
     const _start = order * 0.25;
     const _strokein = _start + strokein;
     const _strokeout = _strokein + strokeout + strokein + 0.033;
     const _end = _start + 0.25 - 0.0165
-    // console.log("animation is in")
     ref.current?.beginElement()
-    // console.log(ref.current)
 
     return (
         <animate attributeName="stroke-dashoffset"

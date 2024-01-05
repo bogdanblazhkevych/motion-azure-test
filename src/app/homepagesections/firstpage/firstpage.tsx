@@ -23,7 +23,6 @@ export default function FirstPage(){
         // set height of text container
         if (window.innerWidth < 450) {
             textcontainerRef.current.style.height = `${windowHeight}px`
-            console.log("here")
         } else if (calculatedTextWrapperHeight > (windowHeight / 2)) {
             textcontainerRef.current.style.height = `${windowHeight / 2}px`    
         } else {
