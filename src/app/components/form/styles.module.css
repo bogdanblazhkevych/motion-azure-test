@@ -81,7 +81,7 @@
     position: absolute;
     top: 0rem;
     left: 0rem;
-    padding-left: 0.5rem;
+    padding-left: calc(0.5rem + 2px);
     padding-top: 0.875rem;
     color: var(--primary-color-4);
     /* color: red; */
@@ -91,26 +91,20 @@
 }
 
 .singleinputgroup :is(input:focus, input:valid)~label {
-    transform-origin: 0.5rem 0.875rem;
+    /* transform-origin: 0.5rem 0.875rem; */
     transform: translateY(-0.65rem);
     font-size: 0.8em;
 }
-/* .singleinputgroup input:-internal-autofill-selected {
-    background-color: aqua !important;
-    background: red !important;
-    appearance: none
-} */
 
 .singleinputgroup input:-webkit-autofill,
 .singleinputgroup input:-webkit-autofill:hover, 
 .singleinputgroup input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 40rem var(--primary-color) inset;
-  /* -webkit-text-fill-color: red !important; */
 }
+
 .singleinputgroup input:disabled,
 .singleinputgroup input:disabled:hover, 
 .singleinputgroup input:disabled:focus {
-  /* -webkit-box-shadow: 0 0 0px 40rem var(--primary-color) inset; */
   -webkit-text-fill-color: var(--primary-color-4) !important;
 }
 
@@ -119,16 +113,9 @@
     transform: translateY(-0.65rem);
     font-size: 0.8em;
 }
-/* .singleinputgroup input:{
-    color: red
-} */
-.singleinputgroup input[data-cunt="smelly"]{
-    color: red !important;
-}
 
 .singleinputgroup input:disabled{
     border: 2px solid var(--primary-color-2);
-    /* color: red !important; */
 }
 
 .singleinputgroup input:valid {
@@ -145,28 +132,58 @@
 .singlebuttongroup label{
     padding-left: 0.8em;
     cursor: pointer;
+    /* cursor: pointer; */
     /* width: max-content; */
+}
+
+/* .singlebuttongroup label{
+    cursor: pointer;
+} */
+
+.singlebuttongroup input:disabled~label{
+    cursor: default;
+    color: var(--primary-color-4)
+}
+
+.singlebuttongroup:hover input:disabled:hover{
+    cursor: default;
 }
 
 .singlebuttongroup input {
     -webkit-appearance: none;
     appearance: none;
     margin: 0;
-
     font-size: 1.5em;
     width: 1em;
     height: 1em;
     border: 2px solid var(--standout-color);
-
     background-color: transparent;
-
     box-sizing: border-box;
-
     display: grid;
     place-content: center;
     position: relative;
     cursor: pointer;
 }
+
+.singlebuttongroup input:disabled {
+    border: 2px solid var(--primary-color-2) !important;
+}
+
+.singlebuttongroup input:disabled:before {
+    background-color: var(--primary-color-2);
+}
+.singlebuttongroup:hover input:disabled::before {
+    transform: scale(0) !important;
+    cursor: default;
+}
+.singlebuttongroup:hover input:checked:disabled::before{
+    transform: scale(1) !important;
+    cursor: default;
+}
+
+/* .singlebuttongroup:hover input:disabled label{
+    cursor: default !important;
+} */
 
 .singlebuttongroup input::before {
     content: "";
@@ -210,6 +227,10 @@
     display: flex;
     align-items: center;
 }
+
+.buttonlabeltoptextdisabled{
+    color: var(--primary-color-2)
+}
 .buttonlabeltoptext{
     /* border: 1px solid green; */
     width: fit-content;
@@ -247,7 +268,6 @@
     font-size: clamp(16px, 3vw, 22px);
     padding: 0.5em;
     border-radius: 10px;
-    cursor: pointer;
     border: 2px solid var(--standout-color);
     text-align: center;
     position: relative;
@@ -260,9 +280,15 @@
     transition: background-position 0.3s ease-out, color 0.3s ease-in-out;
 }
 
-.submitbutton:hover {
+.submitbutton:not(:disabled):hover {
     background-position: 0% 100%;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.submitbutton:disabled{
+    border: 2px solid var(--primary-color-2);
+    color: var(--primary-color-2)
 }
 
 @keyframes gradient {

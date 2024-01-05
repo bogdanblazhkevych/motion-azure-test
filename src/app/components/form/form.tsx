@@ -243,7 +243,7 @@ export default function Form() {
                 <div className={styles.buttonlabeltopwrapper}>
                     <div className={styles.buttonlabeltopleftbar}>
                     </div>
-                    <div className={styles.buttonlabeltoptext}>
+                    <div className={`${styles.buttonlabeltoptext} ${isSubmitted && styles.buttonlabeltoptextdisabled}`}>
                         I am a
                     </div>
                     <div className={styles.buttonlabeltoprightbar}>
@@ -252,14 +252,30 @@ export default function Form() {
 
                 <div className={styles.singlebuttongroup}>
 
-                    <input disabled={isSubmitted ? true : false} type="radio" id="ctype1" name="companyType" value="Partner providing services" onChange={handleChange} required />
+                    <input 
+                        type="radio"
+                        id="ctype1" 
+                        name="companyType" 
+                        value="Partner providing services" 
+                        onChange={handleChange} 
+                        required
+                        disabled={isSubmitted ? true : false} 
+                        />
                     <label htmlFor='ctype1'>Partner providing services</label>
 
                 </div>
 
                 <div className={styles.singlebuttongroup}>
 
-                    <input disabled={isSubmitted ? true : false} type="radio" id="ctype2" name="companyType" value="Partner developing software solutions" onChange={handleChange} required />
+                    <input 
+                        type="radio" 
+                        id="ctype2" 
+                        name="companyType" 
+                        value="Partner developing software solutions" 
+                        onChange={handleChange} 
+                        required 
+                        disabled={isSubmitted ? true : false} 
+                        />
                     <label htmlFor='ctype2'>Partner developing software solutions</label>
 
                 </div>
@@ -286,7 +302,13 @@ export default function Form() {
                 </div>
 
 
-                <button type="submit" disabled={isSubmitted ? true : false} className={styles.submitbutton}>Submit</button>
+                <button 
+                    type="submit" 
+                    className={styles.submitbutton}
+                    disabled={isSubmitted ? true : false} 
+                    >{
+                    isSubmitted ? "Thank You" : "Submit"
+                }</button>
             </div>
         </form>
     )
