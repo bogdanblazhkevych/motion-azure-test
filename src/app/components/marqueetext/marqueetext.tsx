@@ -18,9 +18,7 @@ export default function MarqueeText() {
 
     const changeText = async () => {
         const currentIndex = count % refList.length;
-        console.log("current index:", currentIndex)
         const prevIndex = (count - 1) % refList.length;
-        console.log("prev index:", prevIndex)
 
         const textIn = refList[currentIndex].current;
         const textOut = refList[prevIndex].current;

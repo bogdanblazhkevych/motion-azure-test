@@ -41,9 +41,7 @@ export default function Form(props: FormPropsInterface) {
         consent: false
     });
 
-    // const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
     const [errormessage, setErrorMessage] = useState<string | null>(null)
-    // const errorMessageRef = useRef<HTMLDivElement>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         e.target.parentElement?.classList.remove(`${styles.inputerror}`)
@@ -102,7 +100,6 @@ export default function Form(props: FormPropsInterface) {
             <div id="firstName" className={`${styles.nameinputgroup} ${styles.singleinputgroup}`}>
                 <input
                     name="firstName"
-                    // placeholder='First Name'
                     value={formData.firstName}
                     onChange={handleChange}
                     required
@@ -114,7 +111,6 @@ export default function Form(props: FormPropsInterface) {
             <div id="lastName" className={`${styles.singleinputgroup} ${styles.lastnameinputgroup}`}>
                 <input
                     name="lastName"
-                    // placeholder='Last Name'
                     value={formData.lastName}
                     onChange={handleChange}
                     required
@@ -129,7 +125,6 @@ export default function Form(props: FormPropsInterface) {
 
                 <input
                     name="email"
-                    // placeholder='Email'
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -144,7 +139,6 @@ export default function Form(props: FormPropsInterface) {
 
                 <input
                     name="phoneNumber"
-                    // placeholder='Phone Number'
                     value={formData.phoneNumber}
                     onChange={handleChange}
                     required
@@ -159,7 +153,6 @@ export default function Form(props: FormPropsInterface) {
 
                 <input
                     name="city"
-                    // placeholder='City'
                     value={formData.city}
                     onChange={handleChange}
                     required
@@ -174,7 +167,6 @@ export default function Form(props: FormPropsInterface) {
 
                 <input
                     name="country"
-                    // placeholder='Country'
                     value={formData.country}
                     onChange={handleChange}
                     required
@@ -189,7 +181,6 @@ export default function Form(props: FormPropsInterface) {
 
                 <input
                     name="companyName"
-                    // placeholder='Company Name'
                     value={formData.companyName}
                     onChange={handleChange}
                     required
@@ -204,7 +195,6 @@ export default function Form(props: FormPropsInterface) {
 
                 <input
                     name="industry"
-                    // placeholder='Industry'
                     value={formData.industry}
                     onChange={handleChange}
                     required
@@ -219,7 +209,6 @@ export default function Form(props: FormPropsInterface) {
 
                 <input
                     name="role"
-                    // placeholder='Role / Title'
                     value={formData.role}
                     onChange={handleChange}
                     required
@@ -233,7 +222,6 @@ export default function Form(props: FormPropsInterface) {
             <div id="website" className={`${styles.singleinputgroup} ${styles.websiteinputgroup}`}>
                 <input
                     name="website"
-                    // placeholder='Website'
                     value={formData.website}
                     onChange={handleChange}
                     required
