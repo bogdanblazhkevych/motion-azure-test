@@ -68,7 +68,7 @@ export function getAnimateTransform(ref:React.RefObject<SVGAnimateTransformEleme
     return (
         <animateTransform attributeName="transform"
             type="scale"
-            values="1;1;1.1;1;1;1"
+            values="0.9;0.9;1;0.9;0.9;0.9"
             dur="20s"
             keyTimes={`0;${_start};${_scalein};${_scaleout};${_end};1`}
             repeatCount="indefinite"
