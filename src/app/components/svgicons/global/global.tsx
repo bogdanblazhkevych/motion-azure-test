@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 export default function GlobalSVGIcon() {
     return (
         <div className={styles.svgcontainer}>
-                <svg height="100%" width="100%" viewBox="0 0 500 500">
+                <svg width="100%" viewBox="0 0 500 500">
                         <defs>
                         </defs>
     

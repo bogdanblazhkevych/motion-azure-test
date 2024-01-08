@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 export default function LockSVGIcon() {
     return (
         <div className={styles.svgcontainer}>
-            <svg height="100%" viewBox="0 0 500 500">
+            <svg viewBox="0 0 500 500">
                 <defs>
                 </defs>
                 <path id="lockcircle_1" data-name="lockcircle 1" d="M250,166.089s-155.36,0-155.36,155.36S250,476.809,250,476.809s155.36,0,155.36-155.36S250,166.089,250,166.089Z" />
