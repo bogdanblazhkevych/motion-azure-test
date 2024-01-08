@@ -14,7 +14,7 @@ export default function FirstPage(){
     const textParagraphRef = useRef<HTMLParagraphElement>(null);
     const firstPageWrapperRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    function handleResize(){
         const windowHeight = window.innerHeight;
         const cityHeight = cityWrapperRef.current?.getBoundingClientRect().height ?? 0
         const calculatedTextWrapperHeight = windowHeight - cityHeight
@@ -33,6 +33,11 @@ export default function FirstPage(){
         // set width of paragraph 
         const titleWidth = textTitleRef.current.getBoundingClientRect().width;
         textParagraphRef.current.style.width = `${titleWidth}px`
+    }
+
+    useEffect(() => {
+        handleResize()
+        window.addEventListener('resize', handleResize)
     }, [])
 
     return(
