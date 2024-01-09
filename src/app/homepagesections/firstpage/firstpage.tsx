@@ -37,7 +37,9 @@ export default function FirstPage(){
 
     useEffect(() => {
         handleResize()
-        window.addEventListener('resize', handleResize)
+        if (window.innerWidth > 550) {
+            window.addEventListener('resize', handleResize)
+        }
     }, [])
 
     return(
