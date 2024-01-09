@@ -286,6 +286,9 @@
         /* gap: 1rem; */
         /* gap: 80px; */
     }
+    .buildingsvg {
+        width: 70%
+    }
     .textcontent{
         grid-area: 1 / 1 / 2 / 3;
     }
@@ -306,10 +309,6 @@
     .phonetextwrapper{
         font-size: clamp(14px, 4.1vw, 30px);
     }
-    .buildingsgroup{
-        transform: translateY(4vw) scale(0.67) translateX(20px);
-    }
-
     .textwrapper{
         width: 100%;
     }
@@ -317,10 +316,6 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .buildingsgroup{
-        transform: translateY(5%) scale(0.66) translateX(20px);
-        
-    }
     .phonesvg{
         width: 90%;
     }
