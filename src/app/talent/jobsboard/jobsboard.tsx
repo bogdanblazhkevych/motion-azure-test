@@ -100,7 +100,7 @@ export default function JobsBoard() {
                                 </Link>
                             </td>
                             <td>
-                                <Link href="mleia">
+                                <Link href="/mleia">
                                     France
                                 </Link>
                             </td>
