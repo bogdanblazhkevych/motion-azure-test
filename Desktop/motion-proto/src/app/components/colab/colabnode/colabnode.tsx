@@ -1,35 +1,92 @@
 'use client'
-import { colabNodeInterface } from '../data'
+import { useState } from 'react'
+import { ColabNodeInterface } from '../data'
 import styles from './styles.module.css'
 
-interface colabNodePropsInterface {
-    data: colabNodeInterface
+interface ColabNodePropsInterface {
+    data: ColabNodeInterface
 }
 
-export default function ColabNode(props: colabNodePropsInterface) {
+export default function ColabNode(props: ColabNodePropsInterface) {
     const { data } = props
-    
-    const handleColabNodeClick = (e: React.MouseEvent) => {
-        const target = e.currentTarget
-        console.log(target.classList)
+
+    const [expanded, setExpanded] = useState<boolean>(false)
+
+    const handleColabNodeClick = () => {
+        setExpanded(prev => !prev)
     }
 
-    return (
-        <div onClick={handleColabNodeClick} className={styles.colabnodewrapper}>
-            <p>
-                {data.entity.name}
-            </p>
-
-            <p>
-                {data.entity.sector}
-            </p>
-
-            <div className={styles.matchconfidence}>
-                <p>
-                    {data.matchConfidence * 100}%
-                </p>
-                <div className={styles.matchconfidencecolor} style={{ backgroundColor: `hsl(${data.matchConfidence * 120}, 100%, 32%)` }}>
+    if (expanded) {
+        return (
+            <div onClick={handleColabNodeClick} className={styles.colabnodewrapper}>
+                <div className={styles.colabnodebasic}>
+                    <div className={styles.expandedtitle}>
+                        <p>
+                            {data.entity.name}
+                        </p>
+                    </div>
+                    <div className={styles.expandedsubtitle}>
+                        <p>
+                            {data.entity.startDate.getFullYear()} - {data.entity.sector}
+                        </p>
+                    </div>
+                    <div className={styles.expandeddescription}>
+                        {data.entity.description}
+                    </div>
                 </div>
+
+                <div className={styles.colabnodedata}>
+                    <DataModule metric={data.entity.marketCap} name="Market Cap" type='currency'/>
+                    <DataModule metric={data.entity.annualRevenue} name="Annual Revenue" type='currency'/>
+                    <DataModule metric={data.entity.connectionsMade} name="Connections Made"/>
+                    <DataModule metric={data.entity.ongoingProjects} name="Ongoing Projects"/>
+                </div>
+            </div>
+        )
+    } else {
+        return (
+            <div onClick={handleColabNodeClick} className={styles.colabnodewrapper}>
+                <p>
+                    {data.entity.name}
+                </p>
+
+                <p className={styles.sector}>
+                    {data.entity.sector}
+                </p>
+
+                <div className={styles.matchconfidence}>
+                    <p>
+                        {data.matchConfidence * 100}%
+                    </p>
+                    <div className={styles.matchconfidencecolor} style={{ backgroundColor: `hsl(${data.matchConfidence * 120}, 100%, 32%)` }}>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+interface DataModulePropsInterface {
+    metric: number,
+    name: string,
+    type?: string
+}
+
+function DataModule(props: DataModulePropsInterface) {
+    const { metric, name, type } = props
+
+    const inCurrency = Intl.NumberFormat('en-US', {
+        notation: "compact",
+        maximumFractionDigits: 1
+    }).format(2500);
+
+    return (
+        <div className={styles.datamodualwrapper}>
+            <div className={styles.datamodualmetric}>
+                {type === "currency" ? inCurrency : metric}
+            </div>
+            <div className={styles.datamodualname}>
+                {name}
             </div>
         </div>
     )

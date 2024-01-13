@@ -5,7 +5,8 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem
+    gap: 1rem;
+    width: 800px;
 }
 
 .toolbar{
@@ -18,4 +19,13 @@
     flex-direction: column;
     gap: 1rem;
     font-size: 24px;
+}
+
+.datamodualwrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.datamodualmetric{
+    align-items: flex-end;
 }
