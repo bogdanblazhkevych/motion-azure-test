@@ -1,0 +1,18 @@
+.colabnodewrapper{
+    display: flex;
+    gap: 5rem;
+    /* justify-content: space-between; */
+}
+.matchconfidence{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.matchconfidencecolor{
+    /* background-color: red; */
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+}

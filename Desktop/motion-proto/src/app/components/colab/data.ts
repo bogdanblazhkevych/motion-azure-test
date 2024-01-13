@@ -1,6 +1,6 @@
 type ColabModualDataInterface = colabNodeInterface[];
 
-interface colabNodeInterface {
+export interface colabNodeInterface {
     entity: EntityInterface,
     matchConfidence: number,
 }
@@ -39,5 +39,14 @@ export const mockData: ColabModualDataInterface = [
             description: "A finance company founded in 2022"
         },
         matchConfidence: 0.9
+    },
+    {
+        entity: {
+            name: "Company D",
+            sector: "Finance",
+            startDate: new Date("2022-03-01"),
+            description: "A finance company founded in 2022"
+        },
+        matchConfidence: 0.4
     }
 ];
