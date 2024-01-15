@@ -23,14 +23,11 @@ export default function FirstPage(){
         // set height of text container
         if (window.innerWidth < 450) {
             textcontainerRef.current.style.height = `${windowHeight}px`
-            console.log("full height")
         } else if (calculatedTextWrapperHeight > (windowHeight / 2)) {
             textcontainerRef.current.style.height = `${windowHeight / 2}px`    
-            console.log("half height")
         } else {
             // textcontainerRef.current.style.height = `${calculatedTextWrapperHeight}px`
             textcontainerRef.current.style.height = `${windowHeight / 2}px`    
-            console.log("full height minus city height")
         }
         firstPageWrapperRef.current.style.height = `${windowHeight + windowHeight * 0.07}px`
         firstPageWrapperRef.current.classList.add(`${styles.curtainclosed}`)
