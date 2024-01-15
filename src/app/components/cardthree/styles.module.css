@@ -1,5 +1,5 @@
 .cardwrapper {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,6 +54,10 @@
     opacity: 100%;
     transform: scale(1);
     color: var(--standout-color)
+}
+
+.cardwrapper[data-clickable="false"] .cardarrow{
+    display: none;
 }
 
 .cardwrapper[data-clickable="true"]:hover g path{
