@@ -18,7 +18,7 @@ export default function ColabNode(props: ColabNodePropsInterface) {
 
     if (expanded) {
         return (
-            <div onClick={handleColabNodeClick} className={styles.colabnodewrapper}>
+            <div onClick={handleColabNodeClick} className={styles.colabnodewrapperexpanded}>
                 <div className={styles.colabnodebasic}>
                     <div className={styles.expandedtitle}>
                         <p>
@@ -82,11 +82,13 @@ function DataModule(props: DataModulePropsInterface) {
 
     return (
         <div className={styles.datamodualwrapper}>
-            <div className={styles.datamodualmetric}>
-                {type === "currency" ? inCurrency : metric}
-            </div>
-            <div className={styles.datamodualname}>
-                {name}
+            <div className={styles.datamodualcontainer}>
+                <div className={styles.datamodualmetric}>
+                    {type === "currency" ? inCurrency : metric}
+                </div>
+                <div className={styles.datamodualname}>
+                    {name.split(' ')[0]}<br />{name.split(' ')[1]}
+                </div>
             </div>
         </div>
     )
