@@ -10,7 +10,6 @@
 .submitbutton {
     all: unset;
     color: var(--light-5);
-    /* font-size: clamp(16px, 3vw, 22px); */
     font-size: clamp(16px, 2vw, 24px);
     padding: 0.5em;
     border-radius: 10px;
@@ -35,7 +34,6 @@
 
 .fifthpagecontainer{
     /* border: 1px dashed aqua; */
-
     width: 100%;
     max-width: 1280px;
     padding: 0 24px;
@@ -50,13 +48,9 @@
 
 .textwrapper{
     /* border: 1px solid green; */
-
-    
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* grid-area: 1 / 1 / 2 / 3; */
-
     display: none;
 
 }
@@ -168,22 +162,18 @@
 }
 
 .phonetextwrapper{
-    /* border: 1px solid red; */
     height: 40%;
     bottom: 50px;
-    /* position: absolute; */
     font-size: 25px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    /* letter-spacing: 0.05rem; */
-    /* gap: 1rem; */
     color: var(--secondary-color);
 }
 
 .phonetextitem{
-    /* border: 1px solid green; */
     display: flex;
+    align-items: center;
     gap: 0.5rem;
     opacity: 0%;
 }
@@ -210,9 +200,9 @@
 }
 
 .phonetextcircle{
-    /* border: 1px solid white; */
-    aspect-ratio: 1 / 1;
-    font-size: 1em;
+    width: 1em;
+    height: 1em;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,7 +214,6 @@
 
 .phoneborder{
     fill: transparent;
-    /* stroke: var(--primary-color); */
     stroke: #000000;
     stroke-width: 3px;
     stroke-linecap: butt; 
@@ -242,9 +231,7 @@
 }
 
 .phoneopen{
-    /* stroke: var(--primary-color); */
     stroke: #323232;
-    /* fill: var(--primary-color-2); */
     fill: var(--primary-color);
     stroke-width: 10px;
     transform: scale(1);
@@ -283,8 +270,6 @@
         flex-direction: column;
         grid-template-rows: 1fr minmax(min-content, max-content);
         aspect-ratio: unset;
-        /* gap: 1rem; */
-        /* gap: 80px; */
     }
     .buildingsvg {
         width: 70%
