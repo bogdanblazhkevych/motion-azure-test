@@ -7,48 +7,23 @@
     fill: none;
 }
 
-
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-
-
 .laptopborder{
     fill: var(--primary-color);
-    /* fill: rgba(255,255,255,0.05) */
-    /* fill: rgba(0, 0, 0, 0.257); */
-    /* stroke: none */
-    /* stroke-width: 2px; */
 }
-
-/* .bottombar{
-
-} */
 
 .linechart{
     stroke: var(--standout-color);
-    /* stroke: #267E99 */
 }
-
-/* .piechartlarge{
-
-} */
 
 .piechartsmall{
     stroke: var(--standout-color);
-    /* stroke: #267E99 */
 }
-
-/* .topbar{
-
-} */
-
-/* .topdot{
-
-} */
 
 @media only screen and (max-width: 768px) {
   .laptopborder{

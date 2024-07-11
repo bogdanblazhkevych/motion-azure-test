@@ -15,7 +15,6 @@
 
 .testing {
     /* border: 1px solid red; */
-    /* position: absolute; */
     bottom: -49vh;
     z-index: 1;
     width: 100%;
@@ -27,7 +26,6 @@
     background-position-y: 0%, 0%;
     background-size: 50% 100%, 50% 100%;
     background-repeat: no-repeat;
-    /* mask-image: radial-gradient(100% 10%, black, transparent); */
     mask-image: radial-gradient(100% 30% at 50% 40%, black, transparent);
 
     transform: translateY(51%);

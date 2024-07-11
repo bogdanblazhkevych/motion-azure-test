@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import styles from './styles.module.css'
 import useTransitionScroll from './hooks/useTransitionScroll';
 
@@ -11,7 +11,6 @@ export default function Slider() {
 
   return (
     <>
-      {/* <TestPage /> */}
       <div className={styles.scrollwrapper} ref={parentref}>
         <div className={styles.scrolltext}>
           <h1 className={styles.animatedheading} ref={animateTextDiv}>
@@ -19,7 +18,6 @@ export default function Slider() {
           </h1>
         </div>
       </div>
-      {/* <TestPage /> */}
     </>
   )
 }

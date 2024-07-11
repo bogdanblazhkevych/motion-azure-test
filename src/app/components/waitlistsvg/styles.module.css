@@ -49,15 +49,6 @@
     animation-fill-mode: forwards;
 }
 
-
-.motionicon{
-    /* stroke: none;
-    stroke: #323232; */
-}
-/* .motionchipgroupanimation .motionicon{
-    stroke-dashoffset: 0;
-} */
-
 @keyframes scaleicon {
     0% {transform: scale(5)}
     100% {transform: scale(1);}
@@ -76,7 +67,6 @@
 
     .motionicon{
         stroke: none;
-        /* transform-origin: center; */
         transform-origin: 56% 40%;
         transform: scaleX(-1)
     }

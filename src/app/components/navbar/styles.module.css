@@ -11,16 +11,12 @@
     color: var(--secondary-color);
     top: 0;
     z-index: 201;
-    /* position: relative; */
 }
 
 .companyname {
     font-weight: 700;
     font-size: 30px;
     cursor: pointer;
-    /* position: relative; */
-    /* position: absolute; */
-    /* margin-right: 30px; */
 }
 
 .navcompanyname {
@@ -48,8 +44,6 @@
 
 .burger {
     display: none;
-    /* position: relative; */
-    /* border: 1px solid blue; */
 }
 
 .linkdesc {

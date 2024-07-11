@@ -1,5 +1,4 @@
 'use client'
-import { Dela_Gothic_One } from 'next/font/google';
 import styles from './styles.module.css'
 
 import { useEffect, useRef, useState } from "react";
@@ -7,13 +6,11 @@ import { delay } from '../utils';
 
 export default function MarqueeText() {
     const [count, setCount] = useState<number>(1)
-    const [currentText, setCurrentText] = useState<string>('');
     const newyorkRef = useRef<HTMLSpanElement>(null)
     const londonRef = useRef<HTMLSpanElement>(null)
     const taipeiRef = useRef<HTMLSpanElement>(null)
     const parisRef = useRef<HTMLSpanElement>(null)
 
-    const textList = ["New York", "London", "Tai Pei", "Paris"]
     const refList = [newyorkRef, londonRef, taipeiRef, parisRef]
 
     const changeText = async () => {

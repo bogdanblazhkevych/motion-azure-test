@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import styles from './styles.module.css'
 
-export default function GradientTest() {
+export default function Gradient() {
     const wrapperRef = useRef<HTMLDivElement>(null)
 
     function handleResize(){
