@@ -1,6 +1,6 @@
 'use client'
 import styles from './styles.module.css'
-import { Dispatch, SetStateAction, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 export interface FormDataInterface {
     firstName: string,

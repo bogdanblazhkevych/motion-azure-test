@@ -26,8 +26,6 @@ const useTransitionScroll = (
         const fullBackgroundHeight = viewportHeight * 3;
         const animateTextDivWidth = animatedHeadingRef.current.clientWidth;
 
-        // transformX = startX + (endX - startX) * interpFactor
-        // transformX = viewportWidth + ((-animateTextDivWidth / 2) - viewportWidth) * (scrollY / (3 * viewportHeight))
         animatedHeadingRef.current.style.transform = `translateX(${viewportWidth + ((-animateTextDivWidth / 1.5) - viewportWidth) * ((viewportHeight - scrollWrapperRef.current.getBoundingClientRect().top) / (fullBackgroundHeight))}px)`
     }, [scrollY])
 }

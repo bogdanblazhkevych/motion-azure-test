@@ -1,23 +1,17 @@
-import FirstPage from './homepagesections/firstpage/firstpage'
-import styles from './page.module.css'
+import Landing from './homepagesections/landing/firstpage'
 import Slider from './components/slider/page'
 import SecondPage from './homepagesections/secondpage/secondpage'
-import ThirdPage from './homepagesections/thirdpage/thirdpage'
-import FourthPage from './homepagesections/fourthpage/fourthpage'
-import FifthPage from './homepagesections/fifthpage/fifthpage'
-import SixthPage from './homepagesections/sixthpage/sixthpage'
 import SeventhPage from './homepagesections/seventhpage/seventhpage'
-import GradientTest from './homepagesections/gradienttest/gradienttest'
+import Gradient from './homepagesections/gradient/Gradient'
 import NinthPage from './homepagesections/ninthpage/ninthpage'
+import FifthPage from './homepagesections/fifthpage/fifthpage'
 
 export default function Home() {
 
   return (
     <main>
-      <GradientTest />
-
-      {/* <div className={styles.testing}></div> */}
-      <FirstPage />
+      <Gradient />
+      <Landing />
       <NinthPage />
       <FifthPage />
       <SeventhPage />

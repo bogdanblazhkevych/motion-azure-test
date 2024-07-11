@@ -1,4 +1,3 @@
-import LandingTemplate from "../components/landingtemplate/landingtemplate";
 import FormPage from "../components/formpage/formpage";
 import WaitlistInfo from "./waitlistinfo/waitlistinfo";
 import LandingTemplateTwo from "../components/landingtemplatetwo/landingtemplatetwo";

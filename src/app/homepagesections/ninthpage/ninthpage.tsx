@@ -6,7 +6,6 @@ import InovationSVG from '@/app/components/inovationsvg/inovationsvg'
 import MarketSVG from '@/app/components/marketsvg/marketsvg'
 import ToolsSVG from '@/app/components/toolssvg/toolssvg'
 import { useEffect, useState } from 'react'
-import CardOne from '@/app/components/cardone/cardone'
 
 export default function NinthPage() {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -32,9 +31,6 @@ export default function NinthPage() {
     const svgArr = [<AnalyticsSVG />, <InovationSVG />, <MarketSVG />, <ToolsSVG />]
     return (
         <>
-        {/* <div className={styles.testing}>
-
-        </div> */}
             <div className={styles.ninthpagewrapper}>
                 <div className={styles.ninthpagecontainer}>
                     <div className={styles.textwrapper}>
@@ -110,14 +106,10 @@ export default function NinthPage() {
 
                     <div className={styles.svgwrapper}>
                         {svgArr[currentIndex]}
-                        {/* <AnalyticsSVG /> */}
                     </div>
                 </div>
 
                 <div className={styles.ninthpagemobile}>
-                    {/* <h1>
-                        Innovation is hard, but it does not have to be.
-                    </h1> */}
                     <div className={styles.textcontent}>
                         <h3>
                             Real-Time Analytics
@@ -133,10 +125,6 @@ export default function NinthPage() {
                         </p>
 
                     </div>
-                    {/* <CardOne heading='Real-Time Analytics'
-                        paragraph='Harness the power of real-time analytics for swift, data-driven decisions. Monitor key metrics instantly.'
-                        textAlign='left'
-                        banner={<AnalyticsSVG />} /> */}
                     <div className={styles.textcontent}>
                         <h3>
                             Innovation & Development
@@ -145,7 +133,6 @@ export default function NinthPage() {
                         <InovationSVG />
 
                         <h1>
-                            {/* From ideation to prototyping */}
                             Ideation to Prototyping
                         </h1>
 

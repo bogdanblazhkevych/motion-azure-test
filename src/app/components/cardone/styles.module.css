@@ -11,7 +11,6 @@
   position: relative;
   box-sizing: border-box;
 
-  /* background: rgb(113,113,113); */
   background: radial-gradient(circle, rgb(75, 75, 75) 0%, rgba(0,0,0,1) 80%);
   background-size: 100% 1000%;
   background-position: 0% 0%;
@@ -27,55 +26,39 @@
 }
 
 .cardcontent {
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
-  /* background-image: radial-gradient(var(--primary-color-2) 1px, transparent 1px);
-  background-position: 50% 50%;
-  background-size: 1.1rem 1.1rem; */
-
   border-radius: 4rem;
   padding: 16px;
   gap: 1rem;
 }
 
-
 .cardwrapper:hover .linkicon{
   opacity: 100%;
 }
 
-
 .linkicon{
   /* border: 3px solid white; */
-
   position: absolute;
   top: -3px;
   right: -3px;
-
   display: flex;
   font-size: 1.2rem;
-  /* padding: 1rem; */
   padding: 6px;
   padding-left: 9px;
   padding-bottom: 9px;
 
   border-radius: 0px 12px 0px 12px;
-  /* background-color: var(--standout-color); */
   background-color: var(--primary-color-2);
   border-top: 3px solid var(--primary-color-2);
   border-right: 3px solid var(--primary-color-2);
-  /* color: var(--primary-color-2); */
   color: var(--secondary-color);
 
   opacity: 0%;
   transition: opacity 600ms ease
 }
-
-
-
 
 .cardcontent[data-align="left"] * {
   text-align: left;
@@ -83,7 +66,6 @@
 
 .cardcontent h1 {
   color: var(--secondary-color);
-  /* font-size: clamp(20px, 2.5vw, 32px); */
   font-size: 20px;
 }
 
@@ -130,7 +112,6 @@
   padding-top: 0.5rem;
 }
 
-
 .iconwrapper[data-paddingtrue=true]{
   padding-left: 10px;
 }
@@ -138,7 +119,6 @@
 .iconwrapper svg path{
   fill: none;
   stroke: var(--primary-color-3);
-  /* stroke: var(--secondary-color-4); */
   stroke-width: 10px;
 }
 
@@ -160,7 +140,6 @@
 @media only screen and (max-width: 1024px) {
   .cardwrapper{
     flex: 0 0 calc(50% - 1rem);
-    /* flex: 0 0 40%; */
   }
 
   .cardcontent{
@@ -175,7 +154,6 @@
 }
 @media only screen and (max-width: 640px) {
   .cardwrapper{
-    /* flex: 0 0 calc(100% - 1rem); */
     flex: 0 0 100%;
   }
 }
