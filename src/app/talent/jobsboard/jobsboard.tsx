@@ -15,43 +15,6 @@ export default function JobsBoard() {
                     </thead>
 
                     <tbody className={styles.tbody}>
-                        <tr className={styles.trbody}>
-                                <td>
-                                    <Link href='/bdus'>
-                                        Business Development & Strategic Partnerships Manager
-                                    </Link>
-                                </td>
-                                <td>
-                                    <Link href='/bdus'>
-                                        BDUS
-                                    </Link>
-                                </td>
-                                <td>
-                                    <Link href='/bdus'>
-                                        New York, NY
-                                    </Link>
-                                </td>
-                        </tr>
-                        <tr className={styles.trbody}>                   
-
-                            <td>
-                                <Link href="/sbpm">
-                                    Specialist, Business Project Manager
-                                </Link>
-                            </td>
-
-                            <td>
-                                <Link href="/sbpm">
-                                    SBPM
-                                </Link>
-                            </td>
-
-                            <td>
-                                <Link href="/sbpm">
-                                    Remote
-                                </Link>
-                            </td>
-                        </tr>
                         <tr className={styles.trbody}>                
                             <td>
                                 <Link href='/bdfr'>

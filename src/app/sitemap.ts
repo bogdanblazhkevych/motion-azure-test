@@ -27,18 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: 'https://motion-ise.com/bdus',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://motion-ise.com/sbpm',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.4,
-    },
-    {
       url: 'https://motion-ise.com/bdfr',
       lastModified: new Date(),
       changeFrequency: 'weekly',
